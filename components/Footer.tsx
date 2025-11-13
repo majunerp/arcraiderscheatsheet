@@ -22,7 +22,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-white">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/items" className="text-sm text-zinc-400 hover:text-white transition-colors">
+                <Link href="/#items" className="text-sm text-zinc-400 hover:text-white transition-colors">
                   Item Database
                 </Link>
               </li>

@@ -26,7 +26,7 @@ export default function Header() {
             Home
           </Link>
           <Link
-            href="/items"
+            href="/#items"
             className="text-sm font-medium text-zinc-300 transition-colors hover:text-white"
           >
             Item Database
@@ -87,7 +87,7 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href="/items"
+              href="/#items"
               className="block text-sm font-medium text-zinc-300 hover:text-white"
               onClick={() => setMobileMenuOpen(false)}
             >

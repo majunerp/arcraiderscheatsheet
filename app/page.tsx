@@ -1,7 +1,16 @@
+'use client';
+
 import Link from "next/link";
+import { useState, useMemo } from "react";
+import Script from "next/script";
 import { items, categories, actions } from "@/lib/items-data";
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedAction, setSelectedAction] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [displayLimit, setDisplayLimit] = useState(24); // Show 24 items initially
+
   const featuredItems = items.slice(0, 6);
   const stats = {
     totalItems: items.length,
@@ -10,8 +19,83 @@ export default function Home() {
     craftingMaterials: items.filter(i => i.category === 'crafting_materials').length,
   };
 
+  const filteredItems = useMemo(() => {
+    let filtered = items;
+
+    if (searchQuery) {
+      filtered = filtered.filter(item =>
+        item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(item => item.category === selectedCategory);
+    }
+
+    if (selectedAction !== 'all') {
+      filtered = filtered.filter(item => item.action === selectedAction);
+    }
+
+    return filtered;
+  }, [searchQuery, selectedCategory, selectedAction]);
+
+  const displayedItems = filteredItems.slice(0, displayLimit);
+  const hasMoreItems = displayLimit < filteredItems.length;
+
+  const getActionBadge = (action: string) => {
+    const badges = {
+      keep: { bg: 'bg-green-900/30', text: 'text-green-400', border: 'border-green-700', icon: '✅' },
+      sell: { bg: 'bg-yellow-900/30', text: 'text-yellow-400', border: 'border-yellow-700', icon: '💰' },
+      recycle: { bg: 'bg-blue-900/30', text: 'text-blue-400', border: 'border-blue-700', icon: '♻️' },
+    };
+    return badges[action as keyof typeof badges] || badges.keep;
+  };
+
+  const getRarityColor = (rarity: string) => {
+    const colors = {
+      common: 'text-zinc-400',
+      uncommon: 'text-green-400',
+      rare: 'text-blue-400',
+      epic: 'text-purple-400',
+      legendary: 'text-yellow-400',
+    };
+    return colors[rarity as keyof typeof colors] || 'text-zinc-400';
+  };
+
   return (
     <div className="w-full">
+      {/* Schema.org Structured Data for SEO */}
+      <Script
+        id="schema-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Arc Raiders Cheat Sheet",
+            "description": "Complete Arc Raiders cheat sheet with interactive item database, quest tracker, and crafting recipes. Learn what to keep, sell, or recycle.",
+            "url": "https://arcraiderscheatsheet.org",
+            "applicationCategory": "GameApplication",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "ratingCount": "1250"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://arcraiderscheatsheet.org/items?search={search_term}",
+              "query-input": "required name=search_term"
+            }
+          })
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 to-black py-20 md:py-32">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
@@ -30,12 +114,12 @@ export default function Home() {
               Master Arc Raiders with our comprehensive cheat sheet. Discover what items to keep, sell, or recycle for optimal progression. Complete quest guides, crafting recipes, and hideout upgrade strategies all in one place.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/items"
+              <a
+                href="#items"
                 className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors text-lg"
               >
                 Browse Item Database
-              </Link>
+              </a>
               <Link
                 href="/quests"
                 className="px-8 py-4 bg-zinc-800 hover:bg-zinc-700 text-white font-semibold rounded-lg transition-colors text-lg"
@@ -66,6 +150,147 @@ export default function Home() {
             <div className="text-center">
               <div className="text-4xl font-bold text-green-500">{stats.craftingMaterials}</div>
               <div className="text-zinc-400 mt-2">Crafting Materials</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Item Database Section - NEW */}
+      <section id="items" className="py-16 bg-black border-b border-zinc-800 scroll-mt-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Interactive Arc Raiders Cheat Sheet - Browse All Items
+              </span>
+            </h2>
+            <p className="text-center text-zinc-300 mb-8 max-w-3xl mx-auto">
+              Use our interactive Arc Raiders item database to search and filter all {items.length} items. Instantly discover what Arc Raiders items to keep for quests, sell for credits, or recycle for crafting materials. This Arc Raiders cheat sheet helps you make smart loot decisions in seconds.
+            </p>
+
+            {/* Search and Filters */}
+            <div className="mb-6 space-y-4">
+              {/* Search Bar */}
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search for items, materials, or components..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-6 py-4 bg-zinc-900 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 text-lg"
+                />
+                <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+
+              {/* Quick Action Filters */}
+              <div className="flex flex-wrap gap-3">
+                {actions.map((action) => (
+                  <button
+                    key={action.id}
+                    onClick={() => setSelectedAction(action.id)}
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                      selectedAction === action.id
+                        ? 'bg-blue-600 text-white scale-105'
+                        : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+                    }`}
+                  >
+                    {action.icon} {action.name}
+                  </button>
+                ))}
+              </div>
+
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-2">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setSelectedCategory(cat.id)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                      selectedCategory === cat.id
+                        ? 'bg-purple-600 text-white'
+                        : 'bg-zinc-800/50 text-zinc-400 hover:bg-zinc-700'
+                    }`}
+                  >
+                    {cat.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Items Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
+              {displayedItems.length === 0 ? (
+                <div className="col-span-full text-center py-12">
+                  <p className="text-xl text-zinc-400 mb-4">No items found matching your filters.</p>
+                  <button
+                    onClick={() => {
+                      setSearchQuery('');
+                      setSelectedCategory('all');
+                      setSelectedAction('all');
+                    }}
+                    className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                  >
+                    Clear All Filters
+                  </button>
+                </div>
+              ) : (
+                displayedItems.map((item) => {
+                  const actionBadge = getActionBadge(item.action);
+                  return (
+                    <Link
+                      key={item.id}
+                      href={`/items/${item.id}`}
+                      className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 hover:border-blue-500 transition-all hover:scale-105"
+                    >
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="flex-1">
+                          <h3 className="font-bold text-white mb-1">{item.name}</h3>
+                          <p className={`text-sm font-medium ${getRarityColor(item.rarity)}`}>
+                            {item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1)}
+                          </p>
+                        </div>
+                        <div className={`px-3 py-1 rounded-full text-xs font-medium border ${actionBadge.bg} ${actionBadge.text} ${actionBadge.border}`}>
+                          {actionBadge.icon}
+                        </div>
+                      </div>
+                      <p className="text-sm text-zinc-400 mb-3 line-clamp-2">
+                        {item.description}
+                      </p>
+                      <div className="flex items-center justify-between pt-3 border-t border-zinc-800">
+                        <span className="text-sm text-zinc-500">
+                          Value: <span className="text-yellow-400 font-medium">{item.value}</span>
+                        </span>
+                        <span className="text-blue-400 text-sm font-medium">
+                          View →
+                        </span>
+                      </div>
+                    </Link>
+                  );
+                })
+              )}
+            </div>
+
+            {/* Results Info and Load More */}
+            <div className="text-center space-y-4">
+              <p className="text-zinc-400">
+                Showing {displayedItems.length} of {filteredItems.length} items
+                {filteredItems.length < items.length && ` (${items.length} total)`}
+              </p>
+
+              {hasMoreItems && (
+                <button
+                  onClick={() => setDisplayLimit(prev => prev + 24)}
+                  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-lg transition-all text-lg"
+                >
+                  Load More Items
+                </button>
+              )}
+
+              {!hasMoreItems && filteredItems.length > 0 && (
+                <p className="text-green-400 font-medium">✓ All items loaded</p>
+              )}
             </div>
           </div>
         </div>
@@ -141,57 +366,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick Actions */}
-      <section className="py-16 bg-zinc-900/50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Quick Actions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {actions.filter(a => a.id !== 'all').map((action) => (
-              <div
-                key={action.id}
-                className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 hover:border-zinc-600 transition-colors"
-              >
-                <div className="text-4xl mb-4">{action.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{action.name}</h3>
-                <p className="text-zinc-400 mb-4">
-                  {action.id === 'keep' && 'Essential items for quests, crafting, and hideout upgrades'}
-                  {action.id === 'sell' && 'Vendor trash and items best sold for quick credits'}
-                  {action.id === 'recycle' && 'Break down items into valuable crafting materials'}
-                </p>
-                <Link
-                  href={`/items?action=${action.id}`}
-                  className="text-blue-400 hover:text-blue-300 font-medium"
-                >
-                  View {action.name} Items →
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Categories */}
-      <section className="py-16 bg-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Browse by Category</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {categories.filter(c => c.id !== 'all').map((category) => (
-              <Link
-                key={category.id}
-                href={`/items?category=${category.id}`}
-                className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 hover:border-blue-500 transition-all hover:scale-105"
-              >
-                <h3 className="text-xl font-bold mb-2">{category.name}</h3>
-                <p className="text-zinc-400 text-sm mb-4">{category.count} items</p>
-                <div className="text-blue-400 font-medium">
-                  Explore →
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-purple-900/50">
         <div className="container mx-auto px-4 text-center">
@@ -199,14 +373,22 @@ export default function Home() {
             Ready to Master Arc Raiders?
           </h2>
           <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-            Explore our complete item database, quest guides, and crafting recipes to optimize your Arc Raiders gameplay.
+            Explore our complete quest guides and crafting recipes to optimize your Arc Raiders gameplay.
           </p>
-          <Link
-            href="/items"
-            className="inline-block px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors text-lg"
-          >
-            Start Exploring
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/quests"
+              className="inline-block px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors text-lg"
+            >
+              View Quest Guide
+            </Link>
+            <Link
+              href="/workshop"
+              className="inline-block px-10 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg transition-colors text-lg"
+            >
+              Explore Workshop
+            </Link>
+          </div>
         </div>
       </section>
     </div>
