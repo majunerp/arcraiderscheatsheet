@@ -102,44 +102,8 @@ export default function Home() {
         }}
       />
 
-      {/* Hero Section - Optimized Layout */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 via-black to-black py-12 md:py-16">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto text-center space-y-6">
-            {/* Main Title */}
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Arc Raiders Cheat Sheet
-              </span>
-            </h1>
-
-            {/* Description */}
-            <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
-              Master Arc Raiders with our comprehensive cheat sheet. Discover what items to keep, sell, or recycle for optimal progression.
-            </p>
-
-            {/* Quick Action Buttons - Moved from below */}
-            <div className="flex flex-row gap-3 justify-center pt-2">
-              <Link
-                href="/quests"
-                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-blue-500/50 hover:scale-105"
-              >
-                Quest Guide
-              </Link>
-              <Link
-                href="/workshop"
-                className="px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-purple-500/50 hover:scale-105"
-              >
-                Workshop
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Interactive Item Database Section - PRIMARY CONTENT */}
-      <section id="items" className="py-8 md:py-12 bg-black border-t border-zinc-800">
+      <section id="items" className="py-12 md:py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
