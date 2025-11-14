@@ -36,6 +36,11 @@ export default function Footer() {
                   Workshop & Crafting
                 </Link>
               </li>
+              <li>
+                <Link href="/guides" className="text-sm text-zinc-400 hover:text-white transition-colors">
+                  Guides & Tips
+                </Link>
+              </li>
             </ul>
           </div>
 
