@@ -4,14 +4,13 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 interface ItemImageProps {
-  // Incoming src is ignored when mapping by name is enabled (default)
   src?: string;
   alt: string;
   width?: number;
   height?: number;
   className?: string;
   rarity?: 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
-  // Prefer local image by normalized item name under `/items/*.png`
+  // If true, use `/items/<normalized-alt>.png` when src is not provided
   preferLocalByName?: boolean;
 }
 
@@ -41,17 +40,14 @@ export function ItemImage({
   height = 64,
   className = '',
   rarity = 'common',
-  preferLocalByName = true,
+  preferLocalByName = false,
 }: ItemImageProps) {
   const [imageError, setImageError] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
-  const computedSrc = preferLocalByName
-    ? `/items/${normalizeName(alt)}.png`
-    : (src || `/items/${normalizeName(alt)}.png`);
+  const computedSrc = src || `/items/${normalizeName(alt)}.png`;
 
-  // If image fails to load or hasn't loaded yet, show placeholder
-  if (imageError || !imageLoaded) {
+  // If image fails to load, show placeholder
+  if (imageError) {
     const bgColor = rarityColors[rarity];
     const initials = alt
       .split(' ')
@@ -72,18 +68,6 @@ export function ItemImage({
         }}
         title={`${alt} (Image not available)`}
       >
-        {!imageError && (
-          <Image
-            src={computedSrc}
-            alt={alt}
-            width={width}
-            height={height}
-            className="hidden"
-            onLoad={() => setImageLoaded(true)}
-            onError={() => setImageError(true)}
-            unoptimized
-          />
-        )}
         {initials}
       </div>
     );
