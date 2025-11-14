@@ -1,0 +1,1660 @@
+{
+  "items": [
+    {
+      "name": "Leaper Pulse Unit",
+      "rarity": "epic",
+      "action": "keep",
+      "category": "quests",
+      "description": "📜 Quest: Into the Fray (x1) • 🏗️ Workshop: Utility Station L3 (x4)",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Power Rod",
+      "rarity": "epic",
+      "action": "keep",
+      "category": "quests",
+      "description": "🔧 Used to craft: Gear Bench: Heavy Shield • Utility Station: Snap Hook",
+      "value": "5,500 CR"
+    },
+    {
+      "name": "Rocketeer Driver",
+      "rarity": "epic",
+      "action": "keep",
+      "category": "quests",
+      "description": "📜 Quest: Out of the Shadows (x1) • 🏗️ Workshop: Explosives Station L3 (x3)",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Surveyor Vault",
+      "rarity": "rare",
+      "action": "keep",
+      "category": "quests",
+      "description": "📜 Quest: Mixed Signals (x1) • 🏗️ Workshop: Medical Lab L3 (x5)",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Antiseptic",
+      "rarity": "rare",
+      "action": "keep",
+      "category": "quests",
+      "description": "🔧 Used to craft: Medical Lab: Sterilized Bandage",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Hornet Driver",
+      "rarity": "rare",
+      "action": "keep",
+      "category": "quests",
+      "description": "📜 Quest: The Trifecta (x2) • 🏗️ Workshop: Gear Bench L2 (x5)",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Syringe",
+      "rarity": "rare",
+      "action": "keep",
+      "category": "quests",
+      "description": "📜 Quest: Doctor's Orders (x1)",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Wasp Driver",
+      "rarity": "rare",
+      "action": "keep",
+      "category": "quests",
+      "description": "📜 Quest: The Trifecta (x2) • 🏗️ Workshop: Gunsmith L2 (x8)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Water Pump",
+      "rarity": "rare",
+      "action": "keep",
+      "category": "quests",
+      "description": "📜 Quest: Unexpected Initiative (x1)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Snitch Scanner",
+      "rarity": "uncommon",
+      "action": "keep",
+      "category": "quests",
+      "description": "📜 Quest: The Trifecta (x2) • 🏗️ Workshop: Utility Station L2 (x6)",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Leaper Pulse Unit",
+      "rarity": "epic",
+      "action": "keep",
+      "category": "workshop",
+      "description": "📜 Quest: Into the Fray (x1) • 🏗️ Workshop: Utility Station L3 (x4)",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Magnetic Accelerator",
+      "rarity": "epic",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Hullcracker I",
+      "value": "5,500 CR"
+    },
+    {
+      "name": "Exodus Modules",
+      "rarity": "epic",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Hullcracker I • Utility Station: Snap Hook",
+      "value": "2,750 CR"
+    },
+    {
+      "name": "Advanced Electrical Components",
+      "rarity": "rare",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gear Bench: Looting Mk. 3 (Cautious) • Utility Station: Photoelectric Cloak, Raider Hatch Key • Refiner: Power Rod",
+      "value": "1,750 CR"
+    },
+    {
+      "name": "Humidifier",
+      "rarity": "rare",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Needed for hideout projects!",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Sensors",
+      "rarity": "rare",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Utility Station: Raider Hatch Key",
+      "value": "500 CR"
+    },
+    {
+      "name": "Cooling Fan",
+      "rarity": "rare",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Needed for hideout projects!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Battery",
+      "rarity": "uncommon",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gear Bench: Medium Shield • Explosives Station: Jolt Mine",
+      "value": "250 CR"
+    },
+    {
+      "name": "Light Bulb",
+      "rarity": "uncommon",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Needed for hideout projects!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Electrical Components",
+      "rarity": "uncommon",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gear Bench: Combat Mk. 2, Looting Mk. 2, Tactical Mk. 2 • Medical Lab: Surge Shield Recharger • Explosives Station: Jolt Mine • Utility Station: Lure Grenade • Refiner: Advanced Electrical Components",
+      "value": "640 CR"
+    },
+    {
+      "name": "Wires",
+      "rarity": "uncommon",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Osprey I, Compensator I, Compensator II +3 more • Refiner: Advanced Electrical Components",
+      "value": "200 CR"
+    },
+    {
+      "name": "Durable Cloth",
+      "rarity": "uncommon",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Medical Lab: Herbal Bandage, Sterilized Bandage",
+      "value": "640 CR"
+    },
+    {
+      "name": "Steel Spring",
+      "rarity": "uncommon",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Torrente I, Extended Light Mag I, Extended Medium Mag II +2 more • Explosives Station: Shrapnel Grenade • Refiner: Advanced Mechanical Components, Mod Components",
+      "value": "300 CR"
+    },
+    {
+      "name": "ARC Alloy",
+      "rarity": "uncommon",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Workbench: Light Shield • Gear Bench: Light Shield • Refiner: ARC Circuitry, ARC Motion Core",
+      "value": "200 CR"
+    },
+    {
+      "name": "Rubber Parts",
+      "rarity": "common",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Workbench: Shield Recharger, Ferro I, Kettle I +2 more • Gunsmith: Kettle I, Ferro I, Stitcher I +2 more • Gear Bench: Combat Mk. 1, Looting Mk. 1, Tactical Mk. 1 • Medical Lab: Shield Recharger • Explosives Station: Gas Grenade • Utility Station: Binoculars, Door Blocker, Remote Raider Flare • Refiner: Mechanical Components, Electrical Components",
+      "value": "50 CR"
+    },
+    {
+      "name": "Metal Parts",
+      "rarity": "common",
+      "action": "keep",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Workbench: Ferro I, Hairpin I, Kettle I +6 more • Gunsmith: Hairpin I, Kettle I, Ferro I +5 more • Utility Station: Door Blocker • Refiner: Mechanical Components",
+      "value": "50 CR"
+    },
+    {
+      "name": "Ruined Accordion",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Rubber Parts, otherwise sell",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Alarm Clock",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "ARC Coolant",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Good to recycle (gives Chemicals)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "ARC Flex Rubber",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Rubber Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "ARC Performance Steel",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "ARC Synthetic Resin",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "ARC Thermo Lining",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Fabric, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Bicycle Pump",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Broken Flashlight",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Broken Guidance System",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Ruined Handcuffs",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Broken Handheld Radio",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "⚖️ Recycle if low on Sensors, Wires, otherwise sell",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Broken Taser",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "⚖️ Recycle if low on Battery, Wires, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Burned Arc Circuitry",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on ARC Alloy, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Camera Lens",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Candle Holder",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Coolant",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "⚖️ Recycle if low on Chemicals, Oil, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Cooling Coil",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Good to recycle (gives Chemicals, Steel Spring)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Crumpled Plastic Bottle",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, otherwise sell",
+      "value": "270 CR"
+    },
+    {
+      "name": "Damaged ARC Motion Core",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on ARC Alloy, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Damaged ARC Powercell",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on ARC Alloy, otherwise sell",
+      "value": "293 CR"
+    },
+    {
+      "name": "Deflated Football",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Rubber Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Diving Goggles",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Dried-Out ARC Resin",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Expired Respirator",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Rubber Parts, Fabric, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Fireball Burner",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Refiner L2 (x8)",
+      "value": "640 CR"
+    },
+    {
+      "name": "Flute",
+      "rarity": "unknown",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Frying Pan",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Garlic Press",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Headphones",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Rubber Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Household Cleaner",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Good to recycle (gives Chemicals)",
+      "value": "640 CR"
+    },
+    {
+      "name": "Ice Cream Scooper",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Impure ARC Coolant",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Good to recycle (gives Chemicals)",
+      "value": "640 CR"
+    },
+    {
+      "name": "Industrial Charger",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Industrial Magnet",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Metal Brackets",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Number Plate",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "270 CR"
+    },
+    {
+      "name": "Polluted Air Filter",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Fabric, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Portable TV",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "⚖️ Recycle if low on Battery, Wires, otherwise sell",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Power Bank",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "⚖️ Recycle if low on Battery, Wires, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Projector",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "⚖️ Recycle if low on Wires, Processor, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Remote Control",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Rubber Pad",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Rubber Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Ruined Baton",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Ruined Parachute",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Ruined Riot Shield",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, Rubber Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Ruined Tactical Vest",
+      "rarity": "unknown",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Rusted Bolts",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Rusty ARC Steel",
+      "rarity": "unknown",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Ripped Safety Vest",
+      "rarity": "unknown",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Sensors",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Utility Station: Raider Hatch Key",
+      "value": "500 CR"
+    },
+    {
+      "name": "Spring Cushion",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "⚖️ Recycle if low on Durable Cloth, Steel Spring, otherwise sell",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Spotter Relay",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on ARC Alloy, otherwise sell",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Tattered Arc Lining",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Fabric, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Tattered Clothes",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Fabric, otherwise sell",
+      "value": "270 CR"
+    },
+    {
+      "name": "Thermostat",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Rubber Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Torn Blanket",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Fabric, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Turbo Pump",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Good to recycle (gives Mechanical Components, Oil)",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Water Filter",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Rubber Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Fabric",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Workbench: Bandage • Medical Lab: Bandage • Refiner: Durable Cloth",
+      "value": "50 CR"
+    },
+    {
+      "name": "Tick Pod",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Medical Lab L2 (x8)",
+      "value": "640 CR"
+    },
+    {
+      "name": "Explosive Mixture",
+      "rarity": "unknown",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "Dog Collar",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Scrappy L2 (x1)",
+      "value": "640 CR"
+    },
+    {
+      "name": "Lemon",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Scrappy L3 (x3)",
+      "value": "640 CR"
+    },
+    {
+      "name": "Apricot",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Scrappy L3 (x3), Scrappy L5 (x12)",
+      "value": "640 CR"
+    },
+    {
+      "name": "Plastic Parts",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Workbench: Light Impact Grenade, Hairpin I, Light Shield +1 more • Gunsmith: Hairpin I, Angled Grip I, Vertical Grip I +2 more • Gear Bench: Light Shield, Combat Mk. 1, Looting Mk. 1 +1 more • Medical Lab: Adrenaline Shot, Defibrillator • Explosives Station: Light Impact Grenade • Utility Station: Binoculars, Li'l Smoke Grenade • Refiner: Electrical Components",
+      "value": "60 CR"
+    },
+    {
+      "name": "Voltage Converter",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gear Bench: Heavy Shield",
+      "value": "500 CR"
+    },
+    {
+      "name": "ARC Motion Core",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Refiner: Magnetic Accelerator",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Toaster",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Refiner L2 (x3)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "ARC Circuitry",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gear Bench: Medium Shield • Refiner: Power Rod",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Motor",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Refiner L3 (x3)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Queen Reactor",
+      "rarity": "legendary",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 Better to SELL (high value item)",
+      "value": "13,000 CR"
+    },
+    {
+      "name": "Fried Motherboard",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Utility Station L3 (x3)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Rusted Tools",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Gunsmith L2 (x3)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Rusted Gear",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Gunsmith L3 (x3)",
+      "value": "3,000 CR"
+    },
+    {
+      "name": "Sentinel Part",
+      "rarity": "unknown",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "Synthesized Fuel",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Explosives Station L2 (x3)",
+      "value": "700 CR"
+    },
+    {
+      "name": "Laboratory Reagents",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Explosives Station L3 (x3)",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Rusted Shut Medical Kit",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Medical Lab L3 (x3)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Spring",
+      "rarity": "unknown",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "Heavy Gun Parts",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Bettina I, Hullcracker I • Refiner: Complex Gun Parts",
+      "value": "700 CR"
+    },
+    {
+      "name": "Sterilized Bandage",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Rubber Duck",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "ARC Powercell",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Workbench: Shield Recharger • Medical Lab: Shield Recharger",
+      "value": "640 CR"
+    },
+    {
+      "name": "Duct Tape",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Angled Grip I, Vertical Grip I, Vertical Grip III +2 more",
+      "value": "300 CR"
+    },
+    {
+      "name": "Empty Wine Bottle",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Oil",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Renegade I • Refiner: Explosive Compound",
+      "value": "300 CR"
+    },
+    {
+      "name": "Film Reel",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Canister",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Bettina I • Explosives Station: Heavy Fuze Grenade",
+      "value": "300 CR"
+    },
+    {
+      "name": "Advanced Mechanical Components",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Venator I, Torrente I, Osprey I +2 more • Refiner: Magnetic Accelerator",
+      "value": "1,750 CR"
+    },
+    {
+      "name": "Simple Gun Parts",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Burletta I, Anvil I, Arpeggio I +1 more • Refiner: Light Gun Parts, Medium Gun Parts, Heavy Gun Parts",
+      "value": "330 CR"
+    },
+    {
+      "name": "Mechanical Components",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Burletta I, Anvil I, Arpeggio I +4 more • Refiner: Advanced Mechanical Components, Mod Components",
+      "value": "640 CR"
+    },
+    {
+      "name": "Medium Gun Parts",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Venator I, Torrente I, Osprey I +1 more • Refiner: Complex Gun Parts",
+      "value": "700 CR"
+    },
+    {
+      "name": "Chemicals",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Workbench: Light Impact Grenade, Heavy Ammo, Light Ammo +2 more • Medical Lab: Adrenaline Shot • Explosives Station: Light Impact Grenade, Gas Grenade • Utility Station: Remote Raider Flare, Green Light Stick, Li'l Smoke Grenade • Refiner: Crude Explosives, Antiseptic",
+      "value": "50 CR"
+    },
+    {
+      "name": "Industrial Battery",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Gear Bench L3 (x3)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Power Cable",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Gear Bench L2 (x3)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Processor",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gear Bench: Looting Mk. 3 (Cautious) • Explosives Station: Trigger 'Nade",
+      "value": "500 CR"
+    },
+    {
+      "name": "Speaker Component",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Utility Station: Lure Grenade, Photoelectric Cloak",
+      "value": "500 CR"
+    },
+    {
+      "name": "Magnet",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Venator I • Gear Bench: Combat Mk. 2, Looting Mk. 2, Tactical Mk. 2 • Explosives Station: Snap Blast Grenade",
+      "value": "300 CR"
+    },
+    {
+      "name": "Advanced ARC Powercell",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Medical Lab: Surge Shield Recharger",
+      "value": "640 CR"
+    },
+    {
+      "name": "Bastion Cell",
+      "rarity": "epic",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Gear Bench L3 (x6)",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Cracked Bioscanner",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Medical Lab L2 (x2)",
+      "value": "640 CR"
+    },
+    {
+      "name": "Crude Explosives",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Workbench: Launcher Ammo • Explosives Station: Shrapnel Grenade, Snap Blast Grenade, Trigger 'Nade • Refiner: Explosive Compound",
+      "value": "270 CR"
+    },
+    {
+      "name": "Great Mullein",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Medical Lab: Herbal Bandage • Refiner: Antiseptic",
+      "value": "300 CR"
+    },
+    {
+      "name": "Light Gun Parts",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Refiner: Complex Gun Parts",
+      "value": "700 CR"
+    },
+    {
+      "name": "Radio",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "⚠️ Recycle in hideout (50% raid penalty)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Recorder",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Rope",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Fabric, otherwise sell",
+      "value": "500 CR"
+    },
+    {
+      "name": "Sentinel Firing Core",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Gunsmith L3 (x4)",
+      "value": "3,000 CR"
+    },
+    {
+      "name": "Bombardier Cell",
+      "rarity": "epic",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Refiner L3 (x6)",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Agave",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Assorted Seeds",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "100 CR"
+    },
+    {
+      "name": "Prickly Pear",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Scrappy L4 (x6)",
+      "value": "640 CR"
+    },
+    {
+      "name": "Resin",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Roots",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Olives",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Scrappy L4 (x6)",
+      "value": "640 CR"
+    },
+    {
+      "name": "Mushroom",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Scrappy L5 (x12)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Pop Trigger",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Explosives Station L2 (x5)",
+      "value": "640 CR"
+    },
+    {
+      "name": "Volcanic Rock",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "270 CR"
+    },
+    {
+      "name": "Faded Photograph",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Cat Bed",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Scrappy L4 (x1)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Bloated Tuna Can",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Coffee Pot",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Very Comfortable Pillow",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Scrappy L5 (x3)",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Pottery",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Air Freshener",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Statuette",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "3,000 CR"
+    },
+    {
+      "name": "Silver Teaspoon Set",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "3,000 CR"
+    },
+    {
+      "name": "Music Album",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "3,000 CR"
+    },
+    {
+      "name": "Vase",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "3,000 CR"
+    },
+    {
+      "name": "Music Box",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Red Coral Jewelry",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Playing Cards",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Lance's Mixtape (5th Edition)",
+      "rarity": "epic",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "10,000 CR"
+    },
+    {
+      "name": "Medium Shield",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 Better to SELL (high value item)",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Light Shield",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Heavy Shield",
+      "rarity": "epic",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "5,500 CR"
+    },
+    {
+      "name": "Zipline",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Damaged Heat Sink",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🏗️ Workshop: Utility Station L2 (x2)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Showstopper",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 Better to SELL (high value item)",
+      "value": "2,200 CR"
+    },
+    {
+      "name": "Photoelectric Cloak",
+      "rarity": "epic",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Binoculars",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Rubber Parts, Plastic Parts, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Vita Shot",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 Better to SELL (high value item)",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Jolt Mine",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, otherwise sell",
+      "value": "850 CR"
+    },
+    {
+      "name": "Barricade Kit",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Defibrillator",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Trigger 'Nade",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "⚠️ Recycle in hideout (50% raid penalty)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Adrenaline Shot",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, otherwise sell",
+      "value": "300 CR"
+    },
+    {
+      "name": "Breathtaking Snow Globe",
+      "rarity": "epic",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "7,000 CR"
+    },
+    {
+      "name": "Expired Pasta",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Degraded ARC Rubber",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Rubber Parts, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Complex Gun Parts",
+      "rarity": "epic",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 Better to SELL (high value item)",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Fine Wristwatch",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "3,000 CR"
+    },
+    {
+      "name": "Shield Recharger",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "520 CR"
+    },
+    {
+      "name": "Red Light Stick",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "150 CR"
+    },
+    {
+      "name": "Noisemaker",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Dart Board",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Blue Light Stick",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "750 CR"
+    },
+    {
+      "name": "Green Light Stick",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "150 CR"
+    },
+    {
+      "name": "Surge Shield Recharger",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "⚠️ Recycle in hideout (50% raid penalty)",
+      "value": "1,200 CR"
+    },
+    {
+      "name": "Damaged Tick Pod",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "90 CR"
+    },
+    {
+      "name": "Door Blocker",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "270 CR"
+    },
+    {
+      "name": "Herbal Bandage",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "640 CR"
+    },
+    {
+      "name": "Yellow Light Stick",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "150 CR"
+    },
+    {
+      "name": "Mod Components",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Gunsmith: Vertical Grip III, Lightweight Stock, Extended Medium Mag III",
+      "value": "1,750 CR"
+    },
+    {
+      "name": "Rocket Thruster",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Poster of Natural Wonders",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Explosive Compound",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Explosives Station: Heavy Fuze Grenade",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Torn Book",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Fertilizer",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "quests",
+      "description": "📜 Quest: Unexpected Initiative (x1)",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Damaged Rocketeer Driver",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "arc_parts",
+      "description": "♻️ Recycle if low on ARC Alloy, otherwise sell",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Damaged Hornet Driver",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "arc_parts",
+      "description": "♻️ Recycle if low on ARC Alloy, otherwise sell",
+      "value": "640 CR"
+    },
+    {
+      "name": "Moss",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "workshop",
+      "description": "🔧 Used to craft: Medical Lab: Defibrillator",
+      "value": "500 CR"
+    },
+    {
+      "name": "Bandage",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Fabric, otherwise sell",
+      "value": "250 CR"
+    },
+    {
+      "name": "Painted Box",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Music Box",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "5,000 CR"
+    },
+    {
+      "name": "Rosary",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "💰 High value - better to sell!",
+      "value": "2,000 CR"
+    },
+    {
+      "name": "Damaged Wasp Driver",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "arc_parts",
+      "description": "",
+      "value": "270 CR"
+    },
+    {
+      "name": "Recorder",
+      "rarity": "uncommon",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Plastic Parts, otherwise sell",
+      "value": "1,000 CR"
+    },
+    {
+      "name": "Celeste's Journal",
+      "rarity": "common",
+      "action": "unknown",
+      "category": "materials",
+      "description": "",
+      "value": ""
+    },
+    {
+      "name": "Unusable Weapon",
+      "rarity": "rare",
+      "action": "unknown",
+      "category": "materials",
+      "description": "♻️ Recycle if low on Metal Parts, otherwise sell",
+      "value": "2,000 CR"
+    }
+  ]
+}

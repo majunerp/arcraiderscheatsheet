@@ -277,7 +277,7 @@ export default function WorkshopPage() {
                       {recipe.materials.map((material, index) => (
                         <div key={index} className="flex items-center justify-between bg-zinc-800 rounded px-4 py-2">
                           <Link
-                            href={`/items?search=${material.name}`}
+                            href={`/#items?search=${material.name}`}
                             className="text-zinc-300 hover:text-blue-400 transition-colors"
                           >
                             {material.name}

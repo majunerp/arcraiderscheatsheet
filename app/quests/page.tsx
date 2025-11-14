@@ -207,7 +207,7 @@ export default function QuestsPage() {
                       {quest.requiredItems.map((item, index) => (
                         <div key={index} className="flex items-center justify-between bg-zinc-800 rounded px-4 py-2">
                           <Link
-                            href={`/items?search=${item.name}`}
+                            href={`/#items?search=${item.name}`}
                             className="text-zinc-300 hover:text-blue-400 transition-colors"
                           >
                             {item.name}

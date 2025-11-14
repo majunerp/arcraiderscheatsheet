@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__mcp-chrome__chrome_get_web_content",
+      "mcp__mcp-chrome__chrome_screenshot",
+      "mcp__mcp-chrome__chrome_navigate",
+      "mcp__mcp-chrome__chrome_inject_script",
+      "mcp__mcp-chrome__chrome_console"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
