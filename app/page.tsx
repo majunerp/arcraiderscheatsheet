@@ -103,19 +103,19 @@ export default function Home() {
       />
 
       {/* Hero Section with H1 for SEO */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 via-black to-black py-12 md:py-16 border-b border-zinc-800">
+      <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 via-black to-black py-6 md:py-8 border-b border-zinc-800">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto text-center space-y-4">
+          <div className="max-w-6xl mx-auto text-center space-y-2">
             {/* Main H1 Title - Required for SEO */}
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Arc Raiders Cheat Sheet
               </span>
             </h1>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed">
               Master Arc Raiders with our comprehensive cheat sheet. Discover what items to keep, sell, or recycle for optimal progression.
             </p>
           </div>
@@ -123,15 +123,15 @@ export default function Home() {
       </section>
 
       {/* Interactive Item Database Section - PRIMARY CONTENT */}
-      <section id="items" className="py-8 md:py-12 bg-black">
+      <section id="items" className="py-4 md:py-6 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <p className="text-center text-zinc-400 text-base md:text-lg mb-8 max-w-3xl mx-auto">
+            <p className="text-center text-zinc-400 text-sm md:text-base mb-4 max-w-3xl mx-auto">
               Search and filter all {items.length} Arc Raiders items. Instantly discover what to keep, sell, or recycle.
             </p>
 
             {/* Search and Filters */}
-            <div className="mb-8 space-y-4">
+            <div className="mb-6 space-y-3">
               {/* Search Bar */}
               <div className="relative max-w-2xl mx-auto">
                 <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,17 +142,17 @@ export default function Home() {
                   placeholder="Search for items, materials, or components..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-5 py-4 bg-zinc-900/80 border-2 border-zinc-700 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:bg-zinc-900 transition-all"
+                  className="w-full pl-12 pr-5 py-3 bg-zinc-900/80 border-2 border-zinc-700 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:bg-zinc-900 transition-all"
                 />
               </div>
 
               {/* Quick Action Filters */}
-              <div className="flex flex-wrap gap-3 justify-center">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {actions.map((action) => (
                   <button
                     key={action.id}
                     onClick={() => setSelectedAction(action.id)}
-                    className={`px-6 py-3 rounded-xl font-bold transition-all duration-200 ${
+                    className={`px-5 py-2 rounded-xl font-bold transition-all duration-200 text-sm ${
                       selectedAction === action.id
                         ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 scale-105'
                         : 'bg-zinc-800/80 text-zinc-300 hover:bg-zinc-700 hover:scale-105'
@@ -169,7 +169,7 @@ export default function Home() {
                   <button
                     key={cat.id}
                     onClick={() => setSelectedCategory(cat.id)}
-                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                    className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
                       selectedCategory === cat.id
                         ? 'bg-purple-600 text-white shadow-md shadow-purple-500/30 scale-105'
                         : 'bg-zinc-800/60 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-300'
@@ -182,7 +182,7 @@ export default function Home() {
             </div>
 
             {/* Items Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 mb-6">
               {displayedItems.length === 0 ? (
                 <div className="col-span-full text-center py-16">
                   <div className="max-w-md mx-auto">
@@ -383,7 +383,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-purple-900/50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Master Arc Raiders?
           </h2>
           <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
