@@ -36,44 +36,12 @@ export default function Footer() {
                   Workshop & Crafting
                 </Link>
               </li>
-              <li>
-                <Link href="/guides" className="text-sm text-zinc-400 hover:text-white transition-colors">
-                  Guides & Tips
-                </Link>
-              </li>
             </ul>
           </div>
 
           {/* Resources */}
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-white">Resources</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/guides/beginner" className="text-sm text-zinc-400 hover:text-white transition-colors">
-                  Beginner's Guide
-                </Link>
-              </li>
-              <li>
-                <Link href="/guides/advanced" className="text-sm text-zinc-400 hover:text-white transition-colors">
-                  Advanced Strategies
-                </Link>
-              </li>
-              <li>
-                <Link href="/guides/farming" className="text-sm text-zinc-400 hover:text-white transition-colors">
-                  Farming Routes
-                </Link>
-              </li>
-              <li>
-                <Link href="/guides/meta" className="text-sm text-zinc-400 hover:text-white transition-colors">
-                  Meta Analysis
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Community */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-white">Community</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -95,6 +63,13 @@ export default function Footer() {
                   Discord Server
                 </a>
               </li>
+            </ul>
+          </div>
+
+          {/* Info */}
+          <div className="space-y-4">
+            <h4 className="text-sm font-semibold text-white">Info</h4>
+            <ul className="space-y-2">
               <li>
                 <a
                   href="https://twitter.com/arcraiders"
@@ -102,7 +77,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-sm text-zinc-400 hover:text-white transition-colors"
                 >
-                  Twitter/X
+                  Official Twitter/X
                 </a>
               </li>
             </ul>
