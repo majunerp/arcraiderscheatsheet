@@ -102,113 +102,98 @@ export default function Home() {
         }}
       />
 
-      {/* Compact Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 to-black py-8 md:py-12 border-b border-zinc-800">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+      {/* Hero Section - Optimized Layout */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 via-black to-black py-12 md:py-16">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center space-y-4">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+          <div className="max-w-6xl mx-auto text-center space-y-6">
+            {/* Main Title */}
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Arc Raiders Cheat Sheet
               </span>
             </h1>
-            <p className="text-base md:text-lg text-zinc-300 max-w-3xl mx-auto">
+
+            {/* Description */}
+            <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
               Master Arc Raiders with our comprehensive cheat sheet. Discover what items to keep, sell, or recycle for optimal progression.
             </p>
-            <div className="flex flex-row gap-3 justify-center text-sm">
+
+            {/* Quick Action Buttons - Moved from below */}
+            <div className="flex flex-row gap-3 justify-center pt-2">
               <Link
                 href="/quests"
-                className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white font-semibold rounded-lg transition-colors"
+                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-blue-500/50 hover:scale-105"
               >
                 Quest Guide
               </Link>
               <Link
                 href="/workshop"
-                className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white font-semibold rounded-lg transition-colors"
+                className="px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-purple-500/50 hover:scale-105"
               >
                 Workshop
               </Link>
-            </div>
-            {/* Results Info and Load More (clean) */}
-            <div className="text-center space-y-3">
-              <p className="text-zinc-400 text-sm">
-                Showing {displayedItems.length} of {filteredItems.length} items
-                {filteredItems.length < items.length && ` (${items.length} total)`}
-              </p>
-
-              {hasMoreItems ? (
-                <button
-                  onClick={() => setDisplayLimit(prev => prev + 24)}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-lg transition-all"
-                >
-                  Load More Items
-                </button>
-              ) : (
-                filteredItems.length > 0 && (
-                  <p className="text-green-400 font-medium text-sm">All items loaded</p>
-                )
-              )}
             </div>
           </div>
         </div>
       </section>
 
       {/* Interactive Item Database Section - PRIMARY CONTENT */}
-      <section id="items" className="py-6 bg-black">
+      <section id="items" className="py-8 md:py-12 bg-black border-t border-zinc-800">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Interactive Item Database
               </span>
             </h2>
-            <p className="text-center text-zinc-400 text-sm mb-6 max-w-3xl mx-auto">
+            <p className="text-center text-zinc-400 text-base md:text-lg mb-8 max-w-3xl mx-auto">
               Search and filter all {items.length} Arc Raiders items. Instantly discover what to keep, sell, or recycle.
             </p>
 
             {/* Search and Filters */}
-            <div className="mb-6 space-y-3">
+            <div className="mb-8 space-y-4">
               {/* Search Bar */}
-              <div className="relative">
+              <div className="relative max-w-2xl mx-auto">
+                <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
                 <input
                   type="text"
                   placeholder="Search for items, materials, or components..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-5 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500"
+                  className="w-full pl-12 pr-5 py-4 bg-zinc-900/80 border-2 border-zinc-700 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:bg-zinc-900 transition-all"
                 />
-                <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
               </div>
 
               {/* Quick Action Filters */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3 justify-center">
                 {actions.map((action) => (
                   <button
                     key={action.id}
                     onClick={() => setSelectedAction(action.id)}
-                    className={`px-5 py-2 rounded-lg font-semibold transition-all text-sm ${
+                    className={`px-6 py-3 rounded-xl font-bold transition-all duration-200 ${
                       selectedAction === action.id
-                        ? 'bg-blue-600 text-white scale-105'
-                        : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 scale-105'
+                        : 'bg-zinc-800/80 text-zinc-300 hover:bg-zinc-700 hover:scale-105'
                     }`}
                   >
-                    {action.icon} {action.name}
+                    {action.name}
                   </button>
                 ))}
               </div>
 
               {/* Category Filter */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {categories.map((cat) => (
                   <button
                     key={cat.id}
                     onClick={() => setSelectedCategory(cat.id)}
-                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                       selectedCategory === cat.id
-                        ? 'bg-purple-600 text-white'
-                        : 'bg-zinc-800/50 text-zinc-400 hover:bg-zinc-700'
+                        ? 'bg-purple-600 text-white shadow-md shadow-purple-500/30 scale-105'
+                        : 'bg-zinc-800/60 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-300'
                     }`}
                   >
                     {cat.name}
@@ -218,20 +203,25 @@ export default function Home() {
             </div>
 
             {/* Items Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 mb-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-8">
               {displayedItems.length === 0 ? (
-                <div className="col-span-full text-center py-8">
-                  <p className="text-lg text-zinc-400 mb-3">No items found matching your filters.</p>
-                  <button
-                    onClick={() => {
-                      setSearchQuery('');
-                      setSelectedCategory('all');
-                      setSelectedAction('all');
-                    }}
-                    className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors text-sm"
-                  >
-                    Clear All Filters
-                  </button>
+                <div className="col-span-full text-center py-16">
+                  <div className="max-w-md mx-auto">
+                    <svg className="w-16 h-16 text-zinc-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p className="text-xl text-zinc-400 mb-4">No items found matching your filters.</p>
+                    <button
+                      onClick={() => {
+                        setSearchQuery('');
+                        setSelectedCategory('all');
+                        setSelectedAction('all');
+                      }}
+                      className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all shadow-lg hover:scale-105"
+                    >
+                      Clear All Filters
+                    </button>
+                  </div>
                 </div>
               ) : (
                 displayedItems.map((item) => {
@@ -239,42 +229,48 @@ export default function Home() {
                   return (
                     <div
                       key={item.id}
-                      className="bg-zinc-900 border-2 border-zinc-800 rounded-lg p-3 hover:border-zinc-600 hover:scale-105 transition-all duration-300"
+                      className="group bg-gradient-to-b from-zinc-900 to-zinc-900/50 border-2 rounded-xl p-4 hover:scale-105 transition-all duration-300 hover:shadow-xl"
                       style={{
                         borderColor: item.rarity === 'epic' ? 'rgb(168, 85, 247)' :
                                    item.rarity === 'rare' ? 'rgb(59, 130, 246)' :
                                    item.rarity === 'uncommon' ? 'rgb(16, 185, 129)' :
-                                   'rgb(156, 163, 175)'
+                                   'rgb(82, 82, 91)',
+                        boxShadow: `0 0 20px ${
+                          item.rarity === 'epic' ? 'rgba(168, 85, 247, 0.1)' :
+                          item.rarity === 'rare' ? 'rgba(59, 130, 246, 0.1)' :
+                          item.rarity === 'uncommon' ? 'rgba(16, 185, 129, 0.1)' :
+                          'transparent'
+                        }`
                       }}
                     >
                       {/* Item Image */}
-                      <div className="flex justify-center mb-3">
+                      <div className="flex justify-center mb-3 relative">
                         <ItemImage
                           src={item.image}
                           alt={item.name}
-                          width={64}
-                          height={64}
+                          width={80}
+                          height={80}
                           rarity={item.rarity}
-                          className="rounded-lg"
+                          className="rounded-lg group-hover:scale-110 transition-transform duration-300"
                         />
                       </div>
 
-                      <div className="flex items-start justify-between mb-2">
+                      <div className="flex items-start justify-between mb-2 gap-2">
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-bold text-white text-sm mb-0.5 leading-tight">{item.name}</h3>
-                          <p className={`text-xs font-bold uppercase ${getRarityColor(item.rarity)}`}>
+                          <h3 className="font-bold text-white text-sm mb-1 leading-tight line-clamp-2">{item.name}</h3>
+                          <p className={`text-xs font-bold uppercase tracking-wide ${getRarityColor(item.rarity)}`}>
                             {item.rarity}
                           </p>
                         </div>
-                        <div className={`px-2 py-0.5 rounded text-xs font-bold ${actionBadge.bg} ${actionBadge.text} ${actionBadge.border} ml-1 flex-shrink-0`}>
+                        <div className={`px-2.5 py-1 rounded-lg text-xs font-bold ${actionBadge.bg} ${actionBadge.text} border ${actionBadge.border} flex-shrink-0 shadow-sm`}>
                           {actionBadge.icon}
                         </div>
                       </div>
-                      <p className="text-xs text-zinc-400 mb-2 line-clamp-2 leading-relaxed">
+                      <p className="text-xs text-zinc-400 mb-3 line-clamp-2 leading-relaxed">
                         {item.description}
                       </p>
-                      <div className="flex items-center justify-center pt-2 border-t border-zinc-800">
-                        <span className="text-yellow-300 font-bold text-xs">{new Intl.NumberFormat('en-US').format(item.value)} CR</span>
+                      <div className="flex items-center justify-center pt-3 border-t border-zinc-800/50">
+                        <span className="text-yellow-400 font-bold text-sm">{new Intl.NumberFormat('en-US').format(item.value)} CR</span>
                       </div>
                     </div>
                   );
@@ -283,23 +279,28 @@ export default function Home() {
             </div>
 
             {/* Results Info and Load More */}
-            <div className="hidden text-center space-y-3">
-              <p className="text-zinc-400 text-sm">
-                Showing {displayedItems.length} of {filteredItems.length} items
+            <div className="text-center space-y-4 pt-4">
+              <p className="text-zinc-400 text-base">
+                Showing <span className="text-white font-semibold">{displayedItems.length}</span> of <span className="text-white font-semibold">{filteredItems.length}</span> items
                 {filteredItems.length < items.length && ` (${items.length} total)`}
               </p>
 
               {hasMoreItems && (
                 <button
                   onClick={() => setDisplayLimit(prev => prev + 24)}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-lg transition-all"
+                  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-500/50 hover:scale-105"
                 >
                   Load More Items
                 </button>
               )}
 
               {!hasMoreItems && filteredItems.length > 0 && (
-                <p className="text-green-400 font-medium text-sm">All items loaded</p>
+                <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-900/30 border border-green-700 rounded-xl">
+                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-green-400 font-semibold">All items loaded</span>
+                </div>
               )}
             </div>
           </div>
