@@ -102,15 +102,30 @@ export default function Home() {
         }}
       />
 
+      {/* Hero Section with H1 for SEO */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 via-black to-black py-12 md:py-16 border-b border-zinc-800">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto text-center space-y-4">
+            {/* Main H1 Title - Required for SEO */}
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                Arc Raiders Cheat Sheet
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+              Master Arc Raiders with our comprehensive cheat sheet. Discover what items to keep, sell, or recycle for optimal progression.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Interactive Item Database Section - PRIMARY CONTENT */}
-      <section id="items" className="py-12 md:py-16 bg-black">
+      <section id="items" className="py-8 md:py-12 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-              <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Interactive Item Database
-              </span>
-            </h2>
             <p className="text-center text-zinc-400 text-base md:text-lg mb-8 max-w-3xl mx-auto">
               Search and filter all {items.length} Arc Raiders items. Instantly discover what to keep, sell, or recycle.
             </p>
