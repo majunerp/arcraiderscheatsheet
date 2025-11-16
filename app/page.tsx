@@ -127,7 +127,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "WebApplication",
             "name": "Arc Raiders Cheat Sheet",
-            "description": "Complete Arc Raiders cheat sheet with interactive item database, quest tracker, and crafting recipes. Learn what to keep, sell, or recycle.",
+            "description": "Complete Arc Raiders Cheat Sheet with interactive item database, quest tracker, and crafting recipes. Learn what to keep, sell, or recycle.",
             "url": "https://arcraiderscheatsheet.org",
             "applicationCategory": "GameApplication",
             "offers": {
@@ -163,58 +163,58 @@ export default function Home() {
 
             {/* Description */}
             <p className="text-base md:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed">
-              Master Arc Raiders with our comprehensive cheat sheet. Discover what items to keep, sell, or recycle for optimal progression.
+              Master Arc Raiders faster with this compact Arc Raiders Cheat Sheet and know exactly what to keep, sell, or recycle.
             </p>
           </div>
         </div>
       </section>
 
       {/* Interactive Item Database Section - PRIMARY CONTENT */}
-      <section id="items" className="py-4 md:py-6 bg-black">
+      <section
+        id="items"
+        className="relative -mt-10 md:-mt-16 lg:-mt-20 pt-16 pb-12 bg-black"
+      >
         <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <p className="text-center text-zinc-400 text-sm md:text-base mb-4 max-w-3xl mx-auto">
-              Search and filter all {items.length} Arc Raiders items. Instantly discover what to keep, sell, or recycle.
-            </p>
-
+          <div className="max-w-7xl mx-auto space-y-6">
             {/* Search and Filters */}
-            <div className="mb-6 space-y-3">
+            <div className="space-y-6 rounded-3xl border border-white/5 bg-gradient-to-br from-zinc-900 via-black to-zinc-900/80 p-6 md:p-8 shadow-[0_25px_80px_rgba(0,0,0,0.45)]">
+              <p className="text-center text-zinc-300 text-sm md:text-base max-w-2xl mx-auto">
+                Search and filter all {items.length} Arc Raiders items. Instantly discover what to keep, sell, or recycle.
+              </p>
               {/* Search Bar */}
-                <div className="relative max-w-2xl mx-auto group">
-                  {/* Multiple glow layers for stronger effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 rounded-2xl opacity-75 blur-md group-focus-within:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-500 rounded-2xl opacity-60 blur group-focus-within:opacity-90 transition-opacity duration-300"></div>
+              <div className="relative max-w-2xl mx-auto group">
+                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 opacity-70 blur-md group-focus-within:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-blue-600 via-purple-500 to-blue-500 opacity-60 blur group-focus-within:opacity-90 transition-opacity duration-300"></div>
 
-                  <div className="relative">
-                    <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] group-focus-within:text-yellow-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                    <input
-                      type="text"
-                      placeholder="Search for items, materials, or components..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      aria-label="Search Arc Raiders items"
-                      className="w-full pl-14 pr-12 py-4 bg-zinc-900/95 backdrop-blur-sm border-2 border-yellow-500/40 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:border-yellow-400/70 focus:bg-zinc-900 focus:shadow-[0_0_20px_rgba(250,204,21,0.3)] transition-all duration-300 shadow-xl"
-                    />
-                    {searchQuery && (
-                      <button
-                        type="button"
-                        onClick={() => setSearchQuery('')}
-                        aria-label="Clear search"
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white bg-zinc-800/70 hover:bg-zinc-700 rounded-full p-1.5 transition-colors"
-                      >
-                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                          <line x1="18" y1="6" x2="6" y2="18" />
-                          <line x1="6" y1="6" x2="18" y2="18" />
-                        </svg>
-                      </button>
-                    )}
-                  </div>
+                <div className="relative">
+                  <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-blue-200 drop-shadow-[0_0_8px_rgba(59,130,246,0.7)] group-focus-within:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                  <input
+                    type="text"
+                    placeholder="Search for items, materials, or components..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    aria-label="Search Arc Raiders items"
+                    className="w-full pl-14 pr-12 py-4 bg-zinc-950/90 backdrop-blur-sm border-2 border-blue-500/40 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:border-blue-400/70 focus:bg-zinc-900 focus:shadow-[0_0_25px_rgba(59,130,246,0.35)] transition-all duration-300 shadow-xl"
+                  />
+                  {searchQuery && (
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery('')}
+                      aria-label="Clear search"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white bg-zinc-800/70 hover:bg-zinc-700 rounded-full p-1.5 transition-colors"
+                    >
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                      </svg>
+                    </button>
+                  )}
                 </div>
-
+              </div>
               {/* Quick Action Filters */}
-              <div className="flex flex-wrap gap-2 justify-center">
+              <div className="flex flex-wrap gap-3 justify-center">
                   {actions.map((action) => (
                     <button
                       key={action.id}
@@ -233,7 +233,7 @@ export default function Home() {
               </div>
 
               {/* Category Filter */}
-              <div className="flex flex-wrap gap-2 justify-center">
+              <div className="flex flex-wrap gap-3 justify-center">
                 {categories.map((cat) => (
                   <button
                     key={cat.id}
@@ -412,7 +412,10 @@ export default function Home() {
 
       {/* Stats Section - Moved below items */}
       <section className="py-8 bg-zinc-900/50 border-y border-zinc-800">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 space-y-4 text-center">
+          <p className="text-zinc-300 text-sm md:text-base max-w-3xl mx-auto">
+            These live stats prove how expansive the Arc Raiders Cheat Sheet is, covering loot, quests, and hideout upgrades in one continually updated hub.
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-500">{stats.totalItems}+</div>
@@ -442,14 +445,14 @@ export default function Home() {
               Complete Arc Raiders Cheat Sheet for Loot Management
             </h2>
             <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              Welcome to the most comprehensive Arc Raiders cheat sheet available online. Our Arc Raiders guide helps players make informed decisions about every item they encounter in the game. Whether you're a beginner learning the basics or an experienced raider optimizing your hideout, this Arc Raiders cheat sheet provides essential information for successful gameplay.
+              Welcome to the most comprehensive Arc Raiders Cheat Sheet available online. Our Arc Raiders guide helps players make informed decisions about every item they encounter in the game. Whether you're a beginner learning the basics or an experienced raider optimizing your hideout, this Arc Raiders Cheat Sheet provides essential information for successful gameplay.
             </p>
 
             <h3 className="text-2xl font-bold text-white mt-8 mb-4">
               Understanding Arc Raiders Loot System
             </h3>
             <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              The Arc Raiders loot system revolves around three critical decisions: keep, sell, or recycle. Every item you find in Arc Raiders serves a specific purpose, and knowing which action to take can significantly impact your progression. Our Arc Raiders cheat sheet categorizes all items based on their optimal use, helping you maximize your inventory efficiency and resource management.
+              The Arc Raiders loot system revolves around three critical decisions: keep, sell, or recycle. Every item you find in Arc Raiders serves a specific purpose, and knowing which action to take can significantly impact your progression. Our Arc Raiders Cheat Sheet categorizes all items based on their optimal use, helping you maximize your inventory efficiency and resource management.
             </p>
 
             <h3 className="text-2xl font-bold text-white mt-8 mb-4">
@@ -463,21 +466,21 @@ export default function Home() {
               Crafting Materials and Workshop Guide
             </h3>
             <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              Crafting in Arc Raiders requires specific materials that can be found, purchased, or obtained through recycling. Our Arc Raiders cheat sheet lists all crafting materials, from common items like wires and batteries to rare components like ARC Alloy and Exodus Modules. Understanding which Arc Raiders crafting materials to stockpile ensures you're always prepared for weapon modifications, armor upgrades, and hideout construction projects.
+              Crafting in Arc Raiders requires specific materials that can be found, purchased, or obtained through recycling. Our Arc Raiders Cheat Sheet lists all crafting materials, from common items like wires and batteries to rare components like ARC Alloy and Exodus Modules. Understanding which Arc Raiders crafting materials to stockpile ensures you're always prepared for weapon modifications, armor upgrades, and hideout construction projects.
             </p>
 
             <h3 className="text-2xl font-bold text-white mt-8 mb-4">
               Recycling Strategy for Maximum Efficiency
             </h3>
             <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              Recycling is a core mechanic in Arc Raiders that converts unwanted items into valuable crafting materials. Our Arc Raiders recycling guide shows exactly what each item breaks down into, helping you decide whether to recycle or sell. Items like broken electronics, damaged ARC components, and household objects can be recycled for essential materials. The Arc Raiders cheat sheet includes detailed recycling chains, showing you the most efficient paths to obtain specific crafting components.
+              Recycling is a core mechanic in Arc Raiders that converts unwanted items into valuable crafting materials. Our Arc Raiders recycling guide shows exactly what each item breaks down into, helping you decide whether to recycle or sell. Items like broken electronics, damaged ARC components, and household objects can be recycled for essential materials. The Arc Raiders Cheat Sheet includes detailed recycling chains, showing you the most efficient paths to obtain specific crafting components.
             </p>
 
             <h3 className="text-2xl font-bold text-white mt-8 mb-4">
               ARC Parts: The Most Valuable Loot
             </h3>
             <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              ARC parts are the most sought-after items in Arc Raiders, dropped by defeated ARC units. These Arc Raiders items include specialized components like Hornet Drivers, Wasp Drivers, Snitch Scanners, and Spotter Relays. Each ARC part serves specific purposes in hideout upgrades and advanced crafting. Our Arc Raiders cheat sheet provides complete information on where to find these parts, their value, and their uses in the workshop and crafting system.
+              ARC parts are the most sought-after items in Arc Raiders, dropped by defeated ARC units. These Arc Raiders items include specialized components like Hornet Drivers, Wasp Drivers, Snitch Scanners, and Spotter Relays. Each ARC part serves specific purposes in hideout upgrades and advanced crafting. Our Arc Raiders Cheat Sheet provides complete information on where to find these parts, their value, and their uses in the workshop and crafting system.
             </p>
 
             <h3 className="text-2xl font-bold text-white mt-8 mb-4">
@@ -491,14 +494,14 @@ export default function Home() {
               Advanced Tips for Arc Raiders Players
             </h3>
             <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              Experienced Arc Raiders players know that efficient loot management is key to success. Our Arc Raiders cheat sheet includes advanced strategies for inventory optimization, priority item lists for different playstyles, and farming routes for specific materials. Whether you're focusing on PvP combat, PvE missions, or hideout development, this Arc Raiders guide provides tailored recommendations to support your gameplay objectives.
+              Experienced Arc Raiders players know that efficient loot management is key to success. Our Arc Raiders Cheat Sheet includes advanced strategies for inventory optimization, priority item lists for different playstyles, and farming routes for specific materials. Whether you're focusing on PvP combat, PvE missions, or hideout development, this Arc Raiders guide provides tailored recommendations to support your gameplay objectives.
             </p>
 
             <h3 className="text-2xl font-bold text-white mt-8 mb-4">
               Stay Updated with Arc Raiders Meta
             </h3>
             <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              The Arc Raiders meta evolves with each update, introducing new items, quests, and crafting recipes. Our Arc Raiders cheat sheet is regularly updated to reflect the latest game changes, ensuring you always have accurate information. Bookmark this Arc Raiders guide and check back frequently for new content, updated item values, and fresh strategies to stay ahead of the competition.
+              The Arc Raiders meta evolves with each update, introducing new items, quests, and crafting recipes. Our Arc Raiders Cheat Sheet is regularly updated to reflect the latest game changes, ensuring you always have accurate information. Bookmark this Arc Raiders guide and check back frequently for new content, updated item values, and fresh strategies to stay ahead of the competition.
             </p>
           </div>
         </div>
@@ -511,7 +514,7 @@ export default function Home() {
             Ready to Master Arc Raiders?
           </h2>
           <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-            Explore our complete quest guides and crafting recipes to optimize your Arc Raiders gameplay.
+            Explore our Arc Raiders Cheat Sheet quest guides and crafting recipes to optimize every run, then share the Arc Raiders Cheat Sheet with your squad for faster upgrades.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -532,3 +535,6 @@ export default function Home() {
     </div>
   );
 }
+
+
+
