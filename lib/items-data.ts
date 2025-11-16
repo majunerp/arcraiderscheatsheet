@@ -1,3 +1,5 @@
+import { generatedMissingItems } from './generated-missing-items';
+
 export interface Item {
   id: string;
   name: string;
@@ -11,7 +13,7 @@ export interface Item {
   recyclesInto?: string[];
 }
 
-export const items: Item[] = [
+const baseItems: Item[] = [
   // ARC Parts - Keep for Quests/Crafting
   {
     id: 'leaper_pulse_unit',
@@ -669,6 +671,8 @@ export const items: Item[] = [
     recyclesInto: ['Fabric', 'Metal Parts'],
   },
 ];
+
+export const items: Item[] = [...baseItems, ...(generatedMissingItems as Item[])];
 
 export const categories = [
   { id: 'all', name: 'All Items', count: items.length },

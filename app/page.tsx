@@ -6,19 +6,79 @@ import Script from "next/script";
 import { items, categories } from "@/lib/items-data";
 import { ItemImage } from "@/components/ItemImage";
 
+const categoryMeta = {
+  arc_parts: {
+    label: 'ARC Parts',
+    summary: 'Quest-critical ARC tech salvaged from mechanized threats.',
+    accent: 'text-cyan-300',
+  },
+  crafting_materials: {
+    label: 'Crafting Materials',
+    summary: 'Rare ingredients for high-end workshop upgrades.',
+    accent: 'text-emerald-300',
+  },
+  quest_items: {
+    label: 'Quest Items',
+    summary: 'Story progression requirements — don’t dismantle them.',
+    accent: 'text-purple-300',
+  },
+  recyclable: {
+    label: 'Recyclable',
+    summary: 'Break these down for raw resources and hideout upkeep.',
+    accent: 'text-sky-300',
+  },
+  consumables: {
+    label: 'Consumables',
+    summary: 'Quick-use boosts to keep squads alive mid-encounter.',
+    accent: 'text-amber-300',
+  },
+} as const;
+
+const actionMeta = {
+  keep: {
+    short: 'KEEP',
+    title: 'Keep & Upgrade',
+    summary: 'Best stored for hideout upgrades or late-game crafting.',
+    badge: 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/40',
+    highlight: 'High Priority Inventory',
+  },
+  sell: {
+    short: 'SELL',
+    title: 'Sell for Credits',
+    summary: 'Safe to liquidate at traders for extra Arc Credits.',
+    badge: 'bg-amber-500/10 text-amber-300 border border-amber-400/40',
+    highlight: 'Trader-Friendly Loot',
+  },
+  recycle: {
+    short: 'RECYCLE',
+    title: 'Recycle Efficiently',
+    summary: 'Dismantle for guaranteed crafting components.',
+    badge: 'bg-blue-500/10 text-blue-300 border border-blue-400/40',
+    highlight: 'Resource Conversion Pick',
+  },
+} as const;
+
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedAction, setSelectedAction] = useState('all');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [displayLimit, setDisplayLimit] = useState(24); // Show 24 items initially
 
-  const featuredItems = items.slice(0, 6);
   const stats = {
     totalItems: items.length,
     arcParts: items.filter(i => i.category === 'arc_parts').length,
     questItems: items.filter(i => i.category === 'quest_items').length,
     craftingMaterials: items.filter(i => i.category === 'crafting_materials').length,
   };
+
+  const actions = [
+    { id: 'all', name: 'All Actions', helper: 'Show every item' },
+    { id: 'keep', name: 'Keep Priority', helper: 'Quest or upgrade essentials' },
+    { id: 'sell', name: 'Sell for Credits', helper: 'Safe vendor fodder' },
+    { id: 'recycle', name: 'Recycle for Parts', helper: 'Break down for materials' },
+  ] as const;
+
+  const creditFormatter = useMemo(() => new Intl.NumberFormat('en-US'), []);
 
   const filteredItems = useMemo(() => {
     let filtered = items;
@@ -54,19 +114,6 @@ export default function Home() {
       legendary: 'text-yellow-400',
     };
     return colors[rarity as keyof typeof colors] || 'text-zinc-400';
-  };
-
-  
-  // Clean action badge mapping to avoid any encoding issues
-  
-  // Clean action badge mapping (ASCII-only icons)
-  const badgeForAction = (action: string) => {
-    const badges = {
-      keep: { bg: 'bg-green-900/30', text: 'text-green-400', border: 'border-green-700', icon: '*' },
-      sell: { bg: 'bg-yellow-900/30', text: 'text-yellow-400', border: 'border-yellow-700', icon: '$' },
-      recycle: { bg: 'bg-blue-900/30', text: 'text-blue-400', border: 'border-blue-700', icon: 'R' },
-    } as const;
-    return (badges as any)[action as keyof typeof badges] || badges.keep;
   };
 
   return (
@@ -133,31 +180,53 @@ export default function Home() {
             {/* Search and Filters */}
             <div className="mb-6 space-y-3">
               {/* Search Bar */}
-              <div className="relative max-w-2xl mx-auto">
-                <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <input
-                  type="text"
-                  placeholder="Search for items, materials, or components..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-5 py-3 bg-zinc-900/80 border-2 border-zinc-700 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:bg-zinc-900 transition-all"
-                />
-              </div>
+                <div className="relative max-w-2xl mx-auto group">
+                  {/* Multiple glow layers for stronger effect */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 rounded-2xl opacity-75 blur-md group-focus-within:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-500 rounded-2xl opacity-60 blur group-focus-within:opacity-90 transition-opacity duration-300"></div>
+
+                  <div className="relative">
+                    <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] group-focus-within:text-yellow-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input
+                      type="text"
+                      placeholder="Search for items, materials, or components..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      aria-label="Search Arc Raiders items"
+                      className="w-full pl-14 pr-12 py-4 bg-zinc-900/95 backdrop-blur-sm border-2 border-yellow-500/40 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:border-yellow-400/70 focus:bg-zinc-900 focus:shadow-[0_0_20px_rgba(250,204,21,0.3)] transition-all duration-300 shadow-xl"
+                    />
+                    {searchQuery && (
+                      <button
+                        type="button"
+                        onClick={() => setSearchQuery('')}
+                        aria-label="Clear search"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white bg-zinc-800/70 hover:bg-zinc-700 rounded-full p-1.5 transition-colors"
+                      >
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                          <line x1="18" y1="6" x2="6" y2="18" />
+                          <line x1="6" y1="6" x2="18" y2="18" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+                </div>
 
               {/* Quick Action Filters */}
               <div className="flex flex-wrap gap-2 justify-center">
-                {actions.map((action) => (
-                  <button
-                    key={action.id}
-                    onClick={() => setSelectedAction(action.id)}
-                    className={`px-5 py-2 rounded-xl font-bold transition-all duration-200 text-sm ${
-                      selectedAction === action.id
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 scale-105'
-                        : 'bg-zinc-800/80 text-zinc-300 hover:bg-zinc-700 hover:scale-105'
-                    }`}
-                  >
+                  {actions.map((action) => (
+                    <button
+                      key={action.id}
+                      onClick={() => setSelectedAction(action.id)}
+                      title={action.helper}
+                      aria-label={`Filter by ${action.name}`}
+                      className={`px-5 py-2 rounded-xl font-bold transition-all duration-200 text-sm ${
+                        selectedAction === action.id
+                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 scale-105'
+                          : 'bg-zinc-800/80 text-zinc-300 hover:bg-zinc-700 hover:scale-105'
+                      }`}
+                    >
                     {action.name}
                   </button>
                 ))}
@@ -182,7 +251,7 @@ export default function Home() {
             </div>
 
             {/* Items Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-6">
               {displayedItems.length === 0 ? (
                 <div className="col-span-full text-center py-16">
                   <div className="max-w-md mx-auto">
@@ -204,54 +273,109 @@ export default function Home() {
                 </div>
               ) : (
                 displayedItems.map((item) => {
-                  const actionBadge = badgeForAction(item.action);
+                  const actionInfo =
+                    actionMeta[item.action as keyof typeof actionMeta] ?? actionMeta.keep;
+                  const categoryInfo =
+                    categoryMeta[item.category as keyof typeof categoryMeta] ?? {
+                      label: 'Arc Loot',
+                      summary: 'General purpose equipment.',
+                      accent: 'text-slate-300',
+                    };
+
                   return (
-                    <div
+                    <article
                       key={item.id}
-                      className="group bg-gradient-to-b from-zinc-900 to-zinc-900/50 border-2 rounded-xl p-4 hover:scale-105 transition-all duration-300 hover:shadow-xl"
-                      style={{
-                        borderColor: item.rarity === 'epic' ? 'rgb(168, 85, 247)' :
-                                   item.rarity === 'rare' ? 'rgb(59, 130, 246)' :
-                                   item.rarity === 'uncommon' ? 'rgb(16, 185, 129)' :
-                                   'rgb(82, 82, 91)',
-                        boxShadow: `0 0 20px ${
-                          item.rarity === 'epic' ? 'rgba(168, 85, 247, 0.1)' :
-                          item.rarity === 'rare' ? 'rgba(59, 130, 246, 0.1)' :
-                          item.rarity === 'uncommon' ? 'rgba(16, 185, 129, 0.1)' :
-                          'transparent'
-                        }`
-                      }}
+                      className="group relative overflow-hidden rounded-2xl border-2 border-blue-500/30 bg-gradient-to-b from-zinc-900/95 to-black/95 shadow-xl shadow-black/60 transition-all duration-300 hover:border-blue-400/50 hover:shadow-blue-500/20"
+                      itemScope
+                      itemType="https://schema.org/Product"
                     >
-                      {/* Item Image */}
-                      <div className="flex justify-center mb-3 relative">
-                        <ItemImage
-                          src={item.image}
-                          alt={item.name}
-                          width={80}
-                          height={80}
-                          rarity={item.rarity}
-                          className="rounded-lg group-hover:scale-110 transition-transform duration-300"
-                        />
+                      <div
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.15),_transparent_60%)]"
+                        aria-hidden="true"
+                      ></div>
+
+                      <div className="relative z-10 flex flex-col h-full">
+                        {/* Header with item name and quantity badge */}
+                        <div className="flex items-start justify-between gap-2 p-4 pb-3 border-b border-zinc-800/50">
+                          <h3 itemProp="name" className="text-lg font-bold text-white leading-tight flex-1">
+                            {item.name}
+                          </h3>
+                          {item.rarity !== 'common' && (
+                            <span className={`px-2 py-1 text-[10px] font-bold uppercase rounded-md ${getRarityColor(item.rarity)} bg-black/40`}>
+                              {item.rarity}
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Image section */}
+                        <div className="flex items-center justify-center p-6 bg-gradient-to-b from-zinc-900/40 to-transparent">
+                          <div className="relative">
+                            <ItemImage
+                              src={item.image}
+                              alt={item.name}
+                              width={140}
+                              height={140}
+                              rarity={item.rarity}
+                              className="rounded-xl drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)]"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Action badge - centered */}
+                        <div className="px-4 pb-3">
+                          <div className={`w-full text-center py-2 px-4 rounded-lg font-bold text-sm ${actionInfo.badge}`}>
+                            {actionInfo.title}
+                          </div>
+                        </div>
+
+                        {/* Description */}
+                        {item.description && (
+                          <div className="px-4 pb-3">
+                            <p itemProp="description" className="text-sm text-zinc-300 leading-relaxed line-clamp-3">
+                              {item.description}
+                            </p>
+                          </div>
+                        )}
+
+                        {/* Bottom info section */}
+                        <div className="mt-auto px-4 pb-4 space-y-3">
+                          {/* Category */}
+                          <div className="rounded-lg border border-white/10 bg-white/5 p-3">
+                            <p className="text-[10px] uppercase tracking-wider text-zinc-500 mb-1">
+                              Category
+                            </p>
+                            <p className={`text-sm font-semibold ${categoryInfo.accent}`}>
+                              {categoryInfo.label}
+                            </p>
+                          </div>
+
+                          {/* Value */}
+                          <div className="flex items-center justify-center gap-2 py-2 bg-zinc-900/60 rounded-lg border border-zinc-800">
+                            <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            {item.value > 0 ? (
+                              <div
+                                className="flex items-baseline gap-1"
+                                itemProp="offers"
+                                itemScope
+                                itemType="https://schema.org/Offer"
+                              >
+                                <meta itemProp="priceCurrency" content="CR" />
+                                <span itemProp="price" className="text-xl font-bold text-amber-300">
+                                  {creditFormatter.format(item.value)}
+                                </span>
+                              </div>
+                            ) : (
+                              <span className="text-lg font-semibold text-zinc-400">TBD</span>
+                            )}
+                          </div>
+                        </div>
                       </div>
 
-                      <div className="flex items-start justify-between mb-2 gap-2">
-                        <div className="flex-1 min-w-0">
-                          <h3 className="font-bold text-white text-sm mb-1 leading-tight line-clamp-2">{item.name}</h3>
-                          <p className={`text-xs font-bold uppercase tracking-wide ${getRarityColor(item.rarity)}`}>
-                            {item.rarity}
-                          </p>
-                        </div>
-                        <div className={`px-2.5 py-1 rounded-lg text-xs font-bold ${actionBadge.bg} ${actionBadge.text} border ${actionBadge.border} flex-shrink-0 shadow-sm`}>
-                          {actionBadge.icon}
-                        </div>
-                      </div>
-                      <p className="text-xs text-zinc-400 mb-3 line-clamp-2 leading-relaxed">
-                        {item.description}
-                      </p>
-                      <div className="flex items-center justify-center pt-3 border-t border-zinc-800/50">
-                        <span className="text-yellow-400 font-bold text-sm">{new Intl.NumberFormat('en-US').format(item.value)} CR</span>
-                      </div>
-                    </div>
+                      <meta itemProp="image" content={item.image} />
+                      <meta itemProp="category" content={categoryInfo.label} />
+                    </article>
                   );
                 })
               )}
@@ -408,14 +532,3 @@ export default function Home() {
     </div>
   );
 }
-  
-  
-  // Actions list (ASCII-only icons to avoid encoding issues)
-  const actions = [
-    { id: 'all', name: 'All Actions', icon: 'ALL' },
-    { id: 'keep', name: 'Keep', icon: 'KEEP', color: 'green' },
-    { id: 'sell', name: 'Sell', icon: 'SELL', color: 'yellow' },
-    { id: 'recycle', name: 'Recycle', icon: 'RECYCLE', color: 'blue' },
-  ];
-
-

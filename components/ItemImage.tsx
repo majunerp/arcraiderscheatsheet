@@ -46,29 +46,20 @@ export function ItemImage({
 
   const computedSrc = src || `/items/${normalizeName(alt)}.png`;
 
-  // If image fails to load, show placeholder
+  // If image fails to load, show "No image" placeholder
   if (imageError) {
-    const bgColor = rarityColors[rarity];
-    const initials = alt
-      .split(' ')
-      .map(word => word[0])
-      .join('')
-      .slice(0, 2)
-      .toUpperCase();
-
     return (
       <div
-        className={`flex items-center justify-center font-bold text-white ${className}`}
+        className={`flex flex-col items-center justify-center ${className}`}
         style={{
           width: `${width}px`,
           height: `${height}px`,
-          backgroundColor: bgColor,
+          backgroundColor: '#1a1a2e',
           borderRadius: '8px',
-          fontSize: `${width / 3}px`,
         }}
         title={`${alt} (Image not available)`}
       >
-        {initials}
+        <span className="text-zinc-500 text-xs font-medium">No image</span>
       </div>
     );
   }
