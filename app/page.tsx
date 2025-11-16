@@ -163,7 +163,7 @@ export default function Home() {
 
             {/* Description */}
             <p className="text-sm md:text-base text-zinc-300 max-w-3xl mx-auto leading-relaxed">
-              Master Arc Raiders faster with this compact Arc Raiders Cheat Sheet and know exactly what to keep, sell, or recycle.
+              Master Arc Raiders faster with this Arc Raiders Cheat Sheet and know exactly what to keep, sell, or recycle.
             </p>
           </div>
         </div>
