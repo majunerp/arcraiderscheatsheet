@@ -150,10 +150,10 @@ export default function Home() {
       />
 
       {/* Hero Section with H1 for SEO */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 via-black to-black py-6 md:py-8 border-b border-zinc-800">
+      <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 via-black to-black py-4 md:py-6 border-b border-zinc-800">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto text-center space-y-2">
+          <div className="max-w-6xl mx-auto text-center space-y-1.5">
             {/* Main H1 Title - Required for SEO */}
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -162,7 +162,7 @@ export default function Home() {
             </h1>
 
             {/* Description */}
-            <p className="text-base md:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base text-zinc-300 max-w-3xl mx-auto leading-relaxed">
               Master Arc Raiders faster with this compact Arc Raiders Cheat Sheet and know exactly what to keep, sell, or recycle.
             </p>
           </div>
@@ -172,12 +172,12 @@ export default function Home() {
       {/* Interactive Item Database Section - PRIMARY CONTENT */}
       <section
         id="items"
-        className="relative -mt-10 md:-mt-16 lg:-mt-20 pt-16 pb-12 bg-black"
+        className="relative -mt-14 md:-mt-20 lg:-mt-24 pt-10 pb-10 bg-black"
       >
         <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto space-y-6">
+          <div className="max-w-7xl mx-auto space-y-4">
             {/* Search and Filters */}
-            <div className="space-y-6 rounded-3xl border border-white/5 bg-gradient-to-br from-zinc-900 via-black to-zinc-900/80 p-6 md:p-8 shadow-[0_25px_80px_rgba(0,0,0,0.45)]">
+            <div className="space-y-5 rounded-3xl border border-white/5 bg-gradient-to-br from-zinc-900 via-black to-zinc-900/80 p-5 md:p-6 shadow-[0_18px_60px_rgba(0,0,0,0.45)]">
               <p className="text-center text-zinc-300 text-sm md:text-base max-w-2xl mx-auto">
                 Search and filter all {items.length} Arc Raiders items. Instantly discover what to keep, sell, or recycle.
               </p>
@@ -214,7 +214,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Quick Action Filters */}
-              <div className="flex flex-wrap gap-3 justify-center">
+              <div className="flex flex-wrap gap-2 justify-center">
                   {actions.map((action) => (
                     <button
                       key={action.id}
@@ -233,7 +233,7 @@ export default function Home() {
               </div>
 
               {/* Category Filter */}
-              <div className="flex flex-wrap gap-3 justify-center">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {categories.map((cat) => (
                   <button
                     key={cat.id}
@@ -251,7 +251,7 @@ export default function Home() {
             </div>
 
             {/* Items Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 mb-4">
               {displayedItems.length === 0 ? (
                 <div className="col-span-full text-center py-16">
                   <div className="max-w-md mx-auto">
@@ -285,7 +285,7 @@ export default function Home() {
                   return (
                     <article
                       key={item.id}
-                      className="group relative overflow-hidden rounded-2xl border-2 border-blue-500/30 bg-gradient-to-b from-zinc-900/95 to-black/95 shadow-xl shadow-black/60 transition-all duration-300 hover:border-blue-400/50 hover:shadow-blue-500/20"
+                      className="group relative overflow-hidden rounded-2xl border border-blue-500/25 bg-gradient-to-b from-zinc-900/90 to-black/90 shadow-lg shadow-black/50 transition-all duration-300 hover:border-blue-400/40 hover:shadow-blue-500/20"
                       itemScope
                       itemType="https://schema.org/Product"
                     >
@@ -296,25 +296,25 @@ export default function Home() {
 
                       <div className="relative z-10 flex flex-col h-full">
                         {/* Header with item name and quantity badge */}
-                        <div className="flex items-start justify-between gap-2 p-4 pb-3 border-b border-zinc-800/50">
-                          <h3 itemProp="name" className="text-lg font-bold text-white leading-tight flex-1">
+                        <div className="flex items-start justify-between gap-2 px-3 py-2 border-b border-zinc-800/50">
+                          <h3 itemProp="name" className="text-base font-semibold text-white leading-tight flex-1">
                             {item.name}
                           </h3>
                           {item.rarity !== 'common' && (
-                            <span className={`px-2 py-1 text-[10px] font-bold uppercase rounded-md ${getRarityColor(item.rarity)} bg-black/40`}>
+                            <span className={`px-2 py-0.5 text-[10px] font-bold uppercase rounded-md ${getRarityColor(item.rarity)} bg-black/40`}>
                               {item.rarity}
                             </span>
                           )}
                         </div>
 
                         {/* Image section */}
-                        <div className="flex items-center justify-center p-6 bg-gradient-to-b from-zinc-900/40 to-transparent">
+                        <div className="flex items-center justify-center px-3 pt-4 pb-2 bg-gradient-to-b from-zinc-900/40 to-transparent">
                           <div className="relative">
                             <ItemImage
                               src={item.image}
                               alt={item.name}
-                              width={140}
-                              height={140}
+                              width={110}
+                              height={110}
                               rarity={item.rarity}
                               className="rounded-xl drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)]"
                             />
@@ -322,15 +322,15 @@ export default function Home() {
                         </div>
 
                         {/* Action badge - centered */}
-                        <div className="px-4 pb-3">
-                          <div className={`w-full text-center py-2 px-4 rounded-lg font-bold text-sm ${actionInfo.badge}`}>
+                        <div className="px-3 pb-3">
+                          <div className={`w-full text-center py-1.5 px-3 rounded-lg font-bold text-xs ${actionInfo.badge}`}>
                             {actionInfo.title}
                           </div>
                         </div>
 
                         {/* Description */}
                         {item.description && (
-                          <div className="px-4 pb-3">
+                          <div className="px-3 pb-3">
                             <p itemProp="description" className="text-sm text-zinc-300 leading-relaxed line-clamp-3">
                               {item.description}
                             </p>
@@ -338,9 +338,9 @@ export default function Home() {
                         )}
 
                         {/* Bottom info section */}
-                        <div className="mt-auto px-4 pb-4 space-y-3">
+                        <div className="mt-auto px-3 pb-3 space-y-2.5">
                           {/* Category */}
-                          <div className="rounded-lg border border-white/10 bg-white/5 p-3">
+                          <div className="rounded-lg border border-white/10 bg-white/5 p-2.5">
                             <p className="text-[10px] uppercase tracking-wider text-zinc-500 mb-1">
                               Category
                             </p>
@@ -350,7 +350,7 @@ export default function Home() {
                           </div>
 
                           {/* Value */}
-                          <div className="flex items-center justify-center gap-2 py-2 bg-zinc-900/60 rounded-lg border border-zinc-800">
+                          <div className="flex items-center justify-center gap-2 py-1.5 bg-zinc-900/60 rounded-lg border border-zinc-800">
                             <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
                             </svg>
