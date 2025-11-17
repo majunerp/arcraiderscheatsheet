@@ -157,8 +157,8 @@ export default function QuestsPage() {
   return (
     <div className="w-full min-h-screen bg-black">
       {/* Header Section */}
-      <section className="bg-gradient-to-b from-zinc-900 to-black py-12 border-b border-zinc-800">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-b from-zinc-900 to-black border-b border-zinc-800 pt-16 pb-12 md:pt-24 md:pb-16">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
               Arc Raiders Quest Guide
@@ -171,8 +171,8 @@ export default function QuestsPage() {
       </section>
 
       {/* Quests List */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="space-y-6">
             {quests.map((quest) => (
               <div
@@ -239,7 +239,7 @@ export default function QuestsPage() {
 
       {/* SEO Content */}
       <section className="py-16 bg-zinc-900/30 border-t border-zinc-800">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-5xl">
           <div className="prose prose-invert max-w-none">
             <h2 className="text-3xl font-bold text-white mb-6">
               Arc Raiders Quest Progression Guide

@@ -193,8 +193,8 @@ export default function WorkshopPage() {
   return (
     <div className="w-full min-h-screen bg-black">
       {/* Header Section */}
-      <section className="bg-gradient-to-b from-zinc-900 to-black py-12 border-b border-zinc-800">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-b from-zinc-900 to-black border-b border-zinc-800 pt-16 pb-12 md:pt-24 md:pb-16">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
               Arc Raiders Workshop & Crafting
@@ -207,8 +207,8 @@ export default function WorkshopPage() {
       </section>
 
       {/* Workshop Levels Info */}
-      <section className="py-8 bg-zinc-900/50">
-        <div className="container mx-auto px-4">
+      <section className="py-12 md:py-16 bg-zinc-900/50">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-2xl font-bold text-white mb-6">Workshop Levels</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-6">
@@ -237,8 +237,8 @@ export default function WorkshopPage() {
       </section>
 
       {/* Crafting Recipes */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl font-bold text-white mb-8">Crafting Recipes</h2>
           <div className="space-y-6">
             {craftingRecipes.map((recipe) => (
@@ -304,7 +304,7 @@ export default function WorkshopPage() {
 
       {/* SEO Content */}
       <section className="py-16 bg-zinc-900/30 border-t border-zinc-800">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-5xl">
           <div className="prose prose-invert max-w-none">
             <h2 className="text-3xl font-bold text-white mb-6">
               Arc Raiders Crafting System Guide
