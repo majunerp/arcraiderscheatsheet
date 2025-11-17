@@ -133,8 +133,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white min-h-screen flex flex-col`}
       >
         <Header />
-        <main className="flex-1">
-          {children}
+        <main className="flex-1 relative">
+          <div className="absolute inset-0 bg-center bg-repeat" style={{ backgroundImage: "url('/arcraiders.jpg?v=2')" }}></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/50"></div>
+          <div className="relative z-10">
+            {children}
+          </div>
         </main>
         <Footer />
       </body>

@@ -73,19 +73,13 @@ export default function Footer() {
 
           {/* Info */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-white">Info</h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="https://twitter.com/arcraiders"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-zinc-400 hover:text-white transition-colors"
-                >
-                  Official Twitter/X
-                </a>
-              </li>
-            </ul>
+            <h4 className="text-sm font-semibold text-white">Contact</h4>
+            <a
+              href="mailto:support@arcraiderscheatsheet.org"
+              className="text-sm text-zinc-400 hover:text-white transition-colors inline-block"
+            >
+              support@arcraiderscheatsheet.org
+            </a>
           </div>
         </div>
 

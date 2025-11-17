@@ -117,7 +117,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-black">
+    <div className="w-full min-h-screen">
       {/* Schema.org Structured Data for SEO */}
       <Script
         id="schema-structured-data"
@@ -150,7 +150,7 @@ export default function Home() {
       />
 
       {/* Hero Section with H1 for SEO */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 via-black to-black py-4 md:py-6 border-b border-zinc-800">
+      <section className="relative overflow-hidden py-4 md:py-6 border-b border-zinc-800/50">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto text-center space-y-1.5">
@@ -172,12 +172,12 @@ export default function Home() {
       {/* Interactive Item Database Section - PRIMARY CONTENT */}
       <section
         id="items"
-        className="relative -mt-14 md:-mt-20 lg:-mt-24 pt-10 pb-10 bg-black"
+        className="relative -mt-14 md:-mt-20 lg:-mt-24 pt-10 pb-10"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto space-y-4">
             {/* Search and Filters */}
-            <div className="space-y-5 rounded-3xl border border-white/5 bg-gradient-to-br from-zinc-900 via-black to-zinc-900/80 p-5 md:p-6 shadow-[0_18px_60px_rgba(0,0,0,0.45)]">
+            <div className="space-y-5 rounded-3xl border border-white/10 bg-black/30 backdrop-blur-md p-5 md:p-6 shadow-[0_18px_60px_rgba(0,0,0,0.45)]">
               <p className="text-center text-zinc-300 text-sm md:text-base max-w-2xl mx-auto">
                 Search and filter all {items.length} Arc Raiders items. Instantly discover what to keep, sell, or recycle.
               </p>
@@ -285,7 +285,7 @@ export default function Home() {
                   return (
                     <article
                       key={item.id}
-                      className="group relative overflow-hidden rounded-2xl border border-blue-500/25 bg-gradient-to-b from-zinc-900/90 to-black/90 shadow-lg shadow-black/50 transition-all duration-300 hover:border-blue-400/40 hover:shadow-blue-500/20"
+                      className="group relative overflow-hidden rounded-2xl border border-blue-500/25 bg-black/40 backdrop-blur-sm shadow-lg shadow-black/50 transition-all duration-300 hover:border-blue-400/40 hover:shadow-blue-500/20"
                       itemScope
                       itemType="https://schema.org/Product"
                     >
@@ -308,7 +308,7 @@ export default function Home() {
                         </div>
 
                         {/* Image section */}
-                        <div className="flex items-center justify-center px-3 pt-4 pb-2 bg-gradient-to-b from-zinc-900/40 to-transparent">
+                        <div className="flex items-center justify-center px-3 pt-4 pb-2 bg-gradient-to-b from-white/5 to-transparent">
                           <div className="relative">
                             <ItemImage
                               src={item.image}
@@ -340,7 +340,7 @@ export default function Home() {
                         {/* Bottom info section */}
                         <div className="mt-auto px-3 pb-3 space-y-2.5">
                           {/* Category */}
-                          <div className="rounded-lg border border-white/10 bg-white/5 p-2.5">
+                          <div className="rounded-lg border border-white/10 bg-black/20 backdrop-blur-sm p-2.5">
                             <p className="text-[10px] uppercase tracking-wider text-zinc-500 mb-1">
                               Category
                             </p>
@@ -350,7 +350,7 @@ export default function Home() {
                           </div>
 
                           {/* Value */}
-                          <div className="flex items-center justify-center gap-2 py-1.5 bg-zinc-900/60 rounded-lg border border-zinc-800">
+                          <div className="flex items-center justify-center gap-2 py-1.5 bg-black/30 backdrop-blur-sm rounded-lg border border-zinc-800/50">
                             <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
                             </svg>
@@ -411,7 +411,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section - Moved below items */}
-      <section className="py-8 bg-zinc-900/50 border-y border-zinc-800">
+      <section className="py-8 bg-black/40 backdrop-blur-sm border-y border-zinc-800/50">
         <div className="container mx-auto px-4 space-y-4 text-center">
           <p className="text-zinc-300 text-sm md:text-base max-w-3xl mx-auto">
             These live stats prove how expansive the Arc Raiders Cheat Sheet is, covering loot, quests, and hideout upgrades in one continually updated hub.
@@ -438,7 +438,7 @@ export default function Home() {
       </section>
 
       {/* Main Content - SEO Optimized */}
-      <section className="py-16 bg-black">
+      <section className="relative py-16 overflow-hidden">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="prose prose-invert max-w-none">
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -508,7 +508,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-purple-900/50">
+      <section className="py-20 bg-black/30 backdrop-blur-sm">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Master Arc Raiders?
