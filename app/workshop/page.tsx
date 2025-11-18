@@ -206,42 +206,42 @@ export default function WorkshopPage() {
       {/* Content Wrapper */}
       <div className="relative z-10">
         {/* Header Section */}
-        <section className="bg-gradient-to-b from-zinc-900/80 to-transparent border-b border-zinc-800 pt-16 pb-12 md:pt-24 md:pb-16">
+        <section className="bg-gradient-to-b from-slate-950/90 via-blue-950/50 to-transparent border-b-2 border-cyan-500/30 pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,229,255,0.6)]">
               Arc Raiders Workshop & Crafting
             </span>
           </h1>
-          <p className="text-xl text-zinc-300 max-w-3xl">
+          <p className="text-xl text-cyan-100/80 max-w-3xl">
             Complete Arc Raiders crafting guide with all workshop recipes, required materials, and upgrade paths. Learn how to craft powerful weapons, protective armor, and essential equipment for survival.
           </p>
         </div>
       </section>
 
       {/* Workshop Levels Info */}
-      <section className="py-12 md:py-16 bg-zinc-900/50">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-blue-950/30 to-slate-950/50">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-2xl font-bold text-white mb-6">Workshop Levels</h2>
+          <h2 className="text-2xl font-bold text-cyan-300 mb-6">Workshop Levels</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">Level 1</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Basic Crafting</h3>
-              <p className="text-zinc-400">
+            <div className="bg-slate-900/60 border-2 border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400/60 hover:shadow-[0_0_30px_rgba(0,229,255,0.2)] transition-all">
+              <div className="text-3xl font-bold text-cyan-400 mb-2 drop-shadow-[0_0_10px_rgba(0,229,255,0.5)]">Level 1</div>
+              <h3 className="text-xl font-semibold text-cyan-100 mb-2">Basic Crafting</h3>
+              <p className="text-cyan-100/70">
                 Unlock basic weapon and armor crafting. Essential for early game survival.
               </p>
             </div>
-            <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-6">
-              <div className="text-3xl font-bold text-blue-400 mb-2">Level 2</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Advanced Crafting</h3>
-              <p className="text-zinc-400">
+            <div className="bg-slate-900/60 border-2 border-blue-500/30 rounded-lg p-6 hover:border-blue-400/60 hover:shadow-[0_0_30px_rgba(0,132,255,0.2)] transition-all">
+              <div className="text-3xl font-bold text-blue-400 mb-2 drop-shadow-[0_0_10px_rgba(0,132,255,0.5)]">Level 2</div>
+              <h3 className="text-xl font-semibold text-cyan-100 mb-2">Advanced Crafting</h3>
+              <p className="text-cyan-100/70">
                 Access advanced weapons, energy rifles, and specialized equipment.
               </p>
             </div>
-            <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">Level 3</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Legendary Crafting</h3>
-              <p className="text-zinc-400">
+            <div className="bg-slate-900/60 border-2 border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400/60 hover:shadow-[0_0_30px_rgba(0,229,255,0.2)] transition-all">
+              <div className="text-3xl font-bold text-cyan-300 mb-2 drop-shadow-[0_0_10px_rgba(0,229,255,0.5)]">Level 3</div>
+              <h3 className="text-xl font-semibold text-cyan-100 mb-2">Legendary Crafting</h3>
+              <p className="text-cyan-100/70">
                 Craft legendary weapons and top-tier equipment using rare ARC technology.
               </p>
             </div>
@@ -252,50 +252,50 @@ export default function WorkshopPage() {
       {/* Crafting Recipes */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-3xl font-bold text-white mb-8">Crafting Recipes</h2>
+          <h2 className="text-3xl font-bold text-cyan-300 mb-8">Crafting Recipes</h2>
           <div className="space-y-6">
             {craftingRecipes.map((recipe) => (
               <div
                 key={recipe.id}
-                className="bg-zinc-900 border border-zinc-800 rounded-lg p-6 hover:border-blue-500 transition-colors"
+                className="bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 border-2 border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(0,229,255,0.3)] transition-all"
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{recipe.name}</h3>
+                    <h3 className="text-2xl font-bold text-cyan-50 mb-2">{recipe.name}</h3>
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-sm font-medium">
+                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-medium border border-cyan-500/40">
                         {recipe.category}
                       </span>
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                        recipe.tier === 'Basic' ? 'bg-green-900/30 text-green-400' :
-                        recipe.tier === 'Advanced' ? 'bg-blue-900/30 text-blue-400' :
-                        'bg-purple-900/30 text-purple-400'
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium border ${
+                        recipe.tier === 'Basic' ? 'bg-green-500/20 text-green-300 border-green-500/40' :
+                        recipe.tier === 'Advanced' ? 'bg-blue-500/20 text-blue-300 border-blue-500/40' :
+                        'bg-purple-500/20 text-purple-300 border-purple-500/40'
                       }`}>
                         {recipe.tier}
                       </span>
-                      <span className="px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full text-sm font-medium">
+                      <span className="px-3 py-1 bg-slate-900/60 text-cyan-200 rounded-full text-sm font-medium border border-cyan-500/30">
                         Workshop Level {recipe.workshopLevel}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-zinc-300 mb-6">{recipe.description}</p>
+                <p className="text-cyan-100/70 mb-6">{recipe.description}</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Required Materials */}
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Required Materials</h4>
+                    <h4 className="text-lg font-semibold text-cyan-200 mb-3">Required Materials</h4>
                     <div className="space-y-2">
                       {recipe.materials.map((material, index) => (
-                        <div key={index} className="flex items-center justify-between bg-zinc-800 rounded px-4 py-2">
+                        <div key={index} className="flex items-center justify-between bg-slate-900/60 border border-cyan-500/20 rounded px-4 py-2">
                           <Link
                             href={`/#items?search=${material.name}`}
-                            className="text-zinc-300 hover:text-blue-400 transition-colors"
+                            className="text-cyan-100/80 hover:text-cyan-300 transition-colors"
                           >
                             {material.name}
                           </Link>
-                          <span className="text-blue-400 font-medium">x{material.quantity}</span>
+                          <span className="text-cyan-400 font-medium">x{material.quantity}</span>
                         </div>
                       ))}
                     </div>
@@ -303,9 +303,9 @@ export default function WorkshopPage() {
 
                   {/* Output */}
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Crafting Output</h4>
-                    <div className="bg-green-900/20 border border-green-700 rounded-lg px-6 py-4">
-                      <div className="text-green-400 text-xl font-bold">{recipe.output}</div>
+                    <h4 className="text-lg font-semibold text-cyan-200 mb-3">Crafting Output</h4>
+                    <div className="bg-cyan-500/10 border-2 border-cyan-500/40 rounded-lg px-6 py-4 shadow-[0_0_20px_rgba(0,229,255,0.2)]">
+                      <div className="text-cyan-300 text-xl font-bold">{recipe.output}</div>
                     </div>
                   </div>
                 </div>
@@ -316,27 +316,27 @@ export default function WorkshopPage() {
       </section>
 
         {/* SEO Content */}
-        <section className="py-16 bg-zinc-900/30 border-t border-zinc-800">
+        <section className="py-16 bg-gradient-to-b from-blue-950/40 to-slate-950/60 border-t-2 border-cyan-500/20">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="prose prose-invert max-w-none">
-              <h2 className="text-3xl font-bold text-white mb-6">
+              <h2 className="text-3xl font-bold text-cyan-300 mb-6">
                 Arc Raiders Crafting System Guide
               </h2>
-              <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+              <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
                 The crafting system in Arc Raiders is essential for creating powerful weapons, protective armor, and useful equipment. This Arc Raiders workshop guide covers all crafting recipes, required materials, and workshop upgrade paths. Understanding the crafting system helps you prioritize which materials to collect and which items to craft first.
               </p>
 
-              <h3 className="text-2xl font-bold text-white mt-8 mb-4">
+              <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
                 Workshop Progression Strategy
               </h3>
-              <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+              <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
                 Upgrading your workshop in Arc Raiders unlocks increasingly powerful crafting options. Start with Workshop Level 1 for basic weapons and armor, progress to Level 2 for advanced energy weapons and specialized equipment, and reach Level 3 for legendary crafting using rare ARC technology. This Arc Raiders crafting guide recommends prioritizing workshop upgrades early to maximize your combat effectiveness.
               </p>
 
-              <h3 className="text-2xl font-bold text-white mt-8 mb-4">
+              <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
                 Material Collection Tips
               </h3>
-              <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+              <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
                 Efficient material collection is key to successful crafting in Arc Raiders. Common materials like metal parts, wires, and fabric can be found throughout the game world or obtained by recycling items. Rare materials like ARC Alloy, Exodus Modules, and Magnetic Accelerators require defeating specific enemies or completing quests. Use this Arc Raiders guide to plan your farming routes and prioritize high-value materials.
               </p>
             </div>

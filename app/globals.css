@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0e1a;
+  --foreground: #e0f2ff;
+  --accent-cyan: #00e5ff;
+  --accent-blue: #0084ff;
+  --accent-dark: #051428;
+  --glow-cyan: rgba(0, 229, 255, 0.5);
+  --glow-blue: rgba(0, 132, 255, 0.3);
 }
 
 @theme inline {
@@ -14,13 +19,36 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0e1a;
+    --foreground: #e0f2ff;
   }
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(135deg, #0a0e1a 0%, #051428 50%, #0a0e1a 100%);
+  background-attachment: fixed;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Futuristic glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px var(--glow-cyan), 0 0 40px var(--glow-cyan);
+}
+
+.glow-blue {
+  box-shadow: 0 0 15px var(--glow-blue), 0 0 30px var(--glow-blue);
+}
+
+/* Animated border gradient */
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 10px var(--glow-cyan);
+  }
+  50% {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 15px var(--glow-blue);
+  }
 }
