@@ -191,9 +191,22 @@ export default function WorkshopPage() {
   const tiers = ['All', 'Basic', 'Advanced', 'Legendary'];
 
   return (
-    <div className="w-full min-h-screen bg-black">
-      {/* Header Section */}
-      <section className="bg-gradient-to-b from-zinc-900 to-black border-b border-zinc-800 pt-16 pb-12 md:pt-24 md:pb-16">
+    <div className="w-full min-h-screen bg-black relative">
+      {/* Tiled Background with Gradient Overlay */}
+      <div className="fixed inset-0 z-0" style={{
+        backgroundImage: 'url(/workshop.jpg)',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity: 0.5
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+      </div>
+
+      {/* Content Wrapper */}
+      <div className="relative z-10">
+        {/* Header Section */}
+        <section className="bg-gradient-to-b from-zinc-900/80 to-transparent border-b border-zinc-800 pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -302,33 +315,34 @@ export default function WorkshopPage() {
         </div>
       </section>
 
-      {/* SEO Content */}
-      <section className="py-16 bg-zinc-900/30 border-t border-zinc-800">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="prose prose-invert max-w-none">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Arc Raiders Crafting System Guide
-            </h2>
-            <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              The crafting system in Arc Raiders is essential for creating powerful weapons, protective armor, and useful equipment. This Arc Raiders workshop guide covers all crafting recipes, required materials, and workshop upgrade paths. Understanding the crafting system helps you prioritize which materials to collect and which items to craft first.
-            </p>
+        {/* SEO Content */}
+        <section className="py-16 bg-zinc-900/30 border-t border-zinc-800">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="prose prose-invert max-w-none">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Arc Raiders Crafting System Guide
+              </h2>
+              <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+                The crafting system in Arc Raiders is essential for creating powerful weapons, protective armor, and useful equipment. This Arc Raiders workshop guide covers all crafting recipes, required materials, and workshop upgrade paths. Understanding the crafting system helps you prioritize which materials to collect and which items to craft first.
+              </p>
 
-            <h3 className="text-2xl font-bold text-white mt-8 mb-4">
-              Workshop Progression Strategy
-            </h3>
-            <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              Upgrading your workshop in Arc Raiders unlocks increasingly powerful crafting options. Start with Workshop Level 1 for basic weapons and armor, progress to Level 2 for advanced energy weapons and specialized equipment, and reach Level 3 for legendary crafting using rare ARC technology. This Arc Raiders crafting guide recommends prioritizing workshop upgrades early to maximize your combat effectiveness.
-            </p>
+              <h3 className="text-2xl font-bold text-white mt-8 mb-4">
+                Workshop Progression Strategy
+              </h3>
+              <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+                Upgrading your workshop in Arc Raiders unlocks increasingly powerful crafting options. Start with Workshop Level 1 for basic weapons and armor, progress to Level 2 for advanced energy weapons and specialized equipment, and reach Level 3 for legendary crafting using rare ARC technology. This Arc Raiders crafting guide recommends prioritizing workshop upgrades early to maximize your combat effectiveness.
+              </p>
 
-            <h3 className="text-2xl font-bold text-white mt-8 mb-4">
-              Material Collection Tips
-            </h3>
-            <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              Efficient material collection is key to successful crafting in Arc Raiders. Common materials like metal parts, wires, and fabric can be found throughout the game world or obtained by recycling items. Rare materials like ARC Alloy, Exodus Modules, and Magnetic Accelerators require defeating specific enemies or completing quests. Use this Arc Raiders guide to plan your farming routes and prioritize high-value materials.
-            </p>
+              <h3 className="text-2xl font-bold text-white mt-8 mb-4">
+                Material Collection Tips
+              </h3>
+              <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+                Efficient material collection is key to successful crafting in Arc Raiders. Common materials like metal parts, wires, and fabric can be found throughout the game world or obtained by recycling items. Rare materials like ARC Alloy, Exodus Modules, and Magnetic Accelerators require defeating specific enemies or completing quests. Use this Arc Raiders guide to plan your farming routes and prioritize high-value materials.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }

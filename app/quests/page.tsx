@@ -155,9 +155,22 @@ export default function QuestsPage() {
   const difficulties = ['All', 'Easy', 'Medium', 'Hard'];
 
   return (
-    <div className="w-full min-h-screen bg-black">
-      {/* Header Section */}
-      <section className="bg-gradient-to-b from-zinc-900 to-black border-b border-zinc-800 pt-16 pb-12 md:pt-24 md:pb-16">
+    <div className="w-full min-h-screen bg-black relative">
+      {/* Tiled Background with Gradient Overlay */}
+      <div className="fixed inset-0 z-0" style={{
+        backgroundImage: 'url(/quests.jpg)',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity: 0.5
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+      </div>
+
+      {/* Content Wrapper */}
+      <div className="relative z-10">
+        {/* Header Section */}
+        <section className="bg-gradient-to-b from-zinc-900/80 to-transparent border-b border-zinc-800 pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -237,33 +250,34 @@ export default function QuestsPage() {
         </div>
       </section>
 
-      {/* SEO Content */}
-      <section className="py-16 bg-zinc-900/30 border-t border-zinc-800">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="prose prose-invert max-w-none">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Arc Raiders Quest Progression Guide
-            </h2>
-            <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              Quests in Arc Raiders are essential for hideout progression and unlocking advanced gameplay features. This Arc Raiders quest guide provides complete information about all available quests, including required items, rewards, and optimal completion order. Understanding the quest system helps you prioritize which items to keep and which materials to farm.
-            </p>
+        {/* SEO Content */}
+        <section className="py-16 bg-zinc-900/30 border-t border-zinc-800">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="prose prose-invert max-w-none">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Arc Raiders Quest Progression Guide
+              </h2>
+              <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+                Quests in Arc Raiders are essential for hideout progression and unlocking advanced gameplay features. This Arc Raiders quest guide provides complete information about all available quests, including required items, rewards, and optimal completion order. Understanding the quest system helps you prioritize which items to keep and which materials to farm.
+              </p>
 
-            <h3 className="text-2xl font-bold text-white mt-8 mb-4">
-              Hideout Quest Chain
-            </h3>
-            <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              Hideout quests in Arc Raiders focus on establishing and upgrading your base of operations. These Arc Raiders quests unlock essential facilities like the medical station, power grid, water purification system, and security station. Each hideout upgrade provides permanent benefits and unlocks new crafting options. Prioritize hideout quests early in your Arc Raiders progression to maximize your efficiency.
-            </p>
+              <h3 className="text-2xl font-bold text-white mt-8 mb-4">
+                Hideout Quest Chain
+              </h3>
+              <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+                Hideout quests in Arc Raiders focus on establishing and upgrading your base of operations. These Arc Raiders quests unlock essential facilities like the medical station, power grid, water purification system, and security station. Each hideout upgrade provides permanent benefits and unlocks new crafting options. Prioritize hideout quests early in your Arc Raiders progression to maximize your efficiency.
+              </p>
 
-            <h3 className="text-2xl font-bold text-white mt-8 mb-4">
-              Workshop Progression Path
-            </h3>
-            <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-              The workshop quest chain in Arc Raiders is crucial for accessing advanced weapon crafting and modifications. Starting with basic weapon crafting at Level 1, progressing through advanced energy weapons at Level 2, and culminating in legendary crafting at Level 3, the workshop progression defines your combat capabilities. This Arc Raiders guide details all required materials for each workshop upgrade, helping you plan your resource collection strategy.
-            </p>
+              <h3 className="text-2xl font-bold text-white mt-8 mb-4">
+                Workshop Progression Path
+              </h3>
+              <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+                The workshop quest chain in Arc Raiders is crucial for accessing advanced weapon crafting and modifications. Starting with basic weapon crafting at Level 1, progressing through advanced energy weapons at Level 2, and culminating in legendary crafting at Level 3, the workshop progression defines your combat capabilities. This Arc Raiders guide details all required materials for each workshop upgrade, helping you plan your resource collection strategy.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }

@@ -151,7 +151,11 @@ export default function Home() {
 
       {/* Hero Section with H1 for SEO */}
       <section className="relative overflow-hidden py-4 md:py-6 border-b border-zinc-800/50">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" style={{
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto text-center space-y-1.5">
             {/* Main H1 Title - Required for SEO */}
