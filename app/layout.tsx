@@ -43,6 +43,12 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <GoogleAnalytics />
+        <meta name="google-adsense-account" content="ca-pub-3347260027976502" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3347260027976502"
+          crossOrigin="anonymous"
+        />
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
