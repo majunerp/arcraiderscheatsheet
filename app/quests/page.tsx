@@ -164,7 +164,7 @@ export default function QuestsPage() {
         backgroundPosition: 'center',
         opacity: 0.5
       }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/90"></div>
       </div>
 
       {/* Content Wrapper */}
@@ -251,8 +251,9 @@ export default function QuestsPage() {
       </section>
 
         {/* SEO Content */}
-        <section className="py-16 bg-gradient-to-b from-blue-950/40 to-slate-950/60 border-t-2 border-cyan-500/20">
-          <div className="container mx-auto px-4 max-w-5xl">
+        <section className="relative isolate py-16 border-t-2 border-cyan-500/20">
+          <div className="absolute inset-0 bg-[#030712]" aria-hidden="true" />
+          <div className="relative z-10 container mx-auto px-4 max-w-5xl">
             <div className="prose prose-invert max-w-none">
               <h2 className="text-3xl font-bold text-cyan-300 mb-6">
                 Arc Raiders Quest Progression Guide

@@ -415,12 +415,13 @@ export default function Home() {
       </section>
 
       {/* Stats Section - Moved below items */}
-      <section className="py-8 bg-gradient-to-b from-slate-950/60 to-blue-950/30 backdrop-blur-sm border-y border-cyan-500/20">
+      <section className="py-8">
         <div className="container mx-auto px-4 space-y-4 text-center">
+          <div className="max-w-7xl mx-auto bg-gradient-to-b from-slate-950/60 to-blue-950/30 backdrop-blur-sm rounded-2xl p-6 border border-cyan-500/20">
           <p className="text-cyan-100/70 text-sm md:text-base max-w-3xl mx-auto">
             These live stats prove how expansive the Arc Raiders Cheat Sheet is, covering loot, quests, and hideout upgrades in one continually updated hub.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-4">
             <div className="text-center p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/30">
               <div className="text-3xl font-bold text-cyan-400 drop-shadow-[0_0_10px_rgba(0,229,255,0.5)]">{stats.totalItems}+</div>
               <div className="text-cyan-100/60 mt-1 text-sm">Total Items</div>
@@ -437,6 +438,7 @@ export default function Home() {
               <div className="text-3xl font-bold text-blue-300 drop-shadow-[0_0_10px_rgba(0,132,255,0.5)]">{stats.craftingMaterials}</div>
               <div className="text-cyan-100/60 mt-1 text-sm">Crafting Materials</div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -512,8 +514,9 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-blue-950/40 to-slate-950/60 backdrop-blur-sm border-t border-cyan-500/20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20">
+        <div className="container mx-auto px-4 max-w-6xl text-center">
+          <div className="bg-gradient-to-b from-slate-950/80 to-blue-950/60 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-cyan-500/30">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-300 drop-shadow-[0_0_20px_rgba(0,229,255,0.4)]">
             Ready to Master Arc Raiders?
           </h2>
@@ -533,6 +536,7 @@ export default function Home() {
             >
               Explore Workshop
             </Link>
+          </div>
           </div>
         </div>
       </section>

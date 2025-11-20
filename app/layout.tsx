@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -44,13 +45,16 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
         <meta name="google-adsense-account" content="ca-pub-3347260027976502" />
-        <script
+        <Script
+          id="adsense-script"
           async
+          strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3347260027976502"
           crossOrigin="anonymous"
         />
-        <script
-          type="text/javascript"
+        <Script
+          id="ms-clarity"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){

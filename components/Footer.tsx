@@ -1,10 +1,15 @@
+'use client';
+
 import Link from 'next/link';
 
 export default function Footer() {
+  const footerBackground =
+    'bg-gradient-to-b from-[#030712]/95 via-[#050b1b]/80 to-[#07102c]/95 backdrop-blur-md shadow-[0_-15px_45px_rgba(0,0,0,0.7)]';
+
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t-2 border-cyan-300/60 bg-gradient-to-b from-[#030712] via-[#050b1b] to-[#07102c] backdrop-blur-md shadow-[0_-15px_45px_rgba(0,0,0,0.7)]">
+    <footer className={`w-full border-t-2 border-cyan-300/60 relative z-20 ${footerBackground}`}>
       <div className="container mx-auto max-w-7xl px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}

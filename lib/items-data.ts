@@ -16,6 +16,18 @@ export interface Item {
 const baseItems: Item[] = [
   // ARC Parts - Keep for Quests/Crafting
   {
+    id: 'free_loadout_augment',
+    name: 'Free Loadout Augment',
+    category: 'arc_parts',
+    rarity: 'common',
+    action: 'keep',
+    value: 100,
+    image: 'https://arcraiders.wiki/w/images/c/cf/Free_Loadout_Augment.png',
+    description:
+      'Basic augment from free loadouts that increases carry capacity: +14 backpack slots, +4 quest slots, +2 weapon slots while only weighing 1 kg.',
+    usedFor: ['Starter loadout capacity boost', 'Scavenged augments'],
+  },
+  {
     id: 'leaper_pulse_unit',
     name: 'Leaper Pulse Unit',
     category: 'arc_parts',
@@ -471,6 +483,26 @@ const baseItems: Item[] = [
     image: '/items/expired_respirator.png',
     description: 'Old gas mask. Recycle for rubber and filters.',
     recyclesInto: ['Rubber Parts', 'Fabric', 'Plastic Parts'],
+  },
+  {
+    id: 'geiger_counter',
+    name: 'Geiger Counter',
+    category: 'recyclable',
+    rarity: 'epic',
+    action: 'recycle',
+    value: 3500,
+    image: 'https://arcraiders.wiki/w/images/3/37/Geiger_Counter.png',
+    description: 'Epic radiation detector found in Exodus caches. Weighs 1.5, stacks to 3, and can be recycled into premium crafting materials or sold for 3,500 credits.',
+  },
+  {
+    id: 'ion_sputter',
+    name: 'Ion Sputter',
+    category: 'recyclable',
+    rarity: 'epic',
+    action: 'recycle',
+    value: 6000,
+    image: 'https://arcraiders.wiki/w/images/e/e7/Ion_Sputter.png',
+    description: 'High-grade ARC tool dropped in Exodus loot. 1.5 weight, stack size 3, and worth 6,000 credits if you sell instead of recycling for crafting parts.',
   },
   {
     id: 'frying_pan',
