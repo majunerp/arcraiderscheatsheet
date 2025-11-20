@@ -51,6 +51,18 @@ export default function Header() {
             Item Database
           </Link>
           <Link
+            href="/builds"
+            className="text-sm font-medium text-cyan-100 transition-all hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.6)]"
+          >
+            Builds
+          </Link>
+          <Link
+            href="/map"
+            className="text-sm font-medium text-cyan-100 transition-all hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.6)]"
+          >
+            Map
+          </Link>
+          <Link
             href="/quests"
             className="text-sm font-medium text-cyan-100 transition-all hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.6)]"
           >
@@ -111,6 +123,20 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Item Database
+            </Link>
+            <Link
+              href="/builds"
+              className="block text-sm font-medium text-cyan-100 hover:text-cyan-300 transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Builds
+            </Link>
+            <Link
+              href="/map"
+              className="block text-sm font-medium text-cyan-100 hover:text-cyan-300 transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Map
             </Link>
             <Link
               href="/quests"

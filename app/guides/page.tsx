@@ -31,7 +31,7 @@ export default function GuidesPage() {
       {/* Content Wrapper */}
       <div className="relative z-10">
         {/* Header Section */}
-        <section className="bg-gradient-to-b from-slate-950/90 via-blue-950/50 to-transparent border-b-2 border-cyan-500/30 pt-16 pb-12 md:pt-24 md:pb-16">
+        <section className="border-b-2 border-cyan-500/30 pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,229,255,0.6)]">
