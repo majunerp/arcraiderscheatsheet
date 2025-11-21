@@ -65,7 +65,7 @@ export default function Home() {
   const [selectedLocation, setSelectedLocation] = useState('all');
   const [selectedValueTier, setSelectedValueTier] = useState('all');
   const [displayLimit, setDisplayLimit] = useState(24); // Show 24 items initially
-  const [showFilters, setShowFilters] = useState(true); // Keep filters visible by default so search is obvious
+  const [showFilters, setShowFilters] = useState(false); // Start filters collapsed to save space
 
   const stats = {
     totalItems: items.length,
@@ -810,7 +810,7 @@ export default function Home() {
               Complete Arc Raiders Cheat Sheet for Loot Management
             </h2>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Welcome to the most comprehensive Arc Raiders Cheat Sheet available online. Our Arc Raiders guide helps players make informed decisions about every item they encounter in the game. Whether you're a beginner learning the basics or an experienced raider optimizing your hideout, this Arc Raiders Cheat Sheet provides essential information for successful gameplay.
+              Welcome to the most comprehensive Arc Raiders cheat sheet available online. This guide helps players make informed decisions about every item they encounter in the game. Whether you're a beginner learning the basics or an experienced raider optimizing your hideout, the resource below provides essential information for successful gameplay.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
@@ -824,7 +824,7 @@ export default function Home() {
               Arc Raiders Quest Items and Hideout Upgrades
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Quest items in Arc Raiders are essential for hideout progression and unlocking advanced crafting stations. Our Arc Raiders guide identifies all quest-specific items, including rare ARC parts like the Leaper Pulse Unit, Rocketeer Driver, and Surveyor Vault. These Arc Raiders items should always be kept until you complete their associated quests. The cheat sheet also details which items are needed for workshop upgrades, medical station construction, and power system installations.
+              Quest items in Arc Raiders are essential for hideout progression and unlocking advanced crafting stations. This guide identifies all quest-specific items, including rare ARC parts like the Leaper Pulse Unit, Rocketeer Driver, and Surveyor Vault. These items should always be kept until you complete their associated quests. The sheet also details which items are needed for workshop upgrades, medical station construction, and power system installations.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
@@ -852,21 +852,21 @@ export default function Home() {
               Selling vs. Keeping: Making the Right Choice
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Not every item in Arc Raiders needs to be kept or recycled. Some items are best sold for immediate credits, which can be used to purchase essential supplies or upgrade your equipment. Our Arc Raiders guide identifies vendor trash items, consumables with low utility, and duplicate materials that can safely be sold. The cheat sheet helps you maintain optimal inventory space while maximizing your credit income for important purchases.
+              Not every item in Arc Raiders needs to be kept or recycled. Some items are best sold for immediate credits, which can be used to purchase essential supplies or upgrade your equipment. This guide identifies vendor trash items, consumables with low utility, and duplicate materials that can safely be sold. The advice here helps you maintain optimal inventory space while maximizing credit income for important purchases.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
               Advanced Tips for Arc Raiders Players
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Experienced Arc Raiders players know that efficient loot management is key to success. Our Arc Raiders Cheat Sheet includes advanced strategies for inventory optimization, priority item lists for different playstyles, and farming routes for specific materials. Whether you're focusing on PvP combat, PvE missions, or hideout development, this Arc Raiders guide provides tailored recommendations to support your gameplay objectives.
+              Experienced Arc Raiders players know that efficient loot management is key to success. This cheat sheet includes advanced strategies for inventory optimization, priority item lists for different playstyles, and farming routes for specific materials. Whether you're focusing on PvP combat, PvE missions, or hideout development, these recommendations support your gameplay objectives.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
               Stay Updated with Arc Raiders Meta
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              The Arc Raiders meta evolves with each update, introducing new items, quests, and crafting recipes. Our Arc Raiders Cheat Sheet is regularly updated to reflect the latest game changes, ensuring you always have accurate information. Bookmark this Arc Raiders guide and check back frequently for new content, updated item values, and fresh strategies to stay ahead of the competition.
+              The Arc Raiders meta evolves with each update, introducing new items, quests, and crafting recipes. This cheat sheet is updated to reflect the latest changes, ensuring you always have accurate information. Bookmark the guide and check back for new content, updated item values, and fresh strategies to stay ahead of the competition.
             </p>
           </div>
         </div>
