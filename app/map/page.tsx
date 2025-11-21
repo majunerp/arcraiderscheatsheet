@@ -150,7 +150,7 @@ export default function MapPage() {
     <div className="w-full min-h-screen bg-black relative">
       {/* Tiled Background with Gradient Overlay */}
       <div className="fixed inset-0 z-0" style={{
-        backgroundImage: 'url(/map-bg.jpg)',
+        backgroundImage: 'url(/arcraiders.jpg)',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
