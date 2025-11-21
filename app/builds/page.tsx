@@ -4,17 +4,21 @@ import { allSkills, getSkillsByTree } from '@/lib/skills-data';
 import SkillTreeVisual from '@/components/SkillTreeVisual';
 
 export const metadata = genMeta({
-  title: 'Arc Raiders Skill Tree & Builds Guide - Best 2025 Builds',
-  description: 'Master Arc Raiders skill trees with our complete builds guide. 75 skill points, 3 trees (Mobility, Survival, Conditioning), best solo & squad builds for 2025.',
+  title: 'Arc Raiders Skill Trees & Builds Guide 2025',
+  description:
+    'Arc Raiders skill tree guide with best 2025 builds. Covers 75 skill points across Mobility, Survival, Conditioning plus top solo and squad loadouts.',
   keywords: [
-    'arc raiders skill tree',
-    'arc raiders builds',
-    'arc raiders best build',
-    'arc raiders skill tree build',
-    'arc raiders character progression',
-    'arc raiders talent guide',
-    'arc raiders mobility build',
-    'arc raiders survival build',
+    'arc raiders builds guide',
+    'arc raiders skill tree guide',
+    'arc raiders builds 2025',
+    'arc raiders skill trees',
+    'arc raiders best skills',
+    'arc raiders best builds',
+    'arc raiders mobility tree',
+    'arc raiders survival tree',
+    'arc raiders conditioning tree',
+    'arc raiders solo builds',
+    'arc raiders squad builds',
   ],
   canonical: 'https://arcraiderscheatsheet.org/builds',
 });

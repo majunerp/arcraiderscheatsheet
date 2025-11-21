@@ -2,17 +2,21 @@ import { generateMetadata as genMeta } from '@/lib/seo';
 import Link from 'next/link';
 
 export const metadata = genMeta({
-  title: 'Arc Raiders Interactive Map - All Locations & Loot 2025',
-  description: 'Complete Arc Raiders map guide with all 4 maps, loot locations, extraction points, weapon caches, and quest markers for Dam Battlegrounds, Spaceport, Buried City & Blue Gate.',
+  title: 'Arc Raiders Interactive Map 2025 - All Locations & Loot',
+  description: 'Arc Raiders map guide for all 4 maps: loot locations, extractions, weapon caches, quest markers on Dam Battlegrounds, Spaceport, Buried City, and Blue Gate.',
   keywords: [
+    'arc raiders map guide',
+    'arc raiders maps',
     'arc raiders map',
-    'arc raiders interactive map',
     'arc raiders loot map',
-    'arc raiders locations',
     'arc raiders extraction points',
     'arc raiders weapon caches',
-    'arc raiders buried city map',
+    'arc raiders quest markers',
+    'arc raiders map locations',
     'arc raiders dam battlegrounds',
+    'arc raiders spaceport',
+    'arc raiders buried city',
+    'arc raiders blue gate',
   ],
   canonical: 'https://arcraiderscheatsheet.org/map',
 });

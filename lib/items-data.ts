@@ -11,6 +11,8 @@ export interface Item {
   description: string;
   usedFor?: string[];
   recyclesInto?: string[];
+  locationTypes?: Array<'industrial' | 'medical' | 'security' | 'residential' | 'old_world' | 'commercial' | 'nature' | 'electrical'>;
+  valueTier?: 'S' | 'A' | 'B' | 'C' | 'D';
 }
 
 const baseItems: Item[] = [
@@ -26,6 +28,8 @@ const baseItems: Item[] = [
     description:
       'Basic augment from free loadouts that increases carry capacity: +14 backpack slots, +4 quest slots, +2 weapon slots while only weighing 1 kg.',
     usedFor: ['Starter loadout capacity boost', 'Scavenged augments'],
+    locationTypes: ['security', 'industrial'],
+    valueTier: 'C',
   },
   {
     id: 'leaper_pulse_unit',
@@ -37,6 +41,8 @@ const baseItems: Item[] = [
     image: '/items/leaper_pulse_unit.png',
     description: 'Quest: Into the Fray (x1) • Workshop: Utility Station L3 (x4)',
     usedFor: ['Quest: Into the Fray', 'Workshop: Utility Station L3'],
+    locationTypes: ['industrial', 'electrical'],
+    valueTier: 'S',
   },
   {
     id: 'rocketeer_driver',
@@ -48,6 +54,8 @@ const baseItems: Item[] = [
     image: '/items/rocketeer_driver.png',
     description: 'Quest: Out of the Shadows (x1) • Workshop: Explosives Station L3 (x3)',
     usedFor: ['Quest: Out of the Shadows', 'Workshop: Explosives Station L3'],
+    locationTypes: ['industrial', 'security'],
+    valueTier: 'S',
   },
   {
     id: 'surveyor_vault',
@@ -59,6 +67,8 @@ const baseItems: Item[] = [
     image: '/items/surveyor_vault.png',
     description: 'Quest: Mixed Signals (x1) • Workshop: Medical Lab L3 (x5)',
     usedFor: ['Quest: Mixed Signals', 'Workshop: Medical Lab L3'],
+    locationTypes: ['industrial', 'electrical'],
+    valueTier: 'A',
   },
   {
     id: 'hornet_driver',
@@ -70,6 +80,8 @@ const baseItems: Item[] = [
     image: '/items/hornet_driver.png',
     description: 'Quest: The Trifecta (x2) • Workshop: Gear Bench L2 (x5)',
     usedFor: ['Quest: The Trifecta', 'Workshop: Gear Bench L2'],
+    locationTypes: ['industrial', 'security'],
+    valueTier: 'A',
   },
   {
     id: 'wasp_driver',
@@ -81,6 +93,8 @@ const baseItems: Item[] = [
     image: '/items/wasp_driver.png',
     description: 'Quest: The Trifecta (x2) • Workshop: Gunsmith L2 (x8)',
     usedFor: ['Quest: The Trifecta', 'Workshop: Gunsmith L2'],
+    locationTypes: ['industrial', 'security'],
+    valueTier: 'A',
   },
   {
     id: 'snitch_scanner',
@@ -92,6 +106,8 @@ const baseItems: Item[] = [
     image: '/items/snitch_scanner.png',
     description: 'Detection array from Snitch units. Critical for security system upgrades.',
     usedFor: ['Security Station', 'Alarm System'],
+    locationTypes: ['security', 'electrical'],
+    valueTier: 'B',
   },
   {
     id: 'spotter_relay',
@@ -103,6 +119,8 @@ const baseItems: Item[] = [
     image: '/items/spotter_relay.png',
     description: 'Communication relay from Spotter drones. Enhances team coordination systems.',
     usedFor: ['Communication Hub', 'Team Coordination'],
+    locationTypes: ['electrical', 'security'],
+    valueTier: 'B',
   },
 
   // Crafting Materials - Keep
@@ -116,6 +134,8 @@ const baseItems: Item[] = [
     image: '/items/arc_alloy.png',
     description: 'Refined metal alloy from ARC technology. Primary material for weapon and armor crafting.',
     usedFor: ['Weapon Crafting', 'Armor Upgrades', 'Hideout Construction'],
+    locationTypes: ['industrial', 'electrical'],
+    valueTier: 'B',
   },
   {
     id: 'advanced_electrical_components',
@@ -127,6 +147,8 @@ const baseItems: Item[] = [
     image: '/items/advanced_electrical_components.png',
     description: 'High-grade electronic parts. Essential for advanced equipment and power systems.',
     usedFor: ['Generator Upgrade', 'Electronic Devices', 'Power Systems'],
+    locationTypes: ['electrical', 'industrial'],
+    valueTier: 'A',
   },
   {
     id: 'exodus_modules',
@@ -138,6 +160,8 @@ const baseItems: Item[] = [
     image: '/items/exodus_modules.png',
     description: 'Pre-invasion technology modules. Rare and valuable for top-tier crafting.',
     usedFor: ['Legendary Weapon Crafting', 'Hideout Level 4'],
+    locationTypes: ['old_world', 'electrical'],
+    valueTier: 'B',
   },
   {
     id: 'magnetic_accelerator',
@@ -149,6 +173,8 @@ const baseItems: Item[] = [
     image: '/items/magnetic_accelerator.png',
     description: 'Electromagnetic propulsion device. Used in railgun and energy weapon crafting.',
     usedFor: ['Energy Weapons', 'Railgun Crafting'],
+    locationTypes: ['electrical', 'industrial'],
+    valueTier: 'B',
   },
   {
     id: 'sensors',
@@ -160,6 +186,8 @@ const baseItems: Item[] = [
     image: '/items/sensors.png',
     description: 'Detection sensors for various applications. Common crafting component.',
     usedFor: ['Scopes', 'Detection Equipment', 'Traps'],
+    locationTypes: ['electrical', 'security'],
+    valueTier: 'C',
   },
   {
     id: 'battery',
@@ -171,6 +199,8 @@ const baseItems: Item[] = [
     image: '/items/battery.png',
     description: 'Portable power source. Needed for electronic devices and equipment.',
     usedFor: ['Flashlights', 'Electronic Devices', 'Power Tools'],
+    locationTypes: ['electrical', 'commercial'],
+    valueTier: 'C',
   },
   {
     id: 'electrical_components',
@@ -182,6 +212,8 @@ const baseItems: Item[] = [
     image: '/items/electrical_components.png',
     description: 'Basic electronic parts. Fundamental crafting material.',
     usedFor: ['Basic Electronics', 'Repairs', 'Modifications'],
+    locationTypes: ['electrical', 'residential'],
+    valueTier: 'C',
   },
   {
     id: 'wires',
@@ -193,6 +225,8 @@ const baseItems: Item[] = [
     image: '/items/wires.png',
     description: 'Copper wiring for electrical connections. Always useful.',
     usedFor: ['Electrical Repairs', 'Crafting', 'Hideout Wiring'],
+    locationTypes: ['electrical', 'residential', 'industrial'],
+    valueTier: 'D',
   },
   {
     id: 'durable_cloth',
@@ -204,6 +238,8 @@ const baseItems: Item[] = [
     image: '/items/durable_cloth.png',
     description: 'Reinforced fabric material. Used in armor and gear crafting.',
     usedFor: ['Armor Crafting', 'Backpacks', 'Tactical Gear'],
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'C',
   },
   {
     id: 'steel_spring',
@@ -215,6 +251,8 @@ const baseItems: Item[] = [
     image: '/items/steel_spring.png',
     description: 'High-tension steel springs. Mechanical crafting component.',
     usedFor: ['Weapon Mechanisms', 'Traps', 'Mechanical Devices'],
+    locationTypes: ['industrial', 'residential'],
+    valueTier: 'C',
   },
   {
     id: 'rubber_parts',
@@ -226,6 +264,8 @@ const baseItems: Item[] = [
     image: '/items/rubber_parts.png',
     description: 'Flexible rubber components. Useful for seals and grips.',
     usedFor: ['Weapon Grips', 'Seals', 'Shock Absorption'],
+    locationTypes: ['industrial', 'residential'],
+    valueTier: 'D',
   },
   {
     id: 'metal_parts',
@@ -237,6 +277,8 @@ const baseItems: Item[] = [
     image: '/items/metal_parts.png',
     description: 'Assorted metal components. Basic crafting material.',
     usedFor: ['Weapon Parts', 'Repairs', 'Construction'],
+    locationTypes: ['industrial', 'residential'],
+    valueTier: 'C',
   },
   {
     id: 'fabric',
@@ -248,6 +290,8 @@ const baseItems: Item[] = [
     image: '/items/fabric.png',
     description: 'Basic cloth material. Common crafting resource.',
     usedFor: ['Bandages', 'Clothing', 'Bags'],
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'D',
   },
   {
     id: 'plastic_parts',
@@ -259,6 +303,8 @@ const baseItems: Item[] = [
     image: '/items/plastic_parts.png',
     description: 'Molded plastic components. Lightweight crafting material.',
     usedFor: ['Containers', 'Weapon Furniture', 'Equipment'],
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'D',
   },
 
   // Quest Items - Always Keep
@@ -272,6 +318,8 @@ const baseItems: Item[] = [
     image: '/items/antiseptic.png',
     description: 'Used to craft: Medical Lab: Sterilized Bandage',
     usedFor: ['Medical Lab: Sterilized Bandage'],
+    locationTypes: ['medical', 'residential'],
+    valueTier: 'A',
   },
   {
     id: 'syringe',
@@ -283,6 +331,8 @@ const baseItems: Item[] = [
     image: '/items/syringe.png',
     description: 'Quest: Doctor\'s Orders (x1)',
     usedFor: ['Quest: Doctor\'s Orders'],
+    locationTypes: ['medical'],
+    valueTier: 'S',
   },
   {
     id: 'water_pump',
@@ -294,6 +344,8 @@ const baseItems: Item[] = [
     image: '/items/water_pump.png',
     description: 'Mechanical water extraction device. Critical for water system quest.',
     usedFor: ['Water System Quest', 'Hideout Water Supply'],
+    locationTypes: ['industrial', 'residential'],
+    valueTier: 'B',
   },
   {
     id: 'humidifier',
@@ -305,6 +357,8 @@ const baseItems: Item[] = [
     image: '/items/humidifier.png',
     description: 'Air moisture control device. Required for air quality quest.',
     usedFor: ['Air Quality Quest', 'Hideout Comfort'],
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'C',
   },
   {
     id: 'cooling_fan',
@@ -316,6 +370,8 @@ const baseItems: Item[] = [
     image: '/items/cooling_fan.png',
     description: 'Ventilation equipment. Needed for cooling system quest.',
     usedFor: ['Cooling System Quest', 'Generator Cooling'],
+    locationTypes: ['industrial', 'electrical'],
+    valueTier: 'C',
   },
   {
     id: 'light_bulb',
@@ -327,6 +383,8 @@ const baseItems: Item[] = [
     image: '/items/light_bulb.png',
     description: 'Illumination device. Required for lighting system quest.',
     usedFor: ['Lighting Quest', 'Hideout Illumination'],
+    locationTypes: ['electrical', 'residential', 'commercial'],
+    valueTier: 'C',
   },
   {
     id: 'power_rod',
@@ -338,6 +396,8 @@ const baseItems: Item[] = [
     image: '/items/power_rod.png',
     description: 'Used to craft: Gear Bench: Heavy Shield • Utility Station: Snap Hook',
     usedFor: ['Gear Bench: Heavy Shield', 'Utility Station: Snap Hook'],
+    locationTypes: ['industrial', 'electrical'],
+    valueTier: 'S',
   },
 
   // Recyclable Items - Recycle for Materials
@@ -351,6 +411,8 @@ const baseItems: Item[] = [
     image: '/items/broken_flashlight.png',
     description: 'Damaged lighting device. Recycle for electrical components.',
     recyclesInto: ['Electrical Components', 'Battery', 'Plastic Parts'],
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'D',
   },
   {
     id: 'broken_handheld_radio',
@@ -362,6 +424,8 @@ const baseItems: Item[] = [
     image: '/items/broken_handheld_radio.png',
     description: 'Non-functional communication device. Recycle for electronics.',
     recyclesInto: ['Electrical Components', 'Wires', 'Metal Parts'],
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'D',
   },
   {
     id: 'damaged_arc_powercell',
@@ -373,6 +437,8 @@ const baseItems: Item[] = [
     image: '/items/damaged_arc_powercell.png',
     description: 'Depleted ARC energy cell. Recycle for advanced materials.',
     recyclesInto: ['Advanced Electrical Components', 'Battery', 'ARC Alloy'],
+    locationTypes: ['industrial', 'electrical'],
+    valueTier: 'C',
   },
   {
     id: 'burned_arc_circuitry',
@@ -384,6 +450,8 @@ const baseItems: Item[] = [
     image: '/items/burned_arc_circuitry.png',
     description: 'Fried electronic circuits. Recycle for salvageable components.',
     recyclesInto: ['Electrical Components', 'Wires', 'Metal Parts'],
+    locationTypes: ['electrical', 'industrial'],
+    valueTier: 'C',
   },
   {
     id: 'ruined_accordion',
@@ -395,6 +463,8 @@ const baseItems: Item[] = [
     image: '/items/ruined_accordion.png',
     description: 'Destroyed musical instrument. Sell for credits or recycle for metal.',
     recyclesInto: ['Metal Parts', 'Steel Spring'],
+    locationTypes: ['residential', 'old_world'],
+    valueTier: 'C',
   },
   {
     id: 'alarm_clock',
@@ -406,6 +476,8 @@ const baseItems: Item[] = [
     image: '/items/alarm_clock.png',
     description: 'Old timepiece. Recycle for small mechanical parts.',
     recyclesInto: ['Metal Parts', 'Wires', 'Battery'],
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'D',
   },
   {
     id: 'bicycle_pump',
@@ -417,6 +489,8 @@ const baseItems: Item[] = [
     image: '/items/bicycle_pump.png',
     description: 'Manual air pump. Recycle for rubber and metal.',
     recyclesInto: ['Rubber Parts', 'Metal Parts'],
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'D',
   },
   {
     id: 'broken_taser',
@@ -428,6 +502,8 @@ const baseItems: Item[] = [
     image: '/items/broken_taser.png',
     description: 'Non-functional stun weapon. Recycle for electrical components.',
     recyclesInto: ['Electrical Components', 'Battery', 'Plastic Parts'],
+    locationTypes: ['security', 'residential'],
+    valueTier: 'C',
   },
   {
     id: 'camera_lens',
@@ -439,6 +515,8 @@ const baseItems: Item[] = [
     image: '/items/camera_lens.png',
     description: 'Optical glass component. Recycle for sensors.',
     recyclesInto: ['Sensors', 'Plastic Parts'],
+    locationTypes: ['commercial', 'residential'],
+    valueTier: 'C',
   },
   {
     id: 'candle_holder',
@@ -450,6 +528,8 @@ const baseItems: Item[] = [
     image: '/items/candle_holder.png',
     description: 'Decorative metal holder. Better to sell than recycle.',
     recyclesInto: ['Metal Parts'],
+    locationTypes: ['residential', 'old_world'],
+    valueTier: 'D',
   },
   {
     id: 'deflated_football',
@@ -461,6 +541,8 @@ const baseItems: Item[] = [
     image: '/items/deflated_football.png',
     description: 'Punctured sports ball. Recycle for rubber.',
     recyclesInto: ['Rubber Parts'],
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'D',
   },
   {
     id: 'diving_goggles',
@@ -472,6 +554,8 @@ const baseItems: Item[] = [
     image: '/items/diving_goggles.png',
     description: 'Swimming eyewear. Recycle for rubber and plastic.',
     recyclesInto: ['Rubber Parts', 'Plastic Parts'],
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'D',
   },
   {
     id: 'expired_respirator',
@@ -483,6 +567,8 @@ const baseItems: Item[] = [
     image: '/items/expired_respirator.png',
     description: 'Old gas mask. Recycle for rubber and filters.',
     recyclesInto: ['Rubber Parts', 'Fabric', 'Plastic Parts'],
+    locationTypes: ['medical', 'security'],
+    valueTier: 'C',
   },
   {
     id: 'geiger_counter',
@@ -493,6 +579,8 @@ const baseItems: Item[] = [
     value: 3500,
     image: 'https://arcraiders.wiki/w/images/3/37/Geiger_Counter.png',
     description: 'Epic radiation detector found in Exodus caches. Weighs 1.5, stacks to 3, and can be recycled into premium crafting materials or sold for 3,500 credits.',
+    locationTypes: ['old_world', 'electrical'],
+    valueTier: 'A',
   },
   {
     id: 'ion_sputter',
@@ -503,6 +591,8 @@ const baseItems: Item[] = [
     value: 6000,
     image: 'https://arcraiders.wiki/w/images/e/e7/Ion_Sputter.png',
     description: 'High-grade ARC tool dropped in Exodus loot. 1.5 weight, stack size 3, and worth 6,000 credits if you sell instead of recycling for crafting parts.',
+    locationTypes: ['old_world', 'electrical'],
+    valueTier: 'S',
   },
   {
     id: 'spectrum_analyzer',
@@ -514,6 +604,8 @@ const baseItems: Item[] = [
     image: 'https://arcraiders.wiki/w/images/thumb/a/a5/Spectrum_Analyzer.png/150px-Spectrum_Analyzer.png',
     description: 'Epic scavenged item found in Exodus regions (Medical Research, Assembly, Lobby Metro, Sandbox). Weighs 1.5 kg, stacks to 3. Recycles into Exodus Modules x1 and Sensors x1 (total value 3,250 CR).',
     recyclesInto: ['Exodus Modules', 'Sensors'],
+    locationTypes: ['old_world', 'medical', 'electrical'],
+    valueTier: 'A',
   },
   {
     id: 'rusted_gears',
@@ -525,6 +617,8 @@ const baseItems: Item[] = [
     image: 'https://arcraiders.wiki/w/images/thumb/5/58/Rusted_Gear.png/150px-Rusted_Gear.png',
     description: 'Found in vehicles, generators, and industrial containers on Dam Battlegrounds, Spaceport, and Blue Gate (especially Warehouse Complex). Best farming route: Buried City car park at Marano Station.',
     recyclesInto: ['Metal Parts', 'Steel Spring'],
+    locationTypes: ['industrial'],
+    valueTier: 'B',
   },
   {
     id: 'dog_collar',
@@ -536,6 +630,8 @@ const baseItems: Item[] = [
     image: 'https://arcraiders.wiki/w/images/thumb/a/ab/Dog_Collar.png/150px-Dog_Collar.png',
     description: 'Rare recyclable found in residential areas (bins, desks) on Buried City and Spaceport. Used to upgrade Scrappy I → Scrappy II at Workshop, increasing loot quality from Scrappy between raids.',
     usedFor: ['Workshop: Scrappy L2 (x1)'],
+    locationTypes: ['residential'],
+    valueTier: 'B',
   },
   {
     id: 'industrial_battery',
@@ -548,6 +644,8 @@ const baseItems: Item[] = [
     description: 'Found on steel shelves in industrial zones. Best locations: Dam Battlegrounds (Hydroponic Dome, Control Tower), Blue Gate (Warehouse), Spaceport (Rocket Assembly). Required for Gear Bench L3 upgrade (x3).',
     usedFor: ['Workshop: Gear Bench L3 (x3)'],
     recyclesInto: ['Battery', 'Chemicals'],
+    locationTypes: ['industrial'],
+    valueTier: 'A',
   },
   {
     id: 'frying_pan',
@@ -725,6 +823,8 @@ const baseItems: Item[] = [
     value: 25,
     image: '/items/lemon.png',
     description: 'Fresh citrus fruit. Sell for quick credits.',
+    locationTypes: ['nature'],
+    valueTier: 'D',
   },
   {
     id: 'apricot',
@@ -735,6 +835,8 @@ const baseItems: Item[] = [
     value: 30,
     image: '/items/apricot.png',
     description: 'Dried fruit. Sell for credits.',
+    locationTypes: ['nature'],
+    valueTier: 'D',
   },
   {
     id: 'dog_collar',
@@ -746,6 +848,138 @@ const baseItems: Item[] = [
     image: '/items/dog_collar.png',
     description: 'Pet accessory. Minimal value, sell.',
     recyclesInto: ['Fabric', 'Metal Parts'],
+  },
+
+  // Trinkets - High Value / Quest Items
+  {
+    id: 'film_reel',
+    name: 'Film Reel',
+    category: 'quest_items',
+    rarity: 'rare',
+    action: 'keep',
+    value: 850,
+    image: '/items/film_reel.png',
+    description: 'Quest: Trader quest item (x1). Vintage film reel sought by collectors.',
+    usedFor: ['Trader Quest'],
+    locationTypes: ['old_world', 'commercial'],
+    valueTier: 'B',
+  },
+  {
+    id: 'cat_bed',
+    name: 'Cat Bed',
+    category: 'quest_items',
+    rarity: 'uncommon',
+    action: 'keep',
+    value: 620,
+    image: '/items/cat_bed.png',
+    description: 'Quest: Trader quest item (x1). Cozy pet bed required for quest completion.',
+    usedFor: ['Trader Quest'],
+    locationTypes: ['residential'],
+    valueTier: 'B',
+  },
+  {
+    id: 'very_comfortable_pillow',
+    name: 'Very Comfortable Pillow',
+    category: 'quest_items',
+    rarity: 'uncommon',
+    action: 'keep',
+    value: 540,
+    image: '/items/very_comfortable_pillow.png',
+    description: 'Quest: Trader quest item (x3). Premium pillow needed for multiple quests.',
+    usedFor: ['Trader Quests'],
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'B',
+  },
+  {
+    id: 'faded_photograph',
+    name: 'Faded Photograph',
+    category: 'quest_items',
+    rarity: 'rare',
+    action: 'keep',
+    value: 720,
+    image: '/items/faded_photograph.png',
+    description: 'Quest: Trader quest item (x2). Old photograph with sentimental value.',
+    usedFor: ['Trader Quests'],
+    locationTypes: ['residential', 'old_world'],
+    valueTier: 'B',
+  },
+  {
+    id: 'rubber_duck',
+    name: 'Rubber Duck',
+    category: 'quest_items',
+    rarity: 'uncommon',
+    action: 'keep',
+    value: 480,
+    image: '/items/rubber_duck.png',
+    description: 'Quest: Trader quest item (x2). Classic bath toy required for quests.',
+    usedFor: ['Trader Quests'],
+    locationTypes: ['residential'],
+    valueTier: 'B',
+  },
+
+  // High-Value Tech Items (Trending)
+  {
+    id: 'fried_motherboard',
+    name: 'Fried Motherboard',
+    category: 'quest_items',
+    rarity: 'rare',
+    action: 'keep',
+    value: 1200,
+    image: 'https://arcraiders.wiki/w/images/thumb/6/68/Fried_Motherboard.png/150px-Fried_Motherboard.png',
+    description: 'Workshop: Utility Station L3 upgrade component. Found in tech zones at Dam Battlegrounds Research Building and Spaceport server rooms.',
+    usedFor: ['Workshop: Utility Station L3'],
+    recyclesInto: ['Electrical Components', 'Wires'],
+    locationTypes: ['electrical', 'industrial'],
+    valueTier: 'A',
+  },
+  {
+    id: 'stella_montis_archives_key',
+    name: 'Stella Montis Archives Key',
+    category: 'quest_items',
+    rarity: 'epic',
+    action: 'keep',
+    value: 5000,
+    image: '/items/stella_montis_key.png',
+    description: 'Unlocks secret Archives door in Stella Montis frozen research facility. Rare key required for accessing exclusive loot areas.',
+    usedFor: ['Stella Montis Secret Room'],
+    locationTypes: ['old_world'],
+    valueTier: 'S',
+  },
+  {
+    id: 'playing_cards',
+    name: 'Playing Cards',
+    category: 'consumables',
+    rarity: 'common',
+    action: 'sell',
+    value: 180,
+    image: '/items/playing_cards.png',
+    description: 'Trinket with diamond symbol. Pure credit item, no crafting use. Safe to sell immediately.',
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'C',
+  },
+  {
+    id: 'music_album',
+    name: 'Music Album',
+    category: 'consumables',
+    rarity: 'common',
+    action: 'sell',
+    value: 220,
+    image: '/items/music_album.png',
+    description: 'Trinket with diamond symbol. Collectible with no gameplay purpose. Sell for credits.',
+    locationTypes: ['residential', 'commercial'],
+    valueTier: 'C',
+  },
+  {
+    id: 'statuette',
+    name: 'Statuette',
+    category: 'consumables',
+    rarity: 'uncommon',
+    action: 'sell',
+    value: 340,
+    image: '/items/statuette.png',
+    description: 'Decorative trinket with diamond symbol. High sell value, no crafting use.',
+    locationTypes: ['residential', 'old_world'],
+    valueTier: 'C',
   },
 ];
 
@@ -775,3 +1009,25 @@ export const rarities = [
   { id: 'epic', name: 'Epic', color: '#8B5CF6' },
   { id: 'legendary', name: 'Legendary', color: '#F59E0B' },
 ];
+
+export const locationTypes = [
+  { id: 'all', name: 'All Locations', icon: '🗺️' },
+  { id: 'industrial', name: 'Industrial', icon: '🏭', color: 'orange' },
+  { id: 'medical', name: 'Medical', icon: '🏥', color: 'red' },
+  { id: 'security', name: 'Security', icon: '🔒', color: 'yellow' },
+  { id: 'residential', name: 'Residential', icon: '🏠', color: 'green' },
+  { id: 'old_world', name: 'Old World', icon: '🌍', color: 'purple' },
+  { id: 'commercial', name: 'Commercial', icon: '🏢', color: 'cyan' },
+  { id: 'nature', name: 'Nature', icon: '🌳', color: 'lime' },
+  { id: 'electrical', name: 'Electrical', icon: '⚡', color: 'blue' },
+];
+
+export const valueTiers = [
+  { id: 'all', name: 'All Values' },
+  { id: 'S', name: 'S-Tier (5,000₡+)', color: 'purple', min: 5000 },
+  { id: 'A', name: 'A-Tier (1,000-5,000₡)', color: 'blue', min: 1000, max: 4999 },
+  { id: 'B', name: 'B-Tier (500-1,000₡)', color: 'green', min: 500, max: 999 },
+  { id: 'C', name: 'C-Tier (100-500₡)', color: 'yellow', min: 100, max: 499 },
+  { id: 'D', name: 'D-Tier (<100₡)', color: 'gray', max: 99 },
+];
+

@@ -2,7 +2,7 @@ import { generateMetadata as genMeta } from '@/lib/seo';
 
 export const metadata = genMeta({
   title: 'Arc Raiders Guides - Tips & Strategy for 2025',
-  description: 'Master Arc Raiders with expert guides covering beginner tips, advanced strategies, farming routes, and meta analysis. Proven tactics for optimal gameplay.',
+  description: 'Master Arc Raiders with guides covering beginner tips, advanced strategies, farming routes, and meta analysis. Proven tactics for optimal gameplay in 2025.',
   keywords: [
     'arc raiders guide',
     'arc raiders tips',
@@ -104,6 +104,35 @@ export default function GuidesPage() {
               </h3>
               <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
                 Experienced Arc Raiders players need advanced strategies for PvP combat, efficient farming, and meta optimization. Our Arc Raiders advanced guide covers weapon tier lists, optimal loadouts, team coordination tactics, and competitive strategies. Learn how to maximize your combat effectiveness, farm resources efficiently, and stay ahead of the meta with proven Arc Raiders strategies used by top players.
+              </p>
+
+              <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
+                Loot & Recycling Playbook
+              </h3>
+              <p className="text-lg text-cyan-100/70 leading-relaxed mb-4">
+                The fastest way to progress is managing loot the same way top squads do. Use the Arc Raiders cheat sheet loot table to decide what to keep, sell, or recycle before you even hit the extract. Prioritize ARC parts, Dog Collars, Industrial Batteries, and quest electronics; offload diamond trinkets for credits; recycle duplicate tech at the hideout for better yields than salvaging mid-raid.
+              </p>
+              <p className="text-lg text-cyan-100/70 leading-relaxed mb-4">
+                Smart recycling prevents stash clogging. The Arc Raiders recycling checklist is simple: keep anything tagged for quests or workshop upgrades, recycle broken electronics and damaged ARC components for Electrical Components and Wires, and sell low-value trinkets when your backpack nears full. Combine this with Broad Shoulders + Loaded Arms perks to stretch weight limits and avoid the dreaded "inventory full" message.
+              </p>
+              <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
+                Route choice matters. Blue Gate Warehouse Loop for Rusted Gears, Dam Battlegrounds Hydroponic Dome for Industrial Batteries, and Spaceport towers for Security Lockers will guarantee the highest credit-per-slot. Pair these runs with the recycling plan above and your hideout upgrades will finish faster with fewer wasted raids.
+              </p>
+              <ul className="list-disc list-inside text-cyan-100/70 space-y-2 mb-6">
+                <li>Check the Arc Raiders cheat sheet loot tags before every raid to avoid dropping upgrades by mistake.</li>
+                <li>Plan one recycling session per play block to convert excess electronics into crafting materials.</li>
+                <li>Carry a small set of keycards so you never skip Security Lockers, the highest-value containers in current patches.</li>
+                <li>Rotate maps: Blue Gate for gears, Dam for batteries, Spaceport for weapon mods, Buried City for Dog Collars.</li>
+              </ul>
+
+              <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
+                Squad Coordination Checklist
+              </h3>
+              <p className="text-lg text-cyan-100/70 leading-relaxed mb-4">
+                Effective squads divide roles: one player anchors with heavy weapons, one scouts for routes and extracts, and one handles loot and keycards. Call out container types (Security Locker, ARC cache, Exodus stash) so teammates know when to cover versus loot. Share ammo and medical items before pushing an extraction so no one drops high-value Arc Raiders loot because of weight.
+              </p>
+              <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
+                After each raid, audit your stash with the Arc Raiders recycling guide and the main cheat sheet. Clear duplicates, pin quests requiring rare ARC parts, and queue workshop crafts that align with your next raid’s route. This loop keeps your keyword targets—loot, recycling, crafting—aligned and naturally boosts progression without feeling like keyword stuffing.
               </p>
             </div>
           </div>

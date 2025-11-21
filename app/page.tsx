@@ -1,9 +1,9 @@
-﻿'use client';
+'use client';
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import Script from "next/script";
-import { items, categories } from "@/lib/items-data";
+import { items, categories, locationTypes, valueTiers } from "@/lib/items-data";
 import { ItemImage } from "@/components/ItemImage";
 
 const categoryMeta = {
@@ -19,7 +19,7 @@ const categoryMeta = {
   },
   quest_items: {
     label: 'Quest Items',
-    summary: 'Story progression requirements — don’t dismantle them.',
+    summary: 'Story progression requirements - do not dismantle them.',
     accent: 'text-purple-300',
   },
   recyclable: {
@@ -62,7 +62,10 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedAction, setSelectedAction] = useState('all');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedLocation, setSelectedLocation] = useState('all');
+  const [selectedValueTier, setSelectedValueTier] = useState('all');
   const [displayLimit, setDisplayLimit] = useState(24); // Show 24 items initially
+  const [showFilters, setShowFilters] = useState(true); // Keep filters visible by default so search is obvious
 
   const stats = {
     totalItems: items.length,
@@ -72,7 +75,7 @@ export default function Home() {
   };
 
   const actions = [
-    { id: 'all', name: 'All Actions', helper: 'Show every item' },
+    { id: 'all', name: 'All', helper: 'Show every item' },
     { id: 'keep', name: 'Keep Priority', helper: 'Quest or upgrade essentials' },
     { id: 'sell', name: 'Sell for Credits', helper: 'Safe vendor fodder' },
     { id: 'recycle', name: 'Recycle for Parts', helper: 'Break down for materials' },
@@ -98,8 +101,30 @@ export default function Home() {
       filtered = filtered.filter(item => item.action === selectedAction);
     }
 
+    if (selectedLocation !== 'all') {
+      filtered = filtered.filter(item =>
+        item.locationTypes && item.locationTypes.includes(selectedLocation as any)
+      );
+    }
+
+    if (selectedValueTier !== 'all') {
+      const tierConfig = valueTiers.find(t => t.id === selectedValueTier);
+      if (tierConfig && tierConfig.id !== 'all') {
+        filtered = filtered.filter(item => {
+          if (tierConfig.min && tierConfig.max) {
+            return item.value >= tierConfig.min && item.value <= tierConfig.max;
+          } else if (tierConfig.min) {
+            return item.value >= tierConfig.min;
+          } else if (tierConfig.max) {
+            return item.value <= tierConfig.max;
+          }
+          return true;
+        });
+      }
+    }
+
     return filtered;
-  }, [searchQuery, selectedCategory, selectedAction]);
+  }, [searchQuery, selectedCategory, selectedAction, selectedLocation, selectedValueTier]);
 
   const displayedItems = filteredItems.slice(0, displayLimit);
   const hasMoreItems = displayLimit < filteredItems.length;
@@ -157,7 +182,7 @@ export default function Home() {
           backgroundRepeat: 'no-repeat'
         }}></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto text-center space-y-1.5">
+          <div className="max-w-6xl mx-auto text-center space-y-4">
             {/* Main H1 Title - Required for SEO */}
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,229,255,0.6)]">
@@ -165,10 +190,6 @@ export default function Home() {
               </span>
             </h1>
 
-            {/* Description */}
-            <p className="text-sm md:text-base text-cyan-100/80 max-w-3xl mx-auto leading-relaxed">
-              Master Arc Raiders faster with this Arc Raiders Cheat Sheet and know exactly what to keep, sell, or recycle.
-            </p>
           </div>
         </div>
       </section>
@@ -176,47 +197,89 @@ export default function Home() {
       {/* Interactive Item Database Section - PRIMARY CONTENT */}
       <section
         id="items"
-        className="relative -mt-14 md:-mt-20 lg:-mt-24 pt-10 pb-10"
+        className="relative -mt-10 md:-mt-14 lg:-mt-16 pt-12 pb-12"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto space-y-4">
             {/* Search and Filters */}
-            <div className="space-y-5 rounded-3xl border-2 border-cyan-500/30 bg-gradient-to-br from-slate-950/80 via-blue-950/40 to-slate-950/80 backdrop-blur-md p-5 md:p-6 shadow-[0_0_60px_rgba(0,229,255,0.2)]">
-              <p className="text-center text-cyan-100/70 text-sm md:text-base max-w-2xl mx-auto">
-                Search and filter all {items.length} Arc Raiders items. Instantly discover what to keep, sell, or recycle.
-              </p>
-              {/* Search Bar */}
-              <div className="relative max-w-2xl mx-auto group">
-                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 opacity-40 blur-lg group-focus-within:opacity-70 transition-opacity duration-300"></div>
-                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-500 opacity-30 blur group-focus-within:opacity-60 transition-opacity duration-300"></div>
+            <div className="space-y-4 rounded-3xl border border-cyan-500/40 bg-gradient-to-br from-slate-950/85 via-blue-950/50 to-slate-950/85 backdrop-blur-md p-4 md:p-6 shadow-[0_0_40px_rgba(0,229,255,0.18)]">
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-cyan-300/90">Search & Filters</p>
+                  <p className="text-cyan-100/70 text-sm md:text-base whitespace-nowrap">
+                    Master Arc Raiders faster with this cheat sheet. Search and filter all {items.length} items to decide what to keep, sell, or recycle.
+                  </p>
+                  <p className="text-cyan-100/60 text-xs md:text-sm">
+                    Check our <Link href="/loot" className="text-cyan-300 hover:text-cyan-200 underline">complete loot guide</Link>, <Link href="/map" className="text-cyan-300 hover:text-cyan-200 underline">best routes map</Link>, and <Link href="/recycling" className="text-cyan-300 hover:text-cyan-200 underline">recycling guide</Link>.
+                  </p>
+                </div>
 
-                <div className="relative">
-                  <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-cyan-400 drop-shadow-[0_0_12px_rgba(0,229,255,0.8)] group-focus-within:text-cyan-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                  <input
-                    type="text"
-                    placeholder="Search for items, materials, or components..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    aria-label="Search Arc Raiders items"
-                    className="w-full pl-14 pr-12 py-4 bg-slate-950/95 backdrop-blur-sm border-2 border-cyan-500/50 rounded-xl text-cyan-50 placeholder-cyan-200/40 focus:outline-none focus:border-cyan-400/80 focus:bg-slate-900/95 focus:shadow-[0_0_35px_rgba(0,229,255,0.4)] transition-all duration-300 shadow-xl"
-                  />
-                  {searchQuery && (
+                <div className="flex flex-col md:flex-row md:items-center md:gap-3">
+                  <div className="flex-1">
+                    <div className="relative max-w-3xl mx-auto md:mx-0 group">
+                      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 opacity-40 blur-lg group-focus-within:opacity-70 transition-opacity duration-300"></div>
+                      <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-500 opacity-30 blur group-focus-within:opacity-60 transition-opacity duration-300"></div>
+
+                      <div className="relative bg-slate-950/95 border-2 border-cyan-500/60 rounded-2xl shadow-[0_0_30px_rgba(0,229,255,0.25)] overflow-hidden">
+                        <label className="sr-only" htmlFor="item-search">Search items</label>
+                        <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-cyan-300 drop-shadow-[0_0_12px_rgba(0,229,255,0.8)] group-focus-within:text-cyan-200 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <input
+                          id="item-search"
+                          type="text"
+                          placeholder="Search items, materials, or components..."
+                          value={searchQuery}
+                          onChange={(e) => setSearchQuery(e.target.value)}
+                          aria-label="Search Arc Raiders items"
+                          className="w-full pl-14 pr-14 py-4 bg-transparent text-cyan-50 placeholder-cyan-200/50 focus:outline-none focus:ring-0"
+                        />
+                        {searchQuery && (
+                          <button
+                            type="button"
+                            onClick={() => setSearchQuery('')}
+                            aria-label="Clear search"
+                            className="absolute right-3 top-1/2 -translate-y-1/2 text-cyan-200/80 hover:text-cyan-50 bg-slate-800/90 hover:bg-slate-700/90 rounded-full p-1.5 transition-colors border border-cyan-500/30"
+                          >
+                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                              <line x1="18" y1="6" x2="6" y2="18" />
+                              <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3 md:w-auto mt-3 md:mt-0">
+                    <span className="hidden md:inline-flex text-xs px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200 border border-cyan-500/30">
+                      Interactive filters
+                    </span>
                     <button
                       type="button"
-                      onClick={() => setSearchQuery('')}
-                      aria-label="Clear search"
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-cyan-400/70 hover:text-cyan-300 bg-slate-800/90 hover:bg-slate-700/90 rounded-full p-1.5 transition-colors border border-cyan-500/30"
+                      onClick={() => setShowFilters((prev) => !prev)}
+                      aria-expanded={showFilters}
+                      className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-cyan-500/60 bg-gradient-to-r from-cyan-600/40 to-blue-600/40 text-cyan-50 text-sm font-semibold hover:from-cyan-500/60 hover:to-blue-500/60 hover:border-cyan-300/80 transition-all shadow-[0_0_18px_rgba(0,229,255,0.35)]"
                     >
-                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18" />
-                        <line x1="6" y1="6" x2="18" y2="18" />
+                      <span>{showFilters ? "Hide filters" : "Show filters"}</span>
+                      <svg
+                        className={`w-4 h-4 transition-transform duration-200 ${showFilters ? 'rotate-180' : ''}`}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M6 9l6 6 6-6" />
                       </svg>
                     </button>
-                  )}
+                  </div>
                 </div>
               </div>
+
+              {showFilters && (
+                <>
               {/* Quick Action Filters */}
               <div className="flex flex-wrap gap-2 justify-center">
                   {actions.map((action) => (
@@ -252,6 +315,52 @@ export default function Home() {
                   </button>
                 ))}
               </div>
+
+              {/* Location Filter - NEW */}
+              <div>
+                <h3 className="text-xs font-semibold text-cyan-300 uppercase tracking-wider mb-2 text-center">
+                  Filter by Location Type
+                </h3>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {locationTypes.map((loc) => (
+                    <button
+                      key={loc.id}
+                      onClick={() => setSelectedLocation(loc.id)}
+                      className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 border ${
+                        selectedLocation === loc.id
+                          ? 'bg-cyan-500/20 text-cyan-300 border-cyan-400/60 shadow-[0_0_15px_rgba(0,229,255,0.25)] scale-105'
+                          : 'bg-slate-900/50 text-cyan-100/50 border-cyan-500/15 hover:bg-slate-800/70 hover:text-cyan-200/70 hover:border-cyan-400/30'
+                      }`}
+                    >
+                      {loc.icon} {loc.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+                  {/* Value Tier Filter - NEW */}
+                  <div>
+                    <h3 className="text-xs font-semibold text-cyan-300 uppercase tracking-wider mb-2 text-center">
+                      Filter by Value Tier
+                    </h3>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      {valueTiers.map((tier) => (
+                        <button
+                          key={tier.id}
+                          onClick={() => setSelectedValueTier(tier.id)}
+                          className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 border ${
+                            selectedValueTier === tier.id
+                              ? 'bg-cyan-500/20 text-cyan-300 border-cyan-400/60 shadow-[0_0_15px_rgba(0,229,255,0.25)] scale-105'
+                              : 'bg-slate-900/50 text-cyan-100/50 border-cyan-500/15 hover:bg-slate-800/70 hover:text-cyan-200/70 hover:border-cyan-400/30'
+                          }`}
+                        >
+                          {tier.name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Items Grid */}
@@ -268,6 +377,8 @@ export default function Home() {
                         setSearchQuery('');
                         setSelectedCategory('all');
                         setSelectedAction('all');
+                        setSelectedLocation('all');
+                        setSelectedValueTier('all');
                       }}
                       className="px-6 py-3 bg-gradient-to-r from-cyan-500/80 to-blue-500/80 hover:from-cyan-400/90 hover:to-blue-400/90 text-white font-semibold rounded-xl transition-all shadow-[0_0_30px_rgba(0,229,255,0.4)] hover:scale-105 border border-cyan-400/50"
                     >
@@ -412,6 +523,254 @@ export default function Home() {
             </div>
           </div>
         </div>
+    </section>
+
+      {/* Location Spawns Section - NEW for SEO */}
+      <section className="py-12 md:py-16 bg-gradient-to-b from-slate-950/80 via-blue-950/40 to-slate-950/80">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl font-bold text-cyan-300 mb-4 text-center">
+            Arc Raiders Loot Location Spawns Guide
+          </h2>
+          <p className="text-cyan-100/70 text-center max-w-3xl mx-auto mb-8">
+            Items spawn in specific locations based on 8 location types. Use this Arc Raiders loot guide to find exactly where items spawn on all maps.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-gradient-to-b from-slate-900/60 via-blue-900/30 to-slate-900/60 border-2 border-orange-500/30 rounded-xl p-4 hover:border-orange-400/60 hover:shadow-[0_0_30px_rgba(255,165,0,0.2)] transition-all">
+              <div className="text-3xl mb-2 font-black text-orange-200">IND</div>
+              <h3 className="text-lg font-bold text-orange-300 mb-2">Industrial</h3>
+              <p className="text-xs text-cyan-100/60 mb-3">Dam Battlegrounds, Spaceport, Warehouse Complex</p>
+              <div className="space-y-1">
+                <div className="text-xs text-cyan-100/70">- Industrial Batteries</div>
+                <div className="text-xs text-cyan-100/70">- Rusted Gears</div>
+                <div className="text-xs text-cyan-100/70">- Metal Parts</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-900/60 via-blue-900/30 to-slate-900/60 border-2 border-red-500/30 rounded-xl p-4 hover:border-red-400/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.2)] transition-all">
+              <div className="text-3xl mb-2 font-black text-red-200">MED</div>
+              <h3 className="text-lg font-bold text-red-300 mb-2">Medical</h3>
+              <p className="text-xs text-cyan-100/60 mb-3">Buried City Pharmacies, Medical Labs</p>
+              <div className="space-y-1">
+                <div className="text-xs text-cyan-100/70">- Antiseptics</div>
+                <div className="text-xs text-cyan-100/70">- Syringes</div>
+                <div className="text-xs text-cyan-100/70">- ESR Analyzers</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-900/60 via-blue-900/30 to-slate-900/60 border-2 border-yellow-500/30 rounded-xl p-4 hover:border-yellow-400/60 hover:shadow-[0_0_30px_rgba(234,179,8,0.2)] transition-all">
+              <div className="text-3xl mb-2 font-black text-yellow-200">SEC</div>
+              <h3 className="text-lg font-bold text-yellow-300 mb-2">Security</h3>
+              <p className="text-xs text-cyan-100/60 mb-3">Military zones, Control Towers</p>
+              <div className="space-y-1">
+                <div className="text-xs text-cyan-100/70">- Keys (all types)</div>
+                <div className="text-xs text-cyan-100/70">- Weapon Caches</div>
+                <div className="text-xs text-cyan-100/70">- Ammunition</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-900/60 via-blue-900/30 to-slate-900/60 border-2 border-green-500/30 rounded-xl p-4 hover:border-green-400/60 hover:shadow-[0_0_30px_rgba(34,197,94,0.2)] transition-all">
+              <div className="text-3xl mb-2 font-black text-green-200">RES</div>
+              <h3 className="text-lg font-bold text-green-300 mb-2">Residential</h3>
+              <p className="text-xs text-cyan-100/60 mb-3">Apartments, Houses, Raider Refuge</p>
+              <div className="space-y-1">
+                <div className="text-xs text-cyan-100/70">- Dog Collars</div>
+                <div className="text-xs text-cyan-100/70">- Trinkets</div>
+                <div className="text-xs text-cyan-100/70">- Household Items</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-900/60 via-blue-900/30 to-slate-900/60 border-2 border-purple-500/30 rounded-xl p-4 hover:border-purple-400/60 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] transition-all">
+              <div className="text-3xl mb-2 font-black text-purple-200">OLD</div>
+              <h3 className="text-lg font-bold text-purple-300 mb-2">Old World</h3>
+              <p className="text-xs text-cyan-100/60 mb-3">Historical sites, Abandoned areas</p>
+              <div className="space-y-1">
+                <div className="text-xs text-cyan-100/70">- Vintage Items</div>
+                <div className="text-xs text-cyan-100/70">- Collectibles</div>
+                <div className="text-xs text-cyan-100/70">- Film Reels</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-900/60 via-blue-900/30 to-slate-900/60 border-2 border-cyan-500/30 rounded-xl p-4 hover:border-cyan-400/60 hover:shadow-[0_0_30px_rgba(0,229,255,0.2)] transition-all">
+              <div className="text-3xl mb-2 font-black text-cyan-200">COM</div>
+              <h3 className="text-lg font-bold text-cyan-300 mb-2">Commercial</h3>
+              <p className="text-xs text-cyan-100/60 mb-3">Shops, Terminal Buildings</p>
+              <div className="space-y-1">
+                <div className="text-xs text-cyan-100/70">- General Loot</div>
+                <div className="text-xs text-cyan-100/70">- Food Items</div>
+                <div className="text-xs text-cyan-100/70">- Consumer Goods</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-900/60 via-blue-900/30 to-slate-900/60 border-2 border-lime-500/30 rounded-xl p-4 hover:border-lime-400/60 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] transition-all">
+              <div className="text-3xl mb-2 font-black text-lime-200">NAT</div>
+              <h3 className="text-lg font-bold text-lime-300 mb-2">Nature</h3>
+              <p className="text-xs text-cyan-100/60 mb-3">Jungle areas, Outdoor zones</p>
+              <div className="space-y-1">
+                <div className="text-xs text-cyan-100/70">- Lemons (jungle)</div>
+                <div className="text-xs text-cyan-100/70">- Apricots (trees)</div>
+                <div className="text-xs text-cyan-100/70">- Mushrooms</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-900/60 via-blue-900/30 to-slate-900/60 border-2 border-blue-500/30 rounded-xl p-4 hover:border-blue-400/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] transition-all">
+              <div className="text-3xl mb-2 font-black text-blue-200">ELEC</div>
+              <h3 className="text-lg font-bold text-blue-300 mb-2">Electrical</h3>
+              <p className="text-xs text-cyan-100/60 mb-3">Server rooms, Tech buildings</p>
+              <div className="space-y-1">
+                <div className="text-xs text-cyan-100/70">- Fried Motherboards</div>
+                <div className="text-xs text-cyan-100/70">- Tech Components</div>
+                <div className="text-xs text-cyan-100/70">- Electronics</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/map"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500/80 to-blue-500/80 hover:from-cyan-400/90 hover:to-blue-400/90 text-white font-bold rounded-xl transition-all shadow-[0_0_30px_rgba(0,229,255,0.4)] hover:scale-105 border border-cyan-400/50"
+            >
+              View Full Map Guide
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Top Priority Loot Section - NEW for SEO */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl font-bold text-cyan-300 mb-4 text-center">
+            Top Priority Loot Items - What to Grab First
+          </h2>
+          <p className="text-cyan-100/70 text-center max-w-3xl mx-auto mb-8">
+            These are the most valuable Arc Raiders items to prioritize during every raid. Focus on these for maximum efficiency.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-gradient-to-b from-slate-950/60 via-red-950/30 to-slate-950/60 border-2 border-red-500/40 rounded-xl p-6 hover:shadow-[0_0_40px_rgba(239,68,68,0.3)] transition-all">
+              <h3 className="text-2xl font-bold text-red-300 mb-4 flex items-center">
+                <span className="mr-3 text-xl font-black text-red-200">*</span>
+                Must-Grab Items
+              </h3>
+              <div className="space-y-3">
+              <div className="bg-slate-900/60 border border-red-500/20 rounded-lg p-3">
+                  <div className="flex items-start justify-between mb-1">
+                    <span className="text-cyan-100 font-semibold">ARC Powercells</span>
+                    <span className="text-xs px-2 py-1 bg-red-500/20 text-red-300 rounded-full border border-red-500/40">
+                      Essential
+                    </span>
+                  </div>
+                  <p className="text-xs text-cyan-100/60">Craft shield recharges - cannot craft early game</p>
+                </div>
+
+                <div className="bg-slate-900/60 border border-red-500/20 rounded-lg p-3">
+                  <div className="flex items-start justify-between mb-1">
+                    <span className="text-cyan-100 font-semibold">Keys (All Types)</span>
+                    <span className="text-xs px-2 py-1 bg-red-500/20 text-red-300 rounded-full border border-red-500/40">
+                      Essential
+                    </span>
+                  </div>
+                  <p className="text-xs text-cyan-100/60">Unlock high-value Security Lockers and rare loot rooms</p>
+                </div>
+
+                <div className="bg-slate-900/60 border border-orange-500/20 rounded-lg p-3">
+                  <div className="flex items-start justify-between mb-1">
+                    <span className="text-cyan-100 font-semibold">Silencers & Gun Mods</span>
+                    <span className="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full border border-orange-500/40">
+                      High Priority
+                    </span>
+                  </div>
+                  <p className="text-xs text-cyan-100/60">Cannot craft early, only low-tier mods available</p>
+                </div>
+
+                <div className="bg-slate-900/60 border border-orange-500/20 rounded-lg p-3">
+                  <div className="flex items-start justify-between mb-1">
+                    <span className="text-cyan-100 font-semibold">Gun Parts</span>
+                    <span className="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full border border-orange-500/40">
+                      High Priority
+                    </span>
+                  </div>
+                  <p className="text-xs text-cyan-100/60">Essential for repairing low-durability weapons found in crates</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-950/60 via-amber-950/30 to-slate-950/60 border-2 border-amber-500/40 rounded-xl p-6 hover:shadow-[0_0_40px_rgba(245,158,11,0.3)] transition-all">
+              <h3 className="text-2xl font-bold text-amber-300 mb-4 flex items-center">
+                <span className="mr-3 text-xl font-black text-amber-200">*</span>
+                High-Value Sellables
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-slate-900/60 border border-amber-500/20 rounded-lg p-3">
+                  <div className="flex items-start justify-between mb-1">
+                    <span className="text-cyan-100 font-semibold">Lance's Mixtape (5th Edition)</span>
+                    <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/40">
+                      Epic
+                    </span>
+                  </div>
+                  <p className="text-xs text-cyan-100/60">~10,000 credits - Most valuable single item (extremely rare)</p>
+                </div>
+
+                <div className="bg-slate-900/60 border border-amber-500/20 rounded-lg p-3">
+                  <div className="flex items-start justify-between mb-1">
+                    <span className="text-cyan-100 font-semibold">Breathtaking Snow Globe</span>
+                    <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/40">
+                      Rare
+                    </span>
+                  </div>
+                  <p className="text-xs text-cyan-100/60">7,000 credits - High-value collectible</p>
+                </div>
+
+                <div className="bg-slate-900/60 border border-amber-500/20 rounded-lg p-3">
+                  <div className="flex items-start justify-between mb-1">
+                    <span className="text-cyan-100 font-semibold">Red Coral Jewelry</span>
+                    <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/40">
+                      Rare
+                    </span>
+                  </div>
+                  <p className="text-xs text-cyan-100/60">5,000 credits - Excellent credit source</p>
+                </div>
+
+                <div className="bg-slate-900/60 border border-amber-500/20 rounded-lg p-3">
+                  <div className="flex items-start justify-between mb-1">
+                    <span className="text-cyan-100 font-semibold">Rubber Duck</span>
+                    <span className="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded-full border border-green-500/40">
+                      Common
+                    </span>
+                  </div>
+                  <p className="text-xs text-cyan-100/60">1,000 credits - Stacks to 15, found anywhere (great value/weight)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-blue-950/40 via-cyan-950/40 to-blue-950/40 border-2 border-cyan-500/30 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-cyan-300 mb-4">Pro Loot Tips</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="flex items-start">
+                <span className="text-2xl mr-3 font-black text-cyan-200">*</span>
+                <div>
+                  <h4 className="text-cyan-100 font-semibold mb-1">Early Game</h4>
+                  <p className="text-xs text-cyan-100/70">Prioritize progression items and workshop upgrades. Keep quest materials.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="text-2xl mr-3 font-black text-cyan-200">*</span>
+                <div>
+                  <h4 className="text-cyan-100 font-semibold mb-1">Late Game</h4>
+                  <p className="text-xs text-cyan-100/70">Shift to coin generation. Farm Security Lockers with Security Breach perk.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="text-2xl mr-3 font-black text-cyan-200">*</span>
+                <div>
+                  <h4 className="text-cyan-100 font-semibold mb-1">280-Slot Stash</h4>
+                  <p className="text-xs text-cyan-100/70">Manage inventory carefully. Use Broad Shoulders + Loaded Arms for +weight.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Stats Section - Moved below items */}
@@ -479,7 +838,7 @@ export default function Home() {
               Recycling Strategy for Maximum Efficiency
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Recycling is a core mechanic in Arc Raiders that converts unwanted items into valuable crafting materials. Our Arc Raiders recycling guide shows exactly what each item breaks down into, helping you decide whether to recycle or sell. Items like broken electronics, damaged ARC components, and household objects can be recycled for essential materials. The Arc Raiders Cheat Sheet includes detailed recycling chains, showing you the most efficient paths to obtain specific crafting components.
+              Recycling is a core mechanic in Arc Raiders that converts unwanted items into valuable crafting materials. Our <Link href="/recycling" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">Arc Raiders recycling guide</Link> shows exactly what each item breaks down into, helping you decide whether to recycle or sell. Items like broken electronics, damaged ARC components, and household objects can be recycled for essential materials. The Arc Raider Cheat Sheet includes detailed recycling chains, showing you the most efficient paths to obtain specific crafting components.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
@@ -540,9 +899,144 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section with Schema.org */}
+      <section className="py-16 bg-gradient-to-b from-blue-950/30 to-slate-950/50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl font-bold text-cyan-300 mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-6">
+            <div className="bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 border-2 border-cyan-500/30 rounded-xl p-6 hover:border-cyan-400/60 transition-all">
+              <h3 className="text-xl font-bold text-cyan-100 mb-3">
+                What items should I keep in Arc Raiders?
+              </h3>
+              <p className="text-cyan-100/70 leading-relaxed">
+                Always keep ARC Parts (Leaper Pulse Units, Rocketeer Drivers), quest-specific items marked with "Quest:" in descriptions, and crafting materials like ARC Alloy and Advanced Electrical Components. Use our interactive filter above to show only "Keep Priority" items. High-value items worth 1,000+ credits should be kept for workshop upgrades.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 border-2 border-cyan-500/30 rounded-xl p-6 hover:border-cyan-400/60 transition-all">
+              <h3 className="text-xl font-bold text-cyan-100 mb-3">
+                Where do items spawn in Arc Raiders?
+              </h3>
+              <p className="text-cyan-100/70 leading-relaxed">
+                Items spawn based on 8 location types: Industrial zones (Batteries, Gears), Medical areas (Antiseptics, Syringes), Security zones (Keys, Weapons), Residential areas (Dog Collars, Trinkets), Electrical zones (Motherboards, Tech), Nature areas (Fruits, Mushrooms), Commercial zones (Food, General Loot), and Old World locations (Vintage Items). Use our Location Filter above to find items by spawn type.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 border-2 border-cyan-500/30 rounded-xl p-6 hover:border-cyan-400/60 transition-all">
+              <h3 className="text-xl font-bold text-cyan-100 mb-3">
+                Should I recycle or sell items in Arc Raiders?
+              </h3>
+              <p className="text-cyan-100/70 leading-relaxed">
+                Compare the item's sell value to its recycled materials' combined worth. For example, Power Banks sell for 640 credits but recycle into materials worth 1,400+ credits. Always recycle at your Hideout (100% yield) instead of during raids (50% yield). Check our <Link href="/recycling" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">Recycling Guide</Link> for complete item-by-item recommendations.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 border-2 border-cyan-500/30 rounded-xl p-6 hover:border-cyan-400/60 transition-all">
+              <h3 className="text-xl font-bold text-cyan-100 mb-3">
+                What are the most valuable items to loot in Arc Raiders?
+              </h3>
+              <p className="text-cyan-100/70 leading-relaxed">
+                Prioritize S-Tier items (5,000+ credits) like Lance's Mixtape (10,000 credits), Syringe (5,000 credits), and epic ARC Parts. A-Tier items (1,000-5,000 credits) include Industrial Batteries, Fried Motherboards, and Advanced Electrical Components. Always grab Keys and Silencers as they cannot be crafted early game. Use our Value Tier filter to show high-value items only.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 border-2 border-cyan-500/30 rounded-xl p-6 hover:border-cyan-400/60 transition-all">
+              <h3 className="text-xl font-bold text-cyan-100 mb-3">
+                How many items can I store in Arc Raiders?
+              </h3>
+              <p className="text-cyan-100/70 leading-relaxed">
+                Your stash has 280 slots total. Manage inventory by selling low-value trinkets (diamond symbol), recycling common materials you have in excess, and using perks like Broad Shoulders (increases carry weight) and Loaded Arms (reduces weapon weight) to carry more loot per raid. Stack similar items and prioritize quest materials.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 border-2 border-cyan-500/30 rounded-xl p-6 hover:border-cyan-400/60 transition-all">
+              <h3 className="text-xl font-bold text-cyan-100 mb-3">
+                What is the best map for farming specific items in Arc Raiders?
+              </h3>
+              <p className="text-cyan-100/70 leading-relaxed">
+                Blue Gate Warehouse Complex is best for Rusted Gears (40+ vehicles). Dam Battlegrounds Hydroponic Dome is ideal for Industrial Batteries. Buried City and Spaceport residential zones excel for Dog Collars. Stella Montis offers exclusive high-value loot. Check our <Link href="/map" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">Map Guide</Link> for detailed location breakdowns.
+              </p>
+            </div>
+          </div>
+
+          {/* Schema.org FAQPage */}
+          <Script
+            id="faq-schema"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What items should I keep in Arc Raiders?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Always keep ARC Parts (Leaper Pulse Units, Rocketeer Drivers), quest-specific items marked with 'Quest:' in descriptions, and crafting materials like ARC Alloy and Advanced Electrical Components. High-value items worth 1,000+ credits should be kept for workshop upgrades."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Where do items spawn in Arc Raiders?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Items spawn based on 8 location types: Industrial zones (Batteries, Gears), Medical areas (Antiseptics, Syringes), Security zones (Keys, Weapons), Residential areas (Dog Collars, Trinkets), Electrical zones (Motherboards, Tech), Nature areas (Fruits, Mushrooms), Commercial zones (Food), and Old World locations (Vintage Items)."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Should I recycle or sell items in Arc Raiders?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Compare the item's sell value to its recycled materials' combined worth. Always recycle at your Hideout (100% yield) instead of during raids (50% yield). Many items like Power Banks are worth more recycled than sold."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What are the most valuable items to loot in Arc Raiders?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Prioritize S-Tier items (5,000+ credits) like Lance's Mixtape (10,000 credits) and Syringe (5,000 credits). A-Tier items (1,000-5,000 credits) include Industrial Batteries, Fried Motherboards, and Advanced Electrical Components. Always grab Keys and Silencers as they cannot be crafted early game."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How many items can I store in Arc Raiders?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Your stash has 280 slots total. Manage inventory by selling low-value trinkets, recycling excess materials, and using perks like Broad Shoulders (increases carry weight) to carry more loot per raid."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is the best map for farming specific items in Arc Raiders?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Blue Gate Warehouse Complex is best for Rusted Gears (40+ vehicles). Dam Battlegrounds Hydroponic Dome is ideal for Industrial Batteries. Buried City and Spaceport residential zones excel for Dog Collars. Stella Montis offers exclusive high-value loot."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        </div>
+      </section>
     </div>
   );
 }
+
+
+
+
+
+
+
+
 
 
 

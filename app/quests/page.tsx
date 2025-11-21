@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata = genMeta({
   title: 'Arc Raiders Quest Guide - All Quests & Rewards',
-  description: 'Complete Arc Raiders quest guide with 10+ quests, required items, and rewards. Optimize your hideout progression and unlock advanced crafting stations.',
+  description: 'Arc Raiders quest guide covering 10+ quests, required items, and rewards. Optimize hideout progression and unlock advanced crafting stations fast.',
   keywords: [
     'arc raiders quests',
     'arc raiders quest guide',

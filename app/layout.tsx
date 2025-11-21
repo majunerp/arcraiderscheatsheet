@@ -19,16 +19,20 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = genMeta({
   title: "Arc Raiders Cheat Sheet 2025 - Items, Quests & Crafting",
-  description: "🎮 Complete Arc Raiders database: 70+ items, quest tracker, crafting recipes. Instantly know what to keep, sell or recycle. Updated for 2025!",
+  description: "Complete Arc Raiders loot guide: 70+ items, location spawns, priority loot, quest tracker & crafting recipes. Know what to keep, sell or recycle!",
   keywords: [
     'arc raiders cheat sheet',
+    'arc raiders cheat sheet loot',
+    'arc raiders loot guide',
     'arc raiders guide',
     'arc raiders items',
-    'arc raiders loot guide',
+    'arc raiders loot',
+    'arc raiders location spawns',
     'arc raiders crafting',
     'arc raiders quest items',
     'arc raiders recycling guide',
     'arc raiders keep sell recycle',
+    'arc raiders priority items',
     'arc raiders hideout upgrades',
     'arc raiders workshop guide',
   ],

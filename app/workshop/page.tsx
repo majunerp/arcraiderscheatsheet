@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 export const metadata = genMeta({
   title: 'Arc Raiders Crafting Guide - Workshop Recipes 2025',
-  description: 'Complete Arc Raiders crafting guide with 12+ workshop recipes, materials, and upgrade paths. Learn how to craft weapons, armor, and equipment for optimal gameplay.',
+  description:
+    'Arc Raiders crafting guide with 12+ workshop recipes, materials, and upgrade paths. Learn how to craft weapons, armor, and equipment efficiently in 2025.',
   keywords: [
     'arc raiders crafting',
     'arc raiders workshop',
