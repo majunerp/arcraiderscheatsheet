@@ -189,7 +189,9 @@ export default function Home() {
                 Arc Raiders Cheat Sheet
               </span>
             </h1>
-
+            <p className="text-base md:text-lg text-cyan-100/80 max-w-3xl mx-auto leading-relaxed">
+              The Arc Raiders Cheat Sheet gives you a fast overview of loot, filters, and priorities so you can make smarter choices every raid.
+            </p>
           </div>
         </div>
       </section>
@@ -859,7 +861,7 @@ export default function Home() {
               Advanced Tips for Arc Raiders Players
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Experienced Arc Raiders players know that efficient loot management is key to success. This cheat sheet includes advanced strategies for inventory optimization, priority item lists for different playstyles, and farming routes for specific materials. Whether you're focusing on PvP combat, PvE missions, or hideout development, these recommendations support your gameplay objectives.
+              Experienced Arc Raiders players know that efficient loot management is key to success. This Arc Raiders Cheat Sheet includes advanced strategies for inventory optimization, priority item lists for different playstyles, and farming routes for specific materials. Whether you're focusing on PvP combat, PvE missions, or hideout development, these recommendations support your gameplay objectives.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
@@ -904,7 +906,7 @@ export default function Home() {
       <section className="py-16 bg-gradient-to-b from-blue-950/30 to-slate-950/50">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold text-cyan-300 mb-8 text-center">
-            Frequently Asked Questions
+            Arc Raiders Cheat Sheet FAQs
           </h2>
 
           <div className="space-y-6">
