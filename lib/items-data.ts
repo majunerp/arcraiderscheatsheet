@@ -939,7 +939,7 @@ const baseItems: Item[] = [
     rarity: 'epic',
     action: 'keep',
     value: 5000,
-    image: '/items/stella_montis_key.png',
+    image: '/raider.png',
     description: 'Unlocks secret Archives door in Stella Montis frozen research facility. Rare key required for accessing exclusive loot areas.',
     usedFor: ['Stella Montis Secret Room'],
     locationTypes: ['old_world'],
