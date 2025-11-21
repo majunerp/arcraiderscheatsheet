@@ -207,7 +207,7 @@ export default function Home() {
                 <div className="space-y-1">
                   <p className="text-xs font-semibold uppercase tracking-[0.08em] text-cyan-300/90">Search & Filters</p>
                   <p className="text-cyan-100/70 text-sm md:text-base whitespace-nowrap">
-                    Master Arc Raiders faster with this cheat sheet. Search and filter all {items.length} items to decide what to keep, sell, or recycle.
+                    Master Arc Raiders faster with this Arc Raiders Cheat Sheet. Search and filter all {items.length} items to decide what to keep, sell, or recycle.
                   </p>
                   <p className="text-cyan-100/60 text-xs md:text-sm">
                     Check our <Link href="/loot" className="text-cyan-300 hover:text-cyan-200 underline">complete loot guide</Link>, <Link href="/map" className="text-cyan-300 hover:text-cyan-200 underline">best routes map</Link>, and <Link href="/recycling" className="text-cyan-300 hover:text-cyan-200 underline">recycling guide</Link>.
@@ -810,7 +810,7 @@ export default function Home() {
               Complete Arc Raiders Cheat Sheet for Loot Management
             </h2>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Welcome to the most comprehensive Arc Raiders cheat sheet available online. This guide helps players make informed decisions about every item they encounter in the game. Whether you're a beginner learning the basics or an experienced raider optimizing your hideout, the resource below provides essential information for successful gameplay.
+              Welcome to the most comprehensive Arc Raiders Cheat Sheet available online. This guide helps players make informed decisions about every item they encounter in the game. Whether you're a beginner learning the basics or an experienced raider optimizing your hideout, the Arc Raiders Cheat Sheet below provides essential information for successful gameplay.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
@@ -824,7 +824,7 @@ export default function Home() {
               Arc Raiders Quest Items and Hideout Upgrades
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Quest items in Arc Raiders are essential for hideout progression and unlocking advanced crafting stations. This guide identifies all quest-specific items, including rare ARC parts like the Leaper Pulse Unit, Rocketeer Driver, and Surveyor Vault. These items should always be kept until you complete their associated quests. The sheet also details which items are needed for workshop upgrades, medical station construction, and power system installations.
+              Quest items in Arc Raiders are essential for hideout progression and unlocking advanced crafting stations. This Arc Raiders Cheat Sheet identifies all quest-specific items, including rare ARC parts like the Leaper Pulse Unit, Rocketeer Driver, and Surveyor Vault. These items should always be kept until you complete their associated quests. The sheet also details which items are needed for workshop upgrades, medical station construction, and power system installations.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
@@ -852,7 +852,7 @@ export default function Home() {
               Selling vs. Keeping: Making the Right Choice
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Not every item in Arc Raiders needs to be kept or recycled. Some items are best sold for immediate credits, which can be used to purchase essential supplies or upgrade your equipment. This guide identifies vendor trash items, consumables with low utility, and duplicate materials that can safely be sold. The advice here helps you maintain optimal inventory space while maximizing credit income for important purchases.
+              Not every item in Arc Raiders needs to be kept or recycled. Some items are best sold for immediate credits, which can be used to purchase essential supplies or upgrade your equipment. This Arc Raiders Cheat Sheet identifies vendor trash items, consumables with low utility, and duplicate materials that can safely be sold. The advice here helps you maintain optimal inventory space while maximizing credit income for important purchases.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
@@ -866,7 +866,7 @@ export default function Home() {
               Stay Updated with Arc Raiders Meta
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              The Arc Raiders meta evolves with each update, introducing new items, quests, and crafting recipes. This cheat sheet is updated to reflect the latest changes, ensuring you always have accurate information. Bookmark the guide and check back for new content, updated item values, and fresh strategies to stay ahead of the competition.
+              The Arc Raiders meta evolves with each update, introducing new items, quests, and crafting recipes. This Arc Raiders Cheat Sheet is updated to reflect the latest changes, ensuring you always have accurate information. Bookmark the guide and check back for new content, updated item values, and fresh strategies to stay ahead of the competition.
             </p>
           </div>
         </div>
