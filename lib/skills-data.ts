@@ -22,7 +22,7 @@ export const allSkills: Skill[] = [
     tree: 'mobility',
     tier: 1,
     maxPoints: 5,
-    icon: '/skills/nimble_climber.png',
+    icon: 'https://cdn.arctracker.io/skillnodes/nimble_climber.png',
     description: 'Increases climbing speed. Essential for vertical navigation on large maps.',
     position: 'center',
   },
