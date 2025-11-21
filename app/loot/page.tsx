@@ -144,12 +144,10 @@ export default function LootPage() {
                   Arc Raiders Loot Cheat Sheet 2025
                 </p>
                 <h1 className="text-3xl md:text-4xl font-bold leading-tight text-cyan-50">
-                  Rank on page one with the most complete Arc Raiders loot cheat sheet
+                  Arc Raiders loot cheat sheet — best loot routes, containers, and calls
                 </h1>
                 <p className="text-base md:text-lg text-cyan-100/75 leading-relaxed">
-                  Search trends show <strong>"arc raiders cheat sheet loot"</strong> surging. This page is built to
-                  win that query: S-tier drops, fastest credit farms, 280-slot stash plan, and instant keep/sell/recycle
-                  calls pulled from our live database of {totalTracked}+ items.
+                  Use this Arc Raiders cheat sheet loot guide to find the best loot routes, S-tier drops, fastest credit farms, a 280-slot stash plan, and instant keep/sell/recycle calls pulled from our live database of {totalTracked}+ items.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
