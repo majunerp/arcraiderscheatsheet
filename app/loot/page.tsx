@@ -383,6 +383,62 @@ export default function LootPage() {
         </div>
       </section>
 
+      <section className="py-14 border-t border-zinc-800/40 bg-gradient-to-b from-slate-950/70 to-blue-950/40">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="prose prose-invert max-w-none space-y-5">
+            <h2 className="text-3xl font-bold text-cyan-300">Arc Raiders loot strategy playbook</h2>
+            <p className="text-cyan-100/80">
+              Arc Raiders loot strategy for 2025 centers on speed, intel, and clean extracts. This Arc Raiders loot guide leans on live item calls so you can choose the right drop spot, clear the best rooms first, and leave with more credits per kilogram than rival squads. Treat every raid as a timed puzzle: identify where high-value Arc Raiders loot sits, rotate before third parties arrive, and exit early enough to reset without risking your best finds.
+            </p>
+            <p className="text-cyan-100/80">
+              Arc Raiders loot economy works like a market: every slot should return more than it costs to carry. Track the value-per-slot of quest items, ARC parts, and diamond trinkets so you never clog your stash with low-yield junk. When your inventory is close to full, audit each slot mid-raid and replace anything underperforming; the shift from a 200-credit filler to a 1,200-credit Arc Raiders loot find is the difference between a small win and a game-changing buy order.
+            </p>
+            <p className="text-cyan-100/80">
+              Arc Raiders loot routes should change with weather and threat levels. On stormy cycles, lean on enclosed spaces like Spaceport towers where visibility is controlled. On clear cycles, stretch to open vehicle yards for explosive crate density. Always keep a backup Arc Raiders loot path in mind so you can pivot if a hot drop gets contested, and mark extracts before you commit to a full clear to avoid late collapses.
+            </p>
+            <p className="text-cyan-100/80">
+              Arc Raiders loot weight management is the hidden multiplier. Run Broad Shoulders with Loaded Arms when you know you will scoop batteries, ARC parts, and weapon mods. Swap to lighter rigs for trinket-heavy raids so you can sprint between spawns. If a teammate specializes in weight perks, let them carry the heaviest Arc Raiders loot while you scout and secure keycards; sharing roles keeps the squad mobile and lets you hit more rooms in a single timer.
+            </p>
+            <p className="text-cyan-100/80">
+              Arc Raiders loot squads win more when roles are defined. Assign one player to open Security Lockers, another to watch angles, and a third to bag medical spawns. Rotate the pack mule job each raid so no one burns out. A calm caller who tracks remaining Arc Raiders loot hotspots prevents the panic that leads to dropped items or missed extracts, and clarity keeps density high without feeling like keyword stuffing.
+            </p>
+            <p className="text-cyan-100/80">
+              Arc Raiders loot containers pay differently depending on timing. Early raid, sweep Medical and Tech rooms for quest electronics before other squads arrive. Mid raid, pivot to weapon caches and ARC debris for mod rolls. Late raid, prioritize Exodus stashes because they scale with time survived. Treat each segment as its own Arc Raiders loot sprint so you do not waste minutes opening low-yield crates when better options are nearby.
+            </p>
+            <p className="text-cyan-100/80">
+              Arc Raiders loot prep starts before deployment. Craft enough ammo to skip mid-raid stops, pack a single grenade for emergencies, and bring just enough meds to survive two fights. That leaves slots open for premium Arc Raiders loot without sacrificing safety. Keep one empty slot reserved for a surprise quest item so you are never forced to drop a high-tier mod at the worst moment.
+            </p>
+            <p className="text-cyan-100/80">
+              Arc Raiders loot risk management is about disciplined resets. If you already secured a key item, exit early rather than chasing a risky third fight. Log wins in a notebook with map, route, and container notes; over time you will see patterns where Arc Raiders loot runs pay out more often. Refine those loops and ignore distractions that offer low value, even if they look fun.
+            </p>
+            <p className="text-cyan-100/80">
+              Arc Raiders loot progression ties directly to quests and workshop tiers. Before each session, note which upgrades need ARC parts, which quests require rare trinkets, and which recyclables can be converted later. Carry only what those goals demand. This keeps Arc Raiders loot decisions purposeful: every container you open moves you toward a milestone instead of filling your stash with random finds that slow you down.
+            </p>
+            <p className="text-cyan-100/80">
+              Arc Raiders loot weeks flow best with a simple rhythm: one raid for credits, one for crafting mats, one for quest items, repeat. That cadence maintains a steady bankroll while you chase upgrades. When in doubt, ask whether the next room offers better Arc Raiders loot than what is already in your pack; if not, leave and bank the win.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
+              <div className="rounded-xl border border-cyan-500/30 bg-slate-950/60 p-4">
+                <h3 className="text-lg font-semibold text-cyan-100 mb-2">Arc Raiders loot quick wins</h3>
+                <ul className="list-disc list-inside text-sm text-cyan-100/75 space-y-1.5">
+                  <li>Run one sprint on Blue Gate vehicles per session for guaranteed Arc Raiders loot batteries.</li>
+                  <li>Hit Dam Battlegrounds tech rooms first; they pair Arc Raiders loot value with low contest.</li>
+                  <li>Stash diamond trinkets at trader mid-loop to free slots for heavier Arc Raiders loot mods.</li>
+                </ul>
+              </div>
+              <div className="rounded-xl border border-cyan-500/30 bg-slate-950/60 p-4">
+                <h3 className="text-lg font-semibold text-cyan-100 mb-2">Arc Raiders loot checklist</h3>
+                <ul className="list-disc list-inside text-sm text-cyan-100/75 space-y-1.5">
+                  <li>Mark two extracts and a backup Arc Raiders loot route before landing.</li>
+                  <li>Carry one flex slot for a sudden high-tier Arc Raiders loot drop.</li>
+                  <li>Track which containers are still closed so you never double back on spent Arc Raiders loot rooms.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 border-t border-zinc-800/40 bg-gradient-to-b from-blue-950/30 to-slate-950/50">
         <div className="container mx-auto px-4 max-w-5xl space-y-6">
           <header className="space-y-2 text-center">

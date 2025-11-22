@@ -251,6 +251,62 @@ export default function RecyclingPage() {
           </div>
         </section>
 
+        <section className="py-14 border-t-2 border-cyan-500/20 bg-gradient-to-b from-slate-950/70 to-blue-950/40">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="prose prose-invert max-w-none space-y-5">
+              <h2 className="text-3xl font-bold text-cyan-300">Arc Raiders recycling deep dive</h2>
+              <p className="text-cyan-100/80">
+                Arc Raiders recycling is the backbone of every efficient hideout. When you treat Arc Raiders recycling as a deliberate economy, you convert dead weight into upgrade fuel without slowing your squad. Start each session with a goal: craft ammo, finish a workshop tier, or bankroll a purchase. If that goal demands materials, Arc Raiders recycling is the tool that pays for it faster than selling random trinkets.
+              </p>
+              <p className="text-cyan-100/80">
+                Arc Raiders recycling beats raid salvaging because yields are higher and more predictable. Salvaging mid-raid is a panic button; true Arc Raiders recycling happens at the hideout where every part is counted and no materials are lost. Plan your clears so you can reset quickly, dump recyclables into the bench, and roll straight into the next deployment with fresh kits funded by Arc Raiders recycling returns.
+              </p>
+              <p className="text-cyan-100/80">
+                Arc Raiders recycling routes should focus on tech corridors, power rooms, and research labs. These areas pack electronics, batteries, and damaged ARC parts that flip into high-yield materials. Keep two or three fallback paths ready so you can pivot if another team beats you to the first spawn. Consistency matters; a steady Arc Raiders recycling loop outperforms a risky farm that sometimes wipes the squad.
+              </p>
+              <p className="text-cyan-100/80">
+                Arc Raiders recycling also depends on stash discipline. Carry only the tools needed for three fights so you have room for heavy recyclables. If you pick up a quest item, reevaluate your carry weight and drop lower-yield pieces that would bottleneck Arc Raiders recycling output. Every kilogram you free up is another battery or broken drone that converts into the wires, plastics, and parts your workshop needs.
+              </p>
+              <p className="text-cyan-100/80">
+                Arc Raiders recycling thrives when the squad runs defined roles. One player scouts for containers, another hauls heavy gear, and a third covers angles while sorting. Communicate drop priorities: if someone finds power banks, the pack mule grabs them so the scout stays light. A team that respects Arc Raiders recycling roles clears faster and escapes with more materials than a solo looter juggling every task.
+              </p>
+              <p className="text-cyan-100/80">
+                Arc Raiders recycling pairs well with smart trader timing. Sell diamond trinkets at peak prices, then funnel the credits into workbench upgrades that amplify Arc Raiders recycling yields. When traders rotate, note which materials spike in demand and recycle items that feed those recipes. The compounding effect keeps your balance healthy while your hideout climbs tiers without grinding extra raids.
+              </p>
+              <p className="text-cyan-100/80">
+                Arc Raiders recycling prep starts before you spawn. Bring a single grenade, lean kit, and enough ammo for two fights; the rest of your space belongs to recyclables. Tuck one empty slot away for an emergency quest pickup so you are never forced to drop high-yield Arc Raiders recycling targets. If your bag fills mid-raid, make a quick extract and bank the materials rather than gambling on one more fight.
+              </p>
+              <p className="text-cyan-100/80">
+                Arc Raiders recycling math favors patience. Compare selling a Power Bank for credits versus breaking it down for wires, plastics, and batteries you would otherwise buy. Keep a small spreadsheet or notepad with ratios so you can decide in seconds. When you know the numbers, Arc Raiders recycling becomes automatic: you see an item, know its conversion, and either stash it or skip it without hesitation.
+              </p>
+              <p className="text-cyan-100/80">
+                Arc Raiders recycling also unlocks quest progress. Many missions demand converted materials rather than raw loot, so recycling early keeps you ahead of the curve. Before deploying, note which quests align with Arc Raiders recycling runs—if you need sensors, plan a route through labs; if you need metal parts, hit vehicle yards. By mapping quests to Arc Raiders recycling targets, you achieve two goals in one clean loop.
+              </p>
+              <p className="text-cyan-100/80">
+                Arc Raiders recycling weeks work best with a simple cadence: one credit raid, one recycling raid, one quest raid, then repeat. That rhythm prevents burnout while keeping your materials bin full. Whenever you feel tempted to over-loot, ask whether the next room adds to your Arc Raiders recycling plan; if not, extract and bank the win.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
+                <div className="rounded-xl border border-cyan-500/30 bg-slate-950/60 p-4">
+                  <h3 className="text-lg font-semibold text-cyan-100 mb-2">Arc Raiders recycling quick wins</h3>
+                  <ul className="list-disc list-inside text-sm text-cyan-100/75 space-y-1.5">
+                    <li>Clear research labs first; they hold top-tier Arc Raiders recycling targets with minimal contest.</li>
+                    <li>Salvage only when forced; hideout Arc Raiders recycling delivers the full value every time.</li>
+                    <li>Track daily needs so every raid slots into your Arc Raiders recycling pipeline.</li>
+                  </ul>
+                </div>
+                <div className="rounded-xl border border-cyan-500/30 bg-slate-950/60 p-4">
+                  <h3 className="text-lg font-semibold text-cyan-100 mb-2">Arc Raiders recycling checklist</h3>
+                  <ul className="list-disc list-inside text-sm text-cyan-100/75 space-y-1.5">
+                    <li>Pack light to leave five slots open for Arc Raiders recycling hauls.</li>
+                    <li>Mark two extracts so you can bank Arc Raiders recycling materials fast.</li>
+                    <li>Log what you recycled after each raid to refine future Arc Raiders recycling runs.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* SEO Content */}
         <section className="relative isolate py-16 border-t-2 border-cyan-500/20">
           <div className="absolute inset-0 bg-[#030712]" aria-hidden="true" />
