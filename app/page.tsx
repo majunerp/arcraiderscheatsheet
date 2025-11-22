@@ -874,6 +874,62 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-14 border-t border-cyan-500/20 bg-gradient-to-b from-slate-950/70 to-blue-950/40">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="prose prose-invert max-w-none space-y-5">
+            <h2 className="text-3xl font-bold text-cyan-300">Arc Raiders cheat sheet deep strategy</h2>
+            <p className="text-cyan-100/80">
+              This Arc Raiders cheat sheet treats every raid like a timed sprint: land, loot, leave, and reset faster than rival squads. The Arc Raiders cheat sheet framework starts with intent—credits, crafting, or quests—so you choose routes that feed that goal instead of wandering. When you decide a raid is for credits, prioritize high-density containers and extract early; when it is for progression, follow the Arc Raiders cheat sheet quest path and ignore distractions that slow you down.
+            </p>
+            <p className="text-cyan-100/80">
+              Inventory wins come from small decisions. An Arc Raiders cheat sheet mindset means tracking value per slot, carrying only enough ammo for two fights, and dedicating one empty slot for a surprise quest item. If you pick up a heavy battery, drop low-yield trinkets immediately. The Arc Raiders cheat sheet approach is simple: every slot must earn its space. If it does not, recycle it, sell it, or leave it behind.
+            </p>
+            <p className="text-cyan-100/80">
+              Team coordination is where the Arc Raiders cheat sheet shines. Assign a caller to control tempo, a pack mule with weight perks, and a scout who keeps the route clean. The caller reads the Arc Raiders cheat sheet checkpoints out loud—keyrooms, tech labs, and extracts—so no one doubles back. When everyone knows their job, fights are shorter, loot is cleaner, and extracts stay on schedule.
+            </p>
+            <p className="text-cyan-100/80">
+              Route selection lives or dies on timing. The Arc Raiders cheat sheet routes start with secured indoor spawns while lobbies are hot, then pivot to open yards once third parties thin out. On storm cycles, stick to covered interiors; on clear cycles, hit vehicle fields and rooftop crates. Always anchor on two extracts, and keep one backup marked; the Arc Raiders cheat sheet rule is to never gamble a full bag on a single exit.
+            </p>
+            <p className="text-cyan-100/80">
+              Crafting goals keep you honest. Before deploying, note which workshop tier you are chasing and which items gate that tier. The Arc Raiders cheat sheet lists those gating items—ARC parts, electronics, batteries—so your squad grabs them first. When the gating items are secured, call extract and bank the run instead of forcing another fight. The Arc Raiders cheat sheet payoff comes from stacking small wins, not from hero plays that risk everything.
+            </p>
+            <p className="text-cyan-100/80">
+              Money flow matters. Use this Arc Raiders cheat sheet to rotate: one credit raid to fund kits, one recycling raid for materials, one quest raid for progression, then repeat. That rhythm keeps your hideout advancing while you avoid burnout. If a trader window opens, pivot to items that spike in value and sell just enough to maintain reserves; the Arc Raiders cheat sheet rhythm is steady, not streaky.
+            </p>
+            <p className="text-cyan-100/80">
+              Mistakes compound fast. Over-looting low-value rooms adds weight and wastes minutes. Ignoring extracts after a big find invites third parties. Forgetting to reserve an empty slot forces you to drop a key item at the worst time. The Arc Raiders cheat sheet antidote is simple habits: set a five-minute timer per zone, audit your bag after each fight, and call extracts early when objectives are met.
+            </p>
+            <p className="text-cyan-100/80">
+              Communication keeps raids smooth. The Arc Raiders cheat sheet callouts stay short: container type, direction, and intent. “Security locker, north, holding” is enough. Avoid long stories mid-raid; save debriefs for the hideout. Clear, repeatable calls paired with the Arc Raiders cheat sheet checkpoints cut confusion and make every teammate faster.
+            </p>
+            <p className="text-cyan-100/80">
+              Tracking progress prevents drift. Keep a tiny notepad with three lines: what you needed, what you found, what blocked you. Update it after each run and adjust the Arc Raiders cheat sheet route accordingly. If batteries were missing, swap in a power-room loop; if weight was tight, assign more slots to the pack mule. Iteration is the quiet power of any Arc Raiders cheat sheet.
+            </p>
+            <p className="text-cyan-100/80">
+              Finally, play for the week, not the raid. Set a weekly goal—finish a quest chain, fund a hideout tier, craft a signature weapon—and let the Arc Raiders cheat sheet steer daily runs toward it. Celebrate quick extracts, not long fights. A calm, repeatable loop beats a single flashy win every time, and that is the heart of this Arc Raiders cheat sheet philosophy.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
+              <div className="rounded-xl border border-cyan-500/30 bg-slate-950/60 p-4">
+                <h3 className="text-lg font-semibold text-cyan-100 mb-2">Arc Raiders cheat sheet quick hits</h3>
+                <ul className="list-disc list-inside text-sm text-cyan-100/75 space-y-1.5">
+                  <li>Declare raid intent before drop so the Arc Raiders cheat sheet route fits the goal.</li>
+                  <li>Carry two-fight ammo and one flex slot to honor the Arc Raiders cheat sheet weight rules.</li>
+                  <li>Mark two extracts; Arc Raiders cheat sheet discipline avoids last-second scrambles.</li>
+                </ul>
+              </div>
+              <div className="rounded-xl border border-cyan-500/30 bg-slate-950/60 p-4">
+                <h3 className="text-lg font-semibold text-cyan-100 mb-2">Arc Raiders cheat sheet checklist</h3>
+                <ul className="list-disc list-inside text-sm text-cyan-100/75 space-y-1.5">
+                  <li>Review gating items and perk loadout against the Arc Raiders cheat sheet plan.</li>
+                  <li>Audit bag after every fight; drop anything the Arc Raiders cheat sheet flags as low value.</li>
+                  <li>Log finds and misses to refine tomorrow’s Arc Raiders cheat sheet loop.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-6xl text-center">
