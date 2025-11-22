@@ -63,10 +63,10 @@ export default function Header() {
             Recycling
           </Link>
           <Link
-            href="/builds"
+            href="/skills"
             className="text-sm font-medium text-cyan-100 transition-all hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.6)]"
           >
-            Builds
+            Skill Tree
           </Link>
           <Link
             href="/map"
@@ -151,11 +151,11 @@ export default function Header() {
               Recycling
             </Link>
             <Link
-              href="/builds"
+              href="/skills"
               className="block text-sm font-medium text-cyan-100 hover:text-cyan-300 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Builds
+              Skill Tree
             </Link>
             <Link
               href="/map"
