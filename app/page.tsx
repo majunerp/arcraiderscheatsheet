@@ -67,6 +67,14 @@ export default function Home() {
   const [displayLimit, setDisplayLimit] = useState(24); // Show 24 items initially
   const [showFilters, setShowFilters] = useState(false); // Start filters collapsed to save space
 
+  const handleClearFilters = () => {
+    setSearchQuery('');
+    setSelectedAction('all');
+    setSelectedCategory('all');
+    setSelectedLocation('all');
+    setSelectedValueTier('all');
+  };
+
   const stats = {
     totalItems: items.length,
     arcParts: items.filter(i => i.category === 'arc_parts').length,
@@ -128,6 +136,7 @@ export default function Home() {
 
   const displayedItems = filteredItems.slice(0, displayLimit);
   const hasMoreItems = displayLimit < filteredItems.length;
+  const hasActiveFilters = searchQuery || selectedCategory !== 'all' || selectedAction !== 'all' || selectedLocation !== 'all' || selectedValueTier !== 'all';
 
 
   const getRarityColor = (rarity: string) => {
@@ -257,6 +266,20 @@ export default function Home() {
                     <span className="hidden md:inline-flex text-xs px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-200 border border-cyan-500/30">
                       Interactive filters
                     </span>
+                    {hasActiveFilters && (
+                      <button
+                        type="button"
+                        onClick={handleClearFilters}
+                        className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-cyan-50 rounded-lg border border-cyan-400/50 bg-white/5 hover:bg-white/10 hover:border-cyan-300/70 transition-all"
+                        aria-label="Clear all filters"
+                      >
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <line x1="18" y1="6" x2="6" y2="18" />
+                          <line x1="6" y1="6" x2="18" y2="18" />
+                        </svg>
+                        <span>Clear filters</span>
+                      </button>
+                    )}
                     <button
                       type="button"
                       onClick={() => setShowFilters((prev) => !prev)}
