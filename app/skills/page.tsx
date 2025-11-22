@@ -20,7 +20,7 @@ export const metadata = genMeta({
     'arc raiders solo builds',
     'arc raiders squad builds',
   ],
-  canonical: 'https://arcraiderscheatsheet.org/builds',
+  canonical: 'https://arcraiderscheatsheet.org/skills',
 });
 
 const skillTrees = [
