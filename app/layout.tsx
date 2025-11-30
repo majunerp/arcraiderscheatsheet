@@ -50,6 +50,19 @@ export default function RootLayout({
         <GoogleAnalytics />
         <meta name="google-adsense-account" content="ca-pub-3347260027976502" />
         <Script
+          id="perf-measure-guard"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (typeof window !== 'undefined' && typeof performance !== 'undefined' && typeof performance.measure === 'function') {
+                  performance.measure = () => undefined;
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
+        <Script
           id="adsense-script"
           async
           strategy="afterInteractive"

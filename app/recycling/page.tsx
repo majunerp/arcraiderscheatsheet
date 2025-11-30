@@ -19,29 +19,6 @@ export const metadata = genMeta({
 
 const recyclableItems = items.filter(item => item.action === 'recycle' || item.recyclesInto);
 
-const recyclingTips = [
-  {
-    title: 'Compare Value Before Deciding',
-    description: 'Always compare the item\'s selling price to the combined value of recycled materials. Example: Power Bank sells for 640 credits but recycles into materials worth 1,400+ credits.',
-    priority: 'High',
-  },
-  {
-    title: 'Check Workshop Requirements First',
-    description: 'Some "Recyclable" items are needed for Workshop upgrades or Scrappy training. Check hover-descriptions for "Used in" before recycling.',
-    priority: 'Critical',
-  },
-  {
-    title: 'Hideout Recycling > Raid Salvaging',
-    description: 'Always recycle at your Hideout for full material yields. Salvaging during raids gives fewer materials but is better than dropping items.',
-    priority: 'Medium',
-  },
-  {
-    title: 'Focus on Tech Zones',
-    description: 'Electronics and high-value recyclables spawn in tech areas: Research buildings, server rooms, and damaged machinery locations.',
-    priority: 'Medium',
-  },
-];
-
 const recycleMaterials = [
   { name: 'Electrical Components', icon: '⚡', commonSources: ['Broken electronics', 'Damaged tech', 'Old appliances'] },
   { name: 'Metal Parts', icon: '🔩', commonSources: ['Tools', 'Utensils', 'Vehicle parts'] },
@@ -107,71 +84,6 @@ export default function RecyclingPage() {
             <p className="text-xl text-cyan-100/80 max-w-3xl">
               Complete Arc Raiders recycling sheet with all recyclable items, material conversion charts, and recycle vs sell decision guides. Maximize your material yields and inventory efficiency.
             </p>
-          </div>
-        </section>
-
-        {/* Quick Decision Guide */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-blue-950/30 to-slate-950/50">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <h2 className="text-3xl font-bold text-cyan-300 mb-6">Recycle vs Sell Decision Guide</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {decisionGuide.map((guide) => (
-                <div
-                  key={guide.category}
-                  className="bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 border-2 border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(0,229,255,0.3)] transition-all"
-                >
-                  <h3 className="text-xl font-bold text-cyan-100 mb-3">{guide.category}</h3>
-                  <div className="space-y-2 mb-4">
-                    {guide.items.map((item, idx) => (
-                      <div key={idx} className="flex items-center text-cyan-100/70 text-sm">
-                        <span className={`mr-2 ${
-                          guide.color === 'blue' ? 'text-blue-400' :
-                          guide.color === 'amber' ? 'text-amber-400' :
-                          guide.color === 'green' ? 'text-green-400' :
-                          'text-purple-400'
-                        }`}>•</span>
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                  <div className={`p-3 rounded-lg border ${
-                    guide.color === 'blue' ? 'bg-blue-500/10 border-blue-500/30' :
-                    guide.color === 'amber' ? 'bg-amber-500/10 border-amber-500/30' :
-                    guide.color === 'green' ? 'bg-green-500/10 border-green-500/30' :
-                    'bg-purple-500/10 border-purple-500/30'
-                  }`}>
-                    <p className="text-cyan-100/80 text-sm">{guide.reason}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pro Tips */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <h2 className="text-3xl font-bold text-cyan-300 mb-6">Recycling Pro Tips</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {recyclingTips.map((tip) => (
-                <div
-                  key={tip.title}
-                  className="bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 border-2 border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(0,229,255,0.3)] transition-all"
-                >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-cyan-100">{tip.title}</h3>
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      tip.priority === 'Critical' ? 'bg-red-500/20 text-red-300 border border-red-500/40' :
-                      tip.priority === 'High' ? 'bg-orange-500/20 text-orange-300 border border-orange-500/40' :
-                      'bg-blue-500/20 text-blue-300 border border-blue-500/40'
-                    }`}>
-                      {tip.priority}
-                    </span>
-                  </div>
-                  <p className="text-cyan-100/70">{tip.description}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -245,6 +157,44 @@ export default function RecyclingPage() {
                       </div>
                     </div>
                   )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Quick Decision Guide */}
+        <section className="py-12 md:py-16 bg-gradient-to-b from-blue-950/30 to-slate-950/50">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl font-bold text-cyan-300 mb-6">Recycle vs Sell Decision Guide</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {decisionGuide.map((guide) => (
+                <div
+                  key={guide.category}
+                  className="bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 border-2 border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(0,229,255,0.3)] transition-all"
+                >
+                  <h3 className="text-xl font-bold text-cyan-100 mb-3">{guide.category}</h3>
+                  <div className="space-y-2 mb-4">
+                    {guide.items.map((item, idx) => (
+                      <div key={idx} className="flex items-center text-cyan-100/70 text-sm">
+                        <span className={`mr-2 ${
+                          guide.color === 'blue' ? 'text-blue-400' :
+                          guide.color === 'amber' ? 'text-amber-400' :
+                          guide.color === 'green' ? 'text-green-400' :
+                          'text-purple-400'
+                        }`}>•</span>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                  <div className={`p-3 rounded-lg border ${
+                    guide.color === 'blue' ? 'bg-blue-500/10 border-blue-500/30' :
+                    guide.color === 'amber' ? 'bg-amber-500/10 border-amber-500/30' :
+                    guide.color === 'green' ? 'bg-green-500/10 border-green-500/30' :
+                    'bg-purple-500/10 border-purple-500/30'
+                  }`}>
+                    <p className="text-cyan-100/80 text-sm">{guide.reason}</p>
+                  </div>
                 </div>
               ))}
             </div>

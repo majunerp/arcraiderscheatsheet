@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../../fonts/arc-raiders/icons/icomoon.eot?ozgfmi');
+  src:  url('../../../fonts/arc-raiders/icons/icomoon.eot?ozgfmi#iefix') format('embedded-opentype'),
+    url('../../../fonts/arc-raiders/icons/icomoon.ttf?ozgfmi') format('truetype'),
+    url('../../../fonts/arc-raiders/icons/icomoon.woff?ozgfmi') format('woff'),
+    url('../../../fonts/arc-raiders/icons/icomoon.svg?ozgfmi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zipline:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-weapon_crate:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-toolbox:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-tactical_box:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-supply_call_station:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-security_locker:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-security_breach:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon-raider_hatch:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-raider_camp:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-raider_cache:before {
+  content: "\e909";
+  color: #fff;
+}
+.icon-prickly_pear:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-player_spawn:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon-olives:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-npc:before {
+  content: "\e90d";
+  color: #fff;
+}
+.icon-mushroom:before {
+  content: "\e90e";
+  color: #fff;
+}
+.icon-moss:before {
+  content: "\e90f";
+  color: #fff;
+}
+.icon-mission_objective:before {
+  content: "\e910";
+  color: #fff;
+}
+.icon-mission:before {
+  content: "\e911";
+  color: #fff;
+}
+.icon-miscellaneous:before {
+  content: "\e912";
+  color: #fff;
+}
+.icon-metro_station:before {
+  content: "\e913";
+  color: #fff;
+}
+.icon-metro_entrance:before {
+  content: "\e914";
+  color: #fff;
+}
+.icon-merchant:before {
+  content: "\e915";
+  color: #fff;
+}
+.icon-medium_loot:before {
+  content: "\e916";
+  color: #f2be4d;
+}
+.icon-medical_box:before {
+  content: "\e917";
+  color: #fff;
+}
+.icon-low_loot:before {
+  content: "\e918";
+  color: #fff;
+}
+.icon-loose_loot:before {
+  content: "\e919";
+  color: #fff;
+}
+.icon-locked_door:before {
+  content: "\e91a";
+  color: #fff;
+}
+.icon-location:before {
+  content: "\e91b";
+  color: #fff;
+}
+.icon-lemons:before {
+  content: "\e91c";
+  color: #fff;
+}
+.icon-landmark:before {
+  content: "\e91d";
+  color: #fff;
+}
+.icon-key:before {
+  content: "\e91e";
+  color: #fff;
+}
+.icon-high_loot:before {
+  content: "\e91f";
+  color: #c8675f;
+}
+.icon-great_mullein:before {
+  content: "\e920";
+  color: #fff;
+}
+.icon-fruit_basket:before {
+  content: "\e921";
+  color: #fff;
+}
+.icon-field_depot:before {
+  content: "\e922";
+  color: #fff;
+}
+.icon-field_crate:before {
+  content: "\e923";
+  color: #fff;
+}
+.icon-enemy:before {
+  content: "\e924";
+  color: #fff;
+}
+.icon-easter_egg:before {
+  content: "\e925";
+  color: #fff;
+}
+.icon-container:before {
+  content: "\e926";
+  color: #fff;
+}
+.icon-collectible:before {
+  content: "\e927";
+  color: #fff;
+}
+.icon-cargo_elevator:before {
+  content: "\e928";
+  color: #fff;
+}
+.icon-boss:before {
+  content: "\e929";
+  color: #fff;
+}
+.icon-baron_husk:before {
+  content: "\e92a";
+  color: #fff;
+}
+.icon-arc_probe:before {
+  content: "\e92b";
+  color: #fff;
+}
+.icon-arc_husk:before {
+  content: "\e92c";
+  color: #fff;
+}
+.icon-arc_courier:before {
+  content: "\e92d";
+  color: #fff;
+}
+.icon-arc:before {
+  content: "\e92e";
+  color: #fff;
+}
+.icon-apricot:before {
+  content: "\e92f";
+  color: #fff;
+}
+.icon-ammo_box:before {
+  content: "\e930";
+  color: #fff;
+}
+.icon-airshaft:before {
+  content: "\e931";
+  color: #fff;
+}
+.icon-agave:before {
+  content: "\e932";
+  color: #fff;
+}

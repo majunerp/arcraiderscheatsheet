@@ -1,13 +1,13 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import Script from 'next/script';
 import { generateMetadata as genMeta } from '@/lib/seo';
 import { items } from '@/lib/items-data';
 import { ItemImage } from '@/components/ItemImage';
 
 export const metadata = genMeta({
-  title: 'Arc Raiders Loot Cheat Sheet 2025 - Routes & Calls',
+  title: 'Arc Raiders loot cheat sheet - best loot routes, containers, and calls',
   description:
-    'Arc Raiders loot cheat sheet with S-tier drops, fastest credit routes, 280-slot stash plan, and keep/sell/recycle calls. Map-specific paths to rank first.',
+    'Arc Raiders loot cheat sheet - best loot routes, containers, and calls. Map-specific paths to rank first.',
   keywords: [
     'arc raiders loot',
     'arc raiders loot cheat sheet',
@@ -134,19 +134,19 @@ export default function LootPage() {
 
   return (
     <div className="w-full">
-      <section className="relative overflow-hidden pb-12 pt-10">
+      <section className="relative overflow-hidden pb-8 pt-6">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" aria-hidden="true" />
-        <div className="container mx-auto px-4 max-w-6xl relative z-10 space-y-8">
-          <div className="bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-blue-950/40 border border-cyan-500/30 rounded-2xl p-6 md:p-10 shadow-[0_20px_80px_rgba(0,229,255,0.15)]">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-              <div className="space-y-4 max-w-3xl">
+        <div className="container mx-auto px-4 max-w-6xl relative z-10 space-y-6">
+          <div className="bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-blue-950/40 border border-cyan-500/30 rounded-2xl p-5 md:p-7 shadow-[0_14px_64px_rgba(0,229,255,0.15)]">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
+              <div className="space-y-3 max-w-3xl">
                 <p className="text-xs uppercase tracking-[0.3em] text-cyan-300/80">
                   Arc Raiders Loot Cheat Sheet 2025
                 </p>
-                <h1 className="text-3xl md:text-4xl font-bold leading-tight text-cyan-50">
-                  Arc Raiders loot cheat sheet — best loot routes, containers, and calls
+                <h1 className="text-2xl md:text-3xl font-bold leading-tight text-cyan-50">
+                  Arc Raiders loot cheat sheet - best loot routes, containers, and calls
                 </h1>
-                <p className="text-base md:text-lg text-cyan-100/75 leading-relaxed">
+                <p className="text-sm md:text-base text-cyan-100/75 leading-relaxed">
                   Use this Arc Raiders cheat sheet loot guide to find the best loot routes, S-tier drops, fastest credit farms, a 280-slot stash plan, and instant keep/sell/recycle calls pulled from our live database of {totalTracked}+ items.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -164,55 +164,35 @@ export default function LootPage() {
                   </Link>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-3 md:w-72">
-                <div className="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/30">
-                  <div className="text-sm text-cyan-200/70">Tracked items</div>
-                  <div className="text-2xl font-semibold text-cyan-100">{totalTracked}+</div>
-                  <p className="text-xs text-cyan-100/60 mt-1">Live keep/sell/recycle calls</p>
+              <div className="grid grid-cols-2 gap-2.5 md:w-56">
+                <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30">
+                  <div className="text-xs text-cyan-200/70">Tracked items</div>
+                  <div className="text-xl font-semibold text-cyan-100">{totalTracked}+</div>
+                  <p className="text-[11px] text-cyan-100/60 mt-1">Live keep/sell/recycle calls</p>
                 </div>
-                <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/30">
-                  <div className="text-sm text-blue-200/70">Quest items</div>
-                  <div className="text-2xl font-semibold text-blue-100">{questCount}</div>
-                  <p className="text-xs text-blue-100/60 mt-1">Never sell by mistake</p>
+                <div className="p-3 rounded-xl bg-blue-500/10 border border-blue-500/30">
+                  <div className="text-xs text-blue-200/70">Quest items</div>
+                  <div className="text-xl font-semibold text-blue-100">{questCount}</div>
+                  <p className="text-[11px] text-blue-100/60 mt-1">Never sell by mistake</p>
                 </div>
-                <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
-                  <div className="text-sm text-emerald-200/70">ARC parts</div>
-                  <div className="text-2xl font-semibold text-emerald-100">{arcPartsCount}</div>
-                  <p className="text-xs text-emerald-100/60 mt-1">All hotspots listed</p>
+                <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
+                  <div className="text-xs text-emerald-200/70">ARC parts</div>
+                  <div className="text-xl font-semibold text-emerald-100">{arcPartsCount}</div>
+                  <p className="text-[11px] text-emerald-100/60 mt-1">All hotspots listed</p>
                 </div>
-                <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30">
-                  <div className="text-sm text-amber-200/70">Weight fixes</div>
-                  <div className="text-2xl font-semibold text-amber-100">280</div>
-                  <p className="text-xs text-amber-100/60 mt-1">Slot plan to stop "inventory full"</p>
+                <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30">
+                  <div className="text-xs text-amber-200/70">Weight fixes</div>
+                  <div className="text-xl font-semibold text-amber-100">280</div>
+                  <p className="text-[11px] text-amber-100/60 mt-1">Slot plan to stop "inventory full"</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-4 rounded-xl bg-white/5 border border-cyan-500/30">
-              <h2 className="text-lg font-semibold text-cyan-100 mb-2">Why this outranks other loot sheets</h2>
-              <ul className="list-disc list-inside text-sm text-cyan-100/75 space-y-1.5">
-                <li>Live keep/sell/recycle labels for every item, not just top loot headlines.</li>
-                <li>Route-specific guidance by map with containers prioritized for credit-per-slot.</li>
-                <li>Inventory plan for 280-slot stash and weight perks to stop mid-raid drops.</li>
-                <li>Structured data (FAQ) and internal linking to map, workshop, and recycling pages.</li>
-              </ul>
-            </div>
-            <div className="p-4 rounded-xl bg-white/5 border border-cyan-500/30">
-              <h2 className="text-lg font-semibold text-cyan-100 mb-2">Playbook at a glance</h2>
-              <ul className="list-disc list-inside text-sm text-cyan-100/75 space-y-1.5">
-                <li>Early raids: prioritize ARC parts, Dog Collars, Industrial Batteries; avoid heavy trinkets.</li>
-                <li>Mid game: farm Security Lockers with Security Breach perk; craft Scrappy II for better drops.</li>
-                <li>Late game: Blue Gate loop for Rusted Gears, Spaceport towers for weapon mods, recycle excess tech.</li>
-                <li>Between raids: empty diamond trinkets to trader, recycle electronics, craft ammo in workshop.</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </section>
 
-      <section className="py-12 border-t border-zinc-800/40 bg-gradient-to-b from-slate-950/60 to-blue-950/30">
+      <section className="py-8 border-t border-zinc-800/40 bg-gradient-to-b from-slate-950/60 to-blue-950/30">
         <div className="container mx-auto px-4 max-w-6xl space-y-8">
           <header className="space-y-3">
             <p className="text-sm text-cyan-300/80 uppercase tracking-[0.2em]">S-tier loot</p>
@@ -263,7 +243,7 @@ export default function LootPage() {
         </div>
       </section>
 
-      <section className="py-12 border-t border-zinc-800/40">
+      <section className="py-8 border-t border-zinc-800/40">
         <div className="container mx-auto px-4 max-w-6xl space-y-8">
           <header className="space-y-3">
             <p className="text-sm text-amber-300/80 uppercase tracking-[0.2em]">Fast credits</p>
@@ -303,7 +283,7 @@ export default function LootPage() {
         </div>
       </section>
 
-      <section className="py-12 border-t border-zinc-800/40 bg-gradient-to-b from-blue-950/40 to-slate-950/50">
+      <section className="py-8 border-t border-zinc-800/40 bg-gradient-to-b from-blue-950/40 to-slate-950/50">
         <div className="container mx-auto px-4 max-w-6xl space-y-8">
           <header className="space-y-3">
             <p className="text-sm text-emerald-300/80 uppercase tracking-[0.2em]">Crafting and quests</p>
@@ -358,7 +338,32 @@ export default function LootPage() {
         </div>
       </section>
 
-      <section className="py-12 border-t border-zinc-800/40">
+      <section className="py-7 border-t border-zinc-800/40 bg-gradient-to-b from-slate-950/50 to-blue-950/30">
+        <div className="container mx-auto px-4 max-w-6xl space-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="p-3 rounded-xl bg-white/5 border border-cyan-500/30">
+              <h2 className="text-base font-semibold text-cyan-100 mb-2">Why this outranks other loot sheets</h2>
+              <ul className="list-disc list-inside text-xs text-cyan-100/75 space-y-1">
+                <li>Live keep/sell/recycle labels for every item, not just top loot headlines.</li>
+                <li>Route-specific guidance by map with containers prioritized for credit-per-slot.</li>
+                <li>Inventory plan for 280-slot stash and weight perks to stop mid-raid drops.</li>
+                <li>Structured data (FAQ) and internal linking to map, workshop, and recycling pages.</li>
+              </ul>
+            </div>
+            <div className="p-3 rounded-xl bg-white/5 border border-cyan-500/30">
+              <h2 className="text-base font-semibold text-cyan-100 mb-2">Playbook at a glance</h2>
+              <ul className="list-disc list-inside text-xs text-cyan-100/75 space-y-1">
+                <li>Early raids: prioritize ARC parts, Dog Collars, Industrial Batteries; avoid heavy trinkets.</li>
+                <li>Mid game: farm Security Lockers with Security Breach perk; craft Scrappy II for better drops.</li>
+                <li>Late game: Blue Gate loop for Rusted Gears, Spaceport towers for weapon mods, recycle excess tech.</li>
+                <li>Between raids: empty diamond trinkets to trader, recycle electronics, craft ammo in workshop.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 border-t border-zinc-800/40">
         <div className="container mx-auto px-4 max-w-6xl space-y-8">
           <header className="space-y-3">
             <p className="text-sm text-cyan-300/80 uppercase tracking-[0.2em]">Containers first</p>
@@ -439,7 +444,7 @@ export default function LootPage() {
         </div>
       </section>
 
-      <section className="py-12 border-t border-zinc-800/40 bg-gradient-to-b from-blue-950/30 to-slate-950/50">
+      <section className="py-10 border-t border-zinc-800/40 bg-gradient-to-b from-blue-950/30 to-slate-950/50">
         <div className="container mx-auto px-4 max-w-5xl space-y-6">
           <header className="space-y-2 text-center">
             <p className="text-sm text-cyan-300/80 uppercase tracking-[0.2em]">FAQ</p>

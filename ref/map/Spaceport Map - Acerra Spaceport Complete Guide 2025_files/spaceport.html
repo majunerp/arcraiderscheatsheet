@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://game.arcraidersmap.pro/spaceport.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Spaceport | ARC Raiders Map | Map Genie</title>
+
+
+<meta name="description" content="ARC Raiders Interactive Map - All Field Depots, Loot Spots, Spawns, Missions, Extracts, Supply Drop Call Sites, Objectives &amp; more!  Use the progress tracker to get 100%!">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<meta property="og:url" content="https://mapgenie.io/arc-raiders/maps/spaceport">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Spaceport | ARC Raiders Map | Map Genie">
+<meta property="og:description" content="ARC Raiders Interactive Map - All Field Depots, Loot Spots, Spawns, Missions, Extracts, Supply Drop Call Sites, Objectives &amp; more!  Use the progress tracker to get 100%!">
+<meta property="og:image" content="https://cdn.mapgenie.io/images/games/arc-raiders/preview.jpg">
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.mapgenie.io/favicons/arc-raiders/apple-touch-icon.png">
+<link rel="shortcut icon" href="https://cdn.mapgenie.io/favicons/arc-raiders/favicon.ico">
+
+
+<link rel="manifest" href="https://cdn.mapgenie.io/favicons/arc-raiders/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.mapgenie.io/favicons/arc-raiders/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="https://cdn.mapgenie.io/favicons/arc-raiders/favicon.svg">
+
+    
+    <meta name="csrf-token" content="CWYY3y6Vq6HsbEkA75vNi83emSwaaG5bjSvBoQ2O">
+        <meta name="base-url" content="https://mapgenie.io">
+
+    <link rel="stylesheet" href="./bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="./app.css" rel="stylesheet">
+
+                        <link href="./base-theme.css" rel="stylesheet">
+                            <link href="./arc-raiders.css" rel="stylesheet">
+            <link href="./arc-raiders-icons.css" rel="stylesheet">
+            
+        
+    
+    <style>
+      
+        .guide .location-link:after {
+        content: "\f31c";
+      }
+
+      .mapboxgl-ctrl .mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon:before {
+        content: '\f273';
+      }
+
+      .mapboxgl-ctrl .mapboxgl-ctrl-zoom-out .mapboxgl-ctrl-icon:before {
+        content: '\f368';
+      }
+
+      .mapboxgl-ctrl .mapboxgl-ctrl-fullscreen .mapboxgl-ctrl-icon:before {
+        content: '\f2e7';
+      }
+
+      .mapboxgl-ctrl .mapboxgl-ctrl-shrink .mapboxgl-ctrl-icon:before {
+        content: '\f2d8';
+      }
+
+      .switcher-expander:after {
+        content: "\f273";
+      }
+
+      .switcher-expander.expanded:after {
+        content: "\f368";
+      }
+    </style>
+
+    
+    
+            <script async="" src="./beacon.js.下载"></script><script type="text/javascript" async="" src="./js(1)"></script><script type="text/javascript" async="" src="./chartbeat.js.下载"></script><script src="./mapbox-gl.js.下载"></script>
+        <link href="./mapbox-gl.css" rel="stylesheet">
+
+        
+            
+
+            <script>
+const MARKER_SPRITE_POSITIONS_V3 = {"13938":{"width":66,"height":88,"x":66,"y":0,"pixelRatio":2},"13946":{"width":66,"height":88,"x":0,"y":88,"pixelRatio":2},"13833":{"width":66,"height":88,"x":132,"y":88,"pixelRatio":2},"13834":{"width":66,"height":88,"x":66,"y":176,"pixelRatio":2},"13843":{"width":66,"height":88,"x":462,"y":176,"pixelRatio":2},"13840":{"width":66,"height":88,"x":66,"y":264,"pixelRatio":2},"13842":{"width":66,"height":88,"x":132,"y":264,"pixelRatio":2},"13836":{"width":66,"height":88,"x":66,"y":352,"pixelRatio":2},"13832":{"width":66,"height":88,"x":396,"y":440,"pixelRatio":2},"13814":{"width":66,"height":88,"x":462,"y":264,"pixelRatio":2},"13813":{"width":66,"height":88,"x":396,"y":352,"pixelRatio":2},"13815":{"width":66,"height":88,"x":198,"y":88,"pixelRatio":2},"13816":{"width":66,"height":88,"x":264,"y":352,"pixelRatio":2},"13823":{"width":66,"height":88,"x":132,"y":0,"pixelRatio":2},"13940":{"width":66,"height":88,"x":330,"y":0,"pixelRatio":2},"13939":{"width":66,"height":88,"x":396,"y":0,"pixelRatio":2},"13944":{"width":66,"height":88,"x":462,"y":0,"pixelRatio":2},"13817":{"width":66,"height":88,"x":264,"y":88,"pixelRatio":2},"13822":{"width":66,"height":88,"x":330,"y":88,"pixelRatio":2},"13945":{"width":66,"height":88,"x":0,"y":176,"pixelRatio":2},"13820":{"width":66,"height":88,"x":330,"y":176,"pixelRatio":2},"13824":{"width":66,"height":88,"x":396,"y":176,"pixelRatio":2},"13819":{"width":66,"height":88,"x":198,"y":264,"pixelRatio":2},"13825":{"width":66,"height":88,"x":330,"y":264,"pixelRatio":2},"13826":{"width":66,"height":88,"x":0,"y":528,"pixelRatio":2},"13818":{"width":66,"height":88,"x":66,"y":528,"pixelRatio":2},"13821":{"width":66,"height":88,"x":132,"y":528,"pixelRatio":2},"13932":{"width":66,"height":88,"x":0,"y":0,"pixelRatio":2},"13934":{"width":66,"height":88,"x":198,"y":0,"pixelRatio":2},"13933":{"width":66,"height":88,"x":132,"y":176,"pixelRatio":2},"13812":{"width":66,"height":88,"x":0,"y":264,"pixelRatio":2},"13935":{"width":66,"height":88,"x":330,"y":352,"pixelRatio":2},"13943":{"width":66,"height":88,"x":462,"y":352,"pixelRatio":2},"13931":{"width":66,"height":88,"x":264,"y":440,"pixelRatio":2},"13827":{"width":66,"height":88,"x":198,"y":352,"pixelRatio":2},"13841":{"width":66,"height":88,"x":264,"y":0,"pixelRatio":2},"13829":{"width":66,"height":88,"x":66,"y":88,"pixelRatio":2},"13828":{"width":66,"height":88,"x":462,"y":88,"pixelRatio":2},"13830":{"width":66,"height":88,"x":396,"y":88,"pixelRatio":2},"13942":{"width":66,"height":88,"x":0,"y":352,"pixelRatio":2},"13831":{"width":66,"height":88,"x":132,"y":352,"pixelRatio":2},"13837":{"width":66,"height":88,"x":0,"y":440,"pixelRatio":2},"13838":{"width":66,"height":88,"x":66,"y":440,"pixelRatio":2},"13839":{"width":66,"height":88,"x":132,"y":440,"pixelRatio":2},"13930":{"width":66,"height":88,"x":198,"y":440,"pixelRatio":2},"13835":{"width":66,"height":88,"x":462,"y":440,"pixelRatio":2},"13941":{"width":66,"height":88,"x":198,"y":528,"pixelRatio":2},"13936":{"width":66,"height":88,"x":198,"y":176,"pixelRatio":2},"13937":{"width":66,"height":88,"x":330,"y":440,"pixelRatio":2},"13927":{"width":66,"height":88,"x":264,"y":176,"pixelRatio":2},"13929":{"width":66,"height":88,"x":264,"y":264,"pixelRatio":2},"13928":{"width":66,"height":88,"x":396,"y":264,"pixelRatio":2}};
+const MARKER_IMAGES_WIDTH = 528;
+const MARKER_IMAGES_HEIGHT = 616;
+const MARKER_IMAGES_URL = '/images/games/arc-raiders/markers@2x.png?NjA0MjI2';
+</script>    
+    <style>
+      .gmnoprint:not(.gm-bundled-control):not([role="menubar"]):not([data-control-width="40"]) {
+        display: none;
+      }
+
+      #zdcFloatingBtn {
+        display: none !important;
+      }
+
+      /*#map {*/
+      /*    right: -3000px;*/
+      /*    bottom: -3000px;*/
+      /*}*/
+
+              #categories .group-categories {
+        display: block;
+        column-count: 2;
+        column-gap: 0;
+      }
+
+      #categories .category-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      #categories .category-item .bubble {
+        text-align: right;
+        flex: 1;
+      }
+
+      #categories .category-item .title {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      #categories .category-item .icon {
+        margin-top: 0;
+        line-height: 18px;
+      }
+
+      #categories .subheader {
+        column-span: all;
+      }
+            </style>
+
+    <!-- Custom CSS to hide upgrade prompts -->
+    <link rel="stylesheet" href="./custom-override.css">
+
+    <style>
+        /* Additional inline CSS to hide upgrade prompts, privacy notices, and unwanted modules */
+        #blobby-left,
+        #blobby-overlay,
+        #blobby-left-inner,
+        .btn-upgrade,
+        /* Privacy and cookie consent elements */
+        #onetrust-consent-sdk,
+        #onetrust-banner-sdk,
+        .onetrust-pc-dark-filter,
+        .ot-sdk-container,
+        #zdcFloatingBtn,
+        /* PRESETS and SETTINGS modules */
+        #presets-button,
+        #settings-button,
+        [data-preset],
+        .presets-panel,
+        .settings-panel,
+        #presets-panel,
+        #settings-panel,
+        .preset-item,
+        button[title*="Preset"],
+        button[title*="preset"],
+        button[title*="Settings"],
+        button[title*="settings"],
+        a[href*="preset"],
+        a[href*="settings"] {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        /* Hide login to track link */
+        a[href*="/login"],
+        a[href*="login"],
+        a[href*="sign-in"],
+        a[href*="signup"] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+    </style>
+
+
+            <script async="" src="./js(2)"></script>
+        <script>
+          window.Analytics = {
+            trackEvent: function (event, params = {}) {
+              params.send_to = 'G-ZZRVRWZWGJ';
+              window.gtag('event', event, params);
+            },
+            trackEngagement: function (event, params = {}, metaParams = {}) {
+              params.engagement = 1
+              if (!metaParams.group && metaParams.category) metaParams.group = store.getState().map.groupsById[metaParams.category.group_id];
+              if (metaParams.group) params.group = metaParams.group.title;
+              if (metaParams.category) params.category = metaParams.category.title;
+              if (metaParams.location) params.location = metaParams.location.title;
+              window.Analytics.trackEvent(event, params)
+            },
+            setDefaultParams: function (params) {
+              // This doesn't appear to work
+              //window.gtag('set', params)
+              // params.debug_mode = true;
+              window.gtag('config', 'G-ZZRVRWZWGJ', params);
+            },
+          }
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+
+          window.gtag = gtag;
+
+          gtag('js', new Date());
+          gtag('set', 'auth_status', 'not_logged_in');
+                    gtag('set', 'user_type', 'free');
+          
+          gtag('set', 'content_group', "arc-raiders");
+          gtag('config', 'G-ZZRVRWZWGJ', {
+            //'debug_mode': true,
+            // Required for analytics to work in embeds
+            cookie_flags: 'max-age=63072000;secure;samesite=none',
+            // Potentially only works when set with initial config ? Doesn't seem  to work with gtag('set', 'content_group', "...")
+            content_group: "arc-raiders",
+          });
+          gtag('config', 'AW-658861064');
+        </script>
+        
+        <script type="text/javascript">
+          (function () {
+            var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+            _sf_async_config.uid = 21105;
+            _sf_async_config.domain = 'mapgenie.io';
+            _sf_async_config.flickerControl = false;
+            _sf_async_config.useCanonical = true;
+            _sf_async_config.useCanonicalDomain = true;
+            _sf_async_config.sections = "arc-raiders";
+
+            function loadChartbeat() {
+              var e = document.createElement('script');
+              var n = document.getElementsByTagName('script')[0];
+              e.type = 'text/javascript';
+              e.async = true;
+              e.src = '//static.chartbeat.com/js/chartbeat.js';
+              n.parentNode.insertBefore(e, n);
+            }
+
+            loadChartbeat();
+          })();
+        </script>
+    
+    <script type="text/javascript" async="" src="./f(2).txt"></script><script type="text/javascript" async="" src="./f(3).txt"></script><style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2147483647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.immersive-translate-attach-loading::after {
+  content: " ";
+
+  --loading-color: #f78fb6;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+  position: relative;
+  color: white;
+  left: -100px;
+  box-sizing: border-box;
+  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-2000%, -50%);
+  z-index: 100;
+}
+
+.immersive-translate-loading-spinner {
+  vertical-align: middle !important;
+  width: 10px !important;
+  height: 10px !important;
+  display: inline-block !important;
+  margin: 0 4px !important;
+  border: 2px rgba(221, 244, 255, 0.6) solid !important;
+  border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+  animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+}
+
+@-webkit-keyframes immersive-translate-loading-animation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes immersive-translate-loading-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.immersive-translate-input-loading {
+  --loading-color: #f78fb6;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+  position: relative;
+  color: white;
+  left: -100px;
+  box-sizing: border-box;
+  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+}
+
+@keyframes immersiveTranslateShadowRolling {
+  0% {
+    box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0),
+      0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  12% {
+    box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0),
+      0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  25% {
+    box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color),
+      0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  36% {
+    box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color),
+      100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color),
+      110px 0 var(--loading-color), 100px 0 var(--loading-color);
+  }
+
+  62% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color),
+      120px 0 var(--loading-color), 110px 0 var(--loading-color);
+  }
+
+  75% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
+      130px 0 var(--loading-color), 120px 0 var(--loading-color);
+  }
+
+  87% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
+      200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+  }
+
+  100% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
+      200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.immersive-translate-toast {
+  display: flex;
+  position: fixed;
+  z-index: 2147483647;
+  left: 0;
+  right: 0;
+  top: 1%;
+  width: fit-content;
+  padding: 12px 20px;
+  margin: auto;
+  overflow: auto;
+  background: #fef6f9;
+  box-shadow: 0px 4px 10px 0px rgba(0, 10, 30, 0.06);
+  font-size: 15px;
+  border-radius: 8px;
+  color: #333;
+}
+
+.immersive-translate-toast-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.immersive-translate-toast-hidden {
+  margin: 0 20px 0 72px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.immersive-translate-toast-close {
+  color: #666666;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .immersive-translate-toast {
+    top: 0;
+    padding: 12px 0px 0 10px;
+  }
+  .immersive-translate-toast-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .immersive-translate-toast-hidden {
+    margin: 10px auto;
+  }
+}
+
+.immersive-translate-dialog {
+  position: fixed;
+  z-index: 2147483647;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: fit-content;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.immersive-translate-modal {
+  display: none;
+  position: fixed;
+  z-index: 2147483647;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+
+.immersive-translate-modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 40px 24px 24px;
+  border-radius: 12px;
+  width: 350px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .immersive-translate-modal-content {
+    margin: 25% auto !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .immersive-translate-modal-content {
+    width: 80vw !important;
+    margin: 20vh auto !important;
+    padding: 20px 12px 12px !important;
+  }
+
+  .immersive-translate-modal-title {
+    font-size: 14px !important;
+  }
+
+  .immersive-translate-modal-body {
+    font-size: 13px !important;
+    max-height: 60vh !important;
+  }
+
+  .immersive-translate-btn {
+    font-size: 13px !important;
+    padding: 8px 16px !important;
+    margin: 0 4px !important;
+  }
+
+  .immersive-translate-modal-footer {
+    gap: 6px !important;
+    margin-top: 16px !important;
+  }
+}
+
+.immersive-translate-modal .immersive-translate-modal-content-in-input {
+  max-width: 500px;
+}
+.immersive-translate-modal-content-in-input .immersive-translate-modal-body {
+  text-align: left;
+  max-height: unset;
+}
+
+.immersive-translate-modal-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.immersive-translate-modal-body {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  margin-top: 24px;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 768px) {
+  .immersive-translate-modal-body {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+}
+
+.immersive-translate-close {
+  color: #666666;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.immersive-translate-close:hover,
+.immersive-translate-close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.immersive-translate-modal-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.immersive-translate-btn {
+  width: fit-content;
+  color: #fff;
+  background-color: #ea4c89;
+  border: none;
+  font-size: 14px;
+  margin: 0 8px;
+  padding: 9px 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.immersive-translate-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.immersive-translate-btn:hover {
+  background-color: #f082ac;
+}
+.immersive-translate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.immersive-translate-btn:disabled:hover {
+  background-color: #ea4c89;
+}
+
+.immersive-translate-link-btn {
+  background-color: transparent;
+  color: #ea4c89;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+}
+
+.immersive-translate-cancel-btn {
+  /* gray color */
+  background-color: rgb(89, 107, 120);
+}
+
+.immersive-translate-cancel-btn:hover {
+  background-color: hsl(205, 20%, 32%);
+}
+
+.immersive-translate-action-btn {
+  background-color: transparent;
+  color: #ea4c89;
+  border: 1px solid #ea4c89;
+}
+
+.immersive-translate-btn svg {
+  margin-right: 5px;
+}
+
+.immersive-translate-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #ea4c89;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+.immersive-translate-primary-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #ea4c89;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+.immersive-translate-modal input[type="radio"] {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.immersive-translate-modal label {
+  cursor: pointer;
+}
+
+.immersive-translate-close-action {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.imt-image-status {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 16px !important;
+}
+.imt-image-status img,
+.imt-image-status svg,
+.imt-img-loading {
+  width: 28px !important;
+  height: 28px !important;
+  margin: 0 0 8px 0 !important;
+  min-height: 28px !important;
+  min-width: 28px !important;
+  position: relative !important;
+}
+.imt-img-loading {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAtFBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////oK74hAAAAPHRSTlMABBMIDyQXHwyBfFdDMSw+OjXCb+5RG51IvV/k0rOqlGRM6KKMhdvNyZBz9MaupmxpWyj437iYd/yJVNZeuUC7AAACt0lEQVRIx53T2XKiUBCA4QYOiyCbiAsuuGBcYtxiYtT3f6/pbqoYHVFO5r+iivpo6DpAWYpqeoFfr9f90DsYAuRSWkFnPO50OgR9PwiCUFcl2GEcx+N/YBh6pvKaefHlUgZd1zVe0NbYcQjGBfzrPE8Xz8aF+71D8gG6DHFPpc4a7xFiCDuhaWgKgGIJQ3d5IMGDrpS4S5KgpIm+en9f6PlAhKby4JwEIxlYJV9h5k5nee9GoxHJ2IDSNB0dwdad1NAxDJ/uXDHYmebdk4PdbkS58CIVHdYSUHTYYRWOJblWSyu2lmy3KNFVJNBhxcuGW4YBVCbYGRZwIooipHsNqjM4FbgOQqQqSKQQU9V8xmi1QlgHqQQ6DDBvRUVCDirs+EzGDGOQTCATgtYTnbCVLgsVgRE0T1QE0qHCFAht2z6dLvJQs3Lo2FQoDxWNUiBhaP4eRgwNkI+dAjVOA/kUrIDwf3CG8NfNOE0eiFotSuo+rBiq8tD9oY4Qzc6YJw99hl1wzpQvD7ef2M8QgnOGJfJw+EltQc+oX2yn907QB22WZcvlUpd143dqQu+8pCJZuGE4xCuPXJqqcs5sNpsI93Rmzym1k4Npk+oD1SH3/a3LOK/JpUBpWfqNySxWzCfNCUITuDG5dtuphrUJ1myeIE9bIsPiKrfqTai5WZxbhtNphYx6GEIHihyGFTI69lje/rxajdh0s0msZ0zYxyPLhYCb1CyHm9Qsd2H37Y3lugVwL9kNh8Ot8cha6fUNQ8nuXi5z9/ExsAO4zQrb/ev1yrCB7lGyQzgYDGuxq1toDN/JGvN+HyWNHKB7zEoK+PX11e12G431erGYzwmytAWU56fkMHY5JJnDRR2eZji3AwtIcrEV8Cojat/BdQ7XOwGV1e1hDjGGjXbdArm8uJZtCH5MbcctVX8A1WpqumJHwckAAAAASUVORK5CYII=");
+  background-size: 28px 28px;
+  animation: image-loading-rotate 1s linear infinite !important;
+}
+
+.imt-image-status span {
+  color: var(--bg-2, #fff) !important;
+  font-size: 14px !important;
+  line-height: 14px !important;
+  font-weight: 500 !important;
+  font-family: "PingFang SC", Arial, sans-serif !important;
+}
+
+.imt-primary-button {
+  display: flex;
+  padding: 12px 80px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #ea4c89;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.imt-retry-text {
+  color: #999;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.imt-action-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.imt-modal-content-text {
+  text-align: left;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@keyframes image-loading-rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.imt-linear-gradient-text {
+  background: linear-gradient(90deg, #00a6ff 0%, #c369ff 52.4%, #ff4590 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.imt-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imt-linear-black-btn {
+  border-radius: 50px;
+  background: linear-gradient(66deg, #222 19%, #696969 94.25%);
+  height: 48px;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+}
+</style><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17439882808/?random=1764493958555&amp;cv=11&amp;fst=1764493958555&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=view_map&amp;gtm=45je5bi1v868587373za200zd868587373xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115583767~115867901~115867903~115938466~115938468~116184927~116184929~116217636~116217638~116251938~116251940&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fgame.arcraidersmap.pro%2Fspaceport.html&amp;ref=https%3A%2F%2Farcraidersmap.pro%2F&amp;top=https%3A%2F%2Farcraidersmap.pro%2F&amp;frm=2&amp;tiba=Spaceport%20%7C%20ARC%20Raiders%20Map%20%7C%20Map%20Genie&amp;hn=www.googleadservices.com&amp;npa=0&amp;auid=1320267787.1764052439&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B142.0.7444.176%7CGoogle%2520Chrome%3B142.0.7444.176%7CNot_A%2520Brand%3B99.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=15.0.0&amp;uaw=0&amp;_tu=QA&amp;data=event%3Dview_map%3Bevent_label%3DARC%20Raiders%20-%20Spaceport&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/658861064/?random=1764493958559&amp;cv=11&amp;fst=1764493958559&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=view_map&amp;gtm=45be5bi1za200zb868587373zd868587373xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~105446120~115583767~115938466~115938468~116184927~116184929~116217636~116217638~116251935~116251937&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fgame.arcraidersmap.pro%2Fspaceport.html&amp;ref=https%3A%2F%2Farcraidersmap.pro%2F&amp;top=https%3A%2F%2Farcraidersmap.pro%2F&amp;frm=2&amp;tiba=Spaceport%20%7C%20ARC%20Raiders%20Map%20%7C%20Map%20Genie&amp;hn=www.googleadservices.com&amp;npa=0&amp;auid=1320267787.1764052439&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B142.0.7444.176%7CGoogle%2520Chrome%3B142.0.7444.176%7CNot_A%2520Brand%3B99.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=15.0.0&amp;uaw=0&amp;data=event%3Dview_map%3Bevent_label%3DARC%20Raiders%20-%20Spaceport&amp;rfmt=3&amp;fmt=4"></script></head>
+
+<body class="theme-arc-raiders  map map-830 V2 pogo">
+<div id="app">
+    
+    
+    
+    
+    
+    <!-- Mobile Header -->
+    <nav id="header" class="navbar navbar-light fixed-top">
+                    <a href="https://mapgenie.io/arc-raiders">
+                <div class="navbar-logo" href="#"><img src="./logo-small.png" height="36" alt="ARC Raiders Map"></div>
+            </a>
+                <div class="flex-fill"></div>
+
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-collapse-maps" data-parent="#header" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle maps navigation">
+                <span class="navbar-toggler-categories navbar-toggler-maps">Maps</span>
+            </button>
+        
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-collapse" data-parent="#header" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle category navigation">
+            <span class="navbar-toggler-icon navbar-toggler-categories"></span>
+        </button>
+
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-collapse-search" data-parent="#header" aria-controls="navbar-collapse-search" aria-expanded="false" aria-label="Toggle search navigation">
+            <span class="navbar-toggler-icon navbar-toggler-search"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-search"></div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-user"></div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse"></div>
+
+                    <div class="collapse navbar-collapse" id="navbar-collapse-maps">
+                                <div class="map-switcher-panel">
+                                                                                                        <a class="map-link " href="https://game.arcraidersmap.pro/dam-battlegrounds.html">Dam Battlegrounds</a>
+                                                                                                                                                            <a class="map-link " href="https://game.arcraidersmap.pro/buried-city.html">Buried City</a>
+                                                                                                                                                            <a class="map-link selected" href="https://game.arcraidersmap.pro/spaceport.html">Spaceport</a>
+                                                                                                                                                            <a class="map-link " href="https://game.arcraidersmap.pro/the-blue-gate.html">The Blue Gate</a>
+                                                                                        </div>
+                            </div>
+            </nav>
+
+    <!-- Map -->
+    <div id="map" class="mapboxgl-map"><div class="mapboxgl-canary" style="visibility: hidden;"></div><div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate"><canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" role="region" width="1250" height="704" style="width: 1501px; height: 845px;"></canvas></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button class="mapboxgl-ctrl-fullscreen" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><span class="mapboxgl-ctrl-icon" aria-hidden="true"></span></button></div><div></div></div><div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: none;"><a class="mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox logo"></a></div></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mg-map-control" id="add-note-control" data-placement="left" title="Login to add notes to the map"><i class="icon ion-md-create mg-control-image-create"></i></div><div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button class="mapboxgl-ctrl-zoom-in" type="button" title="Zoom in" aria-label="Zoom in" aria-disabled="false"><span class="mapboxgl-ctrl-icon" aria-hidden="true"></span></button><button class="mapboxgl-ctrl-zoom-out" type="button" title="Zoom out" aria-label="Zoom out" aria-disabled="false"><span class="mapboxgl-ctrl-icon" aria-hidden="true"></span></button></div></div></div></div>
+
+    <!-- Left Sidebar -->
+    <div id="left-sidebar" class="sidebar hidden-sm-down footer-large">
+        <div class="sidebar-close">
+            <div class="left-arrow"></div>
+        </div>
+
+        <div class="panel">
+                            <img id="logo-sidebar" src="./logo-512.png" alt="ARC Raiders Map">
+                                    <h2 class="subtitle">ARC Raiders Interactive Map</h2>
+                            
+            
+            </div>
+
+
+                            <hr>
+
+                <div class="map-switcher-panel">
+                                                                                                        <a class="map-link " href="https://game.arcraidersmap.pro/dam-battlegrounds.html">Dam Battlegrounds</a>
+                                                                                                                                                            <a class="map-link " href="https://game.arcraidersmap.pro/buried-city.html">Buried City</a>
+                                                                                                                                                            <a class="map-link selected" href="https://game.arcraidersmap.pro/spaceport.html">Spaceport</a>
+                                                                                                                                                            <a class="map-link " href="https://game.arcraidersmap.pro/the-blue-gate.html">The Blue Gate</a>
+                                                                                        </div>
+                            
+            <hr>
+            
+                        
+            
+            
+            
+            
+            
+            
+
+            
+            
+            
+
+            <div id="left-sidebar-buttons-container">
+                <div class="button-panel" id="left-sidebar-buttons">
+                    <span id="tutorial-button">?</span>
+                    <span id="show-all">Show All</span>
+                    <span id="hide-all">Hide All</span>
+                    
+                                    </div>
+            </div>
+            <hr>
+
+            <div id="sidebar-categories-wrapper">
+
+                <div id="left-sidebar-search-container">
+                    <div id="search-wrapper">
+                        <div id="search-input-wrapper" class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <button id="search-close" class="btn btn-outline-secondary d-none" type="button">X</button>
+                            </div>
+
+                            <input id="search-input" type="text" class="form-control" placeholder="Search... " autocomplete="off">
+                            <div class="input-group-append">
+                                <button id="search-submit" class="btn btn-outline-secondary" type="button">Search</button>
+                            </div>
+                        </div>
+
+                        <div id="search-results-wrapper" class="not-shown"></div>
+                    </div>
+                </div>
+
+                <div id="categories-wrapper">
+                    <ul id="categories">
+                                                    <div class="header">Locations</div>
+
+                            <div class="group-categories">
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-cargo_elevator"></span>
+                                        <span class="title">Cargo Elevator</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-field_depot"></span>
+                                        <span class="title">Field Depot</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-location"></span>
+                                        <span class="title">Location</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-raider_hatch"></span>
+                                        <span class="title">Raider Hatch</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                            </div>
+                                                    <div class="header">Loot</div>
+
+                            <div class="group-categories">
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-arc_courier"></span>
+                                        <span class="title">ARC Courier</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-arc_probe"></span>
+                                        <span class="title">ARC Probe</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-item"></span>
+                                        <span class="title">Item</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-medical_box"></span>
+                                        <span class="title">Medical Box</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                            </div>
+                                                    <div class="header">Natural Resources</div>
+
+                            <div class="group-categories">
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-apricot"></span>
+                                        <span class="title">Apricot</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-great_mullein"></span>
+                                        <span class="title">Great Mullein</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-prickly_pear"></span>
+                                        <span class="title">Prickly Pear</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                            </div>
+                                                    <div class="header">Other</div>
+
+                            <div class="group-categories">
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-miscellaneous"></span>
+                                        <span class="title">Miscellaneous</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-player_spawn"></span>
+                                        <span class="title">Player Spawn</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-supply_call_station"></span>
+                                        <span class="title">Supply Call Station</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                            </div>
+                                                    <div class="header">Loot Zones</div>
+
+                            <div class="group-categories">
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-high_loot"></span>
+                                        <span class="title">High Loot</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                                    <div class="category-item category-visible">
+                                        <span class="icon icon-medium_loot"></span>
+                                        <span class="title">Medium Loot</span>
+                                        <span class="bubble">0</span>
+                                    </div>
+                                                            </div>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+
+        
+        </div>
+        
+
+    
+        
+    
+
+    <div id="marker-tooltip">
+        <div id="marker-tooltip-title"></div>
+    </div>
+
+    <div id="map-context-menu"></div>
+
+    <div id="region-filter-notification" class="tool-info-panel center-top">
+        <div><small>Filter Active</small></div>
+        <div id="region-filter-region-title" class="tool-info-title">region_name</div>
+    </div>
+
+    <div id="distance-info-panel" class="tool-info-panel">
+        <div class="tool-info-title">Distance Measurement Tool</div>
+        <div id="distance-info" class="tool-info"></div>
+    </div>
+
+    <div id="radius-info-panel" class="tool-info-panel">
+        <div class="tool-info-title">Sniping Radius Tool</div>
+        <div id="radius-info" class="tool-info">Drag the target shape to visualize sniping distances. Dotted lines are 50m increments.</div>
+        <button id="radius-clear-button" class="btn btn-link tool-info">Clear Target</button>
+    </div>
+
+    <!-- Embedded -->
+
+    <script>
+        // Hide PRESETS, SETTINGS, and unwanted elements
+        (function() {
+            function hideUnwantedElements() {
+                // Remove specific known elements
+                const selectors = [
+                    '#blobby-left',
+                    '#blobby-overlay',
+                    '.btn-upgrade',
+                    '#onetrust-consent-sdk',
+                    '#onetrust-banner-sdk',
+                    '.onetrust-pc-dark-filter',
+                    '#zdcFloatingBtn',
+                    // PRESETS and SETTINGS
+                    '#presets-button',
+                    '#settings-button',
+                    '.presets-panel',
+                    '.settings-panel',
+                    '#presets-panel',
+                    '#settings-panel'
+                ];
+
+                selectors.forEach(selector => {
+                    try {
+                        document.querySelectorAll(selector).forEach(el => {
+                            el.style.display = 'none';
+                            el.style.visibility = 'hidden';
+                        });
+                    } catch(e) {}
+                });
+
+                // Hide buttons containing PRESETS or SETTINGS text
+                document.querySelectorAll('button, a, span, div').forEach(el => {
+                    // Specifically hide login links
+                    if (el.tagName === 'A') {
+                        const href = el.getAttribute('href') || '';
+                        if (href.includes('login') || href.includes('sign-in') || href.includes('signup')) {
+                            el.style.display = 'none';
+                            el.style.visibility = 'hidden';
+                            el.remove();
+                            return;
+                        }
+                    }
+
+                    // Also check for login/track buttons
+                    const lowerText = text.toLowerCase();
+                    if (lowerText.includes('login') && lowerText.includes('track')) {
+                        el.style.display = 'none';
+                        el.style.visibility = 'hidden';
+                        return;
+                    }
+
+                    const text = el.textContent.trim().toUpperCase();
+                    // Hide elements with login/track text
+                    if (text.includes('LOGIN') && (text.includes('TRACK') || text.includes('FOUND'))) {
+                        el.style.display = 'none';
+                        el.style.visibility = 'hidden';
+                        if (el.parentElement) el.remove();
+                        return;
+                    }
+
+                    if (text === 'PRESETS' || text === 'SETTINGS' || text === 'PRESET' || text === 'Setting' ||
+                        text === 'PRESET' || text === 'Setting') {
+                        el.style.display = 'none';
+                        el.style.visibility = 'hidden';
+                    }
+                });
+            }
+
+            // Run on page load
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', hideUnwantedElements);
+            } else {
+                hideUnwantedElements();
+            }
+
+            // Run after delays to catch late-loading elements
+            setTimeout(hideUnwantedElements, 500);
+            setTimeout(hideUnwantedElements, 1500);
+            setTimeout(hideUnwantedElements, 3000);
+
+            // Add MutationObserver to watch for dynamically added login elements
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    mutation.addedNodes.forEach((node) => {
+                        if (node.nodeType === 1) { // Element node
+                            // Check the node itself
+                            checkAndHideLoginElement(node);
+                            // Check all descendants
+                            if (node.querySelectorAll) {
+                                node.querySelectorAll('a, button').forEach(checkAndHideLoginElement);
+                            }
+                        }
+                    });
+                });
+            });
+            
+            function checkAndHideLoginElement(el) {
+                if (!el || !el.textContent) return;
+                
+                const text = el.textContent.trim().toUpperCase();
+                const href = el.getAttribute ? (el.getAttribute('href') || '') : '';
+                
+                // Hide if it's a login link
+                if (href.includes('login') || href.includes('sign-in') || href.includes('signup')) {
+                    el.style.display = 'none';
+                    el.style.visibility = 'hidden';
+                    el.remove();
+                    return;
+                }
+                
+                // Hide if text contains login + track/found
+                if (text.includes('LOGIN') && (text.includes('TRACK') || text.includes('FOUND'))) {
+                    el.style.display = 'none';
+                    el.style.visibility = 'hidden';
+                    el.remove();
+                    return;
+                }
+            }
+            
+            // Start observing
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+        })();
+    </script>
+
+
+        <script>window.mapUrl = "https:\/\/mapgenie.io\/arc-raiders\/maps\/spaceport";window.baseUrl = "https:\/\/mapgenie.io\/arc-raiders";window.cdnUrl = "https:\/\/cdn.mapgenie.io";window.tilesCdnUrl = "https:\/\/tiles.mapgenie.io\/games\/";window.storageCdnUrl = "https:\/\/storage-cdn.mapgenie.io";window.user = null;window.mapData = {"maps":[{"id":828,"title":"Dam Battlegrounds","slug":"dam-battlegrounds"},{"id":829,"title":"Buried City","slug":"buried-city"},{"id":830,"title":"Spaceport","slug":"spaceport"},{"id":831,"title":"The Blue Gate","slug":"the-blue-gate"}],"map":{"id":830,"title":"Spaceport","slug":"spaceport"},"groups":[{"id":2420,"game_id":242,"title":"Locations","order":10,"color":"223034","expandable":false,"categories":[{"id":13833,"group_id":2420,"title":"Cargo Elevator","icon":"cargo_elevator","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},{"id":13834,"group_id":2420,"title":"Field Depot","icon":"field_depot","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},{"id":13840,"group_id":2420,"title":"Location","icon":"location","info":null,"template":"**Type:** ??","order":1,"has_heatmap":false,"features_enabled":false,"display_type":"text","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},{"id":13832,"group_id":2420,"title":"Raider Hatch","icon":"raider_hatch","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false}]},{"id":2421,"game_id":242,"title":"Services","order":10,"color":"199461","expandable":false,"categories":[]},{"id":2422,"game_id":242,"title":"Collectibles","order":10,"color":"80518A","expandable":false,"categories":[]},{"id":2423,"game_id":242,"title":"Loot","order":10,"color":"5A8A95","expandable":false,"categories":[{"id":13940,"group_id":2423,"title":"ARC Courier","icon":"arc_courier","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},{"id":13944,"group_id":2423,"title":"ARC Probe","icon":"arc_probe","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},{"id":13820,"group_id":2423,"title":"Item","icon":"item","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},{"id":13825,"group_id":2423,"title":"Medical Box","icon":"medical_box","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false}]},{"id":2429,"game_id":242,"title":"Natural Resources","order":10,"color":"745B49","expandable":false,"categories":[{"id":13934,"group_id":2429,"title":"Apricot","icon":"apricot","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},{"id":13933,"group_id":2429,"title":"Great Mullein","icon":"great_mullein","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},{"id":13931,"group_id":2429,"title":"Prickly Pear","icon":"prickly_pear","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false}]},{"id":2424,"game_id":242,"title":"Missions","order":20,"color":"C8A865","expandable":false,"categories":[]},{"id":2425,"game_id":242,"title":"Enemies","order":20,"color":"A43D37","expandable":false,"categories":[]},{"id":2426,"game_id":242,"title":"Other","order":20,"color":"6B7178","expandable":false,"categories":[{"id":13831,"group_id":2426,"title":"Miscellaneous","icon":"miscellaneous","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},{"id":13930,"group_id":2426,"title":"Player Spawn","icon":"player_spawn","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},{"id":13835,"group_id":2426,"title":"Supply Call Station","icon":"supply_call_station","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false}]},{"id":2428,"game_id":242,"title":"Events","order":20,"color":"199461","expandable":false,"categories":[]},{"id":2427,"game_id":242,"title":"Loot Zones","order":30,"color":"6B7178","expandable":false,"categories":[{"id":13927,"group_id":2427,"title":"High Loot","icon":"high_loot","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":true,"display_type":"features","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},{"id":13928,"group_id":2427,"title":"Medium Loot","icon":"medium_loot","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":true,"display_type":"features","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false}]}],"categories":{"13833":{"id":13833,"group_id":2420,"title":"Cargo Elevator","icon":"cargo_elevator","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13834":{"id":13834,"group_id":2420,"title":"Field Depot","icon":"field_depot","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13840":{"id":13840,"group_id":2420,"title":"Location","icon":"location","info":null,"template":"**Type:** ??","order":1,"has_heatmap":false,"features_enabled":false,"display_type":"text","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13832":{"id":13832,"group_id":2420,"title":"Raider Hatch","icon":"raider_hatch","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13940":{"id":13940,"group_id":2423,"title":"ARC Courier","icon":"arc_courier","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13944":{"id":13944,"group_id":2423,"title":"ARC Probe","icon":"arc_probe","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13820":{"id":13820,"group_id":2423,"title":"Item","icon":"item","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13825":{"id":13825,"group_id":2423,"title":"Medical Box","icon":"medical_box","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13934":{"id":13934,"group_id":2429,"title":"Apricot","icon":"apricot","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13933":{"id":13933,"group_id":2429,"title":"Great Mullein","icon":"great_mullein","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13931":{"id":13931,"group_id":2429,"title":"Prickly Pear","icon":"prickly_pear","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13831":{"id":13831,"group_id":2426,"title":"Miscellaneous","icon":"miscellaneous","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13930":{"id":13930,"group_id":2426,"title":"Player Spawn","icon":"player_spawn","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13835":{"id":13835,"group_id":2426,"title":"Supply Call Station","icon":"supply_call_station","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":false,"display_type":"marker","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13927":{"id":13927,"group_id":2427,"title":"High Loot","icon":"high_loot","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":true,"display_type":"features","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false},"13928":{"id":13928,"group_id":2427,"title":"Medium Loot","icon":"medium_loot","info":null,"template":null,"order":1,"has_heatmap":false,"features_enabled":true,"display_type":"features","ign_enabled":true,"ign_visible":true,"visible":true,"description":null,"premium":false}},"regions":[],"locations":[{"id":491773,"map_id":830,"region_id":null,"category_id":13833,"title":"East Elevator","description":null,"latitude":"0.69326658131840","longitude":"-0.61863812257403","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491774,"map_id":830,"region_id":null,"category_id":13833,"title":"South Elevator","description":null,"latitude":"0.69036828692718","longitude":"-0.73379595076315","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491775,"map_id":830,"region_id":null,"category_id":13833,"title":"West Elevator","description":null,"latitude":"0.74852407926095","longitude":"-0.80928889416879","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491776,"map_id":830,"region_id":null,"category_id":13833,"title":"Central Elevator","description":null,"latitude":"0.79435492488486","longitude":"-0.72378158074437","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491890,"map_id":830,"region_id":null,"category_id":13834,"title":"Field Depot","description":null,"latitude":"0.82200194586392","longitude":"-0.80773986944448","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491896,"map_id":830,"region_id":null,"category_id":13834,"title":"Field Depot","description":null,"latitude":"0.59338979948184","longitude":"-0.73937339398924","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491907,"map_id":830,"region_id":null,"category_id":13834,"title":"Field Depot","description":null,"latitude":"0.71759297882981","longitude":"-0.60560272101799","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491923,"map_id":830,"region_id":null,"category_id":13834,"title":"Field Depot","description":null,"latitude":"0.70556604157412","longitude":"-0.79587097880784","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491764,"map_id":830,"region_id":null,"category_id":13840,"title":"Rocket Assembly","description":null,"latitude":"0.74887419348546","longitude":"-0.63937274342524","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491765,"map_id":830,"region_id":null,"category_id":13840,"title":"Fuel Control","description":null,"latitude":"0.77371534137993","longitude":"-0.65439429848843","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491766,"map_id":830,"region_id":null,"category_id":13840,"title":"Launch Towers","description":null,"latitude":"0.75407351531476","longitude":"-0.71775444740871","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491767,"map_id":830,"region_id":null,"category_id":13840,"title":"Departure Building","description":null,"latitude":"0.74483027224186","longitude":"-0.76777838599557","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491768,"map_id":830,"region_id":null,"category_id":13840,"title":"Arrival Building","description":null,"latitude":"0.80298534413487","longitude":"-0.76585254560271","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491769,"map_id":830,"region_id":null,"category_id":13840,"title":"Shipping Warehouse","description":null,"latitude":"0.83610640988810","longitude":"-0.73773527586923","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491770,"map_id":830,"region_id":null,"category_id":13840,"title":"Control Tower A6","description":null,"latitude":"0.69345915126077","longitude":"-0.69933083503406","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491771,"map_id":830,"region_id":null,"category_id":13840,"title":"Vehicle Maintenance","description":null,"latitude":"0.66072215106360","longitude":"-0.69721241060185","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491772,"map_id":830,"region_id":null,"category_id":13840,"title":"Container Storage","description":null,"latitude":"0.67651296698324","longitude":"-0.65561425811924","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491870,"map_id":830,"region_id":null,"category_id":13840,"title":"Fuel Lines","description":null,"latitude":"0.69087365842115","longitude":"-0.77498596304986","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491871,"map_id":830,"region_id":null,"category_id":13840,"title":"Fuel Processing","description":null,"latitude":"0.71009413371922","longitude":"-0.83891501834924","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491872,"map_id":830,"region_id":null,"category_id":13840,"title":"Water Towers","description":null,"latitude":"0.78747685224393","longitude":"-0.88310922949225","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491873,"map_id":830,"region_id":null,"category_id":13840,"title":"Jiangsu Warehouse","description":null,"latitude":"0.83412311224944","longitude":"-0.84012989839607","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491874,"map_id":830,"region_id":null,"category_id":13840,"title":"Fuel Depot","description":null,"latitude":"0.86176508148357","longitude":"-0.81615650265488","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491875,"map_id":830,"region_id":null,"category_id":13840,"title":"Car Park","description":null,"latitude":"0.81360746232900","longitude":"-0.78008842078108","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491876,"map_id":830,"region_id":null,"category_id":13840,"title":"West Hangar","description":null,"latitude":"0.86474840676053","longitude":"-0.68141501380254","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491877,"map_id":830,"region_id":null,"category_id":13840,"title":"East Hangar","description":null,"latitude":"0.83559478416622","longitude":"-0.65009841576779","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491878,"map_id":830,"region_id":null,"category_id":13840,"title":"Little Hangar","description":null,"latitude":"0.79801868586753","longitude":"-0.61273447465800","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491879,"map_id":830,"region_id":null,"category_id":13840,"title":"East Container Yard","description":null,"latitude":"0.76692096491507","longitude":"-0.61899779426417","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491880,"map_id":830,"region_id":null,"category_id":13840,"title":"East Plains Warehouse","description":null,"latitude":"0.73949431489218","longitude":"-0.57904213470184","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491881,"map_id":830,"region_id":null,"category_id":13840,"title":"Service Buildings","description":null,"latitude":"0.59933514327602","longitude":"-0.57947408777230","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491882,"map_id":830,"region_id":null,"category_id":13840,"title":"Communications Tower","description":null,"latitude":"0.65958895825997","longitude":"-0.57645041623795","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491883,"map_id":830,"region_id":null,"category_id":13840,"title":"Staff Parking","description":null,"latitude":"0.59112847771119","longitude":"-0.67558364724783","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491884,"map_id":830,"region_id":null,"category_id":13840,"title":"Security Checkpoint","description":null,"latitude":"0.57017982943303","longitude":"-0.63929958883466","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491885,"map_id":830,"region_id":null,"category_id":13840,"title":"Electrical Substation","description":null,"latitude":"0.55247060327919","longitude":"-0.67169606956068","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491886,"map_id":830,"region_id":null,"category_id":13840,"title":"Maintenance Hangar","description":null,"latitude":"0.61140474334204","longitude":"-0.73173381263203","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491887,"map_id":830,"region_id":null,"category_id":13840,"title":"Fuel Storage","description":null,"latitude":"0.60773334998267","longitude":"-0.79911849254046","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491888,"map_id":830,"region_id":null,"category_id":13840,"title":"West Container Yard","description":null,"latitude":"0.84324654850913","longitude":"-0.71981058252669","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491902,"map_id":830,"region_id":null,"category_id":13840,"title":"North Trench Tower","description":null,"latitude":"0.83651013045910","longitude":"-0.67750934515311","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491903,"map_id":830,"region_id":null,"category_id":13840,"title":"South Trench Tower","description":null,"latitude":"0.82456982009801","longitude":"-0.68790553112382","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491904,"map_id":830,"region_id":null,"category_id":13840,"title":"The Trench","description":null,"latitude":"0.80532477412424","longitude":"-0.67315418616579","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491777,"map_id":830,"region_id":null,"category_id":13832,"title":"Trench Hatch West","description":null,"latitude":"0.85308698416713","longitude":"-0.70201958430729","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491778,"map_id":830,"region_id":null,"category_id":13832,"title":"Raider Hatch","description":null,"latitude":"0.77798682256167","longitude":"-0.62113428781356","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491779,"map_id":830,"region_id":null,"category_id":13832,"title":"Departures Hatch","description":null,"latitude":"0.73079491532508","longitude":"-0.68809364208479","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491780,"map_id":830,"region_id":null,"category_id":13832,"title":"Control Hatch","description":null,"latitude":"0.71192317534452","longitude":"-0.70176710887233","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491897,"map_id":830,"region_id":null,"category_id":13940,"title":"ARC Courier","description":null,"latitude":"0.61559205316721","longitude":"-0.70984907506076","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491906,"map_id":830,"region_id":null,"category_id":13944,"title":"Crashed ARC Probe","description":"**Location:** On the road","latitude":"0.71542788055550","longitude":"-0.58296583267591","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491892,"map_id":830,"region_id":null,"category_id":13820,"title":"Lemon Tree","description":null,"latitude":"0.59148337983204","longitude":"-0.68185506303266","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491894,"map_id":830,"region_id":null,"category_id":13820,"title":"Lemon Tree","description":null,"latitude":"0.59388651053040","longitude":"-0.67928014237813","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491895,"map_id":830,"region_id":null,"category_id":13820,"title":"Lemon Tree","description":null,"latitude":"0.59457311910978","longitude":"-0.67704854447797","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491899,"map_id":830,"region_id":null,"category_id":13825,"title":"Med Bag","description":"**Location:** Between the containers","latitude":"0.69004247670483","longitude":"-0.74146635135810","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491893,"map_id":830,"region_id":null,"category_id":13934,"title":"Apricot Tree","description":null,"latitude":"0.59414398875793","longitude":"-0.68073926408178","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491908,"map_id":830,"region_id":null,"category_id":13934,"title":"Apricot Tree","description":null,"latitude":"0.69299905176356","longitude":"-0.60081078667505","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491909,"map_id":830,"region_id":null,"category_id":13934,"title":"Apricot Tree","description":null,"latitude":"0.67815140566249","longitude":"-0.60741974968812","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491910,"map_id":830,"region_id":null,"category_id":13934,"title":"Apricot Tree","description":null,"latitude":"0.67085630268066","longitude":"-0.60012414116767","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491905,"map_id":830,"region_id":null,"category_id":13933,"title":"4x Great Mullein","description":null,"latitude":"0.78460442807472","longitude":"-0.62892321062722","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491911,"map_id":830,"region_id":null,"category_id":13931,"title":"Prickly Pear Bush","description":null,"latitude":"0.67720733412899","longitude":"-0.61935021538642","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491912,"map_id":830,"region_id":null,"category_id":13931,"title":"Prickly Pear Bush","description":null,"latitude":"0.67497589159105","longitude":"-0.62389924187573","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491900,"map_id":830,"region_id":null,"category_id":13831,"title":"Baron Husk","description":null,"latitude":"0.66209710058907","longitude":"-0.72676211168644","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":492336,"map_id":830,"region_id":null,"category_id":13831,"title":"Bastion","description":null,"latitude":"0.68263924576692","longitude":"-0.68071687113635","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491891,"map_id":830,"region_id":null,"category_id":13930,"title":"Player Spawn","description":null,"latitude":"0.57162241262654","longitude":"-0.68209991851879","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491901,"map_id":830,"region_id":null,"category_id":13930,"title":"Player Spawn","description":null,"latitude":"0.80033588904062","longitude":"-0.62045923662399","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491898,"map_id":830,"region_id":null,"category_id":13835,"title":"Supply Call Station","description":null,"latitude":"0.62503287556888","longitude":"-0.73044844029445","features":null,"ign_page_id":null,"tags":[],"media":[]},{"id":491730,"map_id":830,"region_id":null,"category_id":13927,"title":"Container Storage","description":"","latitude":"0.68534456560730","longitude":"-0.65543350720849","features":[{"id":"2fb8dd24a4a1f4fdaf76e4c8d514fffc","type":"Feature","properties":{},"geometry":{"coordinates":[[[-0.6506530042936731,0.7008925542535991],[-0.640868305808084,0.664160148552412],[-0.6637850996307009,0.6579808354804015],[-0.6733123060519688,0.6953140546033723],[-0.6506530042936731,0.7008925542535991],[-0.6506530042936731,0.7008925542535991]]],"type":"Polygon"}}],"ign_page_id":null,"tags":[],"media":[]},{"id":491731,"map_id":830,"region_id":null,"category_id":13927,"title":"Control Tower A6","description":"","latitude":"0.69796036033810","longitude":"-0.69474908913520","features":[{"id":"a8e85aff4bdf44e2c301e12fec44b4aa","type":"Feature","properties":{},"geometry":{"coordinates":[[[-0.6823025827048639,0.7088470230663546],[-0.6785260324112699,0.6939996388451135],[-0.7156907205221898,0.6848165490749096],[-0.7173215036029603,0.6913391195025298],[-0.7120000009175271,0.7006938415602235],[-0.6823025827048639,0.7088470230663546],[-0.6823025827048639,0.7088470230663546]]],"type":"Polygon"}}],"ign_page_id":null,"tags":[],"media":[]},{"id":491732,"map_id":830,"region_id":null,"category_id":13927,"title":"Launch Towers","description":"","latitude":"0.76001441615321","longitude":"-0.71637640044502","features":[{"id":"543e61360d42baa05b7794c6deeb3cd5","type":"Feature","properties":{},"geometry":{"coordinates":[[[-0.7228679434517176,0.7841183434165373],[-0.6906814352729782,0.7567412573195611],[-0.709821678803678,0.7350282623800126],[-0.7246703879104075,0.7346849729925822],[-0.7374591604933016,0.7452411084757813],[-0.7412357107860714,0.7624913193704543],[-0.7311935202344557,0.7743347044645077],[-0.7228679434517176,0.7841183434165373],[-0.7228679434517176,0.7841183434165373]]],"type":"Polygon"}}],"ign_page_id":null,"tags":[],"media":[]},{"id":491733,"map_id":830,"region_id":null,"category_id":13927,"title":"Departure Building","description":"","latitude":"0.75160282622409","longitude":"-0.76492016269207","features":[{"id":"6d6e87239cceeb206c386b63ddf45df2","type":"Feature","properties":{},"geometry":{"coordinates":[[[-0.7698114553337803,0.7293038836254482],[-0.7651765981557048,0.7253560496769467],[-0.7486112752800693,0.7446660709618129],[-0.7731588521843378,0.7653491472162699],[-0.7892091909287728,0.7457817582906188],[-0.7794244924431837,0.7376286515209785],[-0.7892091909287728,0.7259568072595215],[-0.7795961538193694,0.7178894839178867],[-0.7698114553337803,0.7293038836254482],[-0.7698114553337803,0.7293038836254482]]],"type":"Polygon"}}],"ign_page_id":null,"tags":[],"media":[]},{"id":491734,"map_id":830,"region_id":null,"category_id":13927,"title":"Arrival Building","description":"","latitude":"0.81031512964143","longitude":"-0.76148992595176","features":[{"id":"5d3147df3e2e1a8f3080177f502f9948","type":"Feature","properties":{},"geometry":{"coordinates":[[[-0.767580541248833,0.7878458833632891],[-0.752131017322796,0.8057824669174067],[-0.764833959217583,0.8165958685012384],[-0.7804551445206869,0.7990026199166635],[-0.767580541248833,0.7878458833632891],[-0.767580541248833,0.7878458833632891]]],"type":"Polygon"}}],"ign_page_id":null,"tags":[],"media":[]},{"id":491728,"map_id":830,"region_id":null,"category_id":13928,"title":"Vehicle Maintenance","description":"","latitude":"0.67079714660704","longitude":"-0.69627029008245","features":[{"id":"864a2f7cea649d96c67edb2bd5922433","type":"Feature","properties":{},"geometry":{"coordinates":[[[-0.6956966443921146,0.6480676563750905],[-0.6979282422921642,0.656049284907084],[-0.7063396497630094,0.6541611589854313],[-0.711146168317299,0.6735573240548121],[-0.6916626020333467,0.678449263909144],[-0.6841953321359142,0.6511573206833674],[-0.6956966443921146,0.6480676563750905],[-0.6956966443921146,0.6480676563750905]]],"type":"Polygon"}}],"ign_page_id":null,"tags":[],"media":[]},{"id":491729,"map_id":830,"region_id":null,"category_id":13928,"title":"Rocket Assembly","description":"","latitude":"0.75992656623200","longitude":"-0.63354668168634","features":[{"id":"54ecca5503340d1d92ce29cb360a23ca","type":"Feature","properties":{},"geometry":{"coordinates":[[[-0.6480204787224295,0.7531605480995864],[-0.6537711348509276,0.75822403775895],[-0.6423556532836585,0.7720413241231228],[-0.6178939070675256,0.7511866436153838],[-0.6273352827998906,0.7402014183924308],[-0.6313693251586585,0.7438059487057131],[-0.641583177087341,0.7319624799994244],[-0.6554877486198052,0.7439775929266261],[-0.6480204787224295,0.7531605480995864],[-0.6480204787224295,0.7531605480995864]]],"type":"Polygon"}}],"ign_page_id":null,"tags":[],"media":[]},{"id":491735,"map_id":830,"region_id":null,"category_id":13928,"title":"North Trench Tower","description":"","latitude":"0.84177082020391","longitude":"-0.67406951963232","features":[{"id":"0ec3e03ca1c87371d394aa4518d9da48","type":"Feature","properties":{},"geometry":{"coordinates":[[[-0.6856250150789549,0.8369523208238974],[-0.6789302213778967,0.844933577262097],[-0.6700896604648676,0.8374672411242159],[-0.6769561155429642,0.8294859683091147],[-0.6856250150789549,0.8369523208238974],[-0.6856250150789549,0.8369523208238974]]],"type":"Polygon"}}],"ign_page_id":null,"tags":[],"media":[]},{"id":491736,"map_id":830,"region_id":null,"category_id":13928,"title":"South Trench Tower","description":"","latitude":"0.83130076499771","longitude":"-0.68316757261149","features":[{"id":"3e511e1377f1550e40f9039168051454","type":"Feature","properties":{},"geometry":{"coordinates":[[[-0.6886008634394045,0.8340342801899823],[-0.679760302526347,0.8264821014231387],[-0.6864550962274336,0.8185866252458567],[-0.6954673185175579,0.8261388202009243],[-0.6886008634394045,0.8340342801899823],[-0.6886008634394045,0.8340342801899823],[-0.6886008634394045,0.8340342801899823],[-0.6886008634394045,0.8340342801899823]]],"type":"Polygon"}}],"ign_page_id":null,"tags":[],"media":[]}],"heatmapGroups":[],"heatmapCategories":[],"routes":[],"notes":[],"sharedNotes":{},"maxMarkedLocations":50,"tags":[],"tagsById":[],"distanceToolConfig":null,"mapConfig":{"tile_sets":[{"id":905,"map_id":830,"name":"V2","path":"arc-raiders\/spaceport\/default-v2","extension":"jpg","pattern":"arc-raiders\/spaceport\/default-v2\/{z}\/{y}\/{x}.jpg","min_zoom":8,"max_zoom":14,"order":1,"bounds":null}],"initial_zoom":12,"start_lat":0.78378585535565,"start_lng":-0.7350004928908,"overlay":null,"overzoom":false},"proCategoryLocationCounts":[],"searchQuery":null,"presets":[],"styles":{"textStyles":{},"lineStyles":{},"regionStyles":{"126":{"text-color":"#c29cd8","text-halo-color":"#253139","line-color":"#533f5d","line-width":2,"fill-color":"#533f5d","fill-opacity":["case",["boolean",["feature-state","hover"],false],0.25,0]},"127":{"text-color":"#c29cd8","text-halo-color":"#253139","line-color":"#533f5d","line-width":2,"fill-color":"#533f5d","fill-opacity":["case",["boolean",["feature-state","hover"],false],0.25,0]},"128":{"text-color":"#c29cd8","text-halo-color":"#253139","line-color":"#533f5d","line-width":2,"fill-color":"#533f5d","fill-opacity":["case",["boolean",["feature-state","hover"],false],0.25,0]},"129":{"text-color":"#769CB3","text-halo-color":"#253139","line-color":"#445A67","line-width":2,"fill-color":"#445A67","fill-opacity":["case",["boolean",["feature-state","hover"],false],0.25,0]},"130":{"text-color":"#769CB3","text-halo-color":"#253139","line-color":"#445A67","line-width":2,"fill-color":"#445A67","fill-opacity":["case",["boolean",["feature-state","hover"],false],0.25,0]},"131":{"text-color":"#769CB3","text-halo-color":"#253139","line-color":"#445A67","line-width":2,"fill-color":"#445A67","fill-opacity":["case",["boolean",["feature-state","hover"],false],0.25,0]},"132":{"text-color":"#efefef","text-halo-color":"#aaaaaa","line-color":"#b1b1b1","line-width":2,"fill-color":"#b1b1b1","fill-opacity":["case",["boolean",["feature-state","hover"],false],0.25,0]},"133":{"text-color":"#efefef","text-halo-color":"#aaaaaa","line-color":"#b1b1b1","line-width":2,"fill-color":"#b1b1b1","fill-opacity":["case",["boolean",["feature-state","hover"],false],0.25,0]},"134":{"text-color":"#61BA76","text-halo-color":"#23462B","line-color":"#3C7449","line-width":2,"fill-color":"#3C7449","fill-opacity":["case",["boolean",["feature-state","hover"],false],0.25,0]},"135":{"text-color":"#61BA76","text-halo-color":"#23462B","line-color":"#3C7449","line-width":2,"fill-color":"#3C7449","fill-opacity":["case",["boolean",["feature-state","hover"],false],0.25,0]},"136":{"text-color":"#61BA76","text-halo-color":"#23462B","line-color":"#3C7449","line-width":2,"fill-color":"#3C7449","fill-opacity":["case",["boolean",["feature-state","hover"],false],0.25,0]},"354":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"355":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"356":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"357":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"358":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"3202":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"3203":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"474":{"text-color":"#B07CEE","line-color":"#ff6a13"},"475":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"476":{"text-color":"#B07CEE","line-color":"#ff6a13"},"477":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"478":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"479":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"480":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"481":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"482":{"text-color":"#B07CEE","line-color":"#ff6a13"},"483":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"484":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"485":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"486":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"487":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"488":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"489":{"text-color":"#FFFFFF","line-color":"#FFFFFF"},"2886":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#"},"2887":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#31efd5"},"2888":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#eabea5"},"2889":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#0f7cf5"},"2890":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#"},"2891":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#0f7cf5"},"2892":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#"},"2893":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#701f25"},"2894":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#b7c7e8"},"2895":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#c48748"},"2896":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#10916b"},"2897":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#9446fc"},"2898":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#f8448b"},"2899":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#5bffff"},"2900":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#4530a7"},"2901":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#"},"2902":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#4530a7"},"2903":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#37e5fd"},"2904":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#1d8804"},"2905":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#"},"2906":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#134402"},"2907":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#"},"2908":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#7198fd"},"2909":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#d75c8a"},"2910":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#cebec1"},"2911":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#998169"},"2912":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#"},"2913":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#fbd4e7"},"2914":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#e6a1d8"},"2915":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#016f66"},"2916":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#e8e3a9"},"2917":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#"},"2918":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#4abbf7"},"2919":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#5a5d26"},"2920":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#"},"2921":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#cfdf4b"},"2922":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#cfd4d8"},"2923":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#"},"2924":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#4379a6"},"2925":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#b240c0"},"2926":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#c7b6e9"},"2927":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#8503b7"},"2928":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#609d6d"},"2929":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#28be33"},"2930":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#7e9b28"},"2931":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#27a1ea"},"3061":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#0b59a5"},"3065":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#ffb300"},"3066":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#ffb300"},"3067":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#ffb300"},"3063":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#ffb300"},"3199":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#ffb300"},"3050":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#eabea5"},"3054":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#31efd5"},"3042":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#0f7cf5"},"3057":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#f8448b"},"3046":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#4530a7"},"3055":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#701f25"},"3047":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#c48748"},"3056":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#b7c7e8"},"3043":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#cebec1"},"3051":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#998169"},"3053":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#4abbf7"},"3044":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#134402"},"3052":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#37e5fd"},"3049":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#1d8804"},"3045":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#fbd4e7"},"3048":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#016f66"},"3060":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#eabea5"},"3058":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#ffb300"},"3059":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#A4CFEC"},"3167":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#ffb300"},"3262":{"text-color":"#E6E6E6","text-halo-color":"#253139","fill-color":"#ffb300"}},"shapeStyles":{},"polygonStyles":{"13927":{"line-color":"#C8675F","line-width":8,"fill-color":"#C8675F","fill-opacity":0.3},"13928":{"line-color":"#F2BE4D","line-width":8,"fill-color":"#F2BE4D","fill-opacity":0.2},"13929":{"line-color":"#F7F8FA","line-width":8,"fill-color":"#F7F8FA","fill-opacity":0.15}},"polygonStylesByTag":{}}};window.specialData = [];window.isEditor = false;window.isEmbedded = false;window.isMini = false;window.partner = null;window.embedType = null;window.needsVerification = false;window.game = {"id":242,"title":"ARC Raiders","slug":"arc-raiders","ign_slug":"arc-raiders","mapgenie_release_date":"2025-10-30T00:00:00.000000Z","config":{"cdn_url":"https:\/\/cdn.mapgenie.io","tiles_base_url":"https:\/\/tiles.mapgenie.io","url":"https:\/\/mapgenie.io\/arc-raiders","presets_enabled":true,"marker_sprite_url":"\/images\/games\/arc-raiders\/markers@2x.png?NjA0MjI2","compass_enabled":false,"heatmaps_enabled":false,"show_tags":false,"default_tracked_category_id":13827}};window.config = {"gameUrl":"https:\/\/mapgenie.io\/arc-raiders","cdnUrl":"https:\/\/cdn.mapgenie.io","suggestionsEnabled":false,"newSuggestionsEnabled":false,"showRegionsInInfoWindow":false,"regionLocationFocusEnabled":false,"regionSelectorEnabled":false,"regionToggleEnabled":false,"iconSizeToggleEnabled":false,"altMapSdk":true,"proOnlyMedia":false,"copyrightFooterEnabled":false,"presetsEnabled":false,"routesEnabled":false,"checklistEnabled":false,"3dEnabled":false,"gridEnabled":false,"linkLinesEnabled":false,"mapStyle":null};</script><!-- JS Variables bounds here -->
+
+<!-- Scripts -->
+    <script src="./markdown-it.min.js.下载" integrity="sha256-gZ3xe0BdCJplNiHWTKrm6AGZydPy34jJKZqFIf+7hIw=" crossorigin="anonymous"></script>
+    <iframe height="0" width="0" style="display: none; visibility: hidden;" src="./saved_resource(1).html"></iframe><script src="./jquery.min.js.下载"></script>
+    <script src="./popper.min.js.下载" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="./jquery.magnific-popup.min.js.下载" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./bootstrap.min.js.下载" integrity="sha512-7rusk8kGPFynZWu26OKbTeI+QPoYchtxsmPeBqkHIEXJxeun4yJ4ISYe7C6sz9wdxeE1Gk3VxsIWgCZTc+vX3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./intro.min.js.下载"></script>
+
+    <script>
+      window.isMobile = window.innerWidth < 768;
+      window.isMobile = window.isEmbedded ? window.embedType === 'compact' : window.isMobile;
+      window.md = window.markdownit({
+        html: false,
+      });
+      md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+        var token = tokens[idx];
+        var href = token.attrs[0][1];
+        if (href.endsWith('.mp3')) {
+          token.tag = "audio"
+          token.attrs = [['src', href], ['controls', 'true']]
+        } else {
+          token.attrPush(['target', '_blank']);
+        }
+        return self.renderToken(tokens, idx, options, env, self);
+      };
+      window.isOverwolf = false;
+    </script>
+            <script src="./map.js.下载"></script>
+    <script>
+      if (isMobile) {
+        document.getElementById('categories').style.maxHeight = (window.innerHeight - 140) + "px";
+      }
+    </script>
+
+    <script src="./toastr-2.1.3-modified.min.js.下载"></script>
+    <link rel="stylesheet" href="./toastr.min.css">
+
+            
+        
+    
+
+    
+
+
+    
+    
+        
+    <script>
+      if (window.gtag) {
+        setTimeout(function () {
+          window.gtag('event', 'view_map', {
+            'event_label': window.game.title + " - " + window.mapData.map.title,
+          });
+        }, 10000)
+      }
+    </script>
+
+    <link href="./ionicons@4.2.6.min.css" rel="stylesheet">
+
+    <script>
+      var _comscore = _comscore || [];
+      _comscore.push({c1: "2", c2: "6036202"});
+
+      (function () {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+        s.async = true;
+        s.src = "https://sb.scorecardresearch.com/cs/6036202/beacon.js";
+        el.parentNode.insertBefore(s, el);
+      })();
+    </script>
+    <noscript>
+        <img src="https://sb.scorecardresearch.com/p?c1=2&c2=6036202&cv=3.6&cj=1">
+    </noscript>
+
+<script>
+  window.Analytics.setDefaultParams({
+    signed_in: 0,
+    section: null,
+    game_name: "arc-raiders",
+    page: "https://mapgenie.io/arc-raiders/maps/spaceport",
+    source_platform: 'web',
+    content_group: "arc-raiders",
+  });
+  window.Analytics.trackEvent("pageview", {
+    pageview: 1,
+    previous_section: null,
+    from_component: null,
+  })
+</script>
+
+
+
+
+
+
+
+</body></html>
