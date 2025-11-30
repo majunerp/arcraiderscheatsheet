@@ -301,6 +301,28 @@ export default function BuildsPage() {
             <SkillTreeVisual treeName="survival" skills={getSkillsByTree('survival')} />
             <SkillTreeVisual treeName="conditioning" skills={getSkillsByTree('conditioning')} />
 
+            <div className="bg-gradient-to-b from-slate-900/70 via-blue-900/50 to-slate-900/70 border border-cyan-500/25 rounded-3xl p-6 md:p-8 shadow-[0_15px_50px_rgba(0,0,0,0.35)]">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+                <div>
+                  <h2 className="text-3xl font-bold text-cyan-200">Sell vs Recycle Cheat Sheet</h2>
+                  <p className="text-cyan-100/70 mt-2 text-sm md:text-base">
+                    Quick-reference image for which Arc Raiders loot to sell or recycle. Keep it handy while planning skill paths and crafting routes.
+                  </p>
+                </div>
+                <span className="text-xs font-semibold text-cyan-300 uppercase tracking-[0.12em] bg-cyan-500/15 border border-cyan-500/30 rounded-full px-3 py-1">
+                  Updated V3
+                </span>
+              </div>
+              <div className="rounded-2xl overflow-hidden border border-cyan-500/25 shadow-[0_0_40px_rgba(0,229,255,0.2)] bg-slate-950/70">
+                <img
+                  src="/skills-cheatsheet.jpg"
+                  alt="Arc Raiders Sell vs Recycle cheat sheet showing loot items and recommended actions"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
             <h2 className="text-3xl font-bold text-cyan-200 mb-4">Best Builds for 2025</h2>
             <p className="text-cyan-100/70 mb-6">Cards now share the homepage gradients and brighter contrast for easier reading.</p>
             <div className="space-y-8">
