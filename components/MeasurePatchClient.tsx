@@ -6,13 +6,15 @@ export default function MeasurePatchClient() {
   useEffect(() => {
     if (typeof performance === 'undefined' || typeof performance.measure !== 'function') return;
     const original = performance.measure.bind(performance);
-    performance.measure = (...args) => {
+    const safeMeasure: typeof performance.measure = (...args) => {
       try {
         return original(...args);
       } catch {
-        return undefined;
+        const fallbackName = typeof args[0] === 'string' && args[0] ? `${args[0]}-safe` : 'measure-patch-fallback';
+        return original(fallbackName);
       }
     };
+    performance.measure = safeMeasure;
     return () => {
       performance.measure = original;
     };
