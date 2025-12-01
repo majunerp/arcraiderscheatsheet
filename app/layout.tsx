@@ -119,41 +119,6 @@ export default function RootLayout({
             })
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "What is Arc Raiders Cheat Sheet?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Arc Raiders Cheat Sheet is a comprehensive database with 70+ items, quest tracker, and crafting recipes to help you decide what to keep, sell, or recycle in Arc Raiders."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How do I know what to keep in Arc Raiders?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Use our item database to check each item's action recommendation. Items marked as 'Keep' are needed for quests or crafting, while 'Sell' items are vendor trash, and 'Recycle' items provide valuable materials."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Does Arc Raiders Cheat Sheet include quest items?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! Our database includes all quest items and clearly marks which items are needed for hideout progression and workshop upgrades."
-                  }
-                }
-              ]
-            })
-          }}
-        />
       </head>
       <body
         suppressHydrationWarning
