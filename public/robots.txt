@@ -4,9 +4,6 @@
 # Allow all search engines
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
 
 # Sitemap location
 Sitemap: https://arcraiderscheatsheet.org/sitemap.xml
