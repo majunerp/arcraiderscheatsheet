@@ -427,7 +427,7 @@ export default function Home() {
                       key={item.id}
                       className="group relative overflow-hidden rounded-2xl border-2 border-cyan-500/30 bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 backdrop-blur-sm shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(0,229,255,0.3)]"
                       itemScope
-                      itemType="https://schema.org/Product"
+                      itemType="https://schema.org/Thing"
                     >
                       <div
                         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(circle_at_top,_rgba(0,229,255,0.15),_transparent_60%)]"
@@ -495,15 +495,10 @@ export default function Home() {
                               <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
                             </svg>
                             {item.value > 0 ? (
-                              <div
-                                className="flex items-baseline gap-1"
-                                itemProp="offers"
-                                itemScope
-                                itemType="https://schema.org/Offer"
-                              >
-                                <meta itemProp="priceCurrency" content="CR" />
-                                <span itemProp="price" className="text-xl font-bold text-cyan-300">
-                                  {creditFormatter.format(item.value)}
+                              <div className="flex items-baseline gap-1">
+                                <span className="text-xs text-cyan-200/70">Value</span>
+                                <span className="text-xl font-bold text-cyan-300">
+                                  {creditFormatter.format(item.value)} CR
                                 </span>
                               </div>
                             ) : (
