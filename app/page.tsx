@@ -91,6 +91,66 @@ export default function Home() {
 
   const creditFormatter = useMemo(() => new Intl.NumberFormat('en-US'), []);
 
+  const keepSellRecycleHighlights = useMemo(() => {
+    const topByAction = (action: 'keep' | 'sell' | 'recycle') =>
+      items
+        .filter((item) => item.action === action)
+        .sort((a, b) => (b.value || 0) - (a.value || 0))
+        .slice(0, 3)
+        .map((item) => ({
+          name: item.name,
+          description: item.description,
+          value: item.value,
+          action,
+        }));
+
+    return {
+      keep: topByAction('keep'),
+      sell: topByAction('sell'),
+      recycle: topByAction('recycle'),
+    };
+  }, []);
+
+  const itemListSchema = useMemo(() => {
+    const itemListElement: Array<{
+      "@type": "ListItem";
+      position: number;
+      name: string;
+      description: string;
+      url: string;
+    }> = [];
+
+    let position = 1;
+
+    (['keep', 'sell', 'recycle'] as const).forEach((action) => {
+      keepSellRecycleHighlights[action].forEach((item) => {
+        const actionLabel =
+          action === 'keep'
+            ? 'Keep for quests or upgrades'
+            : action === 'sell'
+              ? 'Sell for credits'
+              : 'Recycle for materials';
+
+        itemListElement.push({
+          "@type": "ListItem",
+          position: position++,
+          name: `${item.name} (${action})`,
+          description: `${actionLabel} - ${item.value} credits`,
+          url: "https://arcraiderscheatsheet.org/#items",
+        });
+      });
+    });
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Arc Raiders loot items to keep, sell, or recycle",
+      description: "Priority Arc Raiders loot decisions with keep, sell, or recycle calls and credit values.",
+      numberOfItems: itemListElement.length,
+      itemListElement,
+    };
+  }, [keepSellRecycleHighlights]);
+
   const filteredItems = useMemo(() => {
     let filtered = items;
 
@@ -182,6 +242,13 @@ export default function Home() {
           })
         }}
       />
+      <Script
+        id="itemlist-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(itemListSchema)
+        }}
+      />
 
       {/* Hero Section with H1 for SEO */}
       <section className="relative overflow-hidden py-4 md:py-6 border-b border-zinc-800/50">
@@ -199,8 +266,26 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-base md:text-lg text-cyan-100/80 max-w-3xl mx-auto leading-relaxed">
-              The Arc Raiders Cheat Sheet gives you a fast overview of loot, filters, and priorities so you can make smarter choices every raid.
+              Arc Raiders loot cheat sheet with instant keep / sell / recycle calls, filters, and values so you know what to stash or scrap every raid.
             </p>
+          </div>
+          <div className="max-w-5xl mx-auto mt-6 grid grid-cols-1 md:grid-cols-3 gap-3 text-left">
+            {(['keep', 'sell', 'recycle'] as const).map((action) => {
+              const samples = keepSellRecycleHighlights[action].map((item) => item.name).join(', ');
+              return (
+                <div
+                  key={action}
+                  className="rounded-xl border border-cyan-500/25 bg-slate-950/60 px-4 py-3 shadow-[0_0_28px_rgba(0,229,255,0.12)]"
+                >
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-cyan-300/90 mb-1">
+                    {actionMeta[action].short} Loot
+                  </div>
+                  <p className="text-sm font-semibold text-cyan-100">{actionMeta[action].title}</p>
+                  <p className="text-xs text-cyan-100/70 mt-1">{actionMeta[action].summary}</p>
+                  <p className="text-xs text-cyan-100/60 mt-2">Examples: {samples}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -986,10 +1071,10 @@ export default function Home() {
           <div className="space-y-6">
             <div className="bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 border-2 border-cyan-500/30 rounded-xl p-6 hover:border-cyan-400/60 transition-all">
               <h3 className="text-xl font-bold text-cyan-100 mb-3">
-                What items should I keep in Arc Raiders?
+                What Arc Raiders loot should I keep, sell, or recycle?
               </h3>
               <p className="text-cyan-100/70 leading-relaxed">
-                Always keep ARC Parts (Leaper Pulse Units, Rocketeer Drivers), quest-specific items marked with "Quest:" in descriptions, and crafting materials like ARC Alloy and Advanced Electrical Components. Use our interactive filter above to show only "Keep Priority" items. High-value items worth 1,000+ credits should be kept for workshop upgrades.
+                Keep ARC Parts and any item flagged for quests; sell diamond trinkets and duplicate consumables under 1,000 credits; recycle electronics like Power Banks and Fried Motherboards because their crafting materials beat the sell price. Use the keep/sell/recycle filter above for a live call on every item.
               </p>
             </div>
 
@@ -1050,10 +1135,10 @@ export default function Home() {
                 "mainEntity": [
                   {
                     "@type": "Question",
-                    "name": "What items should I keep in Arc Raiders?",
+                    "name": "What Arc Raiders loot should I keep, sell, or recycle?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Always keep ARC Parts (Leaper Pulse Units, Rocketeer Drivers), quest-specific items marked with 'Quest:' in descriptions, and crafting materials like ARC Alloy and Advanced Electrical Components. High-value items worth 1,000+ credits should be kept for workshop upgrades."
+                      "text": "Keep ARC Parts and anything flagged for quests, sell diamond trinkets and duplicate consumables under 1,000 credits, and recycle electronics like Power Banks and Fried Motherboards because their materials are worth more than the vendor price. The keep/sell/recycle filter shows the right call for every loot item."
                     }
                   },
                   {
@@ -1069,7 +1154,7 @@ export default function Home() {
                     "name": "Should I recycle or sell items in Arc Raiders?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Compare the item's sell value to its recycled materials' combined worth. Always recycle at your Hideout (100% yield) instead of during raids (50% yield). Many items like Power Banks are worth more recycled than sold."
+                      "text": "Compare the item's sell value to its recycled materials' combined worth. Power Banks sell for 640 credits but recycle into materials worth 1,400+ credits. Always recycle at your Hideout (100% yield) instead of during raids (50% yield)."
                     }
                   },
                   {
