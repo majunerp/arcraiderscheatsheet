@@ -22,13 +22,15 @@ export function generateMetadata(config: SEOConfig): Metadata {
 
   // Ensure title is 40-60 characters
   const optimizedTitle = title.length > 60 ? title.substring(0, 57) + '...' : title;
+  const openGraphTitle = (() => {
+    const combined = `${optimizedTitle} | ${SITE_NAME}`;
+    return combined.length > 60 ? combined.substring(0, 57) + '...' : combined;
+  })();
 
   // Ensure description is 140-160 characters
   const optimizedDescription = description.length > 160
     ? description.substring(0, 157) + '...'
     : description;
-
-  const fullTitle = `${optimizedTitle} | ${SITE_NAME}`;
 
   return {
     title: optimizedTitle,
@@ -55,7 +57,7 @@ export function generateMetadata(config: SEOConfig): Metadata {
       type: 'website',
       locale: 'en_US',
       url: canonical || SITE_URL,
-      title: fullTitle,
+      title: openGraphTitle,
       description: optimizedDescription,
       siteName: SITE_NAME,
       images: [
@@ -69,7 +71,7 @@ export function generateMetadata(config: SEOConfig): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
-      title: fullTitle,
+      title: openGraphTitle,
       description: optimizedDescription,
       images: [ogImage],
       creator: '@arcraiderssheet',

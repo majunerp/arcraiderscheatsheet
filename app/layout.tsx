@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = genMeta({
-  title: "Arc Raiders Cheat Sheet - Keep, Sell or Recycle Loot Items",
-  description: "Arc Raiders loot cheat sheet with keep/sell/recycle calls for 70+ items, credit values, spawns, and crafting uses - know what to stash or scrap every raid.",
+  title: "Arc Raiders Cheat Sheet 2025-loot,item & recycling",
+  description: "2025 Arc Raiders loot cheat sheet with keep/sell/recycle calls for 240+ items, credit values, spawns, and crafting uses so you know what to stash or scrap.",
   keywords: [
     'arc raiders cheat sheet',
     'arc raiders loot cheat sheet',
