@@ -269,24 +269,6 @@ export default function Home() {
               Arc Raiders loot cheat sheet with instant keep / sell / recycle calls, filters, and values so you know what to stash or scrap every raid.
             </p>
           </div>
-          <div className="max-w-5xl mx-auto mt-6 grid grid-cols-1 md:grid-cols-3 gap-3 text-left">
-            {(['keep', 'sell', 'recycle'] as const).map((action) => {
-              const samples = keepSellRecycleHighlights[action].map((item) => item.name).join(', ');
-              return (
-                <div
-                  key={action}
-                  className="rounded-xl border border-cyan-500/25 bg-slate-950/60 px-4 py-3 shadow-[0_0_28px_rgba(0,229,255,0.12)]"
-                >
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-cyan-300/90 mb-1">
-                    {actionMeta[action].short} Loot
-                  </div>
-                  <p className="text-sm font-semibold text-cyan-100">{actionMeta[action].title}</p>
-                  <p className="text-xs text-cyan-100/70 mt-1">{actionMeta[action].summary}</p>
-                  <p className="text-xs text-cyan-100/60 mt-2">Examples: {samples}</p>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </section>
 
