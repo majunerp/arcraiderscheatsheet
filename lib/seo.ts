@@ -17,8 +17,11 @@ export function generateMetadata(config: SEOConfig): Metadata {
     description,
     keywords = [],
     canonical,
-    ogImage = `${SITE_URL}/og-image.png`,
+    ogImage = `${SITE_URL}/og-image.png?v=2`,
   } = config;
+
+  const socialImage = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`;
+  const socialAlt = `${SITE_NAME} social preview`;
 
   // Ensure title is 40-60 characters
   const optimizedTitle = title.length > 60 ? title.substring(0, 57) + '...' : title;
@@ -33,6 +36,7 @@ export function generateMetadata(config: SEOConfig): Metadata {
     : description;
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: optimizedTitle,
     description: optimizedDescription,
     keywords: keywords.join(', '),
@@ -62,10 +66,12 @@ export function generateMetadata(config: SEOConfig): Metadata {
       siteName: SITE_NAME,
       images: [
         {
-          url: ogImage,
+          url: socialImage,
+          secureUrl: socialImage,
+          type: 'image/png',
           width: 1200,
           height: 630,
-          alt: optimizedTitle,
+          alt: socialAlt,
         },
       ],
     },
@@ -73,8 +79,9 @@ export function generateMetadata(config: SEOConfig): Metadata {
       card: 'summary_large_image',
       title: openGraphTitle,
       description: optimizedDescription,
-      images: [ogImage],
+      images: [socialImage],
       creator: '@arcraiderssheet',
+      site: '@arcraiderssheet',
     },
     verification: {
       google: 'your-google-verification-code',
