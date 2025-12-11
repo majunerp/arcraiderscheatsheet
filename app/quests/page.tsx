@@ -205,7 +205,7 @@ export default function QuestsPage() {
       {/* Content Wrapper */}
       <div className="relative z-10">
         {/* Header Section */}
-        <section className="border-b-2 border-cyan-500/30 pt-16 pb-12 md:pt-24 md:pb-16">
+      <section className="border-b-2 border-cyan-500/30 pt-10 pb-8 md:pt-14 md:pb-10">
         <div className="container mx-auto px-4 max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,229,255,0.6)]">
@@ -232,9 +232,9 @@ export default function QuestsPage() {
       </section>
 
       {/* Quest Tree Image */}
-      <section className="py-10 border-b border-cyan-500/20 bg-slate-950/50">
-        <div className="container mx-auto px-4 max-w-6xl space-y-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <section className="py-8 border-b border-cyan-500/20 bg-slate-950/50">
+        <div className="container mx-auto px-4 max-w-6xl space-y-5">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div>
               <h2 className="text-3xl font-bold text-cyan-200">Quest Tree Overview</h2>
               <p className="text-cyan-100/70 mt-2">
@@ -266,7 +266,7 @@ export default function QuestsPage() {
               alt="Arc Raiders Quest Tree overview"
               width={2048}
               height={2048}
-              className="w-full h-auto"
+              className="w-full h-auto max-h-[720px] object-contain"
               priority
               sizes="(max-width: 768px) 100vw, 1200px"
             />
