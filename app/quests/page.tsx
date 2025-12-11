@@ -156,7 +156,7 @@ export default function QuestsPage() {
   const difficulties = ['All', 'Easy', 'Medium', 'Hard'];
   const questRoutes = [
     {
-      title: '开局主线（Dam Battlegrounds）',
+      title: 'Opening Line (Dam Battlegrounds)',
       steps: [
         'Picking Up The Pieces',
         'Cleaner Skies',
@@ -166,7 +166,7 @@ export default function QuestsPage() {
       ],
     },
     {
-      title: '中段支线（资源/情报）',
+      title: 'Mid Route (Resources / Intel)',
       steps: [
         'The Right Tool',
         'A Better Use',
@@ -177,7 +177,7 @@ export default function QuestsPage() {
       ],
     },
     {
-      title: '区域解锁（Blue Gate / Stella Montis）',
+      title: 'Zone Unlocks (Blue Gate / Stella Montis)',
       steps: [
         'Water Troubles',
         'Switching The Supply',
@@ -222,10 +222,10 @@ export default function QuestsPage() {
               target="_blank"
               rel="noreferrer"
             >
-              官方 Wiki 任务页
+              Official wiki quests page
             </Link>
             <span className="px-3 py-1 rounded-full border border-cyan-400/40 bg-cyan-500/10 text-cyan-100/90">
-              Quest Tree 对应整理
+              Quest tree reference
             </span>
           </div>
         </div>
@@ -236,9 +236,9 @@ export default function QuestsPage() {
         <div className="container mx-auto px-4 max-w-6xl space-y-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h2 className="text-3xl font-bold text-cyan-200">Quest Tree 总览</h2>
+              <h2 className="text-3xl font-bold text-cyan-200">Quest Tree Overview</h2>
               <p className="text-cyan-100/70 mt-2">
-                参考官方任务树，快速了解 Dam Battlegrounds 开局到 Blue Gate / Stella Montis 解锁的主要节点。
+                Use the official quest tree to see the main beats from Dam Battlegrounds start through Blue Gate / Stella Montis unlocks.
               </p>
             </div>
             <div className="flex gap-3">
@@ -248,7 +248,7 @@ export default function QuestsPage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                查看原图 (4096×4096)
+                View full image (4096×4096)
               </Link>
               <Link
                 href="https://arcraiders.wiki/wiki/Quests"
@@ -256,14 +256,14 @@ export default function QuestsPage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                对照 Wiki 顺序
+                Match wiki order
               </Link>
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden border border-cyan-500/30 shadow-[0_0_30px_rgba(0,229,255,0.25)] bg-slate-900/60">
             <Image
               src="/Quest_Tree.png"
-              alt="Arc Raiders Quest Tree 全景"
+              alt="Arc Raiders Quest Tree overview"
               width={2048}
               height={2048}
               className="w-full h-auto"
