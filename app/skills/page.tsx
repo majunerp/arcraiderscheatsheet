@@ -204,68 +204,68 @@ export default function BuildsPage() {
       </div>
 
       <div className="relative z-10">
-        <section className="border-b border-cyan-500/25 pt-14 pb-12 md:pt-20 md:pb-14 bg-gradient-to-b from-slate-950/70 via-slate-900/60 to-transparent">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-3 text-center md:text-left">
+        <section className="border-b border-cyan-500/25 pt-6 pb-4 md:pt-10 md:pb-7 bg-gradient-to-b from-slate-950/70 via-slate-900/60 to-transparent">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h1 className="text-2xl md:text-3xl font-bold mb-2 text-center md:text-left leading-tight">
               <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-200 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,229,255,0.5)]">
                 Arc Raiders Skill Tree & Builds
               </span>
             </h1>
-            <p className="text-base md:text-lg text-cyan-100/80 max-w-3xl">
+            <p className="text-xs md:text-sm text-cyan-100/80 max-w-3xl">
               Brighter, homepage-matched palette for the full 75-point spread across Mobility, Survival, and Conditioning.
             </p>
           </div>
         </section>
 
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4 max-w-6xl space-y-12">
-            <div className="bg-gradient-to-br from-slate-900/70 via-blue-900/60 to-slate-900/70 backdrop-blur-md rounded-3xl p-8 border border-cyan-500/30 shadow-[0_0_60px_rgba(0,229,255,0.15)]">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-7">
-                <h2 className="text-2xl md:text-3xl font-bold text-cyan-200">Skill Points Overview</h2>
+        <section className="py-8 md:py-12">
+          <div className="container mx-auto px-4 max-w-5xl space-y-6 md:space-y-8">
+            <div className="bg-gradient-to-br from-slate-900/70 via-blue-900/60 to-slate-900/70 backdrop-blur-md rounded-3xl p-5 md:p-6 border border-cyan-500/30 shadow-[0_0_50px_rgba(0,229,255,0.12)]">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+                <h2 className="text-lg md:text-xl font-bold text-cyan-200">Skill Points Overview</h2>
                 <div className="flex flex-wrap gap-2">
                   <Link
                     href="/"
-                    className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500/80 to-blue-500/80 text-white font-semibold border border-cyan-400/50 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,229,255,0.35)] transition-transform duration-200"
+                    className="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-cyan-500/80 to-blue-500/80 text-white font-semibold border border-cyan-400/50 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,229,255,0.35)] transition-transform duration-200 text-sm"
                   >
                     Match Homepage Look
                   </Link>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6">
-                <div className="rounded-2xl border border-cyan-500/30 bg-slate-950/60 p-5 text-center shadow-inner shadow-cyan-500/10">
-                  <div className="text-4xl font-bold text-cyan-300 drop-shadow-[0_0_14px_rgba(0,229,255,0.4)]">75</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 mb-4">
+                <div className="rounded-2xl border border-cyan-500/30 bg-slate-950/60 p-3.5 text-center shadow-inner shadow-cyan-500/10">
+                  <div className="text-2xl md:text-3xl font-bold text-cyan-300 drop-shadow-[0_0_12px_rgba(0,229,255,0.35)]">75</div>
                   <div className="text-cyan-100/70 mt-2 text-sm">Total Skill Points</div>
                 </div>
-                <div className="rounded-2xl border border-blue-500/30 bg-slate-950/60 p-5 text-center shadow-inner shadow-blue-500/10">
-                  <div className="text-4xl font-bold text-blue-300 drop-shadow-[0_0_14px_rgba(59,130,246,0.4)]">3</div>
+                <div className="rounded-2xl border border-blue-500/30 bg-slate-950/60 p-3.5 text-center shadow-inner shadow-blue-500/10">
+                  <div className="text-2xl md:text-3xl font-bold text-blue-300 drop-shadow-[0_0_12px_rgba(59,130,246,0.35)]">3</div>
                   <div className="text-cyan-100/70 mt-2 text-sm">Skill Trees</div>
                 </div>
-                <div className="rounded-2xl border border-emerald-500/30 bg-slate-950/60 p-5 text-center shadow-inner shadow-emerald-500/10">
-                  <div className="text-4xl font-bold text-emerald-300 drop-shadow-[0_0_14px_rgba(52,211,153,0.4)]">45</div>
+                <div className="rounded-2xl border border-emerald-500/30 bg-slate-950/60 p-3.5 text-center shadow-inner shadow-emerald-500/10">
+                  <div className="text-2xl md:text-3xl font-bold text-emerald-300 drop-shadow-[0_0_12px_rgba(52,211,153,0.35)]">45</div>
                   <div className="text-cyan-100/70 mt-2 text-sm">Unique Skills</div>
                 </div>
               </div>
-              <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-2xl p-4">
-                <p className="text-cyan-100/80 text-sm leading-relaxed">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-2xl p-3 md:p-3.5">
+                <p className="text-cyan-100/80 text-xs md:text-sm leading-relaxed">
                   <strong className="text-cyan-200">Important:</strong> Arc Raiders does not currently offer free respecs. A voluntary wipe is available every eight weeks via the Expedition Project.
                 </p>
               </div>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold text-cyan-200 mb-4">Skill Trees</h2>
-              <p className="text-cyan-100/70 mb-8 max-w-3xl">
+              <h2 className="text-2xl md:text-3xl font-bold text-cyan-200 mb-3">Skill Trees</h2>
+              <p className="text-cyan-100/70 mb-6 max-w-3xl">
                 Same cyan-blue balance as the homepage so each tree reads clearly against the background.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
                 {skillTrees.map((tree) => (
                   <div
                     key={tree.id}
-                    className="bg-gradient-to-b from-slate-900/70 via-blue-900/50 to-slate-900/70 border border-cyan-500/25 rounded-2xl p-6 shadow-[0_15px_50px_rgba(0,0,0,0.35)] hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(0,229,255,0.25)] transition-all"
+                    className="bg-gradient-to-b from-slate-900/70 via-blue-900/50 to-slate-900/70 border border-cyan-500/25 rounded-2xl p-5 shadow-[0_15px_50px_rgba(0,0,0,0.35)] hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(0,229,255,0.25)] transition-all"
                   >
-                    <h3 className="text-2xl font-bold text-cyan-50 mb-2">{tree.name}</h3>
-                    <p className="text-cyan-100/75 mb-5 text-sm leading-relaxed">{tree.description}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-cyan-50 mb-2">{tree.name}</h3>
+                    <p className="text-cyan-100/75 mb-4 text-sm leading-relaxed">{tree.description}</p>
 
                     <h4 className="text-xs font-semibold text-cyan-300 mb-3 uppercase tracking-[0.08em]">Key Skills</h4>
                     <div className="space-y-3">
@@ -293,7 +293,7 @@ export default function BuildsPage() {
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold text-cyan-200">Interactive Skill Trees (45 Skills)</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-cyan-200">Interactive Skill Trees (45 Skills)</h2>
               <p className="text-cyan-100/70">Click or hover to allocate points. All {allSkills.length} skills across the three trees.</p>
             </div>
 
@@ -301,17 +301,17 @@ export default function BuildsPage() {
             <SkillTreeVisual treeName="survival" skills={getSkillsByTree('survival')} />
             <SkillTreeVisual treeName="conditioning" skills={getSkillsByTree('conditioning')} />
 
-            <h2 className="text-3xl font-bold text-cyan-200 mb-4">Best Builds for 2025</h2>
-            <p className="text-cyan-100/70 mb-6">Cards now share the homepage gradients and brighter contrast for easier reading.</p>
-            <div className="space-y-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-cyan-200 mb-3">Best Builds for 2025</h2>
+            <p className="text-cyan-100/70 mb-5">Cards now share the homepage gradients and brighter contrast for easier reading.</p>
+            <div className="space-y-6 md:space-y-8">
               {builds.map((build) => (
                 <div
                   key={build.id}
-                  className="bg-gradient-to-b from-slate-900/70 via-blue-900/50 to-slate-900/70 border border-cyan-500/25 rounded-2xl p-6 shadow-[0_15px_50px_rgba(0,0,0,0.35)] hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(0,229,255,0.25)] transition-all"
+                  className="bg-gradient-to-b from-slate-900/70 via-blue-900/50 to-slate-900/70 border border-cyan-500/25 rounded-2xl p-5 shadow-[0_15px_50px_rgba(0,0,0,0.35)] hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(0,229,255,0.25)] transition-all"
                 >
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2.5 mb-3">
                     <div>
-                      <h3 className="text-2xl font-bold text-cyan-50 mb-2">{build.name}</h3>
+                      <h3 className="text-xl md:text-2xl font-bold text-cyan-50 mb-2">{build.name}</h3>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-3 py-1 bg-cyan-500/15 text-cyan-200 rounded-full text-sm font-medium border border-cyan-500/40">
                           {build.type}
@@ -332,9 +332,9 @@ export default function BuildsPage() {
                     </div>
                   </div>
 
-                  <p className="text-cyan-100/80 mb-6 leading-relaxed">{build.description}</p>
+                  <p className="text-cyan-100/80 mb-5 leading-relaxed">{build.description}</p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-5">
                     <div className="rounded-2xl border border-cyan-500/25 bg-slate-950/60 p-4">
                       <h4 className="text-lg font-semibold text-cyan-100 mb-3">Point Distribution ({build.totalPoints} total)</h4>
                       <div className="space-y-2">
@@ -380,7 +380,7 @@ export default function BuildsPage() {
                     </div>
                   </div>
 
-                  <div className="bg-blue-900/50 border border-blue-500/30 rounded-2xl p-4">
+                  <div className="bg-blue-900/50 border border-blue-500/30 rounded-2xl p-3 md:p-4">
                     <h4 className="text-xs font-semibold text-blue-200 mb-3 uppercase tracking-[0.1em]">Priority Progression</h4>
                     <ul className="space-y-2">
                       {build.priorities.map((priority, index) => (
@@ -392,7 +392,7 @@ export default function BuildsPage() {
                     </ul>
                   </div>
 
-                  <div className="mt-4 p-4 bg-slate-900/60 border border-cyan-500/20 rounded-2xl">
+                  <div className="mt-3 p-3 md:p-4 bg-slate-900/60 border border-cyan-500/20 rounded-2xl">
                     <p className="text-cyan-100/80 text-sm leading-relaxed">
                       <strong className="text-cyan-200">Playstyle:</strong> {build.playstyle}
                     </p>
@@ -401,19 +401,19 @@ export default function BuildsPage() {
               ))}
             </div>
 
-            <div className="mt-16 pt-12 border-t border-cyan-500/20">
-              <h2 className="text-3xl font-bold text-cyan-200 mb-5">Complete Arc Raiders Skill Tree Guide</h2>
-              <p className="text-lg text-cyan-100/75 leading-relaxed mb-6">
+            <div className="mt-12 pt-8 border-t border-cyan-500/20">
+              <h2 className="text-2xl md:text-3xl font-bold text-cyan-200 mb-4">Complete Arc Raiders Skill Tree Guide</h2>
+              <p className="text-base md:text-lg text-cyan-100/75 leading-relaxed mb-5">
                 The Arc Raiders skill tree system features 75 skill points distributed across three distinct specializations: Mobility, Survival, and Conditioning. This Arc Raiders build guide helps you optimize your character progression with proven builds for solo play, squad coordination, and PvP combat. Understanding the skill tree meta is crucial for success in Arc Raiders 2025.
               </p>
 
-              <h3 className="text-2xl font-bold text-cyan-100 mt-8 mb-4">Best Skills to Unlock First</h3>
-              <p className="text-lg text-cyan-100/75 leading-relaxed mb-6">
+              <h3 className="text-xl md:text-2xl font-bold text-cyan-100 mt-6 mb-3">Best Skills to Unlock First</h3>
+              <p className="text-base md:text-lg text-cyan-100/75 leading-relaxed mb-5">
                 Your first 20 skill points in Arc Raiders are absolutely critical, setting the foundation for your entire build. Priority skills include Marathon Runner and Youthful Lungs from Mobility for stamina management, In-Round Crafting from Survival for self-sufficiency, and Used to the Weight from Conditioning for gear flexibility. These Arc Raiders essential skills provide the strongest foundation for any build type.
               </p>
 
-              <h3 className="text-2xl font-bold text-cyan-100 mt-8 mb-4">Skill Tree Builds Strategy</h3>
-              <p className="text-lg text-cyan-100/75 leading-relaxed mb-6">
+              <h3 className="text-xl md:text-2xl font-bold text-cyan-100 mt-6 mb-3">Skill Tree Builds Strategy</h3>
+              <p className="text-base md:text-lg text-cyan-100/75 leading-relaxed mb-5">
                 Advanced Arc Raiders players should customize their skill tree build based on preferred playstyle. Solo looters benefit from heavy Survival investment with moderate Mobility, while aggressive PvP players maximize Mobility with minimal Survival. Tank builds focus on Conditioning and Survival for sustained combat. Use community tools like ARCRaiders.build and MetaForge to plan your Arc Raiders skill tree before committing points.
               </p>
             </div>

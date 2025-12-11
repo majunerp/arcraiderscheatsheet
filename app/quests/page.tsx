@@ -205,25 +205,17 @@ export default function QuestsPage() {
       {/* Content Wrapper */}
       <div className="relative z-10">
         {/* Header Section */}
-      <section className="border-b-2 border-cyan-500/30 pt-10 pb-8 md:pt-14 md:pb-10">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      <section className="border-b-2 border-cyan-500/30 pt-6 pb-5 md:pt-10 md:pb-8">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,229,255,0.6)]">
               Arc Raiders Quest Guide
             </span>
           </h1>
-          <p className="text-xl text-cyan-100/80 max-w-3xl">
+          <p className="text-base md:text-lg text-cyan-100/80 max-w-3xl">
             Complete Arc Raiders quest guide with all hideout upgrades, workshop progression, and required items. Plan your loot collection strategy to efficiently complete quests and unlock advanced crafting stations.
           </p>
-          <div className="mt-4 flex flex-wrap gap-3 text-sm text-cyan-200/80">
-            <Link
-              href="https://arcraiders.wiki/wiki/Quests"
-              className="underline underline-offset-4 decoration-cyan-400 hover:text-cyan-100"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Official wiki quests page
-            </Link>
+          <div className="mt-3 flex flex-wrap gap-2.5 text-xs md:text-sm text-cyan-200/80">
             <span className="px-3 py-1 rounded-full border border-cyan-400/40 bg-cyan-500/10 text-cyan-100/90">
               Quest tree reference
             </span>
@@ -232,31 +224,23 @@ export default function QuestsPage() {
       </section>
 
       {/* Quest Tree Image */}
-      <section className="py-8 border-b border-cyan-500/20 bg-slate-950/50">
-        <div className="container mx-auto px-4 max-w-6xl space-y-5">
+      <section className="py-6 md:py-8 border-b border-cyan-500/20 bg-slate-950/50">
+        <div className="container mx-auto px-4 max-w-5xl space-y-4 md:space-y-5">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div>
-              <h2 className="text-3xl font-bold text-cyan-200">Quest Tree Overview</h2>
-              <p className="text-cyan-100/70 mt-2">
+              <h2 className="text-2xl md:text-3xl font-bold text-cyan-200">Quest Tree Overview</h2>
+              <p className="text-cyan-100/70 mt-1.5">
                 Use the official quest tree to see the main beats from Dam Battlegrounds start through Blue Gate / Stella Montis unlocks.
               </p>
             </div>
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-2.5">
               <Link
                 href="/Quest_Tree.png"
-                className="px-4 py-2 rounded-lg border border-cyan-400/40 bg-white/5 text-cyan-100 hover:bg-white/10 transition"
+                className="px-3.5 py-1.5 rounded-lg border border-cyan-400/40 bg-white/5 text-cyan-100 hover:bg-white/10 transition text-sm"
                 target="_blank"
                 rel="noreferrer"
               >
                 View full image (4096×4096)
-              </Link>
-              <Link
-                href="https://arcraiders.wiki/wiki/Quests"
-                className="px-4 py-2 rounded-lg border border-blue-400/40 bg-blue-500/10 text-blue-100 hover:bg-blue-500/20 transition"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Match wiki order
               </Link>
             </div>
           </div>
@@ -266,7 +250,7 @@ export default function QuestsPage() {
               alt="Arc Raiders Quest Tree overview"
               width={2048}
               height={2048}
-              className="w-full h-auto max-h-[720px] object-contain"
+              className="w-full h-auto max-h-[560px] md:max-h-[640px] object-contain"
               priority
               sizes="(max-width: 768px) 100vw, 1200px"
             />
