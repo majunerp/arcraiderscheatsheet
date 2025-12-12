@@ -235,18 +235,18 @@ export default function QuestsPage() {
             </div>
             <div className="flex flex-wrap gap-2.5">
               <Link
-                href="/Quest_Tree.png"
+                href="/Quest_Tree.webp"
                 className="px-3.5 py-1.5 rounded-lg border border-cyan-400/40 bg-white/5 text-cyan-100 hover:bg-white/10 transition text-sm"
                 target="_blank"
                 rel="noreferrer"
               >
-                View full image (4096×4096)
+                View full image (WebP)
               </Link>
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden border border-cyan-500/30 shadow-[0_0_30px_rgba(0,229,255,0.25)] bg-slate-900/60">
             <Image
-              src="/Quest_Tree.png"
+              src="/Quest_Tree.webp"
               alt="Arc Raiders Quest Tree overview"
               width={2048}
               height={2048}
