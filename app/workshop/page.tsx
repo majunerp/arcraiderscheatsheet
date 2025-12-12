@@ -1,6 +1,5 @@
 import { generateMetadata as genMeta } from '@/lib/seo';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const metadata = genMeta({
   title: 'Arc Raiders Crafting Guide - Workshop Recipes 2025',
@@ -224,35 +223,6 @@ export default function WorkshopPage() {
             <p className="text-base md:text-lg text-cyan-100/80 max-w-3xl">
               Compact recipes, upgrade checkpoints, and material priorities so you can push Workshop 1→3 without digging through walls of text.
             </p>
-          </div>
-        </section>
-
-        {/* Visual Overview */}
-        <section className="py-8 md:py-10 border-b border-cyan-500/20 bg-black/40">
-          <div className="container mx-auto max-w-6xl px-4">
-            <div className="grid gap-4 md:grid-cols-[1.2fr_0.8fr]">
-              <div className="relative overflow-hidden rounded-xl border border-cyan-500/30 bg-black/50 shadow-[0_15px_40px_rgba(0,0,0,0.5)] aspect-[16/9]">
-                <Image
-                  src="/workshop.jpg"
-                  alt="Workshop overview render"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 720px, 100vw"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-              </div>
-              <div className="relative overflow-hidden rounded-xl border border-cyan-500/30 bg-black/50 shadow-[0_15px_40px_rgba(0,0,0,0.5)] aspect-[4/5]">
-                <Image
-                  src="/arc-raiders-pvp-explained.webp"
-                  alt="Arc Raiders crafting floor"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 480px, 100vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
-              </div>
-            </div>
           </div>
         </section>
 
