@@ -39,6 +39,10 @@ export default function GuidesPage() {
     'easiest-way-to-get-rocketeer-driver-arc-raiders',
   ]);
   const expeditionGuides = farmingGuides.filter((guide) => expeditionSlugs.has(guide.slug));
+  const guideHref = (guide: (typeof guidesData)[number]) =>
+    guide.slug === 'very-comfortable-pillow-and-cat-bed-in-arc-raiders'
+      ? '/guides/pillow-arc-raiders'
+      : `/guides/${guide.slug}`;
 
   return (
     <div className="relative min-h-screen w-full bg-black text-cyan-50">
@@ -145,51 +149,64 @@ export default function GuidesPage() {
             </div>
 
             <div className="grid gap-6 lg:grid-cols-2">
-              {spotlightGuides.map((guide) => (
-                <article
-                  key={guide.slug}
-                  className="group overflow-hidden rounded-2xl border border-cyan-500/30 bg-gradient-to-b from-slate-950/70 via-blue-950/50 to-slate-950/70 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition hover:border-cyan-300/60 hover:shadow-[0_25px_70px_rgba(0,229,255,0.15)]"
-                >
-                  <div className="relative aspect-video w-full overflow-hidden">
-                    <Image
-                      src={guide.image}
-                      alt={guide.title}
-                      fill
-                      className="object-cover transition duration-700 group-hover:scale-105"
-                      sizes="(min-width: 1024px) 540px, 100vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                    <div className="absolute left-4 top-3 flex flex-wrap gap-2 text-[11px] font-semibold text-cyan-50">
-                      <span className="rounded-full bg-cyan-500/80 px-3 py-1 text-black shadow-[0_0_20px_rgba(0,229,255,0.6)]">
-                        {guide.category}
-                      </span>
-                      {guide.map && (
-                        <span className="rounded-full bg-black/70 px-3 py-1 text-cyan-100/80 border border-cyan-400/40">
-                          {guide.map}
+              {spotlightGuides.map((guide) => {
+                const isDecember = guide.date.startsWith('Dec');
+                const cardClass =
+                  'group block overflow-hidden rounded-2xl border border-cyan-500/30 bg-gradient-to-b from-slate-950/70 via-blue-950/50 to-slate-950/70 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition hover:border-cyan-300/60 hover:shadow-[0_25px_70px_rgba(0,229,255,0.15)]';
+                const cardContent = (
+                  <>
+                    <div className="relative aspect-video w-full overflow-hidden">
+                      <Image
+                        src={guide.image}
+                        alt={guide.title}
+                        fill
+                        className="object-cover transition duration-700 group-hover:scale-105"
+                        sizes="(min-width: 1024px) 540px, 100vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                      <div className="absolute left-4 top-3 flex flex-wrap gap-2 text-[11px] font-semibold text-cyan-50">
+                        <span className="rounded-full bg-cyan-500/80 px-3 py-1 text-black shadow-[0_0_20px_rgba(0,229,255,0.6)]">
+                          {guide.category}
                         </span>
-                      )}
-                    </div>
-                  </div>
-                  <div className="space-y-3 p-5">
-                    <p className="text-xs uppercase tracking-wide text-cyan-200/70">{guide.date}</p>
-                    <h3 className="text-xl font-semibold text-cyan-50">{guide.title}</h3>
-                    <p className="text-cyan-100/75">{guide.summary}</p>
-                    {guide.need && (
-                      <div className="rounded-lg border border-cyan-400/30 bg-black/30 px-3 py-2 text-sm font-semibold text-cyan-100">
-                        Need: {guide.need}
+                        {guide.map && (
+                          <span className="rounded-full bg-black/70 px-3 py-1 text-cyan-100/80 border border-cyan-400/40">
+                            {guide.map}
+                          </span>
+                        )}
                       </div>
-                    )}
-                    <ul className="space-y-2 text-sm text-cyan-100/80">
-                      {guide.highlights.slice(0, 3).map((point) => (
-                        <li key={point} className="flex gap-2">
-                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(0,229,255,0.7)]" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              ))}
+                    </div>
+                    <div className="space-y-3 p-5">
+                      <p className="text-xs uppercase tracking-wide text-cyan-200/70">{guide.date}</p>
+                      <h3 className="text-xl font-semibold text-cyan-50">{guide.title}</h3>
+                      <p className="text-cyan-100/75">{guide.summary}</p>
+                      {guide.need && (
+                        <div className="rounded-lg border border-cyan-400/30 bg-black/30 px-3 py-2 text-sm font-semibold text-cyan-100">
+                          Need: {guide.need}
+                        </div>
+                      )}
+                      <ul className="space-y-2 text-sm text-cyan-100/80">
+                        {guide.highlights.slice(0, 3).map((point) => (
+                          <li key={point} className="flex gap-2">
+                            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(0,229,255,0.7)]" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                );
+
+                const href = guideHref(guide);
+                return isDecember ? (
+                  <Link key={guide.slug} href={href} className={cardClass}>
+                    {cardContent}
+                  </Link>
+                ) : (
+                  <article key={guide.slug} className={cardClass}>
+                    {cardContent}
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -205,47 +222,59 @@ export default function GuidesPage() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {expeditionGuides.map((guide) => (
-                <article
-                  key={guide.slug}
-                  className="group flex flex-col rounded-xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950/70 p-4 shadow-[0_12px_35px_rgba(0,0,0,0.45)] transition hover:border-cyan-300/50 hover:shadow-[0_18px_50px_rgba(0,229,255,0.12)]"
-                >
-                  <div className="relative mb-3 h-36 overflow-hidden rounded-lg">
-                    <Image
-                      src={guide.image}
-                      alt={guide.title}
-                      fill
-                      sizes="(min-width: 1024px) 240px, 100vw"
-                      className="object-cover transition duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                    <div className="absolute left-3 top-3 flex items-center gap-2 text-[11px] font-semibold">
-                      <span className="rounded-full bg-cyan-500/90 px-3 py-1 text-black shadow-[0_0_18px_rgba(0,229,255,0.4)]">
-                        {guide.category}
-                      </span>
-                      {guide.map && <span className="rounded-full bg-black/60 px-3 py-1 text-cyan-100/80">{guide.map}</span>}
-                    </div>
-                  </div>
-                  <div className="flex flex-1 flex-col space-y-2">
-                    <p className="text-[11px] uppercase tracking-wide text-cyan-200/70">{guide.date}</p>
-                    <h3 className="text-lg font-semibold text-cyan-50">{guide.title}</h3>
-                    <p className="text-sm text-cyan-100/70">{guide.summary}</p>
-                    {guide.need && (
-                      <div className="rounded-lg border border-cyan-400/30 bg-black/30 px-3 py-2 text-xs font-semibold text-cyan-100">
-                        {guide.need}
+              {expeditionGuides.map((guide) => {
+                const isDecember = guide.date.startsWith('Dec');
+                const cardClass =
+                  'group flex flex-col rounded-xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950/70 p-4 shadow-[0_12px_35px_rgba(0,0,0,0.45)] transition hover:border-cyan-300/50 hover:shadow-[0_18px_50px_rgba(0,229,255,0.12)]';
+                const cardContent = (
+                  <>
+                    <div className="relative mb-3 h-36 overflow-hidden rounded-lg">
+                      <Image
+                        src={guide.image}
+                        alt={guide.title}
+                        fill
+                        sizes="(min-width: 1024px) 240px, 100vw"
+                        className="object-cover transition duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                      <div className="absolute left-3 top-3 flex items-center gap-2 text-[11px] font-semibold">
+                        <span className="rounded-full bg-cyan-500/90 px-3 py-1 text-black shadow-[0_0_18px_rgba(0,229,255,0.4)]">
+                          {guide.category}
+                        </span>
+                        {guide.map && <span className="rounded-full bg-black/60 px-3 py-1 text-cyan-100/80">{guide.map}</span>}
                       </div>
-                    )}
-                    <ul className="space-y-2 text-sm text-cyan-100/80">
-                      {guide.highlights.slice(0, 2).map((point) => (
-                        <li key={point} className="flex gap-2">
-                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-cyan-400" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              ))}
+                    </div>
+                    <div className="flex flex-1 flex-col space-y-2">
+                      <p className="text-[11px] uppercase tracking-wide text-cyan-200/70">{guide.date}</p>
+                      <h3 className="text-lg font-semibold text-cyan-50">{guide.title}</h3>
+                      <p className="text-sm text-cyan-100/70">{guide.summary}</p>
+                      {guide.need && (
+                        <div className="rounded-lg border border-cyan-400/30 bg-black/30 px-3 py-2 text-xs font-semibold text-cyan-100">
+                          {guide.need}
+                        </div>
+                      )}
+                      <ul className="space-y-2 text-sm text-cyan-100/80">
+                        {guide.highlights.slice(0, 2).map((point) => (
+                          <li key={point} className="flex gap-2">
+                            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                );
+                const href = guideHref(guide);
+                return isDecember ? (
+                  <Link key={guide.slug} href={href} className={cardClass}>
+                    {cardContent}
+                  </Link>
+                ) : (
+                  <article key={guide.slug} className={cardClass}>
+                    {cardContent}
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -261,42 +290,54 @@ export default function GuidesPage() {
             </div>
 
             <div className="relative grid gap-6 md:grid-cols-2">
-              {updateGuides.map((guide) => (
-                <article
-                  key={guide.slug}
-                  className="group flex flex-col rounded-xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/70 via-blue-950/40 to-slate-950/70 p-5 shadow-[0_16px_45px_rgba(0,0,0,0.5)] transition hover:border-cyan-300/50"
-                >
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="text-xs font-semibold uppercase tracking-wide text-cyan-200/70">{guide.date}</div>
-                    <span className="rounded-full bg-cyan-500/20 px-3 py-1 text-[11px] font-semibold text-cyan-100/90">
-                      {guide.category}
-                    </span>
-                  </div>
-                  <div className="mt-3 flex items-start gap-3">
-                    <div className="relative h-16 w-16 overflow-hidden rounded-lg border border-cyan-500/40 bg-black/50">
-                      <Image
-                        src={guide.image}
-                        alt={guide.title}
-                        fill
-                        sizes="64px"
-                        className="object-cover"
-                      />
+              {updateGuides.map((guide) => {
+                const isDecember = guide.date.startsWith('Dec');
+                const cardClass =
+                  'group flex flex-col rounded-xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/70 via-blue-950/40 to-slate-950/70 p-5 shadow-[0_16px_45px_rgba(0,0,0,0.5)] transition hover:border-cyan-300/50';
+                const cardContent = (
+                  <>
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="text-xs font-semibold uppercase tracking-wide text-cyan-200/70">{guide.date}</div>
+                      <span className="rounded-full bg-cyan-500/20 px-3 py-1 text-[11px] font-semibold text-cyan-100/90">
+                        {guide.category}
+                      </span>
                     </div>
-                    <div className="space-y-2">
-                      <h3 className="text-lg font-semibold text-cyan-50">{guide.title}</h3>
-                      <p className="text-sm text-cyan-100/75">{guide.summary}</p>
+                    <div className="mt-3 flex items-start gap-3">
+                      <div className="relative h-16 w-16 overflow-hidden rounded-lg border border-cyan-500/40 bg-black/50">
+                        <Image
+                          src={guide.image}
+                          alt={guide.title}
+                          fill
+                          sizes="64px"
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <h3 className="text-lg font-semibold text-cyan-50">{guide.title}</h3>
+                        <p className="text-sm text-cyan-100/75">{guide.summary}</p>
+                      </div>
                     </div>
-                  </div>
-                  <ul className="mt-3 space-y-2 text-sm text-cyan-100/80">
-                    {guide.highlights.slice(0, 3).map((point) => (
-                      <li key={point} className="flex gap-2">
-                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-cyan-400" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
+                    <ul className="mt-3 space-y-2 text-sm text-cyan-100/80">
+                      {guide.highlights.slice(0, 3).map((point) => (
+                        <li key={point} className="flex gap-2">
+                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                );
+                const href = guideHref(guide);
+                return isDecember ? (
+                  <Link key={guide.slug} href={href} className={cardClass}>
+                    {cardContent}
+                  </Link>
+                ) : (
+                  <article key={guide.slug} className={cardClass}>
+                    {cardContent}
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -312,42 +353,54 @@ export default function GuidesPage() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              {puzzleGuides.map((guide) => (
-                <article
-                  key={guide.slug}
-                  className="group overflow-hidden rounded-2xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/80 via-blue-950/40 to-slate-950/75 shadow-[0_20px_55px_rgba(0,0,0,0.45)] transition hover:border-cyan-300/50"
-                >
-                  <div className="relative aspect-video w-full overflow-hidden">
-                    <Image
-                      src={guide.image}
-                      alt={guide.title}
-                      fill
-                      sizes="(min-width: 1024px) 520px, 100vw"
-                      className="object-cover transition duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-                    <div className="absolute left-4 top-3 flex items-center gap-2 text-[11px] font-semibold text-cyan-50">
-                      <span className="rounded-full bg-cyan-500/90 px-3 py-1 text-black shadow-[0_0_18px_rgba(0,229,255,0.6)]">
-                        {guide.category}
-                      </span>
-                      {guide.map && <span className="rounded-full bg-black/70 px-3 py-1 text-cyan-100/80">{guide.map}</span>}
+              {puzzleGuides.map((guide) => {
+                const isDecember = guide.date.startsWith('Dec');
+                const cardClass =
+                  'group overflow-hidden rounded-2xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/80 via-blue-950/40 to-slate-950/75 shadow-[0_20px_55px_rgba(0,0,0,0.45)] transition hover:border-cyan-300/50';
+                const cardContent = (
+                  <>
+                    <div className="relative aspect-video w-full overflow-hidden">
+                      <Image
+                        src={guide.image}
+                        alt={guide.title}
+                        fill
+                        sizes="(min-width: 1024px) 520px, 100vw"
+                        className="object-cover transition duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                      <div className="absolute left-4 top-3 flex items-center gap-2 text-[11px] font-semibold text-cyan-50">
+                        <span className="rounded-full bg-cyan-500/90 px-3 py-1 text-black shadow-[0_0_18px_rgba(0,229,255,0.6)]">
+                          {guide.category}
+                        </span>
+                        {guide.map && <span className="rounded-full bg-black/70 px-3 py-1 text-cyan-100/80">{guide.map}</span>}
+                      </div>
                     </div>
-                  </div>
-                  <div className="space-y-3 p-5">
-                    <p className="text-xs uppercase tracking-wide text-cyan-200/70">{guide.date}</p>
-                    <h3 className="text-xl font-semibold text-cyan-50">{guide.title}</h3>
-                    <p className="text-cyan-100/75">{guide.summary}</p>
-                    <ul className="space-y-2 text-sm text-cyan-100/80">
-                      {guide.highlights.slice(0, 3).map((point) => (
-                        <li key={point} className="flex gap-2">
-                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-cyan-400" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              ))}
+                    <div className="space-y-3 p-5">
+                      <p className="text-xs uppercase tracking-wide text-cyan-200/70">{guide.date}</p>
+                      <h3 className="text-xl font-semibold text-cyan-50">{guide.title}</h3>
+                      <p className="text-cyan-100/75">{guide.summary}</p>
+                      <ul className="space-y-2 text-sm text-cyan-100/80">
+                        {guide.highlights.slice(0, 3).map((point) => (
+                          <li key={point} className="flex gap-2">
+                            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                );
+                const href = guideHref(guide);
+                return isDecember ? (
+                  <Link key={guide.slug} href={href} className={cardClass}>
+                    {cardContent}
+                  </Link>
+                ) : (
+                  <article key={guide.slug} className={cardClass}>
+                    {cardContent}
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -363,40 +416,52 @@ export default function GuidesPage() {
             </div>
 
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {guidesData.map((guide) => (
-                <article
-                  key={guide.slug}
-                  className="group flex flex-col rounded-xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-slate-950/70 p-4 shadow-[0_14px_40px_rgba(0,0,0,0.45)] transition hover:border-cyan-300/50"
-                >
-                  <div className="flex items-start gap-3">
-                    <div className="relative h-16 w-20 overflow-hidden rounded-lg border border-cyan-500/30 bg-black/40">
-                      <Image
-                        src={guide.image}
-                        alt={guide.title}
-                        fill
-                        sizes="80px"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <div className="flex items-center gap-2 text-[11px] font-semibold text-cyan-100/80">
-                        <span className="rounded-full bg-cyan-500/20 px-2 py-1 text-cyan-50">{guide.category}</span>
-                        <span className="text-cyan-200/70">{guide.date}</span>
+              {guidesData.map((guide) => {
+                const isDecember = guide.date.startsWith('Dec');
+                const cardClass =
+                  'group flex flex-col rounded-xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-slate-950/70 p-4 shadow-[0_14px_40px_rgba(0,0,0,0.45)] transition hover:border-cyan-300/50';
+                const cardContent = (
+                  <>
+                    <div className="flex items-start gap-3">
+                      <div className="relative h-16 w-20 overflow-hidden rounded-lg border border-cyan-500/30 bg-black/40">
+                        <Image
+                          src={guide.image}
+                          alt={guide.title}
+                          fill
+                          sizes="80px"
+                          className="object-cover"
+                        />
                       </div>
-                      <h3 className="text-base font-semibold text-cyan-50">{guide.title}</h3>
+                      <div className="flex flex-col gap-1">
+                        <div className="flex items-center gap-2 text-[11px] font-semibold text-cyan-100/80">
+                          <span className="rounded-full bg-cyan-500/20 px-2 py-1 text-cyan-50">{guide.category}</span>
+                          <span className="text-cyan-200/70">{guide.date}</span>
+                        </div>
+                        <h3 className="text-base font-semibold text-cyan-50">{guide.title}</h3>
+                      </div>
                     </div>
-                  </div>
-                  <p className="mt-2 text-sm text-cyan-100/75">{guide.summary}</p>
-                  <ul className="mt-2 space-y-1 text-xs text-cyan-100/80">
-                    {guide.highlights.slice(0, 2).map((point) => (
-                      <li key={point} className="flex gap-2">
-                        <span className="mt-1 h-1 w-1 rounded-full bg-cyan-400" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
+                    <p className="mt-2 text-sm text-cyan-100/75">{guide.summary}</p>
+                    <ul className="mt-2 space-y-1 text-xs text-cyan-100/80">
+                      {guide.highlights.slice(0, 2).map((point) => (
+                        <li key={point} className="flex gap-2">
+                          <span className="mt-1 h-1 w-1 rounded-full bg-cyan-400" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                );
+                const href = guideHref(guide);
+                return isDecember ? (
+                  <Link key={guide.slug} href={href} className={cardClass}>
+                    {cardContent}
+                  </Link>
+                ) : (
+                  <article key={guide.slug} className={cardClass}>
+                    {cardContent}
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
