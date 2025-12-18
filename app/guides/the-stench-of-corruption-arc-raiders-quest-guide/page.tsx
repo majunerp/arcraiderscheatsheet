@@ -170,10 +170,10 @@ export default function StenchOfCorruptionGuide() {
           <section className="space-y-3">
             <h2 className="text-2xl font-semibold text-cyan-50">Fast run checklist</h2>
             <ul className="space-y-2 text-cyan-100/80">
-              <li>1) Spaceport spawn -> Departure Building southwest lobby.</li>
-              <li>2) Downstairs to Staff Locker Room -> search hazmat suits -> grab key.</li>
-              <li>3) Head to Launch Towers -> enter tunnels via crack/ladder.</li>
-              <li>4) Move west -> find flashing Flushing Terminal -> override.</li>
+              <li>1) Spaceport spawn -&gt; Departure Building southwest lobby.</li>
+              <li>2) Downstairs to Staff Locker Room -&gt; search hazmat suits -&gt; grab key.</li>
+              <li>3) Head to Launch Towers -&gt; enter tunnels via crack/ladder.</li>
+              <li>4) Move west -&gt; find flashing Flushing Terminal -&gt; override.</li>
               <li>5) Extract or end raid and turn in the quest.</li>
             </ul>
           </section>
