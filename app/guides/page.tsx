@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { guidesData } from '@/lib/guides-data';
+import { guidesData, type GuideEntry } from '@/lib/guides-data';
 import { generateMetadata as genMeta } from '@/lib/seo';
 
 export const metadata = genMeta({
@@ -39,7 +39,24 @@ export default function GuidesPage() {
     'easiest-way-to-get-rocketeer-driver-arc-raiders',
   ]);
   const expeditionGuides = farmingGuides.filter((guide) => expeditionSlugs.has(guide.slug));
-  const guideHref = (guide: (typeof guidesData)[number]) =>
+  const manualQuestGuide: GuideEntry = {
+    slug: 'the-stench-of-corruption-arc-raiders-quest-guide',
+    title: 'The Stench of Corruption ARC Raiders Quest Guide',
+    category: 'Farming',
+    date: 'Dec 17, 2025',
+    summary:
+      'Complete the single-run Spaceport quest: grab the Staff Room key in the Departure Building, drop into tunnels, and override the Flushing Terminal to earn the Warden outfit.',
+    image: '/guides/stench-corruption/hero.jpg',
+    map: 'Spaceport',
+    need: 'Quest rewards: Warden Outfit, Dam Staff Room Key, Air Freshener, Noisemaker x3',
+    highlights: [
+      'Southwest lobby of Departure Building → downstairs Staff Locker Room → hazmat rack key.',
+      'Enter tunnels near Launch Towers and follow west to a flashing Flushing Terminal.',
+      'Single life quest—stash the key fast and avoid PvP to prevent restart.',
+    ],
+  };
+  const allGuidesWithQuest: GuideEntry[] = [manualQuestGuide, ...guidesData];
+  const guideHref = (guide: GuideEntry) =>
     guide.slug === 'very-comfortable-pillow-and-cat-bed-in-arc-raiders'
       ? '/guides/pillow-arc-raiders'
       : `/guides/${guide.slug}`;
@@ -416,7 +433,7 @@ export default function GuidesPage() {
             </div>
 
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {guidesData.map((guide) => {
+              {allGuidesWithQuest.map((guide) => {
                 const isDecember = guide.date.startsWith('Dec');
                 const cardClass =
                   'group flex flex-col rounded-xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-slate-950/70 p-4 shadow-[0_14px_40px_rgba(0,0,0,0.45)] transition hover:border-cyan-300/50';
@@ -462,43 +479,6 @@ export default function GuidesPage() {
                   </article>
                 );
               })}
-              {/* Manual quest guide card (Dec 17, 2025) */}
-              <Link
-                href="/guides/the-stench-of-corruption-arc-raiders-quest-guide"
-                className="group flex flex-col rounded-xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-slate-950/70 p-4 shadow-[0_14px_40px_rgba(0,0,0,0.45)] transition hover:border-cyan-300/50"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="relative h-16 w-20 overflow-hidden rounded-lg border border-cyan-500/30 bg-black/40">
-                    <Image
-                      src="/guides/stench-corruption/hero.jpg"
-                      alt="The Stench of Corruption ARC Raiders Quest Guide"
-                      fill
-                      sizes="80px"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <div className="flex items-center gap-2 text-[11px] font-semibold text-cyan-100/80">
-                      <span className="rounded-full bg-cyan-500/20 px-2 py-1 text-cyan-50">Quest</span>
-                      <span className="text-cyan-200/70">Dec 17, 2025</span>
-                    </div>
-                    <h3 className="text-base font-semibold text-cyan-50">The Stench of Corruption ARC Raiders Quest Guide</h3>
-                  </div>
-                </div>
-                <p className="mt-2 text-sm text-cyan-100/75">
-                  Find the Departure Building Staff Room key, reach the Spaceport tunnels, and override the Flushing Terminal in one run to unlock the Warden outfit.
-                </p>
-                <ul className="mt-2 space-y-1 text-xs text-cyan-100/80">
-                  <li className="flex gap-2">
-                    <span className="mt-1 h-1 w-1 rounded-full bg-cyan-400" />
-                    <span>Southwest lobby → Staff Locker Room hazmat suits for the key.</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="mt-1 h-1 w-1 rounded-full bg-cyan-400" />
-                    <span>Enter tunnels near Launch Towers and use the flashing Flushing Terminal.</span>
-                  </li>
-                </ul>
-              </Link>
             </div>
           </div>
         </section>
