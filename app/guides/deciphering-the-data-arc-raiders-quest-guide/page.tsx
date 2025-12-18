@@ -80,7 +80,7 @@ export default function DecipheringDataGuide() {
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-cyan-50">Quest overview</h2>
             <ul className="space-y-2 text-cyan-100/80">
-              <li><strong>Quest giver:</strong> Shani (unlocks after "Paving the Way").</li>
+              <li><strong>Quest giver:</strong> Shani (unlocks after &quot;Paving the Way&quot;).</li>
               <li><strong>Objectives:</strong> Decrypt at Fuel Control -&gt; Decrypt at Arrival Building top floor (same raid).</li>
               <li><strong>Rewards:</strong> Defibrillator x3, Trailblazer Grenade x3.</li>
               <li><strong>Failure condition:</strong> Death before both decrypts = restart the quest.</li>
@@ -100,7 +100,7 @@ export default function DecipheringDataGuide() {
           <section className="space-y-5">
             <h2 className="text-2xl font-semibold text-cyan-50">Step 1: Fuel Control Building (Northeast)</h2>
             <p className="text-cyan-100/80">
-              Enter the Fuel Control Building near Rocket Assembly. It's dark - use a flashlight. In the server room, the distinct
+              Enter the Fuel Control Building near Rocket Assembly. It&apos;s dark - use a flashlight. In the server room, the distinct
               blue Magnetic Decryptor sits on the southeast wall. Interact to start decryption; it will fail and point you to the next location.
             </p>
             <Figure
