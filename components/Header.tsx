@@ -10,10 +10,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b-2 border-cyan-500/30 bg-gradient-to-r from-slate-950 via-blue-950 to-slate-950 backdrop-blur-md supports-[backdrop-filter]:bg-gradient-to-r supports-[backdrop-filter]:from-slate-950/95 supports-[backdrop-filter]:via-blue-950/95 supports-[backdrop-filter]:to-slate-950/95 overflow-hidden relative shadow-[0_4px_30px_rgba(0,229,255,0.15)]">
       {/* Background pattern overlay */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" aria-hidden="true"></div>
+      <div
+        className="pointer-events-none absolute inset-0 bg-[url('/grid.svg')] opacity-10"
+        aria-hidden="true"
+      ></div>
       {/* Gradient overlay for better text contrast */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-transparent to-cyan-950/20"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent to-cyan-950/20"
         aria-hidden="true"
       ></div>
 
@@ -120,7 +123,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t-2 border-cyan-500/30 bg-gradient-to-b from-slate-950 to-blue-950">
+        <div className="relative z-10 md:hidden border-t-2 border-cyan-500/30 bg-gradient-to-b from-slate-950 to-blue-950">
           <div className="container mx-auto px-4 py-4 space-y-3">
             <Link
               href="/"
