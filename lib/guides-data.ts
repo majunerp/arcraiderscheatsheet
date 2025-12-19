@@ -14,6 +14,36 @@ export type GuideEntry = {
 
 export const guidesData = [
   {
+    slug: 'locked-gate-arc-raiders-event-guide',
+    title: 'Locked Gate Event Guide',
+    category: 'Puzzle',
+    date: 'Dec 18, 2025',
+    summary:
+      'Complete the Blue Gate Locked Gate event: find four security codes, activate the Gate Control Room, and loot the underground for the Bobcat blueprint.',
+    image: '/guides/locked-gate-event/hero.jpg',
+    map: 'Blue Gate',
+    highlights: [
+      "Security codes spawn in Ancient Fort, Raider's Refuge, Reinforced Reception, and Pilgrim's Peak containers.",
+      'Landmines and Rocketeers define the event - bring heals and long-range tools.',
+      'Deliver codes to the Gate Control Room to open the underground blast doors.',
+    ],
+  },
+  {
+    slug: 'buried-city-music-puzzle-guide',
+    title: 'Buried City Music Puzzle',
+    category: 'Puzzle',
+    date: 'Dec 19, 2025',
+    summary:
+      'Press 14 hidden red buttons in order, return to the Music Room, and hit the final button to open the secret door and claim the Guitar.',
+    image: '/guides/buried-city-music-puzzle/hero.jpg',
+    map: 'Buried City',
+    highlights: [
+      'All 15 buttons must be pressed in sequence or the lobby resets instantly.',
+      'Run this as a trio with ziplines and snap hooks to cover the map fast.',
+      'Rewards include the Acoustic Guitar, Shakers, Recorders, and rare valuables.',
+    ],
+  },
+  {
     slug: 'where-to-find-humidifier-arc-raiders',
     title: 'Humidifier Farming Route',
     category: 'Farming',
@@ -148,6 +178,7 @@ export const guidesData = [
       'Extract immediately after the data download to secure rewards.',
     ],
   },
+
   {
     slug: 'where-to-find-rusted-shut-medical-kit-in-arc-raiders',
     title: 'Rusted Shut Medical Kit',

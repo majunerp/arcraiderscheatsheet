@@ -16,7 +16,7 @@ export const metadata = genMeta({
 
   description:
 
-    'Arc Raiders guide hub built from community-proven routes: Humidifiers, Lightbulbs, Cooling Fans, Cat Beds, Medical Kits, Lab Reagents, Rocketeer Drivers, Hidden Bunker puzzle, and November patch intel.',
+    'Arc Raiders guide hub built from community-proven routes: Humidifiers, Lightbulbs, Cooling Fans, Cat Beds, Medical Kits, Lab Reagents, Rocketeer Drivers, Locked Gate event, Buried City music puzzle, Hidden Bunker puzzle, and November patch intel.',
 
   keywords: [
 
@@ -38,6 +38,10 @@ export const metadata = genMeta({
 
     'arc raiders hidden bunker puzzle',
 
+    'arc raiders locked gate event',
+
+    'arc raiders music puzzle',
+
     'arc raiders patch notes',
 
   ],
@@ -50,11 +54,17 @@ export const metadata = genMeta({
 
 export default function GuidesPage() {
 
-  const farmingGuides = guidesData.filter((guide) => guide.category === 'Farming');
+  const sortByDateDesc = (a: GuideEntry, b: GuideEntry) => {
+    const aTime = Date.parse(a.date) || 0;
+    const bTime = Date.parse(b.date) || 0;
+    return bTime - aTime;
+  };
 
-  const updateGuides = guidesData.filter((guide) => guide.category === 'Update');
+  const farmingGuides = guidesData.filter((guide) => guide.category === 'Farming').sort(sortByDateDesc);
 
-  const puzzleGuides = guidesData.filter((guide) => guide.category === 'Puzzle');
+  const updateGuides = guidesData.filter((guide) => guide.category === 'Update').sort(sortByDateDesc);
+
+  const puzzleGuides = guidesData.filter((guide) => guide.category === 'Puzzle').sort(sortByDateDesc);
 
 
 
@@ -149,6 +159,11 @@ export default function GuidesPage() {
   ];
 
   const allGuidesWithQuest: GuideEntry[] = [...manualQuestGuides, ...guidesData];
+  const allGuidesSorted = [...allGuidesWithQuest].sort((a, b) => {
+    const aTime = Date.parse(a.date) || 0;
+    const bTime = Date.parse(b.date) || 0;
+    return bTime - aTime;
+  });
 
   const guideHref = (guide: GuideEntry) =>
 
@@ -242,7 +257,7 @@ export default function GuidesPage() {
 
                   <span className="rounded-full bg-emerald-500/10 px-4 py-2 text-xs font-semibold text-emerald-100/90 border border-emerald-400/30">
 
-                    Hidden Bunker / Rocketeer Drivers
+                    Hidden Bunker / Locked Gate / Music Puzzle / Rocketeer Drivers
 
                   </span>
 
@@ -288,7 +303,7 @@ export default function GuidesPage() {
 
                   <div className="flex items-end gap-2">
 
-                    <span className="text-3xl font-bold text-cyan-100">12</span>
+                  <span className="text-3xl font-bold text-cyan-100">14</span>
 
                     <span className="text-sm text-cyan-100/70">high-signal posts parsed</span>
 
@@ -339,7 +354,7 @@ export default function GuidesPage() {
             </div>
 
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {allGuidesWithQuest.map((guide) => {
+              {allGuidesSorted.map((guide) => {
                 const isDecember = guide.date.startsWith('Dec');
                 const cardClass =
                   'group flex flex-col rounded-xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-slate-950/70 p-4 shadow-[0_14px_40px_rgba(0,0,0,0.45)] transition hover:border-cyan-300/50';
@@ -827,7 +842,7 @@ export default function GuidesPage() {
 
               <p className="text-cyan-100/75">
 
-                Solve the Hidden Bunker sequence and keep your squad alive during timed events.
+                Solve the Hidden Bunker sequence, clear the Locked Gate event, crack the Buried City music puzzle, and keep your squad alive during timed events.
 
               </p>
 
