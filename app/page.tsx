@@ -3,8 +3,11 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 import { items, categories, locationTypes, valueTiers } from "@/lib/items-data";
 import { ItemImage } from "@/components/ItemImage";
+
+const FeaturedYoutubeVideos = dynamic(() => import("@/components/FeaturedYoutubeVideos"), { ssr: false });
 
 const categoryMeta = {
   arc_parts: {
@@ -479,7 +482,7 @@ export default function Home() {
                   </div>
                 </div>
               ) : (
-                displayedItems.map((item) => {
+                displayedItems.map((item, index) => {
                   const actionInfo =
                     actionMeta[item.action as keyof typeof actionMeta] ?? actionMeta.keep;
                   const categoryInfo =
@@ -491,7 +494,7 @@ export default function Home() {
 
                   return (
                     <article
-                      key={item.id}
+                      key={`${item.id}-${index}`}
                       className="group relative overflow-hidden rounded-2xl border-2 border-cyan-500/30 bg-gradient-to-b from-slate-950/60 via-blue-950/30 to-slate-950/60 backdrop-blur-sm shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-cyan-400/60 hover:shadow-[0_0_40px_rgba(0,229,255,0.3)]"
                       itemScope
                       itemType="https://schema.org/Thing"
@@ -611,6 +614,8 @@ export default function Home() {
           </div>
         </div>
     </section>
+
+      <FeaturedYoutubeVideos />
 
       {/* Location Spawns Section - NEW for SEO */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-slate-950/80 via-blue-950/40 to-slate-950/80">
@@ -1172,14 +1177,5 @@ export default function Home() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
 
 
