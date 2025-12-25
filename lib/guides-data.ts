@@ -124,6 +124,22 @@ export const guidesData = [
     ],
   },
   {
+    slug: 'search-first-wave-husks',
+    title: 'Search First Wave Husks Trial Route',
+    category: 'Farming',
+    date: 'Dec 24, 2025',
+    summary:
+      'Dam Battlegrounds loop that chains First Wave Husk clusters during Electromagnetic Storm so you can hit 4,000 score quickly.',
+    image: '/guides/search-first-wave-husks/hero.webp',
+    map: 'Dam Battlegrounds',
+    need: 'Trials score - 4,000+ for weekly 3-star rewards',
+    highlights: [
+      'Searching an already-open Husk still grants score, so do not skip them.',
+      'Electromagnetic Storm boosts Husk spawns and doubles score to 800 each.',
+      'Split the loop in squads to push 50,000+ score on long raids.',
+    ],
+  },
+  {
     slug: 'november-update-1-4-0',
     title: 'Patch 1.4.0 Hotfix',
     category: 'Update',
