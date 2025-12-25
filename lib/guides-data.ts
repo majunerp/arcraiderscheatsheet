@@ -108,6 +108,22 @@ export const guidesData = [
     ],
   },
   {
+    slug: 'damage-leapers',
+    title: 'Damage Leapers Trial Route',
+    category: 'Farming',
+    date: 'Dec 24, 2025',
+    summary:
+      'Fast Dam Battlegrounds loop for the Damage Leapers Trial: anchor at the Control Tower base, rotate to Water Treatment, then reset to keep spawns rolling.',
+    image: '/guides/damage-leapers/hero.webp',
+    map: 'Dam Battlegrounds',
+    need: 'Trials score - aim for 4,000+ for weekly 3-star rewards',
+    highlights: [
+      'Leapers score higher during 2x modifiers, so prioritize those rotations.',
+      'Pull spawns to the dam wall for safe kiting and clean sightlines.',
+      'Two Leaper kills are enough for the baseline reward; loop for leaderboard totals.',
+    ],
+  },
+  {
     slug: 'november-update-1-4-0',
     title: 'Patch 1.4.0 Hotfix',
     category: 'Update',
