@@ -140,6 +140,22 @@ export const guidesData = [
     ],
   },
   {
+    slug: 'harvest-plants',
+    title: 'Harvest Plants Trial Route',
+    category: 'Farming',
+    date: 'Dec 24, 2025',
+    summary:
+      'Great Mullein farming route for Trials. Solo runs excel in Buried City Galleria, while squads can split Spaceport for fast clears.',
+    image: '/guides/harvest-plants/hero.webp',
+    map: 'Buried City / Spaceport',
+    need: 'Trials score - 4,000+ for weekly 3-star rewards',
+    highlights: [
+      'Galleria floors are packed with Great Mullein for fast solo scoring.',
+      'Spaceport routes scale better for duo or trio teams with split coverage.',
+      'Free Loadout works if you want zero risk while farming.',
+    ],
+  },
+  {
     slug: 'november-update-1-4-0',
     title: 'Patch 1.4.0 Hotfix',
     category: 'Update',
