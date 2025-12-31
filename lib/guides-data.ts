@@ -44,6 +44,22 @@ export const guidesData = [
     ],
   },
   {
+    slug: 'where-to-find-mushrooms-arc-raiders',
+    title: 'Mushroom Farming (Guaranteed Spaceport Spawn)',
+    category: 'Farming',
+    date: 'Dec 31, 2025',
+    summary:
+      'Fastest Mushroom route: sprint to the north-east Spaceport trench by Trench Hatch (East), loot 3 guaranteed Mushrooms, safe-pocket them, then surrender to reset in minutes.',
+    image: '/guides/mushrooms/hero.jpg',
+    map: 'Spaceport',
+    need: 'Mushrooms for Scrappy upgrades and project phases',
+    highlights: [
+      'A single trench tree can drop 3 Mushrooms per run when unlooted, making the route highly repeatable.',
+      'Use an empty custom loadout for a Safe Pocket, then surrender instead of extracting for the fastest reset.',
+      'Best consistency comes during busy events elsewhere on the map, or off-peak queues where fewer Raiders race the trench.',
+    ],
+  },
+  {
     slug: 'where-to-find-humidifier-arc-raiders',
     title: 'Humidifier Farming Route',
     category: 'Farming',
