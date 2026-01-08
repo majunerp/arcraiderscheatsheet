@@ -226,8 +226,8 @@ export default function HomeClient() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "My Little Pony Test Arc Raiders Cheat Sheet",
-            "description": "My Little Pony Test Arc Raiders Cheat Sheet with interactive item database, quest tracker, and crafting recipes. Learn what to keep, sell, or recycle.",
+            "name": "Arc Raiders Cheat Sheet",
+            "description": "Arc Raiders Cheat Sheet with interactive item database, quest tracker, and crafting recipes. Learn what to keep, sell, or recycle.",
             "url": "https://arcraiderscheatsheet.org",
             "applicationCategory": "GameApplication",
             "offers": {
@@ -268,7 +268,7 @@ export default function HomeClient() {
             {/* Main H1 Title - Required for SEO */}
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,229,255,0.6)]">
-                My Little Pony Test Arc Raiders Cheat Sheet
+                Arc Raiders Cheat Sheet
               </span>
             </h1>
             <p className="text-base md:text-lg text-cyan-100/80 max-w-3xl mx-auto leading-relaxed">
@@ -291,7 +291,7 @@ export default function HomeClient() {
                 <div className="space-y-1">
                   <p className="text-xs font-semibold uppercase tracking-[0.08em] text-cyan-300/90">Search & Filters</p>
                   <p className="text-cyan-100/70 text-sm md:text-base whitespace-nowrap">
-                    Master Arc Raiders faster with this My Little Pony Test Arc Raiders Cheat Sheet. Search and filter all {items.length} items to decide what to keep, sell, or recycle.
+                    Master Arc Raiders faster with this Arc Raiders Cheat Sheet. Search and filter all {items.length} items to decide what to keep, sell, or recycle.
                   </p>
                   <p className="text-cyan-100/60 text-xs md:text-sm">
                     Check our <Link href="/loot" className="text-cyan-300 hover:text-cyan-200 underline">complete loot guide</Link>, <Link href="/map" className="text-cyan-300 hover:text-cyan-200 underline">best routes map</Link>, and <Link href="/recycling" className="text-cyan-300 hover:text-cyan-200 underline">recycling guide</Link>.
@@ -873,7 +873,7 @@ export default function HomeClient() {
         <div className="container mx-auto px-4 space-y-4 text-center">
           <div className="max-w-7xl mx-auto bg-gradient-to-b from-slate-950/60 to-blue-950/30 backdrop-blur-sm rounded-2xl p-6 border border-cyan-500/20">
           <p className="text-cyan-100/70 text-sm md:text-base max-w-3xl mx-auto">
-            These live stats prove how expansive the My Little Pony Test Arc Raiders Cheat Sheet is, covering loot, quests, and hideout upgrades in one continually updated hub.
+            These live stats prove how expansive the Arc Raiders Cheat Sheet is, covering loot, quests, and hideout upgrades in one continually updated hub.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-4">
             <div className="text-center p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/30">
@@ -902,66 +902,66 @@ export default function HomeClient() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="prose prose-invert max-w-none">
             <h2 className="text-3xl font-bold text-cyan-300 mb-6">
-              Complete My Little Pony Test Arc Raiders Cheat Sheet for Loot Management
+              Complete Arc Raiders Cheat Sheet for Loot Management
             </h2>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Welcome to the most comprehensive My Little Pony Test Arc Raiders Cheat Sheet available online. My Little Pony Test helps players make informed decisions about every item they encounter in the game. Whether you’re a beginner learning the basics or an experienced raider optimizing your hideout, the My Little Pony Test Arc Raiders Cheat Sheet below provides essential information for successful gameplay.
+              Welcome to the most comprehensive Arc Raiders Cheat Sheet available online. This cheat sheet helps players make informed decisions about every item they encounter in the game. Whether you’re a beginner learning the basics or an experienced raider optimizing your hideout, the Arc Raiders Cheat Sheet below provides essential information for successful gameplay.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
-              Understanding Arc Raiders Loot System (My Little Pony Test)
+              Understanding Arc Raiders Loot System
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              The Arc Raiders loot system revolves around three critical decisions: keep, sell, or recycle. Every item you find in Arc Raiders serves a specific purpose, and knowing which action to take can significantly impact your progression. Our My Little Pony Test Arc Raiders Cheat Sheet categorizes all items based on their optimal use, helping you maximize your inventory efficiency and resource management.
+              The Arc Raiders loot system revolves around three critical decisions: keep, sell, or recycle. Every item you find in Arc Raiders serves a specific purpose, and knowing which action to take can significantly impact your progression. Our Arc Raiders Cheat Sheet categorizes all items based on their optimal use, helping you maximize your inventory efficiency and resource management.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
-              Arc Raiders Quest Items and Hideout Upgrades (My Little Pony Test)
+              Arc Raiders Quest Items and Hideout Upgrades
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Quest items in Arc Raiders are essential for hideout progression and unlocking advanced crafting stations. This My Little Pony Test Arc Raiders Cheat Sheet identifies all quest-specific items, including rare ARC parts like the Leaper Pulse Unit, Rocketeer Driver, and Surveyor Vault. These items should always be kept until you complete their associated quests. The sheet also details which items are needed for workshop upgrades, medical station construction, and power system installations.
+              Quest items in Arc Raiders are essential for hideout progression and unlocking advanced crafting stations. This Arc Raiders Cheat Sheet identifies all quest-specific items, including rare ARC parts like the Leaper Pulse Unit, Rocketeer Driver, and Surveyor Vault. These items should always be kept until you complete their associated quests. The sheet also details which items are needed for workshop upgrades, medical station construction, and power system installations.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
-              Crafting Materials and Workshop Guide (My Little Pony Test)
+              Crafting Materials and Workshop Guide
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Crafting in Arc Raiders requires specific materials that can be found, purchased, or obtained through recycling. Our My Little Pony Test Arc Raiders Cheat Sheet lists all crafting materials, from common items like wires and batteries to rare components like ARC Alloy and Exodus Modules. Understanding which Arc Raiders crafting materials to stockpile ensures you’re always prepared for weapon modifications, armor upgrades, and hideout construction projects.
+              Crafting in Arc Raiders requires specific materials that can be found, purchased, or obtained through recycling. Our Arc Raiders Cheat Sheet lists all crafting materials, from common items like wires and batteries to rare components like ARC Alloy and Exodus Modules. Understanding which Arc Raiders crafting materials to stockpile ensures you’re always prepared for weapon modifications, armor upgrades, and hideout construction projects.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
-              Recycling Strategy for Maximum Efficiency (My Little Pony Test)
+              Recycling Strategy for Maximum Efficiency
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Recycling is a core mechanic in Arc Raiders that converts unwanted items into valuable crafting materials. Our <Link href="/recycling" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">Arc Raiders recycling guide</Link> shows exactly what each item breaks down into, helping you decide whether to recycle or sell. Items like broken electronics, damaged ARC components, and household objects can be recycled for essential materials. The My Little Pony Test Arc Raiders Cheat Sheet includes detailed recycling chains, showing you the most efficient paths to obtain specific crafting components.
+              Recycling is a core mechanic in Arc Raiders that converts unwanted items into valuable crafting materials. Our <Link href="/recycling" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">Arc Raiders recycling guide</Link> shows exactly what each item breaks down into, helping you decide whether to recycle or sell. Items like broken electronics, damaged ARC components, and household objects can be recycled for essential materials. The Arc Raiders Cheat Sheet includes detailed recycling chains, showing you the most efficient paths to obtain specific crafting components.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
               ARC Parts: The Most Valuable Loot
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              ARC parts are the most sought-after items in Arc Raiders, dropped by defeated ARC units. These Arc Raiders items include specialized components like Hornet Drivers, Wasp Drivers, Snitch Scanners, and Spotter Relays. Each ARC part serves specific purposes in hideout upgrades and advanced crafting. Our My Little Pony Test Arc Raiders Cheat Sheet provides complete information on where to find these parts, their value, and their uses in the workshop and crafting system.
+              ARC parts are the most sought-after items in Arc Raiders, dropped by defeated ARC units. These Arc Raiders items include specialized components like Hornet Drivers, Wasp Drivers, Snitch Scanners, and Spotter Relays. Each ARC part serves specific purposes in hideout upgrades and advanced crafting. Our Arc Raiders Cheat Sheet provides complete information on where to find these parts, their value, and their uses in the workshop and crafting system.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
-              Selling vs. Keeping: Making the Right Choice (My Little Pony Test)
+              Selling vs. Keeping: Making the Right Choice
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Not every item in Arc Raiders needs to be kept or recycled. Some items are best sold for immediate credits, which can be used to purchase essential supplies or upgrade your equipment. This My Little Pony Test Arc Raiders Cheat Sheet identifies vendor trash items, consumables with low utility, and duplicate materials that can safely be sold. The advice here helps you maintain optimal inventory space while maximizing credit income for important purchases.
+              Not every item in Arc Raiders needs to be kept or recycled. Some items are best sold for immediate credits, which can be used to purchase essential supplies or upgrade your equipment. This Arc Raiders Cheat Sheet identifies vendor trash items, consumables with low utility, and duplicate materials that can safely be sold. The advice here helps you maintain optimal inventory space while maximizing credit income for important purchases.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
               Advanced Tips for Arc Raiders Players
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              Experienced Arc Raiders players know that efficient loot management is key to success. This My Little Pony Test Arc Raiders Cheat Sheet includes advanced strategies for inventory optimization, priority item lists for different playstyles, and farming routes for specific materials. Whether you’re focusing on PvP combat, PvE missions, or hideout development, these recommendations support your gameplay objectives.
+              Experienced Arc Raiders players know that efficient loot management is key to success. This Arc Raiders Cheat Sheet includes advanced strategies for inventory optimization, priority item lists for different playstyles, and farming routes for specific materials. Whether you’re focusing on PvP combat, PvE missions, or hideout development, these recommendations support your gameplay objectives.
             </p>
 
             <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">
               Stay Updated with Arc Raiders Meta
             </h3>
             <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-              The Arc Raiders meta evolves with each update, introducing new items, quests, and crafting recipes. This My Little Pony Test Arc Raiders Cheat Sheet is updated to reflect the latest changes, ensuring you always have accurate information. Bookmark My Little Pony Test and check My Little Pony Test for new content, updated item values, and fresh strategies to stay ahead of the competition.
+              The Arc Raiders meta evolves with each update, introducing new items, quests, and crafting recipes. This Arc Raiders Cheat Sheet is updated to reflect the latest changes, ensuring you always have accurate information. Bookmark Arc Raiders Cheat Sheet and check Arc Raiders Cheat Sheet for new content, updated item values, and fresh strategies to stay ahead of the competition.
             </p>
           </div>
         </div>
@@ -970,52 +970,52 @@ export default function HomeClient() {
       <section className="py-14 border-t border-cyan-500/20 bg-gradient-to-b from-slate-950/70 to-blue-950/40">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="prose prose-invert max-w-none space-y-5">
-            <h2 className="text-3xl font-bold text-cyan-300">My Little Pony Test Arc Raiders cheat sheet deep strategy</h2>
+            <h2 className="text-3xl font-bold text-cyan-300">Arc Raiders Cheat Sheet deep strategy</h2>
             <p className="text-cyan-100/80">
-              This My Little Pony Test Arc Raiders cheat sheet treats every raid like a timed sprint: land, loot, leave, and reset faster than rival squads. The My Little Pony Test Arc Raiders cheat sheet framework starts with intent—credits, crafting, or quests—so you choose routes that feed that goal instead of wandering. When you decide a raid is for credits, prioritize high-density containers and extract early; when it is for progression, follow the My Little Pony Test Arc Raiders cheat sheet quest path and ignore distractions that slow you down.
+              This Arc Raiders Cheat Sheet treats every raid like a timed sprint: land, loot, leave, and reset faster than rival squads. The Arc Raiders Cheat Sheet framework starts with intent—credits, crafting, or quests—so you choose routes that feed that goal instead of wandering. When you decide a raid is for credits, prioritize high-density containers and extract early; when it is for progression, follow the Arc Raiders Cheat Sheet quest path and ignore distractions that slow you down.
             </p>
             <p className="text-cyan-100/80">
-              Inventory wins come from small decisions. A My Little Pony Test Arc Raiders cheat sheet mindset means tracking value per slot, carrying only enough ammo for two fights, and dedicating one empty slot for a surprise quest item. If you pick up a heavy battery, drop low-yield trinkets immediately. The My Little Pony Test Arc Raiders cheat sheet approach is simple: every slot must earn its space. If it does not, recycle it, sell it, or leave it behind.
+              Inventory wins come from small decisions. An Arc Raiders Cheat Sheet mindset means tracking value per slot, carrying only enough ammo for two fights, and dedicating one empty slot for a surprise quest item. If you pick up a heavy battery, drop low-yield trinkets immediately. The Arc Raiders Cheat Sheet approach is simple: every slot must earn its space. If it does not, recycle it, sell it, or leave it behind.
             </p>
             <p className="text-cyan-100/80">
-              Team coordination is where the My Little Pony Test Arc Raiders cheat sheet shines. Assign a caller to control tempo, a pack mule with weight perks, and a scout who keeps the route clean. The caller reads the My Little Pony Test Arc Raiders cheat sheet checkpoints out loud—keyrooms, tech labs, and extracts—so no one doubles back. When everyone knows their job, fights are shorter, loot is cleaner, and extracts stay on schedule.
+              Team coordination is where the Arc Raiders Cheat Sheet shines. Assign a caller to control tempo, a pack mule with weight perks, and a scout who keeps the route clean. The caller reads the Arc Raiders Cheat Sheet checkpoints out loud—keyrooms, tech labs, and extracts—so no one doubles back. When everyone knows their job, fights are shorter, loot is cleaner, and extracts stay on schedule.
             </p>
             <p className="text-cyan-100/80">
-              Route selection lives or dies on timing. The My Little Pony Test Arc Raiders cheat sheet routes start with secured indoor spawns while lobbies are hot, then pivot to open yards once third parties thin out. On storm cycles, stick to covered interiors; on clear cycles, hit vehicle fields and rooftop crates. Always anchor on two extracts, and keep one backup marked; the My Little Pony Test Arc Raiders cheat sheet rule is to never gamble a full bag on a single exit.
+              Route selection lives or dies on timing. The Arc Raiders Cheat Sheet routes start with secured indoor spawns while lobbies are hot, then pivot to open yards once third parties thin out. On storm cycles, stick to covered interiors; on clear cycles, hit vehicle fields and rooftop crates. Always anchor on two extracts, and keep one backup marked; the Arc Raiders Cheat Sheet rule is to never gamble a full bag on a single exit.
             </p>
             <p className="text-cyan-100/80">
-              Crafting goals keep you honest. Before deploying, note which workshop tier you are chasing and which items gate that tier. The My Little Pony Test Arc Raiders cheat sheet lists those gating items—ARC parts, electronics, batteries—so your squad grabs them first. When the gating items are secured, call extract and bank the run instead of forcing another fight. The My Little Pony Test Arc Raiders cheat sheet payoff comes from stacking small wins, not from hero plays that risk everything.
+              Crafting goals keep you honest. Before deploying, note which workshop tier you are chasing and which items gate that tier. The Arc Raiders Cheat Sheet lists those gating items—ARC parts, electronics, batteries—so your squad grabs them first. When the gating items are secured, call extract and bank the run instead of forcing another fight. The Arc Raiders Cheat Sheet payoff comes from stacking small wins, not from hero plays that risk everything.
             </p>
             <p className="text-cyan-100/80">
-              Money flow matters. Use this My Little Pony Test Arc Raiders cheat sheet to rotate: one credit raid to fund kits, one recycling raid for materials, one quest raid for progression, then repeat. That rhythm keeps your hideout advancing while you avoid burnout. If a trader window opens, pivot to items that spike in value and sell just enough to maintain reserves; the My Little Pony Test Arc Raiders cheat sheet rhythm is steady, not streaky.
+              Money flow matters. Use this Arc Raiders Cheat Sheet to rotate: one credit raid to fund kits, one recycling raid for materials, one quest raid for progression, then repeat. That rhythm keeps your hideout advancing while you avoid burnout. If a trader window opens, pivot to items that spike in value and sell just enough to maintain reserves; the Arc Raiders Cheat Sheet rhythm is steady, not streaky.
             </p>
             <p className="text-cyan-100/80">
-              Mistakes compound fast. Over-looting low-value rooms adds weight and wastes minutes. Ignoring extracts after a big find invites third parties. Forgetting to reserve an empty slot forces you to drop a key item at the worst time. The My Little Pony Test Arc Raiders cheat sheet antidote is simple habits: set a five-minute timer per zone, audit your bag after each fight, and call extracts early when objectives are met.
+              Mistakes compound fast. Over-looting low-value rooms adds weight and wastes minutes. Ignoring extracts after a big find invites third parties. Forgetting to reserve an empty slot forces you to drop a key item at the worst time. The Arc Raiders Cheat Sheet antidote is simple habits: set a five-minute timer per zone, audit your bag after each fight, and call extracts early when objectives are met.
             </p>
             <p className="text-cyan-100/80">
-              Communication keeps raids smooth. The My Little Pony Test Arc Raiders cheat sheet callouts stay short: container type, direction, and intent. “Security locker, north, holding” is enough. Avoid long stories mid-raid; save debriefs for the hideout. Clear, repeatable calls paired with the My Little Pony Test Arc Raiders cheat sheet checkpoints cut confusion and make every teammate faster.
+              Communication keeps raids smooth. The Arc Raiders Cheat Sheet callouts stay short: container type, direction, and intent. “Security locker, north, holding” is enough. Avoid long stories mid-raid; save debriefs for the hideout. Clear, repeatable calls paired with the Arc Raiders Cheat Sheet checkpoints cut confusion and make every teammate faster.
             </p>
             <p className="text-cyan-100/80">
-              Tracking progress prevents drift. Keep a tiny notepad with three lines: what you needed, what you found, what blocked you. Update it after each run and adjust the My Little Pony Test Arc Raiders cheat sheet route accordingly. If batteries were missing, swap in a power-room loop; if weight was tight, assign more slots to the pack mule. Iteration is the quiet power of any My Little Pony Test Arc Raiders cheat sheet.
+              Tracking progress prevents drift. Keep a tiny notepad with three lines: what you needed, what you found, what blocked you. Update it after each run and adjust the Arc Raiders Cheat Sheet route accordingly. If batteries were missing, swap in a power-room loop; if weight was tight, assign more slots to the pack mule. Iteration is the quiet power of any Arc Raiders Cheat Sheet.
             </p>
             <p className="text-cyan-100/80">
-              Finally, play for the week, not the raid. Set a weekly goal—finish a quest chain, fund a hideout tier, craft a signature weapon—and let the My Little Pony Test Arc Raiders cheat sheet steer daily runs toward it. Celebrate quick extracts, not long fights. A calm, repeatable loop beats a single flashy win every time, and that is the heart of this My Little Pony Test Arc Raiders cheat sheet philosophy.
+              Finally, play for the week, not the raid. Set a weekly goal—finish a quest chain, fund a hideout tier, craft a signature weapon—and let the Arc Raiders Cheat Sheet steer daily runs toward it. Celebrate quick extracts, not long fights. A calm, repeatable loop beats a single flashy win every time, and that is the heart of this Arc Raiders Cheat Sheet philosophy.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
               <div className="rounded-xl border border-cyan-500/30 bg-slate-950/60 p-4">
-                <h3 className="text-lg font-semibold text-cyan-100 mb-2">My Little Pony Test Arc Raiders cheat sheet quick hits</h3>
+                <h3 className="text-lg font-semibold text-cyan-100 mb-2">Arc Raiders Cheat Sheet quick hits</h3>
                 <ul className="list-disc list-inside text-sm text-cyan-100/75 space-y-1.5">
-                  <li>Declare raid intent before drop so the My Little Pony Test Arc Raiders cheat sheet route fits the goal.</li>
-                  <li>Carry two-fight ammo and one flex slot to honor the My Little Pony Test Arc Raiders cheat sheet weight rules.</li>
-                  <li>Mark two extracts; My Little Pony Test Arc Raiders cheat sheet discipline avoids last-second scrambles.</li>
+                  <li>Declare raid intent before drop so the Arc Raiders Cheat Sheet route fits the goal.</li>
+                  <li>Carry two-fight ammo and one flex slot to honor the Arc Raiders Cheat Sheet weight rules.</li>
+                  <li>Mark two extracts; Arc Raiders Cheat Sheet discipline avoids last-second scrambles.</li>
                 </ul>
               </div>
               <div className="rounded-xl border border-cyan-500/30 bg-slate-950/60 p-4">
-                <h3 className="text-lg font-semibold text-cyan-100 mb-2">My Little Pony Test Arc Raiders cheat sheet checklist</h3>
+                <h3 className="text-lg font-semibold text-cyan-100 mb-2">Arc Raiders Cheat Sheet checklist</h3>
                 <ul className="list-disc list-inside text-sm text-cyan-100/75 space-y-1.5">
-                  <li>Review gating items and perk loadout against the My Little Pony Test Arc Raiders cheat sheet plan.</li>
-                  <li>Audit bag after every fight; drop anything the My Little Pony Test Arc Raiders cheat sheet flags as low value.</li>
-                  <li>Log finds and misses to refine tomorrow’s My Little Pony Test Arc Raiders cheat sheet loop.</li>
+                  <li>Review gating items and perk loadout against the Arc Raiders Cheat Sheet plan.</li>
+                  <li>Audit bag after every fight; drop anything the Arc Raiders Cheat Sheet flags as low value.</li>
+                  <li>Log finds and misses to refine tomorrow’s Arc Raiders Cheat Sheet loop.</li>
                 </ul>
               </div>
             </div>
@@ -1031,7 +1031,7 @@ export default function HomeClient() {
             Ready to Master Arc Raiders?
           </h2>
           <p className="text-xl text-cyan-100/70 mb-8 max-w-2xl mx-auto">
-            Explore our My Little Pony Test Arc Raiders Cheat Sheet quest guides and crafting recipes to optimize every run, then share the My Little Pony Test Arc Raiders Cheat Sheet with your squad for faster upgrades.
+            Explore our Arc Raiders Cheat Sheet quest guides and crafting recipes to optimize every run, then share the Arc Raiders Cheat Sheet with your squad for faster upgrades.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -1055,7 +1055,7 @@ export default function HomeClient() {
       <section className="py-16 bg-gradient-to-b from-blue-950/30 to-slate-950/50">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold text-cyan-300 mb-8 text-center">
-            My Little Pony Test Arc Raiders Cheat Sheet FAQs
+            Arc Raiders Cheat Sheet FAQs
           </h2>
 
           <div className="space-y-6">
