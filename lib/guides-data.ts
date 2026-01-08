@@ -44,6 +44,22 @@ export const guidesData = [
     ],
   },
   {
+    slug: 'where-to-find-surveyor-vaults-arc-raiders',
+    title: 'Surveyor Vaults (Storm Courier Farm)',
+    category: 'Farming',
+    date: 'Jan 6, 2026',
+    summary:
+      'Fastest Surveyor Vaults farm: queue Dam Battlegrounds during an Electromagnetic Storm, breach ARC Couriers around Scrapyard and Old Battleground, then extract early to bank Vaults.',
+    image: '/guides/surveyor-vaults/hero.webp',
+    map: 'Dam Battlegrounds',
+    need: '6x Surveyor Vaults — Mixed Signals + Medical Lab Lv. 3',
+    highlights: [
+      'Electromagnetic Storm spawns many ARC Couriers, giving you far more loot rolls than chasing ARC Surveyors.',
+      'Chain couriers by checking the map often, following black smoke markers, and skipping already-breached targets.',
+      'Extract as soon as you secure a Vault; short repeatable raids finish the set faster than one long run.',
+    ],
+  },
+  {
     slug: 'where-to-find-mushrooms-arc-raiders',
     title: 'Mushroom Farming (Guaranteed Spaceport Spawn)',
     category: 'Farming',

@@ -260,7 +260,7 @@ export default function MapPage() {
               </p>
               <h3 className="mt-8 mb-4 text-2xl font-bold text-cyan-200">Best Maps for Specific Loot</h3>
               <p className="mb-6 text-lg leading-relaxed text-cyan-100/70">
-                Understanding which Arc Raiders map to choose for specific loot is crucial for efficient farming. Blue Gate's Warehouse Complex offers the best Rusted Gears farming with 40+ searchable vehicles. Dam Battlegrounds' Hydroponic Dome Complex excels for Industrial Batteries. Buried City and Spaceport provide optimal Dog Collar spawns in residential areas. Use our Arc Raiders interactive map resources to plan your loot routes before each raid.
+                Understanding which Arc Raiders map to choose for specific loot is crucial for efficient farming. Blue Gate’s Warehouse Complex offers the best Rusted Gears farming with 40+ searchable vehicles. Dam Battlegrounds’ Hydroponic Dome Complex excels for Industrial Batteries. Buried City and Spaceport provide optimal Dog Collar spawns in residential areas. Use our Arc Raiders interactive map resources to plan your loot routes before each raid.
               </p>
               <h3 className="mt-8 mb-4 text-2xl font-bold text-cyan-200">Extraction Points and Strategy</h3>
               <p className="mb-0 text-lg leading-relaxed text-cyan-100/70">

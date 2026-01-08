@@ -104,8 +104,8 @@ export default function LockedGateEventGuide() {
                   Locked Gate event overview
                 </h2>
                 <p className="text-cyan-100/80">
-                  Four different security codes can spawn inside loot containers across Ancient Fort, Raider's Refuge, Reinforced
-                  Reception, and Pilgrim's Peak. Any player can find a code, and multiple copies can spawn, so the lobby can finish
+                  Four different security codes can spawn inside loot containers across Ancient Fort, Raider’s Refuge, Reinforced
+                  Reception, and Pilgrim’s Peak. Any player can find a code, and multiple copies can spawn, so the lobby can finish
                   even if one carrier goes down.
                 </p>
                 <p className="text-cyan-100/80">
@@ -158,7 +158,7 @@ export default function LockedGateEventGuide() {
                 </p>
               </div>
               <div className="rounded-2xl border border-cyan-500/25 bg-black/50 p-5">
-                <h3 className="text-lg font-semibold text-cyan-50">Raider's Refuge</h3>
+                <h3 className="text-lg font-semibold text-cyan-50">Raider’s Refuge</h3>
                 <p className="mt-2 text-sm text-cyan-100/80">
                   Search every container ¡ª keys can show up in breached metal bins.
                 </p>
@@ -170,7 +170,7 @@ export default function LockedGateEventGuide() {
                 </p>
               </div>
               <div className="rounded-2xl border border-cyan-500/25 bg-black/50 p-5">
-                <h3 className="text-lg font-semibold text-cyan-50">Pilgrim's Peak</h3>
+                <h3 className="text-lg font-semibold text-cyan-50">Pilgrim’s Peak</h3>
                 <p className="mt-2 text-sm text-cyan-100/80">
                   High danger zone guarded by two Rocketeers. Use lure grenades or long-range weapons.
                 </p>

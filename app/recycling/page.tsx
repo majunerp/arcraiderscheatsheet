@@ -273,7 +273,7 @@ export default function RecyclingPage() {
                 How Arc Raiders Recycling Works
               </h3>
               <p className="text-lg text-cyan-100/70 leading-relaxed mb-6">
-                Recycling in Arc Raiders breaks down items into core crafting materials at your Hideout workbench. Always recycle at your Hideout rather than salvaging during raids, as Hideout recycling provides full material yields while raid salvaging gives reduced returns. Items marked with "Recyclable" tags show exactly what materials they convert into, helping you make informed Arc Raiders recycling decisions.
+                Recycling in Arc Raiders breaks down items into core crafting materials at your Hideout workbench. Always recycle at your Hideout rather than salvaging during raids, as Hideout recycling provides full material yields while raid salvaging gives reduced returns. Items marked with “Recyclable” tags show exactly what materials they convert into, helping you make informed Arc Raiders recycling decisions.
               </p>
 
               <h3 className="text-2xl font-bold text-cyan-200 mt-8 mb-4">

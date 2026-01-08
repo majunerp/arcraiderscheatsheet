@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import { Skill } from '@/lib/skills-data';
 
 interface SkillCardProps {
@@ -12,13 +12,15 @@ interface SkillCardProps {
 export default function SkillCard({ skill, treeColor, fallbackIcon }: SkillCardProps) {
   const [imgSrc, setImgSrc] = useState(skill.icon);
 
+  const cardStyle: CSSProperties & { ['--hover-shadow-color']?: string } = {
+    borderColor: `${treeColor}40`,
+    ['--hover-shadow-color']: `${treeColor}33`,
+  };
+
   return (
     <div
       className="bg-slate-900/60 border-2 rounded-lg p-3 hover:border-opacity-60 hover:shadow-[0_0_20px] transition-all"
-      style={{
-        borderColor: treeColor + '40',
-        '--hover-shadow-color': treeColor + '33',
-      } as any}
+      style={cardStyle}
     >
       <div className="flex justify-between items-start mb-2">
         <div className="w-12 h-12 rounded border-2 overflow-hidden" style={{borderColor: treeColor}}>

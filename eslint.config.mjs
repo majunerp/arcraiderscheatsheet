@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+
+    // Root utility scripts (ad-hoc only):
+    "download_images*.js",
+    "download_images_node.js",
   ]),
 ]);
 

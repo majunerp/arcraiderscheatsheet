@@ -183,7 +183,7 @@ export default function LootPage() {
                 <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30">
                   <div className="text-xs text-amber-200/70">Weight fixes</div>
                   <div className="text-xl font-semibold text-amber-100">280</div>
-                  <p className="text-[11px] text-amber-100/60 mt-1">Slot plan to stop "inventory full"</p>
+                  <p className="text-[11px] text-amber-100/60 mt-1">Slot plan to stop “inventory full”</p>
                 </div>
               </div>
             </div>
