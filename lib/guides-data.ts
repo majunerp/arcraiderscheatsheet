@@ -279,6 +279,7 @@ export const guidesData: readonly GuideEntry[] = [
     summary:
       'Rare medical component needed for Medical Station 3. The Testing Annex on Dam Battlegrounds is the go-to farm.',
     image: '/guides/rusted-medkit.webp',
+    hasPage: true,
     map: 'Dam Battlegrounds',
     need: 'Rusted Shut Medical Kit – Medical Station Lv3',
     highlights: [
