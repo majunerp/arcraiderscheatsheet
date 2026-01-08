@@ -7,12 +7,13 @@ export type GuideEntry = {
   date: string;
   summary: string;
   image: string;
+  hasPage?: boolean;
   map?: string;
   need?: string;
   highlights: string[];
 };
 
-export const guidesData = [
+export const guidesData: readonly GuideEntry[] = [
   {
     slug: 'locked-gate-arc-raiders-event-guide',
     title: 'Locked Gate Event Guide',
@@ -21,6 +22,7 @@ export const guidesData = [
     summary:
       'Complete the Blue Gate Locked Gate event: find four security codes, activate the Gate Control Room, and loot the underground for the Bobcat blueprint.',
     image: '/guides/locked-gate-event/hero.jpg',
+    hasPage: true,
     map: 'Blue Gate',
     highlights: [
       "Security codes spawn in Ancient Fort, Raider's Refuge, Reinforced Reception, and Pilgrim's Peak containers.",
@@ -36,6 +38,7 @@ export const guidesData = [
     summary:
       'Press 14 hidden red buttons in order, return to the Music Room, and hit the final button to open the secret door and claim the Guitar.',
     image: '/guides/buried-city-music-puzzle/hero.jpg',
+    hasPage: true,
     map: 'Buried City',
     highlights: [
       'All 15 buttons must be pressed in sequence or the lobby resets instantly.',
@@ -51,6 +54,7 @@ export const guidesData = [
     summary:
       'Fastest Surveyor Vaults farm: queue Dam Battlegrounds during an Electromagnetic Storm, breach ARC Couriers around Scrapyard and Old Battleground, then extract early to bank Vaults.',
     image: '/guides/surveyor-vaults/hero.webp',
+    hasPage: true,
     map: 'Dam Battlegrounds',
     need: '6x Surveyor Vaults — Mixed Signals + Medical Lab Lv. 3',
     highlights: [
@@ -67,6 +71,7 @@ export const guidesData = [
     summary:
       'Fastest Mushroom route: sprint to the north-east Spaceport trench by Trench Hatch (East), loot 3 guaranteed Mushrooms, safe-pocket them, then surrender to reset in minutes.',
     image: '/guides/mushrooms/hero.jpg',
+    hasPage: true,
     map: 'Spaceport',
     need: 'Mushrooms for Scrappy upgrades and project phases',
     highlights: [
@@ -83,6 +88,7 @@ export const guidesData = [
     summary:
       'Stage 4/6 Outfitting needs five Humidifiers. This loop prioritizes Buried City’s Red Tower lockers with a quick Metro extract, with Dam Battlegrounds as a low-traffic backup.',
     image: '/guides/humidifier.webp',
+    hasPage: true,
     map: 'Buried City / Dam Battlegrounds',
     need: '5x Humidifier – Expedition Project 4/6 Outfitting',
     highlights: [
@@ -99,6 +105,7 @@ export const guidesData = [
     summary:
       'Lightbulbs are electrical loot for Expedition 3/6 – Framework. Focus electrical zones and chain short clears to stack five quickly.',
     image: '/guides/lightbulb.webp',
+    hasPage: true,
     map: 'Electrical Loot Zones',
     need: '5x Lightbulbs – Expedition Project 3/6 Framework',
     highlights: [
@@ -115,6 +122,7 @@ export const guidesData = [
     summary:
       'Cooling Fans gate Expedition Project Part 2. The fastest pulls come from tech-heavy buildings with stacked server racks.',
     image: '/guides/cooling-fan.webp',
+    hasPage: true,
     map: 'Buried City (Space Travel Building)',
     need: 'Cooling Fans – Expedition Project Part 2',
     highlights: [
@@ -131,6 +139,7 @@ export const guidesData = [
     summary:
       'Scrappy upgrades need comfort items that only spawn in residential interiors. Buried City delivers the best density.',
     image: '/guides/pillow-cat-bed.webp',
+    hasPage: true,
     map: 'Buried City / Dam Battlegrounds',
     need: 'Cat Beds & Very Comfortable Pillows – Scrappy upgrade',
     highlights: [
@@ -147,6 +156,7 @@ export const guidesData = [
     summary:
       'Fast Dam Battlegrounds loop for the Damage Leapers Trial: anchor at the Control Tower base, rotate to Water Treatment, then reset to keep spawns rolling.',
     image: '/guides/damage-leapers/hero.webp',
+    hasPage: true,
     map: 'Dam Battlegrounds',
     need: 'Trials score - aim for 4,000+ for weekly 3-star rewards',
     highlights: [
@@ -163,6 +173,7 @@ export const guidesData = [
     summary:
       'Dam Battlegrounds loop that chains First Wave Husk clusters during Electromagnetic Storm so you can hit 4,000 score quickly.',
     image: '/guides/search-first-wave-husks/hero.webp',
+    hasPage: true,
     map: 'Dam Battlegrounds',
     need: 'Trials score - 4,000+ for weekly 3-star rewards',
     highlights: [
@@ -179,6 +190,7 @@ export const guidesData = [
     summary:
       'Great Mullein farming route for Trials. Solo runs excel in Buried City Galleria, while squads can split Spaceport for fast clears.',
     image: '/guides/harvest-plants/hero.webp',
+    hasPage: true,
     map: 'Buried City / Spaceport',
     need: 'Trials score - 4,000+ for weekly 3-star rewards',
     highlights: [
@@ -307,4 +319,4 @@ export const guidesData = [
       'Secure a fast extract nearby before other squads converge on the event zone.',
     ],
   },
-] as const satisfies GuideEntry[];
+] as const satisfies readonly GuideEntry[];

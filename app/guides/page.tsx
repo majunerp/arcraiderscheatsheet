@@ -108,6 +108,8 @@ export default function GuidesPage() {
 
       image: '/guides/stench-corruption/hero.jpg',
 
+      hasPage: true,
+
       map: 'Spaceport',
 
       need: 'Quest rewards: Warden Outfit, Dam Staff Room Key, Air Freshener, Noisemaker x3',
@@ -139,6 +141,8 @@ export default function GuidesPage() {
         'Hit the Fuel Control and Arrival Building Magnetic Decryptors in one Spaceport run to finish the quest and earn Defibrillators and Trailblazer Grenades.',
 
       image: '/guides/deciphering-data/hero.jpg',
+
+      hasPage: true,
 
       map: 'Spaceport',
 
@@ -355,7 +359,7 @@ export default function GuidesPage() {
 
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {allGuidesSorted.map((guide) => {
-                const isDecember = guide.date.startsWith('Dec');
+                const isLinkable = guide.hasPage === true;
                 const cardClass =
                   'group flex flex-col rounded-xl border border-cyan-500/25 bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-slate-950/70 p-4 shadow-[0_14px_40px_rgba(0,0,0,0.45)] transition hover:border-cyan-300/50';
                 const cardContent = (
@@ -390,7 +394,7 @@ export default function GuidesPage() {
                   </>
                 );
                 const href = guideHref(guide);
-                return isDecember ? (
+                return isLinkable ? (
                   <Link key={guide.slug} href={href} className={cardClass}>
                     {cardContent}
                   </Link>
@@ -446,7 +450,7 @@ export default function GuidesPage() {
 
               {spotlightGuides.map((guide) => {
 
-                const isDecember = guide.date.startsWith('Dec');
+                const isLinkable = guide.hasPage === true;
 
                 const cardClass =
 
@@ -540,7 +544,7 @@ export default function GuidesPage() {
 
                 const href = guideHref(guide);
 
-                return isDecember ? (
+                return isLinkable ? (
 
                   <Link key={guide.slug} href={href} className={cardClass}>
 
@@ -592,7 +596,7 @@ export default function GuidesPage() {
 
               {expeditionGuides.map((guide) => {
 
-                const isDecember = guide.date.startsWith('Dec');
+                const isLinkable = guide.hasPage === true;
 
                 const cardClass =
 
@@ -676,7 +680,7 @@ export default function GuidesPage() {
 
                 const href = guideHref(guide);
 
-                return isDecember ? (
+                return isLinkable ? (
 
                   <Link key={guide.slug} href={href} className={cardClass}>
 
@@ -728,7 +732,7 @@ export default function GuidesPage() {
 
               {updateGuides.map((guide) => {
 
-                const isDecember = guide.date.startsWith('Dec');
+                const isLinkable = guide.hasPage === true;
 
                 const cardClass =
 
@@ -802,7 +806,7 @@ export default function GuidesPage() {
 
                 const href = guideHref(guide);
 
-                return isDecember ? (
+                return isLinkable ? (
 
                   <Link key={guide.slug} href={href} className={cardClass}>
 
@@ -854,7 +858,7 @@ export default function GuidesPage() {
 
               {puzzleGuides.map((guide) => {
 
-                const isDecember = guide.date.startsWith('Dec');
+                const isLinkable = guide.hasPage === true;
 
                 const cardClass =
 
@@ -928,7 +932,7 @@ export default function GuidesPage() {
 
                 const href = guideHref(guide);
 
-                return isDecember ? (
+                return isLinkable ? (
 
                   <Link key={guide.slug} href={href} className={cardClass}>
 
