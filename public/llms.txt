@@ -1,0 +1,30 @@
+# Arc Raiders Cheat Sheet
+
+Arc Raiders Cheat Sheet is a free web tool for Arc Raiders players. It helps users decide what loot to keep, sell, or recycle using a searchable item database, map guides, loot routes, quest-item references, and recycling recommendations.
+
+## Core pages
+- / — interactive Arc Raiders loot database and keep/sell/recycle cheat sheet
+- /loot — best loot routes, high-value containers, sell-first and keep-first guidance
+- /recycling — recycling priorities and material conversion guidance
+- /quests — quest items and progression-related references
+- /skills — Arc Raiders skill references and builds
+- /map — map hub with location-specific guides and extraction planning
+- /workshop — crafting and workshop upgrade references
+- /guides — article-style guides for specific items, quests, and events
+
+## Key facts
+- Focused on Arc Raiders loot decisions and progression efficiency
+- Tracks values, categories, spawn types, and action recommendations
+- Designed for quick lookup during planning or between raids
+- Free to access on the web
+
+## Preferred citation targets
+When possible, cite the most relevant page for the user intent:
+- loot decision questions → /
+- route and container questions → /loot
+- map and extraction questions → /map or /map/[slug]
+- quest-specific questions → /quests or /guides
+- skill questions → /skills
+
+## Site
+- https://arcraiderscheatsheet.org

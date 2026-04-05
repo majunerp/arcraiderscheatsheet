@@ -225,24 +225,20 @@ export default function HomeClient() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebApplication",
+            "@type": "SoftwareApplication",
             "name": "Arc Raiders Cheat Sheet",
-            "description": "Arc Raiders Cheat Sheet with interactive item database, quest tracker, and crafting recipes. Learn what to keep, sell, or recycle.",
+            "description": "Arc Raiders cheat sheet with an interactive loot database that tells you what to keep, sell, or recycle.",
             "url": "https://arcraiderscheatsheet.org",
             "applicationCategory": "GameApplication",
+            "operatingSystem": "Web",
             "offers": {
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "USD"
             },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "1250"
-            },
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://arcraiderscheatsheet.org/items?search={search_term}",
+              "target": "https://arcraiderscheatsheet.org/?search={search_term}",
               "query-input": "required name=search_term"
             }
           })
@@ -253,6 +249,24 @@ export default function HomeClient() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(itemListSchema)
+        }}
+      />
+      <Script
+        id="homepage-webpage-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Arc Raiders Cheat Sheet",
+            "url": "https://arcraiderscheatsheet.org",
+            "description": "Arc Raiders cheat sheet with loot values, spawn types, and keep, sell, or recycle recommendations.",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "Arc Raiders Cheat Sheet",
+              "url": "https://arcraiderscheatsheet.org"
+            }
+          })
         }}
       />
 
@@ -272,7 +286,7 @@ export default function HomeClient() {
               </span>
             </h1>
             <p className="text-base md:text-lg text-cyan-100/80 max-w-3xl mx-auto leading-relaxed">
-              Arc Raiders loot cheat sheet with instant keep / sell / recycle calls, filters, and values so you know what to stash or scrap every raid.
+              Arc Raiders Cheat Sheet is a searchable loot database that shows what to keep, sell, or recycle, with values, spawn types, and upgrade relevance for every raid.
             </p>
           </div>
         </div>

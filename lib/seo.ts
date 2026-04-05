@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 
 const SITE_URL = 'https://arcraiderscheatsheet.org';
 const SITE_NAME = 'Arc Raiders Cheat Sheet';
+const SITE_TWITTER = '@arcraiderssheet';
 
 export interface SEOConfig {
   title: string;
@@ -23,12 +24,9 @@ export function generateMetadata(config: SEOConfig): Metadata {
   const socialImage = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`;
   const socialAlt = `${SITE_NAME} social preview`;
 
-  // Ensure title is 40-60 characters
+  // Keep page titles readable in SERP/snippets
   const optimizedTitle = title.length > 60 ? title.substring(0, 57) + '...' : title;
-  const openGraphTitle = (() => {
-    const combined = `${optimizedTitle} | ${SITE_NAME}`;
-    return combined.length > 60 ? combined.substring(0, 57) + '...' : combined;
-  })();
+  const openGraphTitle = `${optimizedTitle} | ${SITE_NAME}`;
 
   // Ensure description is 140-160 characters
   const optimizedDescription = description.length > 160
@@ -80,11 +78,8 @@ export function generateMetadata(config: SEOConfig): Metadata {
       title: openGraphTitle,
       description: optimizedDescription,
       images: [socialImage],
-      creator: '@arcraiderssheet',
-      site: '@arcraiderssheet',
-    },
-    verification: {
-      google: 'your-google-verification-code',
+      creator: SITE_TWITTER,
+      site: SITE_TWITTER,
     },
   };
 }

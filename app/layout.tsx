@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = genMeta({
-  title: "Arc Raiders Cheat Sheet 2025-loot,item & recycling",
-  description: "2025 Arc Raiders loot cheat sheet with keep/sell/recycle calls for 240+ items, credit values, spawns, and crafting uses so you know what to stash or scrap.",
+  title: "Arc Raiders Cheat Sheet: Keep, Sell or Recycle Loot",
+  description: "Arc Raiders cheat sheet with keep, sell, or recycle calls for 240+ loot items, plus values, spawns, quest uses, and crafting priorities.",
   keywords: [
     'arc raiders cheat sheet',
     'arc raiders loot cheat sheet',
@@ -87,10 +87,22 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Arc Raiders Cheat Sheet",
+              "url": "https://arcraiderscheatsheet.org",
+              "logo": "https://arcraiderscheatsheet.org/og-image.png"
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Arc Raiders Cheat Sheet",
               "url": "https://arcraiderscheatsheet.org",
-              "description": "Complete Arc Raiders database with 70+ items, quest tracker, and crafting recipes",
+              "description": "Arc Raiders cheat sheet with loot routing, quest item decisions, recycling values, and crafting priorities.",
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": "https://arcraiderscheatsheet.org/?search={search_term_string}",
@@ -101,21 +113,6 @@ export default function RootLayout({
                 "name": "Arc Raiders Cheat Sheet",
                 "url": "https://arcraiderscheatsheet.org"
               }
-            })
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "VideoGame",
-              "name": "Arc Raiders",
-              "url": "https://arcraiderscheatsheet.org",
-              "description": "Complete game guide and cheat sheet for Arc Raiders including items, quests, and crafting",
-              "genre": ["Action", "Shooter", "Multiplayer"],
-              "gamePlatform": ["PC"],
-              "applicationCategory": "Game"
             })
           }}
         />
