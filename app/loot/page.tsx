@@ -5,9 +5,9 @@ import { items } from '@/lib/items-data';
 import { ItemImage } from '@/components/ItemImage';
 
 export const metadata = genMeta({
-  title: 'Arc Raiders loot cheat sheet - best loot routes, containers, and calls',
+  title: 'Arc Raiders Loot Routes & Best Containers',
   description:
-    'Arc Raiders loot cheat sheet - best loot routes, containers, and calls. Map-specific paths to rank first.',
+    'Arc Raiders loot routes, best containers, and keep-or-sell calls for high-value runs across Blue Gate, Spaceport, Dam, and Buried City.',
   keywords: [
     'arc raiders loot',
     'arc raiders loot cheat sheet',
@@ -144,7 +144,7 @@ export default function LootPage() {
                   Arc Raiders Loot Cheat Sheet 2025
                 </p>
                 <h1 className="text-2xl md:text-3xl font-bold leading-tight text-cyan-50">
-                  Arc Raiders loot cheat sheet - best loot routes, containers, and calls
+                  Arc Raiders loot routes, best containers, and keep-or-sell calls
                 </h1>
                 <p className="text-sm md:text-base text-cyan-100/75 leading-relaxed">
                   Use this Arc Raiders cheat sheet loot guide to find the best loot routes, S-tier drops, fastest credit farms, a 280-slot stash plan, and instant keep/sell/recycle calls pulled from our live database of {totalTracked}+ items.
